@@ -744,85 +744,85 @@ const Presentation: React.FC = () => {
     <div className="min-h-screen bg-black">
       <div className="relative w-full h-screen bg-white overflow-hidden">
         {/* Header */}
-        <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-teal-600 to-blue-600 text-white p-6 z-10">
-          <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold">Biomagnetismo Kids - Módulo 1</h1>
-            <div className="flex items-center space-x-6">
+        <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-teal-600 to-blue-600 text-white p-3 sm:p-6 z-10">
+          <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
+            <h1 className="text-lg sm:text-2xl md:text-3xl font-bold text-center sm:text-left">Biomagnetismo Kids - Módulo 1</h1>
+            <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-6">
               <button
                 onClick={toggleAutoPlay}
-                className="flex items-center space-x-3 px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors text-lg"
+                className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors text-xs sm:text-sm md:text-lg"
               >
-                {isAutoPlay ? <Pause size={20} /> : <Play size={20} />}
-                <span>{isAutoPlay ? 'Pausar' : 'Auto'}</span>
+                {isAutoPlay ? <Pause size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6" /> : <Play size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />}
+                <span className="hidden sm:inline">{isAutoPlay ? 'Pausar' : 'Auto'}</span>
               </button>
               <button
                 onClick={goHome}
-                className="flex items-center space-x-3 px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors text-lg"
+                className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors text-xs sm:text-sm md:text-lg"
               >
-                <Home size={20} />
-                <span>Inicio</span>
+                <Home size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                <span className="hidden sm:inline">Inicio</span>
               </button>
               <button
                 onClick={goHome}
-                className="p-3 hover:bg-white/20 rounded-lg transition-colors"
+                className="p-2 sm:p-3 hover:bg-white/20 rounded-lg transition-colors"
               >
-                <X size={24} />
+                <X size={20} className="sm:w-6 sm:h-6" />
               </button>
             </div>
           </div>
         </div>
 
         {/* Slide Content - Full Screen */}
-        <div className="absolute inset-0 pt-24 pb-32 px-12 flex items-center justify-center">
+        <div className="absolute inset-0 pt-16 sm:pt-20 md:pt-24 pb-20 sm:pb-24 md:pb-32 px-4 sm:px-8 md:px-12 flex items-center justify-center">
           <div className="w-full max-w-6xl text-center">
             {/* Slide Title with Icon */}
-            <div className="flex items-center justify-center mb-8 animate-fade-in-up">
-              {currentSlideData.id === 1 && <BookOpen className="w-16 h-16 text-teal-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 2 && <Brain className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 3 && <Heart className="w-16 h-16 text-red-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 4 && <Lightbulb className="w-16 h-16 text-yellow-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 5 && <AlertTriangle className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 6 && <Shield className="w-16 h-16 text-red-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 7 && <Shield className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 8 && <Users className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 9 && <GraduationCap className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 10 && <Target className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 11 && <Users className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 12 && <Users className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 13 && <Users className="w-16 h-16 text-indigo-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 14 && <Users className="w-16 h-16 text-pink-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 15 && <Sparkles className="w-16 h-16 text-teal-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 16 && <Target className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 17 && <Search className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 18 && <History className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 19 && <Table className="w-16 h-16 text-indigo-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 20 && <CheckCircle className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 21 && <Brain className="w-16 h-16 text-teal-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 22 && <Heart className="w-16 h-16 text-pink-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 23 && <List className="w-16 h-16 text-red-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 24 && <List className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 25 && <Sparkles className="w-16 h-16 text-yellow-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 26 && <List className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 27 && <Lightbulb className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 28 && <Heart className="w-16 h-16 text-red-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 29 && <Shield className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 30 && <AlertTriangle className="w-16 h-16 text-yellow-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 31 && <Target className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 32 && <Table className="w-16 h-16 text-indigo-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 33 && <Table className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 34 && <GraduationCap className="w-16 h-16 text-teal-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 35 && <Search className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 36 && <MessageCircle className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 37 && <MessageCircle className="w-16 h-16 text-pink-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 38 && <Baby className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 39 && <Baby className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 40 && <Baby className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 41 && <Baby className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 42 && <Rocket className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 43 && <BarChart className="w-16 h-16 text-teal-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 44 && <AlertCircle className="w-16 h-16 text-yellow-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              {currentSlideData.id === 45 && <Target className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-tight">
+            <div className="flex flex-col sm:flex-row items-center justify-center mb-4 sm:mb-6 md:mb-8 animate-fade-in-up space-y-2 sm:space-y-0">
+              {currentSlideData.id === 1 && <BookOpen className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-teal-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 2 && <Brain className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 3 && <Heart className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-red-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 4 && <Lightbulb className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-yellow-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 5 && <AlertTriangle className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-orange-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 6 && <Shield className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-red-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 7 && <Shield className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-orange-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 8 && <Users className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 9 && <GraduationCap className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-purple-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 10 && <Target className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-green-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 11 && <Users className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-purple-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 12 && <Users className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 13 && <Users className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-indigo-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 14 && <Users className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-pink-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 15 && <Sparkles className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-teal-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 16 && <Target className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-green-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 17 && <Search className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 18 && <History className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-purple-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 19 && <Table className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-indigo-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 20 && <CheckCircle className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-green-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 21 && <Brain className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-teal-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 22 && <Heart className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-pink-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 23 && <List className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-red-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 24 && <List className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-orange-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 25 && <Sparkles className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-yellow-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 26 && <List className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-purple-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 27 && <Lightbulb className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-orange-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 28 && <Heart className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-red-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 29 && <Shield className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-orange-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 30 && <AlertTriangle className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-yellow-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 31 && <Target className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-green-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 32 && <Table className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-indigo-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 33 && <Table className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 34 && <GraduationCap className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-teal-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 35 && <Search className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 36 && <MessageCircle className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-purple-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 37 && <MessageCircle className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-pink-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 38 && <Baby className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 39 && <Baby className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-green-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 40 && <Baby className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 41 && <Baby className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-orange-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 42 && <Rocket className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-green-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 43 && <BarChart className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-teal-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 44 && <AlertCircle className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-yellow-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 45 && <Target className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-purple-600 sm:mr-4 transform transition-all duration-500 hover:scale-110" />}
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 leading-tight">
                 {currentSlideData.title}
               </h2>
             </div>
@@ -1134,33 +1134,33 @@ const Presentation: React.FC = () => {
                             {/* Navigation Arrows */}
                     <button
                       onClick={prevSlide}
-                      className="absolute left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 z-20 cursor-pointer"
+                      className="absolute left-2 sm:left-4 md:left-6 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 z-20 cursor-pointer"
                       disabled={currentSlide === 0}
                     >
-                      <ChevronLeft size={24} />
+                      <ChevronLeft size={20} className="sm:w-6 sm:h-6 md:w-6 md:h-6" />
                     </button>
 
                     <button
                       onClick={nextSlide}
-                      className="absolute right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 z-20 cursor-pointer"
+                      className="absolute right-2 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 z-20 cursor-pointer"
                       disabled={currentSlide === slides.length - 1}
                     >
-                      <ChevronRight size={24} />
+                      <ChevronRight size={20} className="sm:w-6 sm:h-6 md:w-6 md:h-6" />
                     </button>
 
                             {/* Bottom Navigation */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/90 to-transparent p-6">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                          <span className="text-white text-lg font-semibold">
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/90 to-transparent p-3 sm:p-4 md:p-6">
+                      <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
+                        <div className="flex items-center space-x-2 sm:space-x-4">
+                          <span className="text-white text-sm sm:text-base md:text-lg font-semibold">
                             {currentSlide + 1} / {slides.length}
                           </span>
-                          <div className="flex space-x-2">
+                          <div className="flex space-x-1 sm:space-x-2">
                             {slides.map((_, index) => (
                               <button
                                 key={index}
                                 onClick={() => setCurrentSlide(index)}
-                                className={`w-2 h-2 rounded-full transition-colors ${
+                                className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-colors ${
                                   index === currentSlide ? 'bg-white' : 'bg-white/40'
                                 }`}
                               />
@@ -1168,23 +1168,23 @@ const Presentation: React.FC = () => {
                           </div>
                         </div>
 
-                        <div className="flex items-center space-x-3">
+                        <div className="flex items-center space-x-2 sm:space-x-3">
                           <button
                             onClick={prevSlide}
-                            className="flex items-center space-x-2 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 active:bg-white/40 transition-all duration-200 text-sm font-medium cursor-pointer"
+                            className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 active:bg-white/40 transition-all duration-200 text-xs sm:text-sm font-medium cursor-pointer"
                             disabled={currentSlide === 0}
                           >
-                            <ChevronLeft size={18} />
-                            <span>Anterior</span>
+                            <ChevronLeft size={16} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />
+                            <span className="hidden sm:inline">Anterior</span>
                           </button>
 
                           <button
                             onClick={nextSlide}
-                            className="flex items-center space-x-2 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 active:bg-white/40 transition-all duration-200 text-sm font-medium cursor-pointer"
+                            className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 active:bg-white/40 transition-all duration-200 text-xs sm:text-sm font-medium cursor-pointer"
                             disabled={currentSlide === slides.length - 1}
                           >
-                            <span>Siguiente</span>
-                            <ChevronRight size={18} />
+                            <span className="hidden sm:inline">Siguiente</span>
+                            <ChevronRight size={16} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />
                           </button>
                         </div>
                       </div>
