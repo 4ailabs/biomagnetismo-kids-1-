@@ -61,7 +61,29 @@ npm run dev
 
 # Construir para producción
 npm run build
+
+# Vista previa de producción
+npm run preview
 ```
+
+## 🚀 Características Avanzadas
+
+### 🌍 Soporte Multiidioma
+- **Español e Inglés** con detección automática
+- **Traducción completa** de todo el contenido
+- **Selector de idioma** en tiempo real
+
+### 📊 Presentaciones Interactivas
+- **45 diapositivas** con contenido detallado
+- **Navegación por teclado** (flechas, espacio, escape)
+- **Modo automático** con temporizador
+- **Diseño responsive** para cualquier dispositivo
+
+### 🧲 Herramientas Especializadas
+- **Lista de Pares Biomagnéticos** interactiva
+- **Tablas de Shocks Vivenciales** con detalles
+- **Protocolos Bioenergéticos** paso a paso
+- **Casos Clínicos** con ejemplos prácticos
 
 ## 🌐 Despliegue
 
@@ -93,14 +115,43 @@ El proyecto está optimizado para despliegue en **Vercel**:
 - Ley de Reparación de Culpa
 - Ley de Dirección Energética
 
+## 🎯 Uso del Sistema
+
+### 📱 Navegación Principal
+1. **Selector de Bloques**: Elige entre los 5 bloques temáticos
+2. **Contenido Detallado**: Cada bloque contiene información completa
+3. **Herramientas Interactivas**: Tablas, protocolos y casos clínicos
+
+### 🖥️ Modo Presentación
+1. **Botón de Presentación**: En el footer de la página principal
+2. **Navegación por Teclado**:
+   - `→` o `Espacio`: Siguiente diapositiva
+   - `←`: Diapositiva anterior
+   - `Home`: Primera diapositiva
+   - `End`: Última diapositiva
+   - `Esc`: Salir a página principal
+
+### 🌍 Cambio de Idioma
+- **Selector de Idioma**: En el header de la página
+- **Detección Automática**: Basada en el navegador
+- **Persistencia**: Se recuerda la preferencia
+
 ## 📄 Licencia
 
-Este proyecto es parte del curso de Biomagnetismo Kids desarrollado por 4ailabs.
+Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ## 👨‍💻 Autor
 
 **4ailabs** - Especialistas en biomagnetismo y desarrollo web
 
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abre un issue o pull request para sugerencias y mejoras.
+
+## 📞 Soporte
+
+Para soporte técnico o preguntas sobre el contenido, contacta a través de GitHub Issues.
+
 ---
 
-**Nota**: Este curso está diseñado para profesionales de la salud y terapeutas que deseen especializarse en biomagnetismo pediátrico con enfoque sistémico.
+**Nota**: Este curso está diseñado para profesionales de la salud y terapeutas que deseen especializarse en biomagnetismo pediátrico con enfoque sistémico. El contenido es educativo y no reemplaza el consejo médico profesional.

@@ -716,19 +716,15 @@ const Presentation: React.FC = () => {
   ];
 
   const nextSlide = () => {
-    console.log('Next slide clicked, current:', currentSlide, 'total:', slides.length);
     setCurrentSlide((prev) => {
       const next = (prev + 1) % slides.length;
-      console.log('Moving to slide:', next);
       return next;
     });
   };
 
   const prevSlide = () => {
-    console.log('Prev slide clicked, current:', currentSlide, 'total:', slides.length);
     setCurrentSlide((prev) => {
       const next = (prev - 1 + slides.length) % slides.length;
-      console.log('Moving to slide:', next);
       return next;
     });
   };
