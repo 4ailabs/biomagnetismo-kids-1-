@@ -3,7 +3,8 @@
     "title": "MODULE 1",
     "subtitle": "\"The Invisible Beginning: When History Starts Before Birth\"",
     "course": "Course: Biomagnetism Kids",
-    "modality": "Modality: Online Class"
+    "modality": "Modality: Online Class",
+    "presentation": "Presentation"
   },
   "blockSelector": {
     "title": "Navigate through the Blocks",
@@ -512,5 +513,68 @@
     "language": "Language",
     "spanish": "Español",
     "english": "English"
+  },
+  "slides": {
+    "welcome": {
+      "title": "BIOMAGNETISM KIDS",
+      "subtitle": "The Invisible Beginning: When History Starts Before Birth"
+    },
+    "fundamentals": {
+      "title": "THEORETICAL FUNDAMENTALS",
+      "point1": "Unified Maternal-Fetal Bioelectric Field",
+      "point2": "Maternal-Filial Resonance Law",
+      "point3": "Energetic Imprint Law",
+      "point4": "Decreasing Plasticity Law"
+    },
+    "conflicts": {
+      "title": "5 FUNDAMENTAL BIOLOGICAL CONFLICTS",
+      "survival": "Survival Conflict",
+      "protection": "Protection Conflict",
+      "separation": "Separation Conflict",
+      "identity": "Identity Conflict",
+      "territory": "Territory Conflict"
+    },
+    "systemic": {
+      "title": "SYSTEMIC APPROACH",
+      "point1": "Family Energetic Interconnection",
+      "point2": "Generational Pattern Transmission",
+      "point3": "Sensitivity to Family Field",
+      "point4": "Systemic Resonance Effect"
+    },
+    "protocol": {
+      "title": "BIOENERGETIC PROTOCOL",
+      "step1": "Conflict Identification",
+      "step2": "Age Recession",
+      "step3": "Biomagnetic Pairs Selection",
+      "step4": "Application and Evaluation",
+      "step5": "Information Consciousness"
+    },
+    "shocks": {
+      "title": "20 GESTATIONAL EXPERIENTIAL SHOCKS",
+      "intro": "Traumatic experiences during gestation",
+      "example1": "Threat of miscarriage",
+      "example2": "Alarming medical diagnosis",
+      "example3": "Loss of a loved one"
+    },
+    "sensations": {
+      "title": "PRENATAL VITAL SENSATIONS",
+      "intro": "Maternal emotional experiences transmitted to the baby",
+      "example1": "Threat of loss",
+      "example2": "Vital insecurity",
+      "example3": "Emotional abandonment"
+    },
+    "belonging": {
+      "title": "LAWS OF BELONGING",
+      "loyalty": "Loyalty Law",
+      "sacrifice": "Sacrifice Law",
+      "guilt": "Guilt Repair Law",
+      "direction": "Energetic Direction Law"
+    },
+    "conclusion": {
+      "title": "CONCLUSION",
+      "point1": "The child as a family energetic system",
+      "point2": "Importance of systemic approach",
+      "point3": "Integral healing protocol"
+    }
   }
 }

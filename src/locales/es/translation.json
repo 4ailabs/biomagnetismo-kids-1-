@@ -3,7 +3,8 @@
     "title": "MÓDULO 1",
     "subtitle": "\"El Inicio Invisible: Cuando la Historia Empieza Antes de Nacer\"",
     "course": "Curso: Biomagnetismo Kids",
-    "modality": "Modalidad: Clase online"
+    "modality": "Modalidad: Clase online",
+    "presentation": "Presentación"
   },
   "blockSelector": {
     "title": "Navega por los Bloques",
@@ -514,5 +515,68 @@
     "language": "Idioma",
     "spanish": "Español",
     "english": "English"
+  },
+  "slides": {
+    "welcome": {
+      "title": "BIOMAGNETISMO KIDS",
+      "subtitle": "El Inicio Invisible: Cuando la Historia Empieza Antes de Nacer"
+    },
+    "fundamentals": {
+      "title": "FUNDAMENTOS TEÓRICOS",
+      "point1": "Campo Bioeléctrico Materno-Fetal Unificado",
+      "point2": "Ley de Resonancia Materno-Filial",
+      "point3": "Ley de Impronta Energética",
+      "point4": "Ley de Plasticidad Decreciente"
+    },
+    "conflicts": {
+      "title": "5 CONFLICTOS BIOLÓGICOS FUNDAMENTALES",
+      "survival": "Conflicto de Supervivencia",
+      "protection": "Conflicto de Protección",
+      "separation": "Conflicto de Separación",
+      "identity": "Conflicto de Identidad",
+      "territory": "Conflicto de Territorio"
+    },
+    "systemic": {
+      "title": "ENFOQUE SISTÉMICO",
+      "point1": "Interconexión Energética Familiar",
+      "point2": "Transmisión Generacional de Patrones",
+      "point3": "Sensibilidad al Campo Familiar",
+      "point4": "Efecto Resonancia Sistémica"
+    },
+    "protocol": {
+      "title": "PROTOCOLO BIOENERGÉTICO",
+      "step1": "Identificación del Conflicto",
+      "step2": "Recesión de Edad",
+      "step3": "Selección de Pares Biomagnéticos",
+      "step4": "Aplicación y Evaluación",
+      "step5": "Conscientización de la Información"
+    },
+    "shocks": {
+      "title": "20 SHOCKS VIVENCIALES GESTACIONALES",
+      "intro": "Experiencias traumáticas durante la gestación",
+      "example1": "Amenaza de aborto",
+      "example2": "Diagnóstico médico alarmante",
+      "example3": "Pérdida de un ser querido"
+    },
+    "sensations": {
+      "title": "SENSACIONES VITALES PRENATALES",
+      "intro": "Experiencias emocionales maternas transmitidas al bebé",
+      "example1": "Amenaza de pérdida",
+      "example2": "Inseguridad vital",
+      "example3": "Abandono emocional"
+    },
+    "belonging": {
+      "title": "LEYES DE PERTENENCIA",
+      "loyalty": "Ley de Lealtad",
+      "sacrifice": "Ley de Sacrificio",
+      "guilt": "Ley de Reparación de Culpa",
+      "direction": "Ley de Dirección Energética"
+    },
+    "conclusion": {
+      "title": "CONCLUSIÓN",
+      "point1": "El niño como sistema energético familiar",
+      "point2": "Importancia del enfoque sistémico",
+      "point3": "Protocolo integral de sanación"
+    }
   }
 }

@@ -12,3 +12,4 @@ export * from './AcademicCapIcon';
 export * from './TimelineIcon';
 export * from './BrainIcon';
 export * from './DocumentArrowDownIcon';
+export * from './PresentationIcon';

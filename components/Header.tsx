@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
+import Slides from './Slides';
+import PresentationIcon from './icons/PresentationIcon';
 
 const Header: React.FC = () => {
   const { t } = useTranslation();
+  const [isSlidesOpen, setIsSlidesOpen] = useState(false);
 
   return (
     <header className="relative bg-white/80 backdrop-blur-md shadow-xl border-b border-white/20">
       <div className="max-w-7xl mx-auto py-6 sm:py-8 lg:py-12 px-4 sm:px-6 lg:px-8">
-        {/* Language Selector */}
-        <div className="absolute top-4 right-4 z-10">
+        {/* Language Selector and Presentation Button */}
+        <div className="absolute top-4 right-4 z-10 flex items-center space-x-3">
+          <button
+            onClick={() => setIsSlidesOpen(true)}
+            className="flex items-center space-x-2 px-3 py-2 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-lg hover:from-teal-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            title={t('header.presentation')}
+          >
+            <PresentationIcon className="w-5 h-5" />
+            <span className="text-sm font-medium hidden sm:inline">{t('header.presentation')}</span>
+          </button>
           <LanguageSelector />
         </div>
         
@@ -39,6 +50,9 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
+      
+      {/* Slides Component */}
+      <Slides isOpen={isSlidesOpen} onClose={() => setIsSlidesOpen(false)} />
     </header>
   );
 };
