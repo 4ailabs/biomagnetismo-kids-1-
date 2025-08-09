@@ -860,7 +860,136 @@ const Presentation: React.FC = () => {
                   })}
                 </div>
               )}
-              
+
+              {/* Special Layout for Shocks Vivenciales */}
+              {currentSlideData.id === 22 && (
+                <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-2xl p-6 sm:p-8 border border-red-200 shadow-xl animate-fade-in-up">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white text-2xl sm:text-3xl">💔</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-red-700 mb-2">Shocks Vivenciales Gestacionales</h3>
+                    <p className="text-sm sm:text-base text-red-600">Eventos traumáticos que afectan el desarrollo fetal</p>
+                  </div>
+                  <div className="space-y-4">
+                    {currentSlideData.content.map((item, index) => (
+                      <div key={index} className="bg-white/80 rounded-lg p-4 border border-red-200">
+                        <div className="flex items-start space-x-3">
+                          <div className="w-8 h-8 bg-gradient-to-r from-red-400 to-pink-400 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-white text-sm font-bold">{index + 1}</span>
+                          </div>
+                          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{item}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {(currentSlideData.id === 23 || currentSlideData.id === 24) && (
+                <div className="space-y-4">
+                  {currentSlideData.content.map((item, index) => {
+                    const colors = [
+                      { bg: 'from-red-50 to-pink-50', border: 'border-red-200', circle: 'from-red-500 to-pink-500', icon: '💔' },
+                      { bg: 'from-orange-50 to-amber-50', border: 'border-orange-200', circle: 'from-orange-500 to-amber-500', icon: '⚠️' },
+                      { bg: 'from-yellow-50 to-orange-50', border: 'border-yellow-200', circle: 'from-yellow-500 to-orange-500', icon: '😰' },
+                      { bg: 'from-blue-50 to-indigo-50', border: 'border-blue-200', circle: 'from-blue-500 to-indigo-500', icon: '😢' },
+                      { bg: 'from-purple-50 to-violet-50', border: 'border-purple-200', circle: 'from-purple-500 to-violet-500', icon: '😨' }
+                    ];
+                    const colorIndex = index % colors.length;
+                    const shockNumber = currentSlideData.id === 23 ? index + 1 : index + 11;
+                    
+                    return (
+                      <div 
+                        key={index} 
+                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-4 sm:p-6 border ${colors[colorIndex].border} shadow-lg transform transition-all duration-700 ease-out animate-fade-in-up`}
+                        style={{ 
+                          animationDelay: `${index * 150}ms`,
+                          animationFillMode: 'both'
+                        }}
+                      >
+                        <div className="flex items-start space-x-3 sm:space-x-4">
+                          <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110 flex-shrink-0`}>
+                            <span className="text-white font-bold text-sm sm:text-base">{shockNumber}</span>
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center space-x-2 mb-2">
+                              <span className="text-lg sm:text-xl">{colors[colorIndex].icon}</span>
+                              <h4 className="text-sm sm:text-base font-semibold text-slate-800">Shock Vivencial</h4>
+                            </div>
+                            <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{item}</p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                            )}
+
+              {/* Special Layout for Sensaciones Vitales */}
+              {currentSlideData.id === 25 && (
+                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 sm:p-8 border border-blue-200 shadow-xl animate-fade-in-up">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white text-2xl sm:text-3xl">👶</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-blue-700 mb-2">Sensaciones Vitales Prenatales</h3>
+                    <p className="text-sm sm:text-base text-blue-600">Experiencias emocionales del bebé en el útero</p>
+                  </div>
+                  <div className="space-y-4">
+                    {currentSlideData.content.map((item, index) => (
+                      <div key={index} className="bg-white/80 rounded-lg p-4 border border-blue-200">
+                        <div className="flex items-start space-x-3">
+                          <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-white text-sm font-bold">{index + 1}</span>
+                          </div>
+                          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{item}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {currentSlideData.id === 26 && (
+                <div className="space-y-4">
+                  {currentSlideData.content.map((item, index) => {
+                    const colors = [
+                      { bg: 'from-red-50 to-pink-50', border: 'border-red-200', circle: 'from-red-500 to-pink-500', icon: '😰' },
+                      { bg: 'from-orange-50 to-amber-50', border: 'border-orange-200', circle: 'from-orange-500 to-amber-500', icon: '😢' },
+                      { bg: 'from-yellow-50 to-orange-50', border: 'border-yellow-200', circle: 'from-yellow-500 to-orange-500', icon: '😨' },
+                      { bg: 'from-blue-50 to-indigo-50', border: 'border-blue-200', circle: 'from-blue-500 to-indigo-500', icon: '😭' },
+                      { bg: 'from-purple-50 to-violet-50', border: 'border-purple-200', circle: 'from-purple-500 to-violet-500', icon: '😱' }
+                    ];
+                    const colorIndex = index % colors.length;
+                    
+                    return (
+                      <div 
+                        key={index} 
+                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-4 sm:p-6 border ${colors[colorIndex].border} shadow-lg transform transition-all duration-700 ease-out animate-fade-in-up`}
+                        style={{ 
+                          animationDelay: `${index * 150}ms`,
+                          animationFillMode: 'both'
+                        }}
+                      >
+                        <div className="flex items-start space-x-3 sm:space-x-4">
+                          <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110 flex-shrink-0`}>
+                            <span className="text-white font-bold text-sm sm:text-base">{index + 1}</span>
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center space-x-2 mb-2">
+                              <span className="text-lg sm:text-xl">{colors[colorIndex].icon}</span>
+                              <h4 className="text-sm sm:text-base font-semibold text-slate-800">Sensación Vital</h4>
+                            </div>
+                            <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{item}</p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+
               {currentSlideData.type === 'content' && (
                 <div className="space-y-4">
                   {currentSlideData.content.map((item, index) => {
