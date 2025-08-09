@@ -11,15 +11,14 @@ const Header: React.FC = () => {
   return (
     <header className="relative bg-white/80 backdrop-blur-md shadow-xl border-b border-white/20">
       <div className="max-w-7xl mx-auto py-6 sm:py-8 lg:py-12 px-4 sm:px-6 lg:px-8">
-        {/* Language Selector and Presentation Button */}
+        {/* Language Selector and Hidden Presentation Button */}
         <div className="absolute top-4 right-4 z-10 flex items-center space-x-3">
           <button
             onClick={() => setIsSlidesOpen(true)}
-            className="flex items-center space-x-2 px-3 py-2 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-lg hover:from-teal-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="flex items-center justify-center w-8 h-8 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-all duration-300 opacity-60 hover:opacity-100"
             title={t('header.presentation')}
           >
-            <PresentationIcon className="w-5 h-5" />
-            <span className="text-sm font-medium hidden sm:inline">{t('header.presentation')}</span>
+            <PresentationIcon className="w-4 h-4" />
           </button>
           <LanguageSelector />
         </div>
