@@ -23,7 +23,13 @@ import {
   Table,
   History,
   Download,
-  Shield
+  Shield,
+  Search,
+  CheckCircle,
+  List,
+  MessageCircle,
+  BarChart,
+  AlertCircle
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -41,12 +47,14 @@ const Presentation: React.FC = () => {
   const [isAutoPlay, setIsAutoPlay] = useState(false);
 
   const slides: Slide[] = [
+    // SLIDE 1: BIENVENIDA
     {
       id: 1,
       title: t('slides.welcome.title'),
       content: [t('slides.welcome.subtitle')],
       type: 'title'
     },
+    // SLIDE 2: FUNDAMENTOS TEÓRICOS
     {
       id: 2,
       title: t('slides.fundamentals.title'),
@@ -58,8 +66,34 @@ const Presentation: React.FC = () => {
       ],
       type: 'key-points'
     },
+    // SLIDE 3: CAMPO BIOELÉCTRICO MATERNO-FETAL
     {
       id: 3,
+      title: "CAMPO BIOELÉCTRICO MATERNO-FETAL",
+      content: [
+        "Madre y bebé forman un ecosistema energético unificado",
+        "Todo cambio en el campo magnético materno genera resonancia directa",
+        "El bebé absorbe todas las vibraciones maternas con permeabilidad total",
+        "Los tejidos registran eventos significativos creando memoria celular",
+        "Plasticidad máxima que permite gran capacidad de adaptación"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 4: PRINCIPIOS FUNDAMENTALES
+    {
+      id: 4,
+      title: "PRINCIPIOS FUNDAMENTALES",
+      content: [
+        "Ley de Resonancia Materno-Filial: Todo lo que siente la madre, lo vive el bebé",
+        "Ley de Impronta Energética: Los primeros 100 días definen el 70% del patrón energético adulto",
+        "Ley de Plasticidad Decreciente: La capacidad de modificación energética es máxima al nacer",
+        "Ley de Vulnerabilidad Extrema: Máxima sensibilidad a desequilibrios externos"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 5: 5 CONFLICTOS BIOLÓGICOS FUNDAMENTALES
+    {
+      id: 5,
       title: t('slides.conflicts.title'),
       content: [
         t('slides.conflicts.survival'),
@@ -70,8 +104,74 @@ const Presentation: React.FC = () => {
       ],
       type: 'key-points'
     },
+    // SLIDE 6: CONFLICTO DE SUPERVIVENCIA
     {
-      id: 4,
+      id: 6,
+      title: "CONFLICTO DE SUPERVIVENCIA",
+      content: [
+        "Se activa con amenaza real o percibida a la continuidad del embarazo",
+        "Manifestaciones: amenaza de aborto, hemorragias gestacionales",
+        "Diagnósticos médicos graves y accidentes",
+        "Par biomagnético principal: Suprarrenal - Riñón Derecho",
+        "Efecto en el bebé: hipervigilancia, estrés crónico, trastornos del sueño"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 7: CONFLICTO DE PROTECCIÓN
+    {
+      id: 7,
+      title: "CONFLICTO DE PROTECCIÓN",
+      content: [
+        "Se presenta cuando el entorno es percibido como inseguro o hostil",
+        "Incluye situaciones de violencia, agresiones y entornos caóticos",
+        "Par principal: Temporal - Temporal",
+        "Manifestaciones en el bebé: hipertonía muscular",
+        "Sobresaltos e hipersensibilidad auditiva"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 8: CONFLICTO DE SEPARACIÓN
+    {
+      id: 8,
+      title: "CONFLICTO DE SEPARACIÓN",
+      content: [
+        "Surge por separación física o emocional de figuras importantes",
+        "Abarca hospitalización, ausencia del padre, duelo y aislamiento",
+        "Se trabaja con Plexo Solar - Riñón Izquierdo",
+        "Genera en el bebé: cólicos, dificultades alimentarias",
+        "Letargia y problemas de apego"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 9: CONFLICTO DE IDENTIDAD
+    {
+      id: 9,
+      title: "CONFLICTO DE IDENTIDAD",
+      content: [
+        "Aparece cuando hay dudas sobre la deseabilidad o identidad del bebé",
+        "Incluye embarazo no deseado y expectativas no cumplidas",
+        "El par Hipófisis - Pineal trabaja estos aspectos",
+        "Puede causar trastornos del crecimiento",
+        "Problemas hormonales y de desarrollo"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 10: CONFLICTO DE TERRITORIO
+    {
+      id: 10,
+      title: "CONFLICTO DE TERRITORIO",
+      content: [
+        "Se desarrolla por pérdida o amenaza del espacio vital seguro",
+        "Engloba mudanzas, pérdida de vivienda y cambios drásticos",
+        "El par Bulbo - Cerebelo genera en el bebé irritabilidad",
+        "Dificultades de adaptación y problemas de estabilidad",
+        "Inseguridad y ansiedad territorial"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 11: ENFOQUE SISTÉMICO
+    {
+      id: 11,
       title: t('slides.systemic.title'),
       content: [
         t('slides.systemic.point1'),
@@ -81,8 +181,61 @@ const Presentation: React.FC = () => {
       ],
       type: 'key-points'
     },
+    // SLIDE 12: INTERCONEXIÓN ENERGÉTICA FAMILIAR
     {
-      id: 5,
+      id: 12,
+      title: "INTERCONEXIÓN ENERGÉTICA FAMILIAR",
+      content: [
+        "El campo energético del niño está directamente conectado con el de sus padres",
+        "Los desequilibrios familiares se reflejan en el sistema energético infantil",
+        "Requiere un abordaje que considere el sistema completo",
+        "No solo al niño de forma aislada",
+        "Los niños actúan como 'antenas' del sistema familiar"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 13: TRANSMISIÓN GENERACIONAL
+    {
+      id: 13,
+      title: "TRANSMISIÓN GENERACIONAL DE PATRONES",
+      content: [
+        "Los patrones energéticos se transmiten de generación en generación",
+        "Conflictos no resueltos de los padres o abuelos pueden manifestarse",
+        "En el niño como síntomas específicos",
+        "Requieren pares biomagnéticos que aborden tanto el síntoma actual",
+        "Como su origen familiar"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 14: SENSIBILIDAD AL CAMPO FAMILIAR
+    {
+      id: 14,
+      title: "SENSIBILIDAD AL CAMPO FAMILIAR",
+      content: [
+        "Los niños captan y manifiestan desequilibrios que otros no perciben",
+        "Su mayor sensibilidad energética los convierte en indicadores precisos",
+        "Del estado del sistema familiar completo",
+        "Pueden manifestar síntomas que 'protegen' a otros miembros",
+        "Requieren pares que liberen la carga sacrificial"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 15: EFECTO RESONANCIA SISTÉMICA
+    {
+      id: 15,
+      title: "EFECTO RESONANCIA SISTÉMICA",
+      content: [
+        "Cuando se equilibra el campo energético del niño",
+        "Se produce una resonancia que afecta positivamente al sistema familiar",
+        "El biomagnetismo pediátrico puede catalizar cambios energéticos",
+        "En toda la familia, creando un efecto terapéutico multiplicador",
+        "Beneficia al sistema familiar en su totalidad"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 16: PROTOCOLO BIOENERGÉTICO
+    {
+      id: 16,
       title: t('slides.protocol.title'),
       content: [
         t('slides.protocol.step1'),
@@ -93,8 +246,74 @@ const Presentation: React.FC = () => {
       ],
       type: 'key-points'
     },
+    // SLIDE 17: IDENTIFICACIÓN DEL CONFLICTO
     {
-      id: 6,
+      id: 17,
+      title: "IDENTIFICACIÓN DEL CONFLICTO",
+      content: [
+        "Preguntar por la sensación o conflicto específico",
+        "Utilizando las listas de esta aplicación",
+        "A través del test muscular, identificar cuál es el conflicto principal",
+        "Que está afectando al niño",
+        "Fundamental dominar el test muscular para identificación correcta"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 18: RECESIÓN DE EDAD
+    {
+      id: 18,
+      title: "RECESIÓN DE EDAD",
+      content: [
+        "Realizar una recesión de edad para encontrar el instante exacto",
+        "Partiendo del momento actual, se va hacia atrás",
+        "Hasta encontrar el instante donde se originó el conflicto",
+        "Que puede llegar hasta el momento de la concepción",
+        "La recesión debe ser guiada con cuidado, respetando el ritmo"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 19: SELECCIÓN DE PARES BIOMAGNÉTICOS
+    {
+      id: 19,
+      title: "SELECCIÓN DE PARES BIOMAGNÉTICOS",
+      content: [
+        "Una vez identificado el instante, se determina cuál es el par",
+        "Que soporta la información",
+        "Se eligen los pares de la lista de puntos de rastreo",
+        "O los pares sugeridos en la aplicación",
+        "Los pares deben seleccionarse según la información obtenida"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 20: APLICACIÓN Y EVALUACIÓN
+    {
+      id: 20,
+      title: "APLICACIÓN Y EVALUACIÓN",
+      content: [
+        "Se impactan los pares seleccionados",
+        "Se evalúa cuántos pares son necesarios para el tratamiento completo",
+        "Se realiza una evaluación continua del proceso",
+        "Evaluar la efectividad del tratamiento en cada paso",
+        "Continuar hasta completar el protocolo"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 21: CONSCIENTIZACIÓN DE LA INFORMACIÓN
+    {
+      id: 21,
+      title: "CONSCIENTIZACIÓN DE LA INFORMACIÓN",
+      content: [
+        "El paso final es hacer consciente la información",
+        "Para que la madre pueda procesar y comprender el conflicto",
+        "Esto permite descargar la memoria energética del conflicto",
+        "Liberando el patrón que afecta al niño",
+        "La conscientización es el paso más importante"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 22: 20 SHOCKS VIVENCIALES GESTACIONALES
+    {
+      id: 22,
       title: t('slides.shocks.title'),
       content: [
         t('slides.shocks.intro'),
@@ -104,8 +323,35 @@ const Presentation: React.FC = () => {
       ],
       type: 'content'
     },
+    // SLIDE 23: SHOCKS GESTACIONALES - PRIMERA PARTE
     {
-      id: 7,
+      id: 23,
+      title: "SHOCKS GESTACIONALES (1-10)",
+      content: [
+        "1. Amenaza de aborto - Suprarrenal-Suprarrenal",
+        "2. Diagnóstico médico alarmante - Bulbo-Suprarrenal",
+        "3. Pérdida de un ser querido - Pericardio-Pulmón",
+        "4. Separación de pareja - Plexo-Riñón der",
+        "5. Violencia hacia la madre - Temporal izq-Temporal der"
+      ],
+      type: 'content'
+    },
+    // SLIDE 24: SHOCKS GESTACIONALES - SEGUNDA PARTE
+    {
+      id: 24,
+      title: "SHOCKS GESTACIONALES (11-20)",
+      content: [
+        "11. Mother's serious illness - Bulb-Adrenal",
+        "12. Threat of premature birth - Pituitary-Adrenal",
+        "13. Fetal malformation - Thymus-Adrenal",
+        "14. Family conflicts - Plexus-Right Kidney",
+        "15. Pregnancy after loss - Adrenal-Adrenal"
+      ],
+      type: 'content'
+    },
+    // SLIDE 25: SENSACIONES VITALES PRENATALES
+    {
+      id: 25,
       title: t('slides.sensations.title'),
       content: [
         t('slides.sensations.intro'),
@@ -115,8 +361,22 @@ const Presentation: React.FC = () => {
       ],
       type: 'content'
     },
+    // SLIDE 26: SENSACIONES VITALES - DETALLES
     {
-      id: 8,
+      id: 26,
+      title: "SENSACIONES VITALES - DETALLES",
+      content: [
+        "Threat of loss: Risk of miscarriage, hemorrhages",
+        "Vital insecurity: Alarming diagnoses, hospitalization",
+        "Emotional abandonment: Father's absence, separation",
+        "Gestational violence: Aggressions, abuse",
+        "Fetal rejection: Unwanted pregnancy, doubts"
+      ],
+      type: 'content'
+    },
+    // SLIDE 27: LEYES DE PERTENENCIA
+    {
+      id: 27,
       title: t('slides.belonging.title'),
       content: [
         t('slides.belonging.loyalty'),
@@ -126,8 +386,61 @@ const Presentation: React.FC = () => {
       ],
       type: 'key-points'
     },
+    // SLIDE 28: LEY DE LEALTAD FAMILIAR
     {
-      id: 9,
+      id: 28,
+      title: "LEY DE LEALTAD FAMILIAR",
+      content: [
+        "'Te seguiré hasta la muerte' - El niño mantiene lealtad energética absoluta",
+        "Hacia su sistema familiar",
+        "Esta lealtad puede manifestarse como síntomas que 'siguen' patrones familiares",
+        "Requiriendo pares biomagnéticos que aborden tanto la lealtad",
+        "Como el patrón subyacente"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 29: LEY DE SACRIFICIO SISTÉMICO
+    {
+      id: 29,
+      title: "LEY DE SACRIFICIO SISTÉMICO",
+      content: [
+        "'Prefiero morir yo antes que tú' - Los niños pueden asumir energéticamente",
+        "El sufrimiento de otros miembros del sistema familiar",
+        "Este sacrificio se manifiesta como síntomas que 'protegen' a otros",
+        "Requiriendo pares que liberen la carga sacrificial",
+        "Y restablezcan el equilibrio"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 30: LEY DE REPARACIÓN DE CULPA
+    {
+      id: 30,
+      title: "LEY DE REPARACIÓN DE CULPA",
+      content: [
+        "'Reparación de la culpa personal' - Los niños pueden manifestar síntomas",
+        "Que 'reparan' culpas o conflictos no resueltos",
+        "De generaciones anteriores",
+        "El biomagnetismo debe abordar tanto el síntoma actual",
+        "Como el patrón de culpa familiar subyacente"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 31: LEY DE DIRECCIÓN ENERGÉTICA
+    {
+      id: 31,
+      title: "LEY DE DIRECCIÓN ENERGÉTICA",
+      content: [
+        "'Dirijo mi mirada hacia...' - Los niños dirigen su energía",
+        "Hacia patrones específicos del sistema familiar",
+        "Esta dirección puede manifestarse como síntomas que 'miran'",
+        "Hacia conflictos no resueltos",
+        "Requiriendo pares que reorienten la energía hacia patrones saludables"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 32: PARES BIOMAGNÉTICOS PRINCIPALES
+    {
+      id: 32,
       title: t('slides.pairs.title'),
       content: [
         t('slides.pairs.intro'),
@@ -138,8 +451,22 @@ const Presentation: React.FC = () => {
       ],
       type: 'key-points'
     },
+    // SLIDE 33: APLICACIÓN BIOMAGNÉTICA DE LEYES SISTÉMICAS
     {
-      id: 10,
+      id: 33,
+      title: "APLICACIÓN BIOMAGNÉTICA DE LEYES SISTÉMICAS",
+      content: [
+        "Ley de Lealtad: Suprarrenal-Suprarrenal, Plexo-Riñón, Pericardio-Pulmón",
+        "Ley de Sacrificio: Timo-Suprarrenal, Bulbo-Plexo, Corazón-Suprarrenal",
+        "Ley de Culpa: Hipófisis-Pineal, Temporal-Temporal, Occipital-Sacro",
+        "Ley de Dirección: Bulbo-Cerebelo, Plexo-Riñón, Estómago-Estómago",
+        "Identificar qué ley sistémica está activa en el niño"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 34: TÉCNICAS FUNDAMENTALES
+    {
+      id: 34,
       title: t('slides.techniques.title'),
       content: [
         t('slides.techniques.muscleTest'),
@@ -149,8 +476,48 @@ const Presentation: React.FC = () => {
       ],
       type: 'key-points'
     },
+    // SLIDE 35: TEST MUSCULAR
     {
-      id: 11,
+      id: 35,
+      title: "TEST MUSCULAR",
+      content: [
+        "Es fundamental dominar el test muscular",
+        "Para identificar correctamente el conflicto",
+        "Y evaluar la efectividad del tratamiento en cada paso",
+        "Permite identificar cuál es el conflicto principal",
+        "Que está afectando al niño"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 36: MÉTODO DE FRASES DEL SENTIR
+    {
+      id: 36,
+      title: "MÉTODO DE FRASES DEL SENTIR",
+      content: [
+        "Una vez identificado el conflicto y realizado el instante",
+        "Es fundamental elaborar frases del sentir que la madre debe repetir",
+        "Para permitir descarga emocional y energética del conflicto",
+        "Las frases permiten expresar y liberar emociones contenidas",
+        "Facilitando la descarga de memoria energética"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 37: EJEMPLOS DE FRASES DEL SENTIR
+    {
+      id: 37,
+      title: "EJEMPLOS DE FRASES DEL SENTIR",
+      content: [
+        "Miedo: 'Me siento asustada porque no sé si mi bebé estará bien'",
+        "Tristeza: 'Me siento triste porque perdí a alguien importante'",
+        "Enojo: 'Me siento enojada porque no puedo cambiar la situación'",
+        "La madre repite la frase mientras se aplican los pares biomagnéticos",
+        "Permitiendo la descarga emocional"
+      ],
+      type: 'content'
+    },
+    // SLIDE 38: CASOS CLÍNICOS
+    {
+      id: 38,
       title: t('slides.cases.title'),
       content: [
         t('slides.cases.case1'),
@@ -159,8 +526,48 @@ const Presentation: React.FC = () => {
       ],
       type: 'content'
     },
+    // SLIDE 39: CASO CLÍNICO 1 - TRASTORNOS DEL SUEÑO
     {
-      id: 12,
+      id: 39,
+      title: "CASO CLÍNICO: TRASTORNOS DEL SUEÑO",
+      content: [
+        "Niño de 3 años con problemas severos de sueño",
+        "Recesión de edad identificó amenaza de aborto en la madre",
+        "Pares aplicados: Suprarrenal-Suprarrenal, Pericardio-Pulmón",
+        "Frases del sentir: 'Me siento asustada por mi bebé'",
+        "Resultado: Mejora del 80% en patrones de sueño"
+      ],
+      type: 'content'
+    },
+    // SLIDE 40: CASO CLÍNICO 2 - CÓLICOS
+    {
+      id: 40,
+      title: "CASO CLÍNICO: CÓLICOS SEVEROS",
+      content: [
+        "Bebé de 2 meses con cólicos intensos",
+        "Recesión identificó hospitalización de la madre durante el embarazo",
+        "Pares aplicados: Plexo-Riñón Izquierdo, Pericardio-Pulmón",
+        "Frases del sentir: 'Me siento sola y separada'",
+        "Resultado: Reducción del 90% en episodios de cólicos"
+      ],
+      type: 'content'
+    },
+    // SLIDE 41: CASO CLÍNICO 3 - HIPERACTIVIDAD
+    {
+      id: 41,
+      title: "CASO CLÍNICO: HIPERACTIVIDAD",
+      content: [
+        "Niño de 4 años con hiperactividad y problemas de atención",
+        "Recesión identificó violencia doméstica durante la gestación",
+        "Pares aplicados: Temporal-Temporal, Bulbo-Plexo",
+        "Frases del sentir: 'Me siento en peligro y sin protección'",
+        "Resultado: Mejora significativa en concentración y calma"
+      ],
+      type: 'content'
+    },
+    // SLIDE 42: RESULTADOS ESPERADOS
+    {
+      id: 42,
       title: t('slides.results.title'),
       content: [
         t('slides.results.improvement1'),
@@ -170,8 +577,35 @@ const Presentation: React.FC = () => {
       ],
       type: 'key-points'
     },
+    // SLIDE 43: MEJORAS ESPECÍFICAS
     {
-      id: 13,
+      id: 43,
+      title: "MEJORAS ESPECÍFICAS OBSERVADAS",
+      content: [
+        "Patrones de sueño: 70-90% de mejora en la mayoría de casos",
+        "Síntomas físicos: Reducción significativa de cólicos y dolores",
+        "Equilibrio emocional: Mayor estabilidad y menor irritabilidad",
+        "Armonización familiar: Mejora en la dinámica familiar completa",
+        "Desarrollo: Aceleración en hitos del desarrollo"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 44: CONSIDERACIONES IMPORTANTES
+    {
+      id: 44,
+      title: "CONSIDERACIONES IMPORTANTES",
+      content: [
+        "El biomagnetismo pediátrico requiere enfoque sistémico",
+        "Es fundamental considerar el contexto familiar completo",
+        "La conscientización es clave para resultados duraderos",
+        "Cada niño es único y requiere abordaje personalizado",
+        "Los resultados varían según la gravedad y tiempo del conflicto"
+      ],
+      type: 'key-points'
+    },
+    // SLIDE 45: CONCLUSIONES
+    {
+      id: 45,
       title: t('slides.conclusion.title'),
       content: [
         t('slides.conclusion.point1'),
@@ -249,17 +683,49 @@ const Presentation: React.FC = () => {
             <div className="flex items-center justify-center mb-8">
               {currentSlideData.id === 1 && <BookOpen className="w-16 h-16 text-teal-600 mr-4" />}
               {currentSlideData.id === 2 && <Brain className="w-16 h-16 text-blue-600 mr-4" />}
-              {currentSlideData.id === 3 && <AlertTriangle className="w-16 h-16 text-red-600 mr-4" />}
-              {currentSlideData.id === 4 && <Users className="w-16 h-16 text-purple-600 mr-4" />}
-              {currentSlideData.id === 5 && <Target className="w-16 h-16 text-green-600 mr-4" />}
-              {currentSlideData.id === 6 && <Heart className="w-16 h-16 text-pink-600 mr-4" />}
-              {currentSlideData.id === 7 && <Sparkles className="w-16 h-16 text-yellow-600 mr-4" />}
-              {currentSlideData.id === 8 && <Lightbulb className="w-16 h-16 text-orange-600 mr-4" />}
-              {currentSlideData.id === 9 && <Table className="w-16 h-16 text-indigo-600 mr-4" />}
-              {currentSlideData.id === 10 && <GraduationCap className="w-16 h-16 text-teal-600 mr-4" />}
-              {currentSlideData.id === 11 && <Baby className="w-16 h-16 text-blue-600 mr-4" />}
-              {currentSlideData.id === 12 && <Rocket className="w-16 h-16 text-green-600 mr-4" />}
-              {currentSlideData.id === 13 && <Target className="w-16 h-16 text-purple-600 mr-4" />}
+              {currentSlideData.id === 3 && <Heart className="w-16 h-16 text-red-600 mr-4" />}
+              {currentSlideData.id === 4 && <Lightbulb className="w-16 h-16 text-yellow-600 mr-4" />}
+              {currentSlideData.id === 5 && <AlertTriangle className="w-16 h-16 text-orange-600 mr-4" />}
+              {currentSlideData.id === 6 && <Shield className="w-16 h-16 text-red-600 mr-4" />}
+              {currentSlideData.id === 7 && <Shield className="w-16 h-16 text-orange-600 mr-4" />}
+              {currentSlideData.id === 8 && <Users className="w-16 h-16 text-blue-600 mr-4" />}
+              {currentSlideData.id === 9 && <GraduationCap className="w-16 h-16 text-purple-600 mr-4" />}
+              {currentSlideData.id === 10 && <Target className="w-16 h-16 text-green-600 mr-4" />}
+              {currentSlideData.id === 11 && <Users className="w-16 h-16 text-purple-600 mr-4" />}
+              {currentSlideData.id === 12 && <Users className="w-16 h-16 text-blue-600 mr-4" />}
+              {currentSlideData.id === 13 && <Users className="w-16 h-16 text-indigo-600 mr-4" />}
+              {currentSlideData.id === 14 && <Users className="w-16 h-16 text-pink-600 mr-4" />}
+              {currentSlideData.id === 15 && <Sparkles className="w-16 h-16 text-teal-600 mr-4" />}
+              {currentSlideData.id === 16 && <Target className="w-16 h-16 text-green-600 mr-4" />}
+              {currentSlideData.id === 17 && <Search className="w-16 h-16 text-blue-600 mr-4" />}
+              {currentSlideData.id === 18 && <History className="w-16 h-16 text-purple-600 mr-4" />}
+              {currentSlideData.id === 19 && <Table className="w-16 h-16 text-indigo-600 mr-4" />}
+              {currentSlideData.id === 20 && <CheckCircle className="w-16 h-16 text-green-600 mr-4" />}
+              {currentSlideData.id === 21 && <Brain className="w-16 h-16 text-teal-600 mr-4" />}
+              {currentSlideData.id === 22 && <Heart className="w-16 h-16 text-pink-600 mr-4" />}
+              {currentSlideData.id === 23 && <List className="w-16 h-16 text-red-600 mr-4" />}
+              {currentSlideData.id === 24 && <List className="w-16 h-16 text-orange-600 mr-4" />}
+              {currentSlideData.id === 25 && <Sparkles className="w-16 h-16 text-yellow-600 mr-4" />}
+              {currentSlideData.id === 26 && <List className="w-16 h-16 text-purple-600 mr-4" />}
+              {currentSlideData.id === 27 && <Lightbulb className="w-16 h-16 text-orange-600 mr-4" />}
+              {currentSlideData.id === 28 && <Heart className="w-16 h-16 text-red-600 mr-4" />}
+              {currentSlideData.id === 29 && <Shield className="w-16 h-16 text-orange-600 mr-4" />}
+              {currentSlideData.id === 30 && <AlertTriangle className="w-16 h-16 text-yellow-600 mr-4" />}
+              {currentSlideData.id === 31 && <Target className="w-16 h-16 text-green-600 mr-4" />}
+              {currentSlideData.id === 32 && <Table className="w-16 h-16 text-indigo-600 mr-4" />}
+              {currentSlideData.id === 33 && <Table className="w-16 h-16 text-blue-600 mr-4" />}
+              {currentSlideData.id === 34 && <GraduationCap className="w-16 h-16 text-teal-600 mr-4" />}
+              {currentSlideData.id === 35 && <Search className="w-16 h-16 text-blue-600 mr-4" />}
+              {currentSlideData.id === 36 && <MessageCircle className="w-16 h-16 text-purple-600 mr-4" />}
+              {currentSlideData.id === 37 && <MessageCircle className="w-16 h-16 text-pink-600 mr-4" />}
+              {currentSlideData.id === 38 && <Baby className="w-16 h-16 text-blue-600 mr-4" />}
+              {currentSlideData.id === 39 && <Baby className="w-16 h-16 text-green-600 mr-4" />}
+              {currentSlideData.id === 40 && <Baby className="w-16 h-16 text-blue-600 mr-4" />}
+              {currentSlideData.id === 41 && <Baby className="w-16 h-16 text-orange-600 mr-4" />}
+              {currentSlideData.id === 42 && <Rocket className="w-16 h-16 text-green-600 mr-4" />}
+              {currentSlideData.id === 43 && <BarChart className="w-16 h-16 text-teal-600 mr-4" />}
+              {currentSlideData.id === 44 && <AlertCircle className="w-16 h-16 text-yellow-600 mr-4" />}
+              {currentSlideData.id === 45 && <Target className="w-16 h-16 text-purple-600 mr-4" />}
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-tight">
                 {currentSlideData.title}
               </h2>
