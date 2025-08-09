@@ -741,6 +741,43 @@ const Presentation: React.FC = () => {
     navigate('/');
   };
 
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      switch (event.key) {
+        case 'ArrowRight':
+        case ' ':
+        case 'Enter':
+          event.preventDefault();
+          if (currentSlide < slides.length - 1) {
+            setCurrentSlide(currentSlide + 1);
+          }
+          break;
+        case 'ArrowLeft':
+          event.preventDefault();
+          if (currentSlide > 0) {
+            setCurrentSlide(currentSlide - 1);
+          }
+          break;
+        case 'Home':
+          event.preventDefault();
+          setCurrentSlide(0);
+          break;
+        case 'End':
+          event.preventDefault();
+          setCurrentSlide(slides.length - 1);
+          break;
+        case 'Escape':
+          event.preventDefault();
+          goHome();
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentSlide, slides.length, navigate]);
+
   React.useEffect(() => {
     let interval: NodeJS.Timeout;
     if (isAutoPlay) {
@@ -1278,6 +1315,15 @@ const Presentation: React.FC = () => {
                       <ChevronRight size={20} className="sm:w-6 sm:h-6 md:w-6 md:h-6" />
                     </button>
 
+                            {/* Keyboard Shortcuts Info */}
+                            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-2 text-white text-xs sm:text-sm opacity-60 hover:opacity-100 transition-opacity duration-300">
+                              <div className="flex items-center space-x-4">
+                                <span>← → Navegar</span>
+                                <span>Espacio Siguiente</span>
+                                <span>Esc Salir</span>
+                              </div>
+                            </div>
+
                             {/* Bottom Navigation */}
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/90 to-transparent p-3 sm:p-4 md:p-6">
                       <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
@@ -1320,16 +1366,6 @@ const Presentation: React.FC = () => {
                       </div>
                     </div>
 
-        {/* Keyboard Navigation */}
-        <div className="absolute inset-0 focus:outline-none" tabIndex={0} onKeyDown={(e) => {
-          if (e.key === 'ArrowRight') nextSlide();
-          if (e.key === 'ArrowLeft') prevSlide();
-          if (e.key === 'Escape') goHome();
-          if (e.key === ' ') {
-            e.preventDefault();
-            toggleAutoPlay();
-          }
-        }} />
       </div>
     </div>
   );
