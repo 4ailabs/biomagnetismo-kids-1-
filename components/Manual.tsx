@@ -170,6 +170,28 @@ const Block1Content = () => {
                     </p>
                 </div>
 
+                <SubSectionTitle title={t('block1.gestationalShocks.title')} />
+                <StyledTable
+                    headers={t('block1.gestationalShocks.headers', { returnObjects: true }) as string[]}
+                    data={t('block1.gestationalShocks.data', { returnObjects: true }) as string[][]}
+                />
+
+                <SubSectionTitle title={t('block1.vitalSensations.title')} />
+                <p className="text-base sm:text-lg leading-relaxed mb-6">
+                    {t('block1.vitalSensations.intro')}
+                </p>
+                
+                <MinorSectionTitle title={t('block1.vitalSensations.contextTitle')} />
+                <p className="text-base sm:text-lg leading-relaxed mb-6">
+                    {t('block1.vitalSensations.contextIntro')}
+                </p>
+                
+                <ul className="list-disc list-outside ml-6 space-y-3 text-base sm:text-lg">
+                    {(t('block1.vitalSensations.sensations', { returnObjects: true }) as string[]).map((sensation: string, index: number) => (
+                        <li key={index}><strong>{sensation}</strong></li>
+                    ))}
+                </ul>
+
                 <SubSectionTitle title={t('block1.belongingLaws.title')} />
                 <p className="text-base sm:text-lg leading-relaxed mb-6">
                     {t('block1.belongingLaws.intro')}

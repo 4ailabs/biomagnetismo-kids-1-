@@ -131,6 +131,60 @@
         "directionPairs": "Bulbo-Cerebelo, Plexo-Riñón, Estómago-Estómago"
       },
       "therapeutic": "Al aplicar biomagnetismo pediátrico, es esencial identificar qué ley sistémica está activa en el niño. Los pares deben seleccionarse no solo para tratar síntomas físicos, sino para liberar patrones sistémicos que mantienen al niño en dinámicas familiares desequilibradas."
+    },
+    "gestationalShocks": {
+      "title": "Lista Completa: 20 Shocks Vivenciales Gestacionales y sus Pares",
+      "headers": ["#", "Shock Vivencial", "Pares Biomagnéticos", "Beneficios Esperados"],
+      "data": [
+        ["1", "Amenaza de aborto", "Suprarrenal–Suprarrenal / Pericardio–Suprarrenal", "Fortalece eje vital y calma estrés"],
+        ["2", "Diagnóstico médico alarmante", "Bulbo–Suprarrenal / Timo–Suprarrenal", "Regula sistema nervioso autónomo"],
+        ["3", "Pérdida de un ser querido", "Pericardio–Pulmón / Plexo–Riñón der", "Libera tensión torácica y mejora energía central"],
+        ["4", "Separación de pareja o sostén", "Plexo–Riñón der / Suprarrenal–Plexo", "Aumenta sensación de amparo"],
+        ["5", "Violencia hacia la madre", "Temporal izq–Temporal der / Bulbo–Plexo", "Relaja sistema neurosensorial"],
+        ["6", "Accidente o caída", "Bulbo–Suprarrenal / Occipital–Sacro", "Restablece coordinación neuromuscular"],
+        ["7", "Hospitalización prolongada", "Plexo–Riñón izq / Estómago–Estómago", "Reduce tensión abdominal y mejora digestión"],
+        ["8", "Ruptura de pareja", "Suprarrenal–Plexo / Pericardio–Pulmón", "Refuerza energía vital"],
+        ["9", "Inseguridad económica", "Plexo–Riñón der / Hígado–Páncreas", "Aumenta confianza y estabilidad"],
+        ["10", "Embarazo no deseado", "Timo–Suprarrenal / Plexo–Riñón izq", "Refuerza energía de aceptación"],
+        ["11", "Enfermedad grave de madre", "Bulbo–Suprarrenal / Corazón–Suprarrenal", "Mejora regulación autonómica"],
+        ["12", "Amenaza de parto prematuro", "Hipófisis–Suprarrenal / Plexo–Riñón der", "Estabiliza energía endocrina"],
+        ["13", "Malformación fetal", "Timo–Suprarrenal / Pericardio–Pulmón", "Favorece aceptación emocional"],
+        ["14", "Conflictos familiares", "Plexo–Riñón der / Temporal izq–Temporal der", "Potencia resiliencia mental"],
+        ["15", "Embarazo tras pérdida", "Suprarrenal–Suprarrenal / Pericardio–Plexo", "Disminuye ansiedad anticipatoria"],
+        ["16", "Infección grave", "Bulbo–Suprarrenal / Hígado–Bazo", "Apoya recuperación energética"],
+        ["17", "Estrés laboral extremo", "Suprarrenal–Plexo / Estómago–Estómago", "Calma mental y aumenta energía"],
+        ["18", "Intervenciones invasivas", "Plexo–Riñón der / Bulbo–Plexo", "Reduce tensión somática"],
+        ["19", "Catástrofe natural", "Bulbo–Suprarrenal / Temporal izq–Temporal der", "Restaura seguridad"],
+        ["20", "Aislamiento social extremo", "Plexo–Riñón izq / Timo–Plexo", "Refuerza sensación de conexión"]
+      ]
+    },
+    "vitalSensations": {
+      "title": "Sensaciones Vitales Prenatales",
+      "intro": "Las sensaciones vitales prenatales son experiencias emocionales profundas de la madre que se transmiten directamente al bebé durante la gestación, creando patrones energéticos que influyen en su desarrollo y pueden manifestarse como desequilibrios específicos.",
+      "contextTitle": "Sensaciones Vitales en el Contexto Prenatal",
+      "contextIntro": "Estas 21 sensaciones vitales están específicamente adaptadas al contexto de la gestación. Representan experiencias emocionales de la madre que se transmiten directamente al bebé, creando patrones energéticos que pueden manifestarse como desequilibrios específicos identificables mediante pares biomagnéticos. Cada sensación tiene su correlación directa con puntos corporales y pares específicos para el trabajo terapéutico.",
+      "sensations": [
+        "Amenaza de pérdida: Riesgo de aborto, hemorragias",
+        "Inseguridad vital: Diagnósticos alarmantes, hospitalización",
+        "Abandono emocional: Ausencia del padre, separación",
+        "Violencia gestacional: Agresiones, maltrato",
+        "Rechazo fetal: Embarazo no deseado, dudas",
+        "Pérdida de sostén: Muerte de ser querido, duelo",
+        "Inestabilidad económica: Pérdida de trabajo, crisis",
+        "Trauma físico: Accidentes, caídas, intervenciones",
+        "Aislamiento social: Soledad, falta de apoyo",
+        "Miedo al parto: Ansiedad, terror al nacimiento",
+        "Culpa materna: Responsabilidad, auto-reproche",
+        "Conflicto de identidad: Dudas sobre el rol materno",
+        "Pérdida de control: Impotencia, dependencia",
+        "Infección gestacional: Enfermedades, virus",
+        "Estrés extremo: Trabajo, presión familiar",
+        "Malformación fetal: Diagnósticos de anomalías",
+        "Parto prematuro: Amenaza de nacimiento temprano",
+        "Pérdida previa: Abortos anteriores, miedo",
+        "Catástrofe natural: Desastres, evacuación",
+        "Conflicto familiar: Disputas, separación"
+      ]
     }
   },
   "bioenergeticProtocol": {

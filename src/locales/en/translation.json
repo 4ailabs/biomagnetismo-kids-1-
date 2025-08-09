@@ -448,6 +448,62 @@
     },
     "integrated": "Integrated Protocol: This protocol combines the precision of biomagnetism with the depth of bioenergetics, creating a unique approach that allows healing not only symptoms, but the energetic origin of the conflict. Age recession, consciousness and feeling phrases are fundamental to discharge the energetic memory of the conflict."
   },
+  "block1": {
+    "gestationalShocks": {
+      "title": "Complete List: 20 Gestational Experiential Shocks and their Pairs",
+      "headers": ["#", "Experiential Shock", "Biomagnetic Pairs", "Expected Benefits"],
+      "data": [
+        ["1", "Threat of miscarriage", "Adrenal–Adrenal / Pericardium–Adrenal", "Strengthens vital axis and calms stress"],
+        ["2", "Alarming medical diagnosis", "Bulb–Adrenal / Thymus–Adrenal", "Regulates autonomic nervous system"],
+        ["3", "Loss of a loved one", "Pericardium–Lung / Plexus–Right Kidney", "Releases chest tension and improves central energy"],
+        ["4", "Separation from partner or support", "Plexus–Right Kidney / Adrenal–Plexus", "Increases feeling of protection"],
+        ["5", "Violence towards mother", "Left Temporal–Right Temporal / Bulb–Plexus", "Relaxes neurosensory system"],
+        ["6", "Accident or fall", "Bulb–Adrenal / Occipital–Sacrum", "Restores neuromuscular coordination"],
+        ["7", "Prolonged hospitalization", "Plexus–Left Kidney / Stomach–Stomach", "Reduces abdominal tension and improves digestion"],
+        ["8", "Partner breakup", "Adrenal–Plexus / Pericardium–Lung", "Reinforces vital energy"],
+        ["9", "Economic insecurity", "Plexus–Right Kidney / Liver–Pancreas", "Increases confidence and stability"],
+        ["10", "Unwanted pregnancy", "Thymus–Adrenal / Plexus–Left Kidney", "Reinforces acceptance energy"],
+        ["11", "Mother's serious illness", "Bulb–Adrenal / Heart–Adrenal", "Improves autonomic regulation"],
+        ["12", "Threat of premature birth", "Pituitary–Adrenal / Plexus–Right Kidney", "Stabilizes endocrine energy"],
+        ["13", "Fetal malformation", "Thymus–Adrenal / Pericardium–Lung", "Favors emotional acceptance"],
+        ["14", "Family conflicts", "Plexus–Right Kidney / Left Temporal–Right Temporal", "Enhances mental resilience"],
+        ["15", "Pregnancy after loss", "Adrenal–Adrenal / Pericardium–Plexus", "Reduces anticipatory anxiety"],
+        ["16", "Serious infection", "Bulb–Adrenal / Liver–Spleen", "Supports energetic recovery"],
+        ["17", "Extreme work stress", "Adrenal–Plexus / Stomach–Stomach", "Calms mind and increases energy"],
+        ["18", "Invasive interventions", "Plexus–Right Kidney / Bulb–Plexus", "Reduces somatic tension"],
+        ["19", "Natural disaster", "Bulb–Adrenal / Left Temporal–Right Temporal", "Restores security"],
+        ["20", "Extreme social isolation", "Plexus–Left Kidney / Thymus–Plexus", "Reinforces feeling of connection"]
+      ]
+    },
+    "vitalSensations": {
+      "title": "Prenatal Vital Sensations",
+      "intro": "Prenatal vital sensations are deep emotional experiences of the mother that are transmitted directly to the baby during gestation, creating energetic patterns that influence their development and can manifest as specific imbalances.",
+      "contextTitle": "Vital Sensations in the Prenatal Context",
+      "contextIntro": "These 21 vital sensations are specifically adapted to the context of gestation. They represent emotional experiences of the mother that are transmitted directly to the baby, creating energetic patterns that can manifest as specific imbalances identifiable through biomagnetic pairs. Each sensation has its direct correlation with body points and specific pairs for therapeutic work.",
+      "sensations": [
+        "Threat of loss: Risk of miscarriage, hemorrhages",
+        "Vital insecurity: Alarming diagnoses, hospitalization",
+        "Emotional abandonment: Father's absence, separation",
+        "Gestational violence: Aggressions, abuse",
+        "Fetal rejection: Unwanted pregnancy, doubts",
+        "Loss of support: Death of loved one, grief",
+        "Economic instability: Job loss, crisis",
+        "Physical trauma: Accidents, falls, interventions",
+        "Social isolation: Loneliness, lack of support",
+        "Fear of childbirth: Anxiety, terror of birth",
+        "Maternal guilt: Responsibility, self-reproach",
+        "Identity conflict: Doubts about maternal role",
+        "Loss of control: Helplessness, dependence",
+        "Gestational infection: Diseases, viruses",
+        "Extreme stress: Work, family pressure",
+        "Fetal malformation: Anomaly diagnoses",
+        "Premature birth: Threat of early birth",
+        "Previous loss: Previous miscarriages, fear",
+        "Natural disaster: Disasters, evacuation",
+        "Family conflict: Disputes, separation"
+      ]
+    }
+  },
   "common": {
     "language": "Language",
     "spanish": "Español",
