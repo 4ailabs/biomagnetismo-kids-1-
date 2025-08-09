@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   BookOpen, 
   Beaker, 
@@ -7,15 +8,17 @@ import {
   Target 
 } from 'lucide-react';
 
-const blocks = [
-  { id: 1, title: 'Bloque 1: Inicios', icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'from-green-400 to-emerald-500' },
-  { id: 2, title: 'Bloque 2: Gestación', icon: <Beaker className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'from-pink-400 to-rose-500' },
-  { id: 3, title: 'Bloque 3: Neonato', icon: <Baby className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'from-blue-400 to-cyan-500' },
-  { id: 4, title: 'Bloque 4: Desarrollo', icon: <Rocket className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'from-purple-400 to-violet-500' },
-  { id: 5, title: 'Bloque 5: Cierre', icon: <Target className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'from-orange-400 to-amber-500' },
-];
-
 const BlockSelector: React.FC = () => {
+  const { t } = useTranslation();
+
+  const blocks = [
+    { id: 1, title: t('blockSelector.block1'), icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'from-green-400 to-emerald-500' },
+    { id: 2, title: t('blockSelector.block2'), icon: <Beaker className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'from-pink-400 to-rose-500' },
+    { id: 3, title: t('blockSelector.block3'), icon: <Baby className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'from-blue-400 to-cyan-500' },
+    { id: 4, title: t('blockSelector.block4'), icon: <Rocket className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'from-purple-400 to-violet-500' },
+    { id: 5, title: t('blockSelector.block5'), icon: <Target className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'from-orange-400 to-amber-500' },
+  ];
+
   const handleScroll = (blockId: number) => {
     const element = document.getElementById(`block-${blockId}`);
     if (element) {
@@ -28,7 +31,7 @@ const BlockSelector: React.FC = () => {
   return (
     <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl p-3 sm:p-4 border border-white/20">
       <div className="text-center mb-3 sm:mb-4">
-        <h2 className="text-base sm:text-lg font-semibold text-slate-700 mb-2">Navega por los Bloques</h2>
+        <h2 className="text-base sm:text-lg font-semibold text-slate-700 mb-2">{t('blockSelector.title')}</h2>
         <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full mx-auto"></div>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3">

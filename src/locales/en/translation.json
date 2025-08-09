@@ -3,8 +3,15 @@
     "title": "MODULE 1",
     "subtitle": "\"The Invisible Beginning: When History Starts Before Birth\"",
     "course": "Course: Biomagnetism Kids",
-    "modality": "Modality: Online Class",
-    "duration": "Duration: 8 hours"
+    "modality": "Modality: Online Class"
+  },
+  "blockSelector": {
+    "title": "Navigate through the Blocks",
+    "block1": "Block 1: Beginnings",
+    "block2": "Block 2: Gestation",
+    "block3": "Block 3: Neonate",
+    "block4": "Block 4: Development",
+    "block5": "Block 5: Close"
   },
   "moduleStructure": {
     "title": "Module Structure",
