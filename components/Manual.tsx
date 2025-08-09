@@ -186,11 +186,19 @@ const Block1Content = () => {
                     {t('block1.vitalSensations.contextIntro')}
                 </p>
                 
-                <ul className="list-disc list-outside ml-6 space-y-3 text-base sm:text-lg">
-                    {(t('block1.vitalSensations.sensations', { returnObjects: true }) as string[]).map((sensation: string, index: number) => (
-                        <li key={index}><strong>{sensation}</strong></li>
-                    ))}
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {(t('block1.vitalSensations.sensations', { returnObjects: true }) as string[]).map((sensation: string, index: number) => {
+                        const colors = ['bg-red-100', 'bg-orange-100', 'bg-yellow-100', 'bg-green-100', 'bg-blue-100', 'bg-purple-100', 'bg-pink-100', 'bg-indigo-100', 'bg-teal-100', 'bg-cyan-100'];
+                        const colorIndex = index % colors.length;
+                        return (
+                            <div key={index} className={`${colors[colorIndex]} rounded-lg p-4 shadow-sm border border-white/20`}>
+                                <p className="text-sm font-medium text-slate-800">
+                                    <strong>{sensation}</strong>
+                                </p>
+                            </div>
+                        );
+                    })}
+                </div>
 
                 <SubSectionTitle title={t('block1.belongingLaws.title')} />
                 <p className="text-base sm:text-lg leading-relaxed mb-6">
