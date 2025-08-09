@@ -17,13 +17,13 @@ const Header: React.FC = () => {
         </div>
         
         {/* Hidden Presentation Button - Bottom */}
-        <div className="absolute bottom-2 right-4 z-10">
+        <div className="absolute bottom-4 right-4 z-10">
           <button
             onClick={() => setIsSlidesOpen(true)}
-            className="flex items-center justify-center w-8 h-8 text-slate-400 hover:text-slate-600 hover:bg-slate-50 rounded-full transition-all duration-300 opacity-40 hover:opacity-100"
+            className="flex items-center justify-center w-10 h-10 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-all duration-300 opacity-70 hover:opacity-100 shadow-sm hover:shadow-md"
             title={t('header.presentation')}
           >
-            <PresentationIcon className="w-4 h-4" />
+            <PresentationIcon className="w-5 h-5" />
           </button>
         </div>
         
