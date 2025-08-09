@@ -74,6 +74,28 @@
                 transform: translateY(-2px);
             }
         }
+
+        /* Animaciones para Shocks Vivenciales */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.7s ease-out forwards;
+        }
+
+        /* Hover effects para shocks */
+        #shocks-container > div:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -106,6 +128,23 @@
         </header>
 
         <div class="max-w-3xl mx-auto">
+            <!-- Sección Especial: Shocks Vivenciales Gestacionales -->
+            <div class="mb-8 sm:mb-12">
+                <div class="bg-gradient-to-r from-red-50 to-pink-50 rounded-2xl p-4 sm:p-6 border border-red-200 shadow-xl">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl sm:text-3xl">💔</span>
+                        </div>
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-red-700 mb-2">20 Shocks Vivenciales Gestacionales</h2>
+                        <p class="text-sm sm:text-base text-red-600">Eventos traumáticos que afectan el desarrollo fetal y sus pares biomagnéticos</p>
+                    </div>
+                    
+                    <div class="space-y-3 sm:space-y-4" id="shocks-container">
+                        <!-- Los shocks se cargarán dinámicamente -->
+                    </div>
+                </div>
+            </div>
+
             <!-- Barra de Búsqueda -->
             <div class="relative mb-6 sm:mb-8">
                 <div class="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl border border-white/20 p-4 sm:p-6">
@@ -158,6 +197,30 @@
     </div>
 
     <script>
+        // Datos de Shocks Vivenciales Gestacionales
+        const shocksVivenciales = [
+            { numero: 1, shock: "Amenaza de aborto", pares: "Suprarrenal-Suprarrenal", beneficios: "Estabilización emocional y física" },
+            { numero: 2, shock: "Diagnóstico médico alarmante", pares: "Bulbo-Suprarrenal", beneficios: "Reducción del estrés y ansiedad" },
+            { numero: 3, shock: "Pérdida de un ser querido", pares: "Pericardio-Pulmón", beneficios: "Liberación del duelo y tristeza" },
+            { numero: 4, shock: "Separación de pareja", pares: "Plexo-Riñón der", beneficios: "Equilibrio emocional y seguridad" },
+            { numero: 5, shock: "Violencia hacia la madre", pares: "Temporal izq-Temporal der", beneficios: "Liberación del trauma y miedo" },
+            { numero: 6, shock: "Accidente o caída", pares: "Bulbo-Suprarrenal", beneficios: "Recuperación del susto y estabilidad" },
+            { numero: 7, shock: "Hospitalización prolongada", pares: "Plexo-Riñón izq", beneficios: "Reducción del estrés hospitalario" },
+            { numero: 8, shock: "Problemas económicos graves", pares: "Estómago-Estómago", beneficios: "Estabilidad financiera emocional" },
+            { numero: 9, shock: "Mudanza forzada", pares: "Occipital-Sacro", beneficios: "Adaptación al nuevo entorno" },
+            { numero: 10, shock: "Conflictos familiares intensos", pares: "Plexo-Riñón derecho", beneficios: "Armonía familiar y paz" },
+            { numero: 11, shock: "Enfermedad grave de la madre", pares: "Bulbo-Suprarrenal", beneficios: "Recuperación y fortaleza materna" },
+            { numero: 12, shock: "Amenaza de parto prematuro", pares: "Hipófisis-Suprarrenal", beneficios: "Gestación completa y segura" },
+            { numero: 13, shock: "Malformación fetal", pares: "Timo-Suprarrenal", beneficios: "Desarrollo fetal óptimo" },
+            { numero: 14, shock: "Conflictos familiares", pares: "Plexo-Riñón derecho", beneficios: "Paz familiar y estabilidad" },
+            { numero: 15, shock: "Embarazo después de pérdida", pares: "Suprarrenal-Suprarrenal", beneficios: "Superación del duelo anterior" },
+            { numero: 16, shock: "Abandono del padre", pares: "Plexo-Riñón izquierdo", beneficios: "Seguridad emocional paterna" },
+            { numero: 17, shock: "Abuso emocional", pares: "Temporal izquierdo-Temporal derecho", beneficios: "Liberación del abuso y empoderamiento" },
+            { numero: 18, shock: "Pobreza extrema", pares: "Estómago-Estómago", beneficios: "Abundancia y prosperidad" },
+            { numero: 19, shock: "Guerra o violencia social", pares: "Bulbo-Plexo", beneficios: "Paz interior y seguridad" },
+            { numero: 20, shock: "Rechazo del embarazo", pares: "Suprarrenal-Suprarrenal", beneficios: "Aceptación y amor hacia el bebé" }
+        ];
+
         const biomagneticPairs = [
             { punto: "Pineal", par: "Bulbo raquídeo", padecimiento: "Guillan Barre" },
             { punto: "Pineal", par: "Pineal", padecimiento: "Disfunción de la glándula. Pigmentación de la piel." },
@@ -367,6 +430,44 @@
         ];
 
         document.addEventListener('DOMContentLoaded', () => {
+            // Cargar Shocks Vivenciales
+            const shocksContainer = document.getElementById('shocks-container');
+            shocksVivenciales.forEach((shock, index) => {
+                const colors = [
+                    { bg: 'from-red-50 to-pink-50', border: 'border-red-200', circle: 'from-red-500 to-pink-500', icon: '💔' },
+                    { bg: 'from-orange-50 to-amber-50', border: 'border-orange-200', circle: 'from-orange-500 to-amber-500', icon: '⚠️' },
+                    { bg: 'from-yellow-50 to-orange-50', border: 'border-yellow-200', circle: 'from-yellow-500 to-orange-500', icon: '😰' },
+                    { bg: 'from-blue-50 to-indigo-50', border: 'border-blue-200', circle: 'from-blue-500 to-indigo-500', icon: '😢' },
+                    { bg: 'from-purple-50 to-violet-50', border: 'border-purple-200', circle: 'from-purple-500 to-violet-500', icon: '😨' }
+                ];
+                const colorIndex = index % colors.length;
+                
+                const shockElement = document.createElement('div');
+                shockElement.className = `bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-4 sm:p-6 border ${colors[colorIndex].border} shadow-lg transform transition-all duration-700 ease-out animate-fade-in-up`;
+                shockElement.style.animationDelay = `${index * 100}ms`;
+                shockElement.style.animationFillMode = 'both';
+                
+                shockElement.innerHTML = `
+                    <div class="flex items-start space-x-3 sm:space-x-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110 flex-shrink-0">
+                            <span class="text-white font-bold text-sm sm:text-base">${shock.numero}</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="text-lg sm:text-xl">${colors[colorIndex].icon}</span>
+                                <h4 class="text-sm sm:text-base font-semibold text-slate-800">${shock.shock}</h4>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-sm sm:text-base text-slate-700"><strong>Pares:</strong> ${shock.pares}</p>
+                                <p class="text-xs sm:text-sm text-slate-600"><strong>Beneficios:</strong> ${shock.beneficios}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                shocksContainer.appendChild(shockElement);
+            });
+
             const container = document.getElementById('accordion-container');
 
             // Agrupar los pares por el 'punto'
