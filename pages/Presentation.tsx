@@ -741,7 +741,6 @@ const Presentation: React.FC = () => {
                         <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center">
                           <span className="text-white font-bold text-lg">{index + 1}</span>
                         </div>
-                        <h3 className="text-lg font-semibold text-blue-800">Punto {index + 1}</h3>
                       </div>
                       <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
                     </div>
@@ -757,7 +756,6 @@ const Presentation: React.FC = () => {
                         <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
                           <span className="text-white font-bold text-sm">•</span>
                         </div>
-                        <h3 className="text-lg font-semibold text-purple-800">Información {index + 1}</h3>
                       </div>
                       <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
                     </div>
@@ -773,7 +771,6 @@ const Presentation: React.FC = () => {
                         <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
                           <span className="text-white font-bold text-lg">✓</span>
                         </div>
-                        <h3 className="text-lg font-semibold text-green-800">Conclusión {index + 1}</h3>
                       </div>
                       <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
                     </div>
