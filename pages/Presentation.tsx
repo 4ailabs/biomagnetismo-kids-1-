@@ -868,17 +868,17 @@ const Presentation: React.FC = () => {
                     <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-white text-2xl sm:text-3xl">💔</span>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-red-700 mb-2">Shocks Vivenciales Gestacionales</h3>
-                    <p className="text-sm sm:text-base text-red-600">Eventos traumáticos que afectan el desarrollo fetal</p>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-red-700 mb-3">Shocks Vivenciales Gestacionales</h3>
+                    <p className="text-base sm:text-lg text-red-600 max-w-2xl mx-auto">Eventos traumáticos que afectan el desarrollo fetal y requieren atención biomagnética</p>
                   </div>
                   <div className="space-y-4">
                     {currentSlideData.content.map((item, index) => (
-                      <div key={index} className="bg-white/80 rounded-lg p-4 border border-red-200">
-                        <div className="flex items-start space-x-3">
-                          <div className="w-8 h-8 bg-gradient-to-r from-red-400 to-pink-400 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span className="text-white text-sm font-bold">{index + 1}</span>
+                      <div key={index} className="bg-white/90 rounded-xl p-5 sm:p-6 border border-red-200 shadow-lg">
+                        <div className="flex items-start space-x-4">
+                          <div className="w-12 h-12 bg-gradient-to-r from-red-400 to-pink-400 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-white text-lg font-bold">{index + 1}</span>
                           </div>
-                          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{item}</p>
+                          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">{item}</p>
                         </div>
                       </div>
                     ))}
@@ -886,8 +886,8 @@ const Presentation: React.FC = () => {
                 </div>
               )}
 
-              {(currentSlideData.id === 23 || currentSlideData.id === 24) && (
-                <div className="space-y-4">
+                            {(currentSlideData.id === 23 || currentSlideData.id === 24) && (
+                <div className="space-y-6">
                   {currentSlideData.content.map((item, index) => {
                     const colors = [
                       { bg: 'from-red-50 to-pink-50', border: 'border-red-200', circle: 'from-red-500 to-pink-500', icon: '💔' },
@@ -902,29 +902,31 @@ const Presentation: React.FC = () => {
                     return (
                       <div 
                         key={index} 
-                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-4 sm:p-6 border ${colors[colorIndex].border} shadow-lg transform transition-all duration-700 ease-out animate-fade-in-up`}
+                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-2xl border-2 ${colors[colorIndex].border} shadow-xl transform transition-all duration-700 ease-out animate-fade-in-up`}
                         style={{ 
                           animationDelay: `${index * 150}ms`,
                           animationFillMode: 'both'
                         }}
                       >
-                        <div className="flex items-start space-x-3 sm:space-x-4">
-                          <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110 flex-shrink-0`}>
-                            <span className="text-white font-bold text-sm sm:text-base">{shockNumber}</span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center space-x-2 mb-2">
-                              <span className="text-lg sm:text-xl">{colors[colorIndex].icon}</span>
-                              <h4 className="text-sm sm:text-base font-semibold text-slate-800">Shock Vivencial</h4>
+                        <div className="p-6 sm:p-8">
+                          <div className="flex items-start space-x-4 sm:space-x-6">
+                            <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110 flex-shrink-0 shadow-lg`}>
+                              <span className="text-white font-bold text-xl sm:text-2xl">{shockNumber}</span>
                             </div>
-                            <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{item}</p>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center space-x-3 mb-3">
+                                <span className="text-2xl sm:text-3xl">{colors[colorIndex].icon}</span>
+                                <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 leading-tight">Shock Vivencial</h4>
+                              </div>
+                              <p className="text-base sm:text-lg text-slate-700 leading-relaxed">{item}</p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     );
                   })}
                 </div>
-                            )}
+              )}
 
               {/* Special Layout for Sensaciones Vitales */}
               {currentSlideData.id === 25 && (
@@ -933,17 +935,17 @@ const Presentation: React.FC = () => {
                     <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-white text-2xl sm:text-3xl">👶</span>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-blue-700 mb-2">Sensaciones Vitales Prenatales</h3>
-                    <p className="text-sm sm:text-base text-blue-600">Experiencias emocionales del bebé en el útero</p>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-700 mb-3">Sensaciones Vitales Prenatales</h3>
+                    <p className="text-base sm:text-lg text-blue-600 max-w-2xl mx-auto">Experiencias emocionales del bebé en el útero</p>
                   </div>
                   <div className="space-y-4">
                     {currentSlideData.content.map((item, index) => (
-                      <div key={index} className="bg-white/80 rounded-lg p-4 border border-blue-200">
-                        <div className="flex items-start space-x-3">
-                          <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span className="text-white text-sm font-bold">{index + 1}</span>
+                      <div key={index} className="bg-white/90 rounded-xl p-5 sm:p-6 border border-blue-200 shadow-lg">
+                        <div className="flex items-start space-x-4">
+                          <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-white text-lg font-bold">{index + 1}</span>
                           </div>
-                          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{item}</p>
+                          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">{item}</p>
                         </div>
                       </div>
                     ))}
@@ -952,7 +954,7 @@ const Presentation: React.FC = () => {
               )}
 
               {currentSlideData.id === 26 && (
-                <div className="space-y-4">
+                <div className="space-y-6">
                   {currentSlideData.content.map((item, index) => {
                     const colors = [
                       { bg: 'from-red-50 to-pink-50', border: 'border-red-200', circle: 'from-red-500 to-pink-500', icon: '😰' },
@@ -966,22 +968,24 @@ const Presentation: React.FC = () => {
                     return (
                       <div 
                         key={index} 
-                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-4 sm:p-6 border ${colors[colorIndex].border} shadow-lg transform transition-all duration-700 ease-out animate-fade-in-up`}
+                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-2xl border-2 ${colors[colorIndex].border} shadow-xl transform transition-all duration-700 ease-out animate-fade-in-up`}
                         style={{ 
                           animationDelay: `${index * 150}ms`,
                           animationFillMode: 'both'
                         }}
                       >
-                        <div className="flex items-start space-x-3 sm:space-x-4">
-                          <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110 flex-shrink-0`}>
-                            <span className="text-white font-bold text-sm sm:text-base">{index + 1}</span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center space-x-2 mb-2">
-                              <span className="text-lg sm:text-xl">{colors[colorIndex].icon}</span>
-                              <h4 className="text-sm sm:text-base font-semibold text-slate-800">Sensación Vital</h4>
+                        <div className="p-6 sm:p-8">
+                          <div className="flex items-start space-x-4 sm:space-x-6">
+                            <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110 flex-shrink-0 shadow-lg`}>
+                              <span className="text-white font-bold text-xl sm:text-2xl">{index + 1}</span>
                             </div>
-                            <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{item}</p>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center space-x-3 mb-3">
+                                <span className="text-2xl sm:text-3xl">{colors[colorIndex].icon}</span>
+                                <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 leading-tight">Sensación Vital</h4>
+                              </div>
+                              <p className="text-base sm:text-lg text-slate-700 leading-relaxed">{item}</p>
+                            </div>
                           </div>
                         </div>
                       </div>
