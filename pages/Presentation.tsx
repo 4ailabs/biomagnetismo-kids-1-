@@ -112,6 +112,17 @@ const Presentation: React.FC = () => {
       .slide-transition {
         transition: all 0.5s ease-in-out;
       }
+      
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+      
+      button:disabled:hover {
+        transform: none !important;
+        scale: 1 !important;
+      }
     `;
     document.head.appendChild(style);
     return () => {
@@ -692,11 +703,21 @@ const Presentation: React.FC = () => {
   ];
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    console.log('Next slide clicked, current:', currentSlide, 'total:', slides.length);
+    setCurrentSlide((prev) => {
+      const next = (prev + 1) % slides.length;
+      console.log('Moving to slide:', next);
+      return next;
+    });
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    console.log('Prev slide clicked, current:', currentSlide, 'total:', slides.length);
+    setCurrentSlide((prev) => {
+      const next = (prev - 1 + slides.length) % slides.length;
+      console.log('Moving to slide:', next);
+      return next;
+    });
   };
 
   const toggleAutoPlay = () => {
@@ -1113,14 +1134,16 @@ const Presentation: React.FC = () => {
                             {/* Navigation Arrows */}
                     <button
                       onClick={prevSlide}
-                      className="absolute left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105 z-20"
+                      className="absolute left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 z-20 cursor-pointer"
+                      disabled={currentSlide === 0}
                     >
                       <ChevronLeft size={24} />
                     </button>
 
                     <button
                       onClick={nextSlide}
-                      className="absolute right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105 z-20"
+                      className="absolute right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 z-20 cursor-pointer"
+                      disabled={currentSlide === slides.length - 1}
                     >
                       <ChevronRight size={24} />
                     </button>
@@ -1148,7 +1171,8 @@ const Presentation: React.FC = () => {
                         <div className="flex items-center space-x-3">
                           <button
                             onClick={prevSlide}
-                            className="flex items-center space-x-2 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors text-sm"
+                            className="flex items-center space-x-2 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 active:bg-white/40 transition-all duration-200 text-sm font-medium cursor-pointer"
+                            disabled={currentSlide === 0}
                           >
                             <ChevronLeft size={18} />
                             <span>Anterior</span>
@@ -1156,7 +1180,8 @@ const Presentation: React.FC = () => {
 
                           <button
                             onClick={nextSlide}
-                            className="flex items-center space-x-2 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors text-sm"
+                            className="flex items-center space-x-2 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 active:bg-white/40 transition-all duration-200 text-sm font-medium cursor-pointer"
+                            disabled={currentSlide === slides.length - 1}
                           >
                             <span>Siguiente</span>
                             <ChevronRight size={18} />
