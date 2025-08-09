@@ -735,46 +735,74 @@ const Presentation: React.FC = () => {
             <div className="space-y-6">
               {currentSlideData.type === 'key-points' && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {currentSlideData.content.map((item, index) => (
-                    <div key={index} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200 shadow-lg">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center">
-                          <span className="text-white font-bold text-sm">{index + 1}</span>
+                  {currentSlideData.content.map((item, index) => {
+                    const colors = [
+                      { bg: 'from-blue-50 to-indigo-50', border: 'border-blue-200', circle: 'from-blue-500 to-indigo-500' },
+                      { bg: 'from-green-50 to-emerald-50', border: 'border-green-200', circle: 'from-green-500 to-emerald-500' },
+                      { bg: 'from-purple-50 to-violet-50', border: 'border-purple-200', circle: 'from-purple-500 to-violet-500' },
+                      { bg: 'from-orange-50 to-amber-50', border: 'border-orange-200', circle: 'from-orange-500 to-amber-500' },
+                      { bg: 'from-pink-50 to-rose-50', border: 'border-pink-200', circle: 'from-pink-500 to-rose-500' }
+                    ];
+                    const colorIndex = index % colors.length;
+                    return (
+                      <div key={index} className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-6 border ${colors[colorIndex].border} shadow-lg`}>
+                        <div className="flex items-center space-x-3 mb-3">
+                          <div className={`w-8 h-8 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center`}>
+                            <span className="text-white font-bold text-xs">{index + 1}</span>
+                          </div>
                         </div>
+                        <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
                       </div>
-                      <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
               
               {currentSlideData.type === 'content' && (
                 <div className="space-y-4">
-                  {currentSlideData.content.map((item, index) => (
-                    <div key={index} className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200 shadow-lg">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                          <span className="text-white font-bold text-sm">•</span>
+                  {currentSlideData.content.map((item, index) => {
+                    const colors = [
+                      { bg: 'from-purple-50 to-pink-50', border: 'border-purple-200', circle: 'from-purple-500 to-pink-500' },
+                      { bg: 'from-cyan-50 to-teal-50', border: 'border-cyan-200', circle: 'from-cyan-500 to-teal-500' },
+                      { bg: 'from-yellow-50 to-amber-50', border: 'border-yellow-200', circle: 'from-yellow-500 to-amber-500' },
+                      { bg: 'from-red-50 to-pink-50', border: 'border-red-200', circle: 'from-red-500 to-pink-500' },
+                      { bg: 'from-indigo-50 to-blue-50', border: 'border-indigo-200', circle: 'from-indigo-500 to-blue-500' }
+                    ];
+                    const colorIndex = index % colors.length;
+                    return (
+                      <div key={index} className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-6 border ${colors[colorIndex].border} shadow-lg`}>
+                        <div className="flex items-center space-x-3 mb-3">
+                          <div className={`w-6 h-6 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center`}>
+                            <span className="text-white font-bold text-xs">•</span>
+                          </div>
                         </div>
+                        <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
                       </div>
-                      <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
               
               {currentSlideData.type === 'summary' && (
                 <div className="grid grid-cols-1 gap-6">
-                  {currentSlideData.content.map((item, index) => (
-                    <div key={index} className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200 shadow-lg">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
-                          <span className="text-white font-bold text-sm">✓</span>
+                  {currentSlideData.content.map((item, index) => {
+                    const colors = [
+                      { bg: 'from-green-50 to-emerald-50', border: 'border-green-200', circle: 'from-green-500 to-emerald-500' },
+                      { bg: 'from-teal-50 to-cyan-50', border: 'border-teal-200', circle: 'from-teal-500 to-cyan-500' },
+                      { bg: 'from-blue-50 to-indigo-50', border: 'border-blue-200', circle: 'from-blue-500 to-indigo-500' }
+                    ];
+                    const colorIndex = index % colors.length;
+                    return (
+                      <div key={index} className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-6 border ${colors[colorIndex].border} shadow-lg`}>
+                        <div className="flex items-center space-x-3 mb-3">
+                          <div className={`w-8 h-8 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center`}>
+                            <span className="text-white font-bold text-xs">✓</span>
+                          </div>
                         </div>
+                        <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
                       </div>
-                      <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>
