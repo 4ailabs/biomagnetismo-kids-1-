@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Slides from './Slides';
+import PresentationPage from './PresentationPage';
 import PresentationIcon from './icons/PresentationIcon';
 
 const Footer: React.FC = () => {
     const { t } = useTranslation();
-    const [isSlidesOpen, setIsSlidesOpen] = useState(false);
+    const [isPresentationOpen, setIsPresentationOpen] = useState(false);
     
     return (
         <footer className="relative bg-white/80 backdrop-blur-md mt-12 sm:mt-16 border-t border-white/20 shadow-lg">
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                     {/* Hidden Presentation Button */}
                     <div className="mt-4 flex justify-center">
                         <button
-                            onClick={() => setIsSlidesOpen(true)}
+                            onClick={() => setIsPresentationOpen(true)}
                             className="flex items-center justify-center w-10 h-10 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-all duration-300 opacity-60 hover:opacity-100"
                             title={t('header.presentation')}
                         >
@@ -58,8 +58,8 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             
-            {/* Slides Component */}
-            <Slides isOpen={isSlidesOpen} onClose={() => setIsSlidesOpen(false)} />
+            {/* Presentation Page Component */}
+            {isPresentationOpen && <PresentationPage onClose={() => setIsPresentationOpen(false)} />}
         </footer>
     );
 }
