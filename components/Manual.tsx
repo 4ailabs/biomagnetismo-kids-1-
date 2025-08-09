@@ -468,118 +468,111 @@ const Block1Content = () => {
     );
 };
 
-const Block2Content = () => (
-    <>
-        <SectionTitle id="block-2" icon={<Beaker className="w-8 h-8" />} title="BLOQUE 2: Rastreo y Protocolos en Gestación" />
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 space-y-8">
-            <SubSectionTitle title="Técnica de Rastreo Biomagnético" />
-            <p>El <strong>Punto Trauma</strong> es la zona donde se aloja el desequilibrio energético, identificable porque provoca acortamiento de la extremidad derecha al colocar un imán negativo. Representa el epicentro del conflicto biológico.</p>
-            <p>El <strong>Punto de Resonancia</strong> es la zona complementaria que equilibra el sistema. Al colocar el imán positivo, corrige el acortamiento. Los riñones actúan frecuentemente como puntos de resonancia universal.</p>
-            <MinorSectionTitle title="Algoritmo de Rastreo" />
-            <ol className="list-decimal list-outside ml-5 space-y-2">
-                <li>Identificar shock vivencial.</li>
-                <li>Localizar punto trauma con imán negativo.</li>
-                <li>Buscar resonancia (simétrico, riñones, etc.).</li>
-                <li>Confirmar nivelación de extremidades.</li>
-                <li>Aplicar imanes 15-20 min. en gestantes.</li>
-                <li>Verificar resultado post-tratamiento.</li>
-            </ol>
+const Block2Content = () => {
+    const { t } = useTranslation();
+    
+    return (
+        <>
+            <SectionTitle id="block-2" icon={<Beaker className="w-8 h-8" />} title={t('block2.title')} />
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 space-y-8">
+                <SubSectionTitle title={t('block2.tracing.title')} />
+                <p>{t('block2.tracing.traumaPoint')}</p>
+                <p>{t('block2.tracing.resonancePoint')}</p>
+                <MinorSectionTitle title={t('block2.algorithm.title')} />
+                <ol className="list-decimal list-outside ml-5 space-y-2">
+                    {(t('block2.algorithm.steps', { returnObjects: true }) as string[]).map((step: string, index: number) => (
+                        <li key={index}>{step}</li>
+                    ))}
+                </ol>
 
-            <SubSectionTitle title="Puntos Clave en Gestación" />
-            <ul className="list-disc list-outside ml-5 space-y-3">
-                <li><strong>Suprarrenal - Riñón Derecho:</strong> Estrés, ansiedad, hipertensión gestacional.</li>
-                <li><strong>Hiato - Riñón Derecho:</strong> Reflujo, ansiedad digestiva ("no puedo tragar esta situación").</li>
-                <li><strong>Plexo Solar - Riñón Izquierdo:</strong> Tristeza, duelo, separación emocional.</li>
-                <li><strong>Hígado - Riñón Derecho:</strong> Sobrecarga tóxica, colestasis gestacional.</li>
-                <li><strong>Occipital - Occipital:</strong> Tensión nerviosa, cefaleas, estrés mental.</li>
-            </ul>
+                <SubSectionTitle title={t('block2.keyPoints.title')} />
+                <ul className="list-disc list-outside ml-5 space-y-3">
+                    {(t('block2.keyPoints.points', { returnObjects: true }) as string[]).map((point: string, index: number) => (
+                        <li key={index}><strong>{point.split(':')[0]}:</strong> {point.split(':')[1]}</li>
+                    ))}
+                </ul>
 
-            <SubSectionTitle title="Adaptaciones para Embarazadas" />
-            <MinorSectionTitle title="Precauciones de Seguridad" />
-            <p>Contraindicaciones absolutas: evitar campos magnéticos intensos cerca del útero en primer trimestre, no colocar imanes en región pélvica con placenta previa, suspender en amenaza de parto prematuro, y derivar en preeclampsia severa.</p>
-            <MinorSectionTitle title="Adaptaciones Técnicas" />
-            <p>Usar gaussaje reducido (1000-3000 gauss), tiempo de exposición máximo 15-20 minutos, y evitar presión abdominal directa.</p>
-        </div>
-    </>
-);
+                <SubSectionTitle title={t('block2.adaptations.title')} />
+                <MinorSectionTitle title={t('block2.adaptations.safety.title')} />
+                <p>{t('block2.adaptations.safety.content')}</p>
+                <MinorSectionTitle title={t('block2.adaptations.technical.title')} />
+                <p>{t('block2.adaptations.technical.content')}</p>
+            </div>
+        </>
+    );
+};
 
-const Block3Content = () => (
-    <>
-        <SectionTitle id="block-3" icon={<Baby className="w-8 h-8" />} title="BLOQUE 3: Recién Nacido (0 a 1 Mes)" />
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 space-y-8">
-            <SubSectionTitle title="Características del Sistema Energético Neonatal" />
-            <p>El recién nacido presenta un sistema energético en transición, permeable, hipersensible y con memoria gestacional activa. Posee plasticidad extrema, respuesta rápida y una fuerte conexión materno-filial.</p>
-            
-            <SubSectionTitle title="Patologías Frecuentes en el Primer Mes" />
-            <MinorSectionTitle title="Trastornos Digestivos" />
-            <ul className="list-disc list-outside ml-5 space-y-2">
-                <li><strong>Cólico del Lactante:</strong> Activación del plexo solar por estrés de separación. Par principal: <strong>Plexo Solar - Riñón Izquierdo</strong>.</li>
-                <li><strong>Reflujo Gastroesofágico:</strong> Tensión en el hiato esofágico por ansiedad prenatal. Par principal: <strong>Hiato - Hiato</strong>.</li>
-                <li><strong>Ictericia Fisiológica:</strong> Sobrecarga hepática. Par principal: <strong>Hígado - Riñón Derecho</strong>.</li>
-            </ul>
-            <MinorSectionTitle title="Trastornos Dermatológicos" />
-            <ul className="list-disc list-outside ml-5 space-y-2">
-                <li><strong>Dermatitis Atópica Neonatal:</strong> Activación del sistema inmune por separación. Par principal: <strong>Timo - Timo</strong>.</li>
-            </ul>
-            
-            <SubSectionTitle title="Pares Biomagnéticos Clave en Neonatos" />
-            <StyledTable
-                headers={['Patología', 'Par Principal', 'Par Secundario', 'Par Terciario']}
-                data={[
-                    ['Cólico del lactante', 'Plexo Solar - Riñón Izq.', 'Estómago - Estómago', 'Duodeno - Duodeno'],
-                    ['Reflujo gastroesofágico', 'Hiato - Hiato', 'Hiato - Riñón Der.', 'Esófago - Esófago'],
-                    ['Ictericia fisiológica', 'Hígado - Riñón Der.', 'Vesícula - Duodeno', 'Bazo - Hígado'],
-                    ['Dermatitis atópica', 'Timo - Timo', 'Pulmón - Pulmón', 'Suprarrenal - Riñón Der.'],
-                    ['Estreñimiento', 'Recto - Recto', 'Sigma - Sigma', 'Duodeno - Riñón Der.'],
-                    ['Insomnio neonatal', 'Pineal - Pineal', 'Occipital - Occipital', 'Temporal - Temporal'],
-                ]}
-            />
-        </div>
-    </>
-);
+const Block3Content = () => {
+    const { t } = useTranslation();
+    
+    return (
+        <>
+            <SectionTitle id="block-3" icon={<Baby className="w-8 h-8" />} title={t('block3.title')} />
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 space-y-8">
+                <SubSectionTitle title={t('block3.characteristics.title')} />
+                <p>{t('block3.characteristics.content')}</p>
+                
+                <SubSectionTitle title={t('block3.pathologies.title')} />
+                <MinorSectionTitle title={t('block3.pathologies.digestive.title')} />
+                <ul className="list-disc list-outside ml-5 space-y-2">
+                    <li><strong>{t('block3.pathologies.digestive.colic')}</strong></li>
+                    <li><strong>{t('block3.pathologies.digestive.reflux')}</strong></li>
+                    <li><strong>{t('block3.pathologies.digestive.jaundice')}</strong></li>
+                </ul>
+                <MinorSectionTitle title={t('block3.pathologies.dermatological.title')} />
+                <ul className="list-disc list-outside ml-5 space-y-2">
+                    <li><strong>{t('block3.pathologies.dermatological.dermatitis')}</strong></li>
+                </ul>
+                
+                <SubSectionTitle title={t('block3.biomagneticPairs.title')} />
+                <StyledTable
+                    headers={t('block3.biomagneticPairs.headers', { returnObjects: true }) as string[]}
+                    data={t('block3.biomagneticPairs.data', { returnObjects: true }) as string[][]}
+                />
+            </div>
+        </>
+    );
+};
 
-const Block4Content = () => (
-    <>
-        <SectionTitle id="block-4" icon={<Rocket className="w-8 h-8" />} title="BLOQUE 4: Desarrollo (1 a 3 Meses)" />
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 space-y-8">
-            <SubSectionTitle title="Cambios Fisiológicos y Energéticos" />
-            <p>Fase de consolidación energética. Se establecen ritmos circadianos, aparece la sonrisa social, se consolidan patrones de alimentación y sueño, y aumenta la resistencia a estímulos externos.</p>
-            
-            <SubSectionTitle title="Shocks Postnatales Específicos" />
-            <ul className="list-disc list-outside ml-5 space-y-3">
-                <li><strong>Hospitalización/Separación Madre-Bebé:</strong> Ruptura del campo protector materno. Par principal: <strong>Plexo Solar - Riñón Izquierdo</strong>.</li>
-                <li><strong>Procedimientos Médicos Dolorosos:</strong> Trauma físico y violación del espacio personal. Par principal: <strong>Suprarrenal - Riñón Derecho</strong>.</li>
-                <li><strong>Cambio de Lactancia a Fórmula:</strong> Pérdida del vínculo nutricional primario. Par principal: <strong>Estómago - Estómago</strong>.</li>
-                <li><strong>Mudanza o Cambio de Entorno:</strong> Pérdida del territorio energético familiar. Par principal: <strong>Bulbo - Cerebelo</strong>.</li>
-            </ul>
+const Block4Content = () => {
+    const { t } = useTranslation();
+    
+    return (
+        <>
+            <SectionTitle id="block-4" icon={<Rocket className="w-8 h-8" />} title={t('block4.title')} />
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 space-y-8">
+                <SubSectionTitle title={t('block4.changes.title')} />
+                <p>{t('block4.changes.content')}</p>
+                
+                <SubSectionTitle title={t('block4.postnatalShocks.title')} />
+                <ul className="list-disc list-outside ml-5 space-y-3">
+                    {(t('block4.postnatalShocks.shocks', { returnObjects: true }) as string[]).map((shock: string, index: number) => (
+                        <li key={index}><strong>{shock.split(':')[0]}:</strong> {shock.split(':')[1]}</li>
+                    ))}
+                </ul>
 
-            <SubSectionTitle title="Protocolos Recomendados" />
-            <StyledTable 
-                headers={['Shock Postnatal', 'Par Principal', 'Par Modulador', 'Par Integrador', 'Tiempo']}
-                data={[
-                    ['Separación madre-bebé', 'Plexo Solar - Riñón Izq.', 'Timo - Timo', 'Corazón - Pulmón', '12 min'],
-                    ['Procedimientos dolorosos', 'Suprarrenal - Riñón Der.', 'Cervical - Cervical', 'Temporal - Temporal', '10 min'],
-                    ['Reacciones post-vacunales', 'Timo - Timo', 'Bazo - Hígado', 'Suprarrenal - Riñón Der.', '15 min'],
-                    ['Cambio alimentario', 'Estómago - Estómago', 'Duodeno - Duodeno', 'Plexo Solar - Riñón Izq.', '12 min'],
-                    ['Cambio de entorno', 'Bulbo - Cerebelo', 'Occipital - Occipital', 'Pineal - Pineal', '10 min'],
-                    ['Conflictos familiares', 'Temporal - Temporal', 'Suprarrenal - Riñón Der.', 'Cervical - Cervical', '15 min'],
-                ]}
-            />
-        </div>
-    </>
-);
+                <SubSectionTitle title={t('block4.protocols.title')} />
+                <StyledTable 
+                    headers={t('block4.protocols.headers', { returnObjects: true }) as string[]}
+                    data={t('block4.protocols.data', { returnObjects: true }) as string[][]}
+                />
+            </div>
+        </>
+    );
+};
 
-const Block5Content = () => (
-    <>
-        <SectionTitle id="block-5" icon={<Target className="w-8 h-8" />} title="BLOQUE 5: Integración Sistémica" />
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 space-y-8">
-            <SubSectionTitle title="Principio Sistémico Central" />
-            <blockquote className="border-l-4 border-teal-500 pl-4 py-2 my-4 text-xl font-semibold text-slate-800 bg-slate-50 rounded-r-lg">
-                "No hay síntomas en el bebé que no hablen también de la madre"
-            </blockquote>
-            <p>Este principio invita a reconocer que madre y bebé comparten un campo energético, y el bebé puede actuar como portavoz de tensiones familiares no resueltas.</p>
+const Block5Content = () => {
+    const { t } = useTranslation();
+    
+    return (
+        <>
+            <SectionTitle id="block-5" icon={<Target className="w-8 h-8" />} title={t('block5.title')} />
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 space-y-8">
+                <SubSectionTitle title={t('block5.integration.title')} />
+                <p>{t('block5.integration.content')}</p>
 
-            <SubSectionTitle title="El Bebé como Sensor del Sistema Familiar" />
+                <SubSectionTitle title={t('block5.systemicApproach.title')} />
+                <p>{t('block5.systemicApproach.content')}</p>
             <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 rounded-2xl p-6 sm:p-8 mb-8 border border-white/20">
                 <h4 className="text-lg sm:text-xl font-bold text-slate-800 mb-6 text-center">Patrones Sistémicos del Bebé</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

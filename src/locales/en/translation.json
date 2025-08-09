@@ -283,6 +283,117 @@
       "website": "www.institutocentrobioenergetica.com"
     }
   },
+  "block2": {
+    "title": "BLOCK 2: Tracing and Protocols in Gestation",
+    "tracing": {
+      "title": "Biomagnetic Tracing Technique",
+      "traumaPoint": "The Trauma Point is the area where the energetic imbalance lodges, identifiable because it causes shortening of the right limb when placing a negative magnet. It represents the epicenter of the biological conflict.",
+      "resonancePoint": "The Resonance Point is the complementary area that balances the system. When placing the positive magnet, it corrects the shortening. The kidneys frequently act as universal resonance points."
+    },
+    "algorithm": {
+      "title": "Tracing Algorithm",
+      "steps": [
+        "Identify experiential shock.",
+        "Locate trauma point with negative magnet.",
+        "Seek resonance (symmetrical, kidneys, etc.).",
+        "Confirm limb leveling.",
+        "Apply magnets 15-20 min. in pregnant women.",
+        "Verify post-treatment result."
+      ]
+    },
+    "keyPoints": {
+      "title": "Key Points in Gestation",
+      "points": [
+        "Adrenal - Right Kidney: Stress, anxiety, gestational hypertension.",
+        "Hiatus - Right Kidney: Reflux, digestive anxiety (\"I can't swallow this situation\").",
+        "Solar Plexus - Left Kidney: Sadness, grief, emotional separation.",
+        "Liver - Right Kidney: Toxic overload, gestational cholestasis.",
+        "Occipital - Occipital: Nervous tension, headaches, mental stress."
+      ]
+    },
+    "adaptations": {
+      "title": "Adaptations for Pregnant Women",
+      "safety": {
+        "title": "Safety Precautions",
+        "content": "Absolute contraindications: avoid intense magnetic fields near the uterus in first trimester, do not place magnets in pelvic region with placenta previa, suspend in threat of premature labor, and refer in severe preeclampsia."
+      },
+      "technical": {
+        "title": "Technical Adaptations",
+        "content": "Use reduced gaussage (1000-3000 gauss), maximum exposure time 15-20 minutes, and avoid direct abdominal pressure."
+      }
+    }
+  },
+  "block3": {
+    "title": "BLOCK 3: Newborn (0 to 1 Month)",
+    "characteristics": {
+      "title": "Neonatal Energetic System Characteristics",
+      "content": "The newborn presents a transitional energetic system, permeable, hypersensitive and with active gestational memory. It possesses extreme plasticity, rapid response and a strong maternal-filial connection."
+    },
+    "pathologies": {
+      "title": "Frequent Pathologies in the First Month",
+      "digestive": {
+        "title": "Digestive Disorders",
+        "colic": "Infant Colic: Activation of the solar plexus due to separation stress. Main pair: Solar Plexus - Left Kidney.",
+        "reflux": "Gastroesophageal Reflux: Tension in the esophageal hiatus due to prenatal anxiety. Main pair: Hiatus - Hiatus.",
+        "jaundice": "Physiological Jaundice: Hepatic overload. Main pair: Liver - Right Kidney."
+      },
+      "dermatological": {
+        "title": "Dermatological Disorders",
+        "dermatitis": "Neonatal Atopic Dermatitis: Immune system activation due to separation. Main pair: Thymus - Thymus."
+      }
+    },
+    "biomagneticPairs": {
+      "title": "Key Biomagnetic Pairs in Neonates",
+      "headers": ["Pathology", "Main Pair", "Secondary Pair", "Tertiary Pair"],
+      "data": [
+        ["Infant colic", "Solar Plexus - Left Kidney", "Stomach - Stomach", "Duodenum - Duodenum"],
+        ["Gastroesophageal reflux", "Hiatus - Hiatus", "Hiatus - Right Kidney", "Esophagus - Esophagus"],
+        ["Physiological jaundice", "Liver - Right Kidney", "Gallbladder - Duodenum", "Spleen - Liver"],
+        ["Atopic dermatitis", "Thymus - Thymus", "Lung - Lung", "Adrenal - Right Kidney"],
+        ["Constipation", "Rectum - Rectum", "Sigmoid - Sigmoid", "Duodenum - Right Kidney"],
+        ["Neonatal insomnia", "Pineal - Pineal", "Occipital - Occipital", "Temporal - Temporal"]
+      ]
+    }
+  },
+  "block4": {
+    "title": "BLOCK 4: Development (1 to 3 Months)",
+    "changes": {
+      "title": "Physiological and Energetic Changes",
+      "content": "Energetic consolidation phase. Circadian rhythms are established, social smile appears, feeding and sleep patterns are consolidated, and resistance to external stimuli increases."
+    },
+    "postnatalShocks": {
+      "title": "Specific Postnatal Shocks",
+      "shocks": [
+        "Hospitalization/Mother-Baby Separation: Rupture of the maternal protective field. Main pair: Solar Plexus - Left Kidney.",
+        "Painful Medical Procedures: Physical trauma and violation of personal space. Main pair: Adrenal - Right Kidney.",
+        "Change from Breastfeeding to Formula: Loss of primary nutritional bond. Main pair: Stomach - Stomach.",
+        "Moving or Change of Environment: Loss of family energetic territory. Main pair: Bulb - Cerebellum."
+      ]
+    },
+    "protocols": {
+      "title": "Recommended Protocols",
+      "headers": ["Postnatal Shock", "Main Pair", "Modulator Pair", "Integrator Pair", "Time"],
+      "data": [
+        ["Mother-baby separation", "Solar Plexus - Left Kidney", "Thymus - Thymus", "Heart - Lung", "12 min"],
+        ["Painful procedures", "Adrenal - Right Kidney", "Cervical - Cervical", "Temporal - Temporal", "10 min"],
+        ["Post-vaccination reactions", "Thymus - Thymus", "Spleen - Liver", "Adrenal - Right Kidney", "15 min"],
+        ["Dietary change", "Stomach - Stomach", "Duodenum - Duodenum", "Solar Plexus - Left Kidney", "12 min"],
+        ["Environment change", "Bulb - Cerebellum", "Occipital - Occipital", "Pineal - Pineal", "10 min"],
+        ["Family conflicts", "Temporal - Temporal", "Adrenal - Right Kidney", "Cervical - Cervical", "15 min"]
+      ]
+    }
+  },
+  "block5": {
+    "title": "BLOCK 5: Systemic Integration",
+    "integration": {
+      "title": "Concept Integration",
+      "content": "This block integrates all learned concepts, applying a systemic approach that considers the child as part of a family energetic system."
+    },
+    "systemicApproach": {
+      "title": "Complete Systemic Approach",
+      "content": "Pediatric biomagnetism requires a holistic vision that considers not only the child's symptoms, but also the complete family system."
+    }
+  },
   "common": {
     "language": "Language",
     "spanish": "Español",

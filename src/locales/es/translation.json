@@ -283,6 +283,117 @@
       "website": "www.institutocentrobioenergetica.com"
     }
   },
+  "block2": {
+    "title": "BLOQUE 2: Rastreo y Protocolos en Gestación",
+    "tracing": {
+      "title": "Técnica de Rastreo Biomagnético",
+      "traumaPoint": "El Punto Trauma es la zona donde se aloja el desequilibrio energético, identificable porque provoca acortamiento de la extremidad derecha al colocar un imán negativo. Representa el epicentro del conflicto biológico.",
+      "resonancePoint": "El Punto de Resonancia es la zona complementaria que equilibra el sistema. Al colocar el imán positivo, corrige el acortamiento. Los riñones actúan frecuentemente como puntos de resonancia universal."
+    },
+    "algorithm": {
+      "title": "Algoritmo de Rastreo",
+      "steps": [
+        "Identificar shock vivencial.",
+        "Localizar punto trauma con imán negativo.",
+        "Buscar resonancia (simétrico, riñones, etc.).",
+        "Confirmar nivelación de extremidades.",
+        "Aplicar imanes 15-20 min. en gestantes.",
+        "Verificar resultado post-tratamiento."
+      ]
+    },
+    "keyPoints": {
+      "title": "Puntos Clave en Gestación",
+      "points": [
+        "Suprarrenal - Riñón Derecho: Estrés, ansiedad, hipertensión gestacional.",
+        "Hiato - Riñón Derecho: Reflujo, ansiedad digestiva (\"no puedo tragar esta situación\").",
+        "Plexo Solar - Riñón Izquierdo: Tristeza, duelo, separación emocional.",
+        "Hígado - Riñón Derecho: Sobrecarga tóxica, colestasis gestacional.",
+        "Occipital - Occipital: Tensión nerviosa, cefaleas, estrés mental."
+      ]
+    },
+    "adaptations": {
+      "title": "Adaptaciones para Embarazadas",
+      "safety": {
+        "title": "Precauciones de Seguridad",
+        "content": "Contraindicaciones absolutas: evitar campos magnéticos intensos cerca del útero en primer trimestre, no colocar imanes en región pélvica con placenta previa, suspender en amenaza de parto prematuro, y derivar en preeclampsia severa."
+      },
+      "technical": {
+        "title": "Adaptaciones Técnicas",
+        "content": "Usar gaussaje reducido (1000-3000 gauss), tiempo de exposición máximo 15-20 minutos, y evitar presión abdominal directa."
+      }
+    }
+  },
+  "block3": {
+    "title": "BLOQUE 3: Recién Nacido (0 a 1 Mes)",
+    "characteristics": {
+      "title": "Características del Sistema Energético Neonatal",
+      "content": "El recién nacido presenta un sistema energético en transición, permeable, hipersensible y con memoria gestacional activa. Posee plasticidad extrema, respuesta rápida y una fuerte conexión materno-filial."
+    },
+    "pathologies": {
+      "title": "Patologías Frecuentes en el Primer Mes",
+      "digestive": {
+        "title": "Trastornos Digestivos",
+        "colic": "Cólico del Lactante: Activación del plexo solar por estrés de separación. Par principal: Plexo Solar - Riñón Izquierdo.",
+        "reflux": "Reflujo Gastroesofágico: Tensión en el hiato esofágico por ansiedad prenatal. Par principal: Hiato - Hiato.",
+        "jaundice": "Ictericia Fisiológica: Sobrecarga hepática. Par principal: Hígado - Riñón Derecho."
+      },
+      "dermatological": {
+        "title": "Trastornos Dermatológicos",
+        "dermatitis": "Dermatitis Atópica Neonatal: Activación del sistema inmune por separación. Par principal: Timo - Timo."
+      }
+    },
+    "biomagneticPairs": {
+      "title": "Pares Biomagnéticos Clave en Neonatos",
+      "headers": ["Patología", "Par Principal", "Par Secundario", "Par Terciario"],
+      "data": [
+        ["Cólico del lactante", "Plexo Solar - Riñón Izq.", "Estómago - Estómago", "Duodeno - Duodeno"],
+        ["Reflujo gastroesofágico", "Hiato - Hiato", "Hiato - Riñón Der.", "Esófago - Esófago"],
+        ["Ictericia fisiológica", "Hígado - Riñón Der.", "Vesícula - Duodeno", "Bazo - Hígado"],
+        ["Dermatitis atópica", "Timo - Timo", "Pulmón - Pulmón", "Suprarrenal - Riñón Der."],
+        ["Estreñimiento", "Recto - Recto", "Sigma - Sigma", "Duodeno - Riñón Der."],
+        ["Insomnio neonatal", "Pineal - Pineal", "Occipital - Occipital", "Temporal - Temporal"]
+      ]
+    }
+  },
+  "block4": {
+    "title": "BLOQUE 4: Desarrollo (1 a 3 Meses)",
+    "changes": {
+      "title": "Cambios Fisiológicos y Energéticos",
+      "content": "Fase de consolidación energética. Se establecen ritmos circadianos, aparece la sonrisa social, se consolidan patrones de alimentación y sueño, y aumenta la resistencia a estímulos externos."
+    },
+    "postnatalShocks": {
+      "title": "Shocks Postnatales Específicos",
+      "shocks": [
+        "Hospitalización/Separación Madre-Bebé: Ruptura del campo protector materno. Par principal: Plexo Solar - Riñón Izquierdo.",
+        "Procedimientos Médicos Dolorosos: Trauma físico y violación del espacio personal. Par principal: Suprarrenal - Riñón Derecho.",
+        "Cambio de Lactancia a Fórmula: Pérdida del vínculo nutricional primario. Par principal: Estómago - Estómago.",
+        "Mudanza o Cambio de Entorno: Pérdida del territorio energético familiar. Par principal: Bulbo - Cerebelo."
+      ]
+    },
+    "protocols": {
+      "title": "Protocolos Recomendados",
+      "headers": ["Shock Postnatal", "Par Principal", "Par Modulador", "Par Integrador", "Tiempo"],
+      "data": [
+        ["Separación madre-bebé", "Plexo Solar - Riñón Izq.", "Timo - Timo", "Corazón - Pulmón", "12 min"],
+        ["Procedimientos dolorosos", "Suprarrenal - Riñón Der.", "Cervical - Cervical", "Temporal - Temporal", "10 min"],
+        ["Reacciones post-vacunales", "Timo - Timo", "Bazo - Hígado", "Suprarrenal - Riñón Der.", "15 min"],
+        ["Cambio alimentario", "Estómago - Estómago", "Duodeno - Duodeno", "Plexo Solar - Riñón Izq.", "12 min"],
+        ["Cambio de entorno", "Bulbo - Cerebelo", "Occipital - Occipital", "Pineal - Pineal", "10 min"],
+        ["Conflictos familiares", "Temporal - Temporal", "Suprarrenal - Riñón Der.", "Cervical - Cervical", "15 min"]
+      ]
+    }
+  },
+  "block5": {
+    "title": "BLOQUE 5: Integración Sistémica",
+    "integration": {
+      "title": "Integración de Conceptos",
+      "content": "Este bloque integra todos los conceptos aprendidos, aplicando un enfoque sistémico que considera al niño como parte de un sistema familiar energético."
+    },
+    "systemicApproach": {
+      "title": "Enfoque Sistémico Completo",
+      "content": "El biomagnetismo pediátrico requiere una visión holística que considere no solo los síntomas del niño, sino también el sistema familiar completo."
+    }
+  },
   "common": {
     "language": "Idioma",
     "spanish": "Español",
