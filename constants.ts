@@ -331,3 +331,44 @@ export const PATHOLOGIES_DATA_1_3_MONTHS: PathologyData[] = [
     { pathology: 'Llanto inconsolable', pairs: 'Timo – Plexo solar / Corazón – Corazón', benefits: 'Reduce ansiedad y calma emocional' },
     { pathology: 'Estreñimiento', pairs: 'Colon descendente – Colon transverso', benefits: 'Facilita evacuación y reduce tensión abdominal' },
 ];
+
+export const BABY_REGULATION_POINTS: KeyPointData[] = [
+    // 🔵 PUNTOS BÁSICOS DE REGULACIÓN PARA BEBÉS (10 puntos)
+    // Basados ÚNICAMENTE en las listas de rastreo existentes
+    { point: 'Timo', resonance: 'Bazo', benefit: 'Regulación inmune y defensas naturales' },
+    { point: 'Corazón', resonance: 'Suprarrenal izquierda', benefit: 'Fortalece vínculo madre-bebé y energía vital' },
+    { point: 'Hígado derecho', resonance: 'Riñón derecho', benefit: 'Detoxificación y metabolismo' },
+    { point: 'Estómago', resonance: 'Colon transverso', benefit: 'Digestión y absorción' },
+    { point: 'Suprarrenal derecha', resonance: 'Suprarrenal izquierda', benefit: 'Regulación del estrés y cortisol' },
+    { point: 'Temporal derecho', resonance: 'Riñón derecho', benefit: 'Equilibra sistema nervioso y tono muscular' },
+    { point: 'Occipital izquierdo', resonance: 'Sacro', benefit: 'Libera tensión espinal y mejora flujo' },
+    { point: 'Bazo', resonance: 'Riñón derecho', benefit: 'Refuerza defensa inmune' },
+    { point: 'Frontal', resonance: 'Riñón derecho', benefit: 'Estabiliza eje HHA y disminuye hipervigilancia' },
+    { point: 'Parietal derecho', resonance: 'Riñón izquierdo', benefit: 'Regula frecuencia cardíaca y sensación de seguridad' },
+    
+    // 🟢 PUNTOS ADICIONALES PARA REGULACIÓN COMPLETA (10 puntos)
+    // Basados en KEY_POINTS_DATA y CONDITIONS_DATA existentes
+    { point: 'Temporal izquierdo', resonance: 'Temporal derecho', benefit: 'Armoniza hemisferios cerebrales' },
+    { point: 'Frontal izquierdo', resonance: 'Riñón izquierdo', benefit: 'Libera miedo anticipatorio' },
+    { point: 'Esternón', resonance: 'Hígado derecho', benefit: 'Disminuye carga emocional' },
+    { point: 'Suprarrenal izquierda', resonance: 'Suprarrenal derecha', benefit: 'Reduce hipertonía fetal' },
+    { point: 'Pubis', resonance: 'Riñón derecho', benefit: 'Favorece tono uterino' },
+    { point: 'Hipogastrio', resonance: 'Riñón izquierdo', benefit: 'Mejora irrigación abdominal' },
+    { point: 'Hígado izquierdo', resonance: 'Estómago', benefit: 'Favorece detoxificación' },
+    { point: 'Lumbares', resonance: 'Riñón izquierdo', benefit: 'Reduce tensión lumbar-uterina' },
+    { point: 'Cervical alta derecha', resonance: 'Cervical alta izquierda', benefit: 'Modula respuesta neuroinmune' },
+    { point: 'Pulmón derecho', resonance: 'Pulmón izquierdo', benefit: 'Optimiza oxigenación' },
+    
+    // 🟣 PUNTOS ESPECÍFICOS PARA BEBÉS (10 puntos)
+    // Basados en pares biomagnéticos de CONDITIONS_DATA
+    { point: 'Hiato esofágico', resonance: 'Hiato esofágico', benefit: 'Reflujo y tensión diafragmática' },
+    { point: 'Frénico derecho', resonance: 'Estómago', benefit: 'Libera tensión nerviosa diafragmática' },
+    { point: 'Vesícula', resonance: 'Hígado derecho', benefit: 'Favorece flujo biliar' },
+    { point: 'Riñón derecho', resonance: 'Riñón izquierdo', benefit: 'Apoya filtrado y eliminación' },
+    { point: 'Colon descendente', resonance: 'Colon ascendente', benefit: 'Favorece motilidad intestinal' },
+    { point: 'Senos frontales', resonance: 'Senos maxilares', benefit: 'Favorece drenaje nasal' },
+    { point: 'Bulbo raquídeo', resonance: 'Suprarrenal', benefit: 'Regula sistema nervioso autónomo' },
+    { point: 'Pericardio', resonance: 'Pulmón', benefit: 'Libera tensión torácica' },
+    { point: 'Plexo solar', resonance: 'Riñón derecho', benefit: 'Aumenta sensación de amparo' },
+    { point: 'Cardias', resonance: 'Estómago', benefit: 'Facilita cierre del esfínter esofágico' }
+];

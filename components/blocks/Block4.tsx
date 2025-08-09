@@ -2,7 +2,8 @@ import React from 'react';
 import CourseSection from '../CourseSection';
 import PostnatalShockAccordion from '../PostnatalShockAccordion';
 import PathologyTable from '../PathologyTable';
-import { POSTNATAL_SHOCKS_DATA, PATHOLOGIES_DATA_1_3_MONTHS } from '../../constants';
+import BabyRegulationTable from '../BabyRegulationTable';
+import { POSTNATAL_SHOCKS_DATA, PATHOLOGIES_DATA_1_3_MONTHS, BABY_REGULATION_POINTS } from '../../constants';
 import { BookOpenIcon, ExclamationTriangleIcon, TableCellsIcon, BeakerIcon, LightBulbIcon, HeartIcon, UserGroupIcon } from '../icons';
 
 const Block4: React.FC = () => {
@@ -56,6 +57,10 @@ const Block4: React.FC = () => {
 
             <CourseSection title="Patologías y desequilibrios frecuentes (1–3 meses)" icon={<TableCellsIcon />}>
                 <PathologyTable data={PATHOLOGIES_DATA_1_3_MONTHS} />
+            </CourseSection>
+
+            <CourseSection title="Puntos Clave de Regulación para Bebés" icon={<TableCellsIcon />}>
+                <BabyRegulationTable data={BABY_REGULATION_POINTS} />
             </CourseSection>
 
             <CourseSection title="Algoritmo de rastreo" icon={<BeakerIcon />}>

@@ -37,6 +37,26 @@ const Header: React.FC = () => {
               {t('header.modality')}
             </span>
           </div>
+          <nav className="hidden md:flex space-x-8">
+                        <a href="#block-1" className="text-slate-600 hover:text-teal-600 transition-colors font-medium">
+                            Bloque 1
+                        </a>
+                        <a href="#block-2" className="text-slate-600 hover:text-teal-600 transition-colors font-medium">
+                            Bloque 2
+                        </a>
+                        <a href="#block-3" className="text-slate-600 hover:text-teal-600 transition-colors font-medium">
+                            Bloque 3
+                        </a>
+                        <a href="#block-4" className="text-slate-600 hover:text-teal-600 transition-colors font-medium">
+                            Bloque 4
+                        </a>
+                        <a href="#block-5" className="text-slate-600 hover:text-teal-600 transition-colors font-medium">
+                            Bloque 5
+                        </a>
+                        <a href="#baby-regulation" className="text-slate-600 hover:text-teal-600 transition-colors font-medium">
+                            🍼 Regulación Bebé
+                        </a>
+                    </nav>
         </div>
       </div>
     </header>

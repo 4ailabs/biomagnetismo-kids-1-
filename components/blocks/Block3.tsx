@@ -1,7 +1,8 @@
 import React from 'react';
 import CourseSection from '../CourseSection';
 import ConditionTable from '../ConditionTable';
-import { CONDITIONS_DATA } from '../../constants';
+import BabyRegulationTable from '../BabyRegulationTable';
+import { CONDITIONS_DATA, BABY_REGULATION_POINTS } from '../../constants';
 import { BookOpenIcon, TableCellsIcon, BeakerIcon, LightBulbIcon, HeartIcon } from '../icons';
 
 const Block3: React.FC = () => {
@@ -39,6 +40,10 @@ const Block3: React.FC = () => {
 
             <CourseSection title="Patologías y desequilibrios frecuentes en el primer mes" icon={<TableCellsIcon />}>
                 <ConditionTable data={CONDITIONS_DATA} />
+            </CourseSection>
+
+            <CourseSection title="Puntos Clave de Regulación para Bebés" icon={<TableCellsIcon />}>
+                <BabyRegulationTable data={BABY_REGULATION_POINTS} />
             </CourseSection>
 
             <CourseSection title="Algoritmo de trabajo en esta etapa" icon={<BeakerIcon />}>

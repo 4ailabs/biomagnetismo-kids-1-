@@ -14,6 +14,8 @@ import {
   Target
 } from 'lucide-react';
 import { SectionTitle, SubSectionTitle, MinorSectionTitle, ConflictTitle, StyledTable } from './manual/index';
+import BabyRegulationTable from './BabyRegulationTable';
+import { BABY_REGULATION_POINTS } from '../constants';
 
 // Función para abrir archivos en nueva pestaña
 const openFileInNewTab = (url: string) => {
@@ -265,6 +267,9 @@ const Block3Content = () => {
                     headers={t('block3.biomagneticPairs.headers', { returnObjects: true }) as string[]}
                     data={t('block3.biomagneticPairs.data', { returnObjects: true }) as string[][]}
                 />
+                
+                <SubSectionTitle title="Puntos Clave de Regulación para Bebés" />
+                <BabyRegulationTable data={BABY_REGULATION_POINTS} />
             </div>
         </>
     );
@@ -292,6 +297,9 @@ const Block4Content = () => {
                     headers={t('block4.protocols.headers', { returnObjects: true }) as string[]}
                     data={t('block4.protocols.data', { returnObjects: true }) as string[][]}
                 />
+                
+                <SubSectionTitle title="Puntos Clave de Regulación para Bebés" />
+                <BabyRegulationTable data={BABY_REGULATION_POINTS} />
             </div>
         </>
     );
@@ -570,6 +578,17 @@ const Manual: React.FC = () => {
             <Block4Content />
             <Block5Content />
             <BioenergeticProtocol />
+            
+            <section id="baby-regulation" className="mb-12">
+                <SectionTitle icon={<Baby className="w-8 h-8" />} title="🍼 Puntos Clave de Regulación para Bebés" />
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8">
+                    <p className="text-lg text-slate-700 mb-6 text-center">
+                        Versión abreviada y práctica de los puntos de rastreo más importantes para la regulación energética del bebé
+                    </p>
+                    <BabyRegulationTable data={BABY_REGULATION_POINTS} />
+                </div>
+            </section>
+            
             <ManualFooter />
         </article>
     );
