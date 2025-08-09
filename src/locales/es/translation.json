@@ -394,6 +394,60 @@
       "content": "El biomagnetismo pediátrico requiere una visión holística que considere no solo los síntomas del niño, sino también el sistema familiar completo."
     }
   },
+  "bioenergeticProtocol": {
+    "title": "PROTOCOLO CON BIOENERGÉTICA Y BIOMAGNETISMO",
+    "fundamentals": {
+      "title": "Fundamentos del Protocolo",
+      "content": "Este protocolo integra la bioenergética con el biomagnetismo para realizar un trabajo profundo de sanación que aborda no solo los síntomas actuales, sino el origen energético del conflicto desde el momento de la concepción."
+    },
+    "objective": {
+      "title": "Objetivo del Protocolo",
+      "content": "Identificar el instante exacto donde se originó el conflicto energético y hacer consciente la información para que la madre pueda procesar y liberar el patrón que afecta al niño."
+    },
+    "steps": {
+      "title": "Pasos del Protocolo",
+      "identification": {
+        "title": "Identificación del Conflicto",
+        "content": "Preguntar por la sensación o conflicto específico utilizando las listas de esta aplicación. A través del test muscular, identificar cuál es el conflicto principal que está afectando al niño."
+      },
+      "recession": {
+        "title": "Recesión de Edad",
+        "content": "Realizar una recesión de edad para encontrar el instante exacto del conflicto. Partiendo del momento actual, se va hacia atrás hasta encontrar el instante donde se originó el conflicto, que puede llegar hasta el momento de la concepción."
+      },
+      "selection": {
+        "title": "Selección de Pares Biomagnéticos",
+        "content": "Una vez identificado el instante, se determina cuál es el par que soporta la información. Se eligen los pares de la lista de puntos de rastreo o los pares sugeridos en la aplicación."
+      },
+      "application": {
+        "title": "Aplicación y Evaluación",
+        "content": "Se impactan los pares seleccionados y se evalúa cuántos pares son necesarios para el tratamiento completo. Se realiza una evaluación continua del proceso."
+      },
+      "consciousness": {
+        "title": "Conscientización de la Información",
+        "content": "El paso final es hacer consciente la información para que la madre pueda procesar y comprender el conflicto. Esto permite descargar la memoria energética del conflicto, liberando el patrón que afecta al niño."
+      }
+    },
+    "considerations": {
+      "title": "Consideraciones Importantes",
+      "muscleTest": {
+        "title": "Test Muscular",
+        "content": "Es fundamental dominar el test muscular para identificar correctamente el conflicto y evaluar la efectividad del tratamiento en cada paso."
+      },
+      "recession": {
+        "title": "Recesión de Edad",
+        "content": "La recesión debe ser guiada con cuidado, respetando el ritmo de la madre y el niño. El instante puede estar en cualquier momento desde la concepción hasta el presente."
+      },
+      "selection": {
+        "title": "Selección de Pares",
+        "content": "Los pares deben seleccionarse según la información obtenida en la regresión, no solo por síntomas actuales. La lista de la aplicación es una guía valiosa."
+      },
+      "consciousness": {
+        "title": "Conscientización",
+        "content": "La conscientización es el paso más importante para descargar la memoria energética del conflicto. Sin ella, el patrón puede volver a manifestarse. La madre debe comprender y procesar la información del conflicto."
+      }
+    },
+    "integrated": "Protocolo Integrado: Este protocolo combina la precisión del biomagnetismo con la profundidad de la bioenergética, creando un abordaje único que permite sanar no solo los síntomas, sino el origen energético del conflicto. La recesión de edad, la conscientización y las frases del sentir son fundamentales para descargar la memoria energética del conflicto."
+  },
   "common": {
     "language": "Idioma",
     "spanish": "Español",

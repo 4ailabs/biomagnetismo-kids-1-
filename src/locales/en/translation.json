@@ -394,6 +394,60 @@
       "content": "Pediatric biomagnetism requires a holistic vision that considers not only the child's symptoms, but also the complete family system."
     }
   },
+  "bioenergeticProtocol": {
+    "title": "PROTOCOL WITH BIOENERGETICS AND BIOMAGNETISM",
+    "fundamentals": {
+      "title": "Protocol Fundamentals",
+      "content": "This protocol integrates bioenergetics with biomagnetism to perform deep healing work that addresses not only current symptoms, but the energetic origin of the conflict from the moment of conception."
+    },
+    "objective": {
+      "title": "Protocol Objective",
+      "content": "Identify the exact moment where the energetic conflict originated and make the information conscious so that the mother can process and release the pattern that affects the child."
+    },
+    "steps": {
+      "title": "Protocol Steps",
+      "identification": {
+        "title": "Conflict Identification",
+        "content": "Ask about the specific sensation or conflict using the lists in this application. Through muscle testing, identify which is the main conflict affecting the child."
+      },
+      "recession": {
+        "title": "Age Recession",
+        "content": "Perform an age recession to find the exact moment of the conflict. Starting from the current moment, go backwards until finding the instant where the conflict originated, which can reach up to the moment of conception."
+      },
+      "selection": {
+        "title": "Biomagnetic Pairs Selection",
+        "content": "Once the instant is identified, determine which pair supports the information. Choose pairs from the tracing points list or pairs suggested in the application."
+      },
+      "application": {
+        "title": "Application and Evaluation",
+        "content": "Impact the selected pairs and evaluate how many pairs are necessary for complete treatment. Continuous evaluation of the process is performed."
+      },
+      "consciousness": {
+        "title": "Information Consciousness",
+        "content": "The final step is to make the information conscious so that the mother can process and understand the conflict. This allows discharging the energetic memory of the conflict, releasing the pattern that affects the child."
+      }
+    },
+    "considerations": {
+      "title": "Important Considerations",
+      "muscleTest": {
+        "title": "Muscle Testing",
+        "content": "It is fundamental to master muscle testing to correctly identify the conflict and evaluate the effectiveness of treatment at each step."
+      },
+      "recession": {
+        "title": "Age Recession",
+        "content": "Recession should be guided carefully, respecting the rhythm of the mother and child. The instant can be at any moment from conception to the present."
+      },
+      "selection": {
+        "title": "Pairs Selection",
+        "content": "Pairs should be selected according to the information obtained in regression, not just by current symptoms. The application list is a valuable guide."
+      },
+      "consciousness": {
+        "title": "Consciousness",
+        "content": "Consciousness is the most important step to discharge the energetic memory of the conflict. Without it, the pattern can manifest again. The mother must understand and process the conflict information."
+      }
+    },
+    "integrated": "Integrated Protocol: This protocol combines the precision of biomagnetism with the depth of bioenergetics, creating a unique approach that allows healing not only symptoms, but the energetic origin of the conflict. Age recession, consciousness and feeling phrases are fundamental to discharge the energetic memory of the conflict."
+  },
   "common": {
     "language": "Language",
     "spanish": "Español",

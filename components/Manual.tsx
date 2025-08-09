@@ -120,7 +120,7 @@ const Block1Content = () => {
                 <ConflictTitle color="bg-blue-500" title={t('block1.conflicts.territory.title')} />
                 <p className="text-base sm:text-lg leading-relaxed mb-8">{t('block1.conflicts.territory.content')}</p>
 
-                <SubSectionTitle title="El Niño como Sistema Energético Familiar" />
+                <SubSectionTitle title={t('block1.systemicApproach.title')} />
                 <p className="text-base sm:text-lg leading-relaxed mb-6">
                     {t('block1.systemicApproach.intro')}
                 </p>
