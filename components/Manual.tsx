@@ -65,13 +65,13 @@ const ModuleStructure = () => (
         <SubSectionTitle title="Estructura del Módulo" />
         <div className="mt-8">
             <StyledTable 
-                headers={['Bloque', 'Tema', 'Duración', 'Enfoque Principal']}
+                headers={['Bloque', 'Tema', 'Enfoque Principal']}
                 data={[
-                    [<strong key="b1" className="text-teal-700">1</strong>, 'Vida Intrauterina y Conflictos Biológicos', '70 min', 'Fundamentos teóricos'],
-                    [<strong key="b2" className="text-teal-700">2</strong>, 'Rastreo y Protocolos en Gestación', '80 min', 'Técnicas de aplicación'],
-                    [<strong key="b3" className="text-teal-700">3</strong>, 'Recién Nacido (0-1 mes)', '70 min', 'Patologías específicas'],
-                    [<strong key="b4" className="text-teal-700">4</strong>, 'Desarrollo (1-3 meses)', '60 min', 'Shocks postnatales'],
-                    [<strong key="b5" className="text-teal-700">5</strong>, 'Integración Sistémica', '40 min', 'Visión holística'],
+                    [<strong key="b1" className="text-teal-700">1</strong>, 'Vida Intrauterina y Conflictos Biológicos', 'Fundamentos teóricos'],
+                    [<strong key="b2" className="text-teal-700">2</strong>, 'Rastreo y Protocolos en Gestación', 'Técnicas de aplicación'],
+                    [<strong key="b3" className="text-teal-700">3</strong>, 'Recién Nacido (0-1 mes)', 'Patologías específicas'],
+                    [<strong key="b4" className="text-teal-700">4</strong>, 'Desarrollo (1-3 meses)', 'Shocks postnatales'],
+                    [<strong key="b5" className="text-teal-700">5</strong>, 'Integración Sistémica', 'Visión holística'],
                 ]}
             />
         </div>
