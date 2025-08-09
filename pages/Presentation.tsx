@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { 
   X, 
@@ -45,6 +45,81 @@ const Presentation: React.FC = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
+  const [slideTransition, setSlideTransition] = useState(false);
+
+  // Agregar estilos CSS para animaciones
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+      
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+      
+      .animate-slide-in-left {
+        animation: slideInLeft 0.6s ease-out forwards;
+      }
+      
+      .animate-slide-in-right {
+        animation: slideInRight 0.6s ease-out forwards;
+      }
+      
+      .animate-pulse-slow {
+        animation: pulse 2s ease-in-out infinite;
+      }
+      
+      .slide-transition {
+        transition: all 0.5s ease-in-out;
+      }
+    `;
+    document.head.appendChild(style);
+    return () => {
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
+    };
+  }, []);
 
   const slides: Slide[] = [
     // SLIDE 1: BIENVENIDA
@@ -745,9 +820,16 @@ const Presentation: React.FC = () => {
                     ];
                     const colorIndex = index % colors.length;
                     return (
-                      <div key={index} className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-6 border ${colors[colorIndex].border} shadow-lg`}>
+                      <div 
+                        key={index} 
+                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-6 border ${colors[colorIndex].border} shadow-lg transform transition-all duration-700 ease-out animate-fade-in-up`}
+                        style={{ 
+                          animationDelay: `${index * 200}ms`,
+                          animationFillMode: 'both'
+                        }}
+                      >
                         <div className="flex items-center space-x-3 mb-3">
-                          <div className={`w-8 h-8 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center`}>
+                          <div className={`w-8 h-8 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110`}>
                             <span className="text-white font-bold text-xs">{index + 1}</span>
                           </div>
                         </div>
@@ -770,9 +852,16 @@ const Presentation: React.FC = () => {
                     ];
                     const colorIndex = index % colors.length;
                     return (
-                      <div key={index} className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-6 border ${colors[colorIndex].border} shadow-lg`}>
+                      <div 
+                        key={index} 
+                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-6 border ${colors[colorIndex].border} shadow-lg transform transition-all duration-700 ease-out animate-slide-in-left`}
+                        style={{ 
+                          animationDelay: `${index * 150}ms`,
+                          animationFillMode: 'both'
+                        }}
+                      >
                         <div className="flex items-center space-x-3 mb-3">
-                          <div className={`w-6 h-6 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center`}>
+                          <div className={`w-6 h-6 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110`}>
                             <span className="text-white font-bold text-xs">•</span>
                           </div>
                         </div>
@@ -809,12 +898,80 @@ const Presentation: React.FC = () => {
 
             {/* Additional Information for Specific Slides */}
             {currentSlideData.id === 1 && (
-              <div className="mt-12 p-8 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl border border-teal-200 shadow-xl">
+              <div className="mt-12 p-8 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl border border-teal-200 shadow-xl animate-fade-in-up">
                 <div className="flex items-center justify-center space-x-4 mb-6">
-                  <Clock className="w-10 h-10 text-teal-600" />
+                  <Clock className="w-10 h-10 text-teal-600 animate-pulse-slow" />
                   <span className="text-2xl text-teal-700 font-bold">Módulo 1: El Inicio Invisible</span>
                 </div>
                 <p className="text-xl text-slate-600 text-center">Cuando la Historia Empieza Antes de Nacer</p>
+              </div>
+            )}
+
+            {/* Elementos Biomagnéticos Visuales */}
+            {currentSlideData.id === 6 && (
+              <div className="mt-8 p-6 bg-gradient-to-r from-red-50 to-pink-50 rounded-2xl border border-red-200 shadow-lg animate-fade-in-up">
+                <div className="flex items-center justify-center space-x-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center animate-pulse-slow">
+                    <Heart className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-lg font-bold text-red-700">Par Biomagnético Principal</span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white/60 rounded-lg p-4 border border-red-300">
+                    <h4 className="font-semibold text-red-700 mb-2">Suprarrenal</h4>
+                    <p className="text-sm text-slate-600">Glándula de supervivencia</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-4 border border-red-300">
+                    <h4 className="font-semibold text-red-700 mb-2">Riñón Derecho</h4>
+                    <p className="text-sm text-slate-600">Filtro de estrés</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {currentSlideData.id === 16 && (
+              <div className="mt-8 p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200 shadow-xl animate-fade-in-up">
+                <div className="flex items-center justify-center space-x-3 mb-6">
+                  <Target className="w-10 h-10 text-green-600 animate-pulse-slow" />
+                  <span className="text-2xl text-green-700 font-bold">Protocolo Bioenergético</span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300 transform transition-all duration-500 hover:scale-105">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse-slow"></div>
+                      <span className="font-semibold text-green-700">1. Identificación</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Test muscular del conflicto</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300 transform transition-all duration-500 hover:scale-105">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse-slow"></div>
+                      <span className="font-semibold text-green-700">2. Recesión</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Encontrar el instante exacto</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300 transform transition-all duration-500 hover:scale-105">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse-slow"></div>
+                      <span className="font-semibold text-green-700">3. Selección</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Pares biomagnéticos</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300 transform transition-all duration-500 hover:scale-105">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse-slow"></div>
+                      <span className="font-semibold text-green-700">4. Aplicación</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Impacto de pares</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300 transform transition-all duration-500 hover:scale-105">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse-slow"></div>
+                      <span className="font-semibold text-green-700">5. Conscientización</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Descarga energética</p>
+                  </div>
+                </div>
               </div>
             )}
 
