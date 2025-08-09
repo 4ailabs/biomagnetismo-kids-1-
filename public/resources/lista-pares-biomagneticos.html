@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pares Biomagnéticos</title>
+    <!-- Incluyendo Tailwind CSS para el diseño -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales y para la barra de scroll */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            padding: 0 1.5rem;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 1000px; /* Suficientemente grande para el contenido */
+            transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+            padding: 1rem 1.5rem;
+        }
+        .accordion-item.active .chevron-icon {
+            transform: rotate(180deg);
+        }
+        .chevron-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Encabezado y barra de búsqueda -->
+        <header class="text-center mb-10">
+            <!-- Botón de regreso -->
+            <div class="flex justify-center mb-6">
+                <button onclick="window.close()" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-lg hover:from-teal-600 hover:to-blue-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Regresar al Módulo
+                </button>
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">Visor Interactivo de Pares</h1>
+            <p class="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">Una forma moderna de explorar los pares biomagnéticos.</p>
+        </header>
+
+        <div class="max-w-3xl mx-auto">
+            <!-- Barra de Búsqueda -->
+            <div class="relative mb-8">
+                <input type="text" id="searchInput" onkeyup="filterAccordion()" placeholder="Buscar por punto, par o padecimiento..." class="w-full pl-5 pr-12 py-3 text-base text-slate-700 placeholder-slate-500 bg-white border border-slate-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                <div class="absolute inset-y-0 right-0 flex items-center pr-5 pointer-events-none">
+                    <svg class="h-5 w-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Contenedor del Acordeón -->
+            <div id="accordion-container" class="space-y-3">
+                <!-- Los elementos del acordeón se insertarán aquí dinámicamente -->
+            </div>
+            
+            <div id="no-results" class="text-center py-10 hidden">
+                <h3 class="text-xl font-semibold text-slate-700">No se encontraron resultados</h3>
+                <p class="text-slate-500 mt-2">Intenta con otros términos de búsqueda.</p>
+            </div>
+
+             <footer class="text-center mt-12 text-sm text-slate-500">
+                <p>Información extraída del documento "Lista de pares biomagneticos.pdf".</p>
+                <p>Esta herramienta es para fines informativos y no reemplaza el consejo médico profesional.</p>
+                <div class="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="text-blue-700 font-medium">💡 <strong>Consejo:</strong> Usa el botón "Regresar al Módulo" arriba o simplemente cierra esta pestaña para volver al curso.</p>
+                </div>
+                <div class="mt-6 p-4 bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg border border-teal-200">
+                    <p class="text-teal-700 font-semibold"><strong>Método creado por:</strong> Dr. Miguel Ojeda Rios</p>
+                    <p class="text-teal-600 text-xs mt-1">Instituto Centrobioenergética</p>
+                    <p class="text-teal-600 text-xs">www.institutocentrobioenergetica.com</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const biomagneticPairs = [
+            { punto: "Pineal", par: "Bulbo raquídeo", padecimiento: "Guillan Barre" },
+            { punto: "Pineal", par: "Pineal", padecimiento: "Disfunción de la glándula. Pigmentación de la piel." },
+            { punto: "Hipófisis", par: "Vejiga", padecimiento: "Dengue virus" },
+            { punto: "Hipófisis", par: "Hipófisis", padecimiento: "Disfunción de la glándula" },
+            { punto: "Hipófisis", par: "Bulbo raquídeo", padecimiento: "Diabetes insípida" },
+            { punto: "Hipófisis", par: "Ovario", padecimiento: "Carmen, disfunción ovarica" },
+            { punto: "Parietal", par: "Parietal", padecimiento: "Encefalitis viral" },
+            { punto: "Parietal", par: "Colon transverso", padecimiento: "Entamoeba histolytica" },
+            { punto: "Parietal", par: "Riñón contralateral", padecimiento: "Goiz" },
+            { punto: "Ojo", par: "Ojo", padecimiento: "Citomegalovirus" },
+            { punto: "Sien", par: "Sien", padecimiento: "ISAAC, Mejora vascularización cerebral, Cefaleas, EPOC" },
+            { punto: "Oído", par: "Oído", padecimiento: "Toxoplasma gondi" },
+            { punto: "Oreja", par: "Oreja", padecimiento: "LENI, regula pares craneales. Tics. Paralisis facial" },
+            { punto: "Mastoides", par: "Mastoides", padecimiento: "Filaria" },
+            { punto: "Mastoides", par: "Riñón del mismo lado", padecimiento: "Tinitus" },
+            { punto: "Pómulo", par: "Riñón", padecimiento: "Paludismo" },
+            { punto: "Lengua", par: "Lengua", padecimiento: "Sarna (escabiosis)" },
+            { punto: "Mandíbula", par: "Mandíbula", padecimiento: "Neisseria Gonorreae" },
+            { punto: "Parótida", par: "Parótida", padecimiento: "Disfunción de glándula" },
+            { punto: "Tiroides", par: "Bulbo", padecimiento: "Meningitis viral" },
+            { punto: "Tiroides", par: "Tiroides", padecimiento: "Disfunción" },
+            { punto: "Paratiroides", par: "Paratiroides", padecimiento: "Disfunción" },
+            { punto: "Timo", par: "Recto", padecimiento: "VIH" },
+            { punto: "Timo", par: "Parietal", padecimiento: "Rubeola" },
+            { punto: "Timo", par: "Apéndice", padecimiento: "Angeles, Inmunocompetencia" },
+            { punto: "Timo", par: "Suprarrenales", padecimiento: "Alvaro, armoniza glándulas, menopausia" },
+            { punto: "Mediastino", par: "Mediastino", padecimiento: "Proteus mirabilis" },
+            { punto: "Laringe", par: "Laringe", padecimiento: "Bacilo pertusis" },
+            { punto: "Cardias", par: "Suprarrenales", padecimiento: "Estreptococo beta hemolitico" },
+            { punto: "Pericardio", par: "Pericardio", padecimiento: "Estafilococo aureo coagulasa positivo" },
+            { punto: "Estómago", par: "Suprarrenales", padecimiento: "Sarampión" },
+            { punto: "Estómago", par: "Píloro", padecimiento: "Clostridium perfringes" },
+            { punto: "Estómago", par: "Estomago", padecimiento: "Disfunción" },
+            { punto: "Cabeza de páncreas", par: "Suprarrenal", padecimiento: "Estafilococo aureo coagulasa negativo" },
+            { punto: "Cuerpo de páncreas", par: "Cola de páncreas", padecimiento: "RAMSES: Fatiga crónica, alteraciones psíquicas" },
+            { punto: "Cola de páncreas", par: "Hígado", padecimiento: "Clostridium botulinum" },
+            { punto: "Punta de páncreas", par: "Bazo", padecimiento: "Verruga común" },
+            { punto: "Conducto de páncreas", par: "Riñón izquierdo", padecimiento: "Espiroqueta" },
+            { punto: "Bazo", par: "Bazo", padecimiento: "Yersinia pestis" },
+            { punto: "Bazo", par: "Hígado", padecimiento: "Brucella" },
+            { punto: "Bazo", par: "Duodeno", padecimiento: "Leucemia" },
+            { punto: "Axila", par: "Axila", padecimiento: "Rabia" },
+            { punto: "Infra axilar", par: "Infra axilar", padecimiento: "Pleuritis viral" },
+            { punto: "Bursa", par: "Bursa", padecimiento: "Actimomices" },
+            { punto: "Subclavia", par: "Subclavia", padecimiento: "Difteria" },
+            { punto: "Supraespinoso", par: "Supraespinoso", padecimiento: "Micobacterium tuberculosis" },
+            { punto: "Deltoides medio", par: "Deltoides medio", padecimiento: "Treponema pallidum" },
+            { punto: "Deltoides medio", par: "Riñon del mismo lado", padecimiento: "Leishmania" },
+            { punto: "Humero", par: "Húmero", padecimiento: "Enterobacter pneumoniae" },
+            { punto: "Braquial", par: "Braquial", padecimiento: "Estreptococo beta hemolítico" },
+            { punto: "Codo", par: "Codo", padecimiento: "Castañeda, miopia, astigmastismo" },
+            { punto: "Radio", par: "Radio", padecimiento: "Microsporum" },
+            { punto: "Cubito", par: "Cubito", padecimiento: "Herpes 3" },
+            { punto: "Muñeca", par: "Muñeca", padecimiento: "Ricketsia" },
+            { punto: "Palma", par: "Palma", padecimiento: "Paludismo, plasmodium vivax" },
+            { punto: "Indice", par: "Indice", padecimiento: "Escherichia Coli" },
+            { punto: "Pleura", par: "Pleura", padecimiento: "Pleuritis" },
+            { punto: "Pleura", par: "Hígado", padecimiento: "Hepatitis B" },
+            { punto: "Pleura", par: "Peritoneo", padecimiento: "Moises; Reservorio" },
+            { punto: "Hígado", par: "Riñón derecho", padecimiento: "Cirrosis hepática" },
+            { punto: "Hígado", par: "Riñón izquierdo", padecimiento: "Absceso hepático amebiano" },
+            { punto: "Hígado", par: "Hígado", padecimiento: "Hepatitis C: Tóxica" },
+            { punto: "Perihepático", par: "Perihepático", padecimiento: "Morganella tifo" },
+            { punto: "Suprahepático", par: "Suprahepático", padecimiento: "Clostridium malignum" },
+            { punto: "Ligamento hepático", par: "Riñón derecho", padecimiento: "Adenovirus" },
+            { punto: "Costo hepático", par: "Costo hepático", padecimiento: "Borrelia" },
+            { punto: "Costo diafragmático", par: "Costo diafragmático", padecimiento: "Tripanosoma Cruzi" },
+            { punto: "Vésicula", par: "Riñón derecho", padecimiento: "Catarro común" },
+            { punto: "Vésicula", par: "Vésicula", padecimiento: "PRADA: Reservorio de virus" },
+            { punto: "Conducto de vesícula", par: "Riñón derecho", padecimiento: "Espiroqueta" },
+            { punto: "Píloro", par: "Píloro", padecimiento: "Enterobius vermicularis" },
+            { punto: "Píloro", par: "Riñón izquierdo", padecimiento: "Amebiasis intestinal" },
+            { punto: "Píloro", par: "Hígado", padecimiento: "Oxiuros (Hepatitis K)" },
+            { punto: "Píloro", par: "Glúteo", padecimiento: "Veionella" },
+            { punto: "Píloro", par: "Uretero", padecimiento: "Micelio intestinal" },
+            { punto: "Duodeno", par: "Riñón derecho", padecimiento: "Diabetes mellitus" },
+            { punto: "Duodeno", par: "Riñón izquierdo", padecimiento: "Clamidia trachomatis" },
+            { punto: "Duodeno", par: "Colon descendente", padecimiento: "Herpes 1" },
+            { punto: "Duodeno", par: "Duodeno", padecimiento: "Disfunción de duodeno" },
+            { punto: "Válvula ileocecal", par: "Riñón derecho", padecimiento: "Trichomonas" },
+            { punto: "Ciego", par: "Ciego", padecimiento: "Haemophylus influenzae" },
+            { punto: "Ciego", par: "Riñón derecho", padecimiento: "Trichomonas" },
+            { punto: "Contraciego", par: "Contraciego", padecimiento: "Bordetella pertusis" },
+            { punto: "Colon ascendente", par: "Riñón derecho", padecimiento: "Klebsiella pneumoniae" },
+            { punto: "Colon ascendente", par: "Colon descendente", padecimiento: "Herpes Zoster" },
+            { punto: "Colon transverso", par: "Vejiga", padecimiento: "Vibrio cholerae" },
+            { punto: "Colon descendente", par: "Colon descendente", padecimiento: "Enterobacter cloacae" },
+            { punto: "Colon descendente", par: "Hígado", padecimiento: "Pasteurella" },
+            { punto: "Colon descendente", par: "Riñón izquierdo", padecimiento: "Pasteurella" },
+            { punto: "Colon descendente", par: "Recto", padecimiento: "Olazo: Obstruccion intestinal" },
+            { punto: "Sigmoides", par: "Recto", padecimiento: "R40 virus" },
+            { punto: "Apéndice", par: "Lengua", padecimiento: "Viruela" },
+            { punto: "Apéndice", par: "Pleura", padecimiento: "Estafilococo aureo coagulasa positivo" },
+            { punto: "Apéndice", par: "Timo", padecimiento: "Inmunocompetencia" },
+            { punto: "Epiplón", par: "Epiplón", padecimiento: "Estafilococo aureo coagulasa positivo" },
+            { punto: "Uretero", par: "Uretero", padecimiento: "Varicela virus" },
+            { punto: "Útero", par: "Útero", padecimiento: "Roberta: Falso embarazo" },
+            { punto: "Útero", par: "Ovario", padecimiento: "Embarazo" },
+            { punto: "Ovario", par: "Ovario", padecimiento: "Disfunción" },
+            { punto: "Trompa", par: "Trompa", padecimiento: "Parvovirus" },
+            { punto: "Vejiga", par: "Vejiga", padecimiento: "Estafilococo aureo coagulasa positivo" },
+            { punto: "Vagina", par: "Vagina", padecimiento: "Yersinia pestis" },
+            { punto: "Clítoris", par: "Clítoris", padecimiento: "Espiroqueta" },
+            { punto: "Pudendo", par: "Pudendo", padecimiento: "Virus de la parotiditis" },
+            { punto: "Testículo", par: "Testículo", padecimiento: "Yersinia pestis" },
+            { punto: "Uretra", par: "Uretra", padecimiento: "Coronavirus" },
+            { punto: "Próstata", par: "Recto", padecimiento: "Papilomavirus" },
+            { punto: "Suprapúbico", par: "Suprapúbico", padecimiento: "HTLV" },
+            { punto: "Aductor", par: "Aductor", padecimiento: "VIH 2" },
+            { punto: "Trocánter menor", par: "Trocánter menor", padecimiento: "HTLV" },
+            { punto: "Cuadriceps", par: "Cuadriceps", padecimiento: "Magda: Intoxicación por bismuto" },
+            { punto: "Nervio inguinal", par: "Nervio inguinal", padecimiento: "VIH 3" },
+            { punto: "Nervio inguinal", par: "Hígado", padecimiento: "Roseola" },
+            { punto: "Nervio inguinal", par: "Articulación", padecimiento: "Reumatismo articular" },
+            { punto: "Tibia", par: "Tibia", padecimiento: "Malazessia furfur" },
+            { punto: "Calcáneo", par: "Calcáneo", padecimiento: "Ricketsia" },
+            { punto: "Aquiles", par: "Aquiles", padecimiento: "Shigella" },
+            { punto: "Popliteo", par: "Popliteo", padecimiento: "Neumococo" },
+            { punto: "Ciático", par: "Ciático", padecimiento: "Poliomielitis" },
+            { punto: "Tensor de la fascia lata", par: "Tensor de la fascia lata", padecimiento: "Gardenerella vaginalis" },
+            { punto: "Isquion", par: "Isquion", padecimiento: "Onchocerca volvulus" },
+            { punto: "Gluteo", par: "Glúteo", padecimiento: "Parasitos intestinales" },
+            { punto: "Gluteo", par: "Píloro", padecimiento: "Veionella" },
+            { punto: "Trocánter mayor", par: "Trocánter mayor", padecimiento: "Salmonella tiphy" },
+            { punto: "Cuello de femur", par: "Cuello de femur", padecimiento: "Reservorio de hongos. Moises" },
+            { punto: "Cadera", par: "Cadera", padecimiento: "Clamidia trachomatis" },
+            { punto: "Rama isquiática", par: "Rama isquiática", padecimiento: "Estreptococo C" },
+            { punto: "Iliaco", par: "Iliaco", padecimiento: "Elena. Disfunción grastrointestinal." },
+            { punto: "Interiliaco", par: "Sacro", padecimiento: "Reservorio de parásitos" },
+            { punto: "Coxis", par: "Coxis", padecimiento: "Rotavirus" },
+            { punto: "Sacro", par: "Sacro", padecimiento: "Proteus mirabilis" },
+            { punto: "Saco de Douglas", par: "Vena femoral", padecimiento: "Norwalk virus" },
+            { punto: "Recto", par: "Recto", padecimiento: "Pseudomona aureginosa" },
+            { punto: "Ano", par: "Ano", padecimiento: "Papiloma virus" },
+            { punto: "Cuadrado", par: "Cuadrado", padecimiento: "Treponema pallidum" },
+            { punto: "Cáliz renal", par: "Uretero", padecimiento: "Herpes 5" },
+            { punto: "Riñón", par: "Riñón", padecimiento: "Clostridium tetani" },
+            { punto: "Riñón", par: "Hígado", padecimiento: "Cirrosis hepática" },
+            { punto: "Riñón", par: "Uretero", padecimiento: "Machin. Cólico nefrítico. Dismenorrea" },
+            { punto: "Riñón", par: "Cápsula renal", padecimiento: "Ale. Reservorio VIH." },
+            { punto: "Riñón", par: "Sacro contrario", padecimiento: "Conflicto intestinal" },
+            { punto: "Cápsula renal", par: "Cápsula renal", padecimiento: "Proteus mirabilis" },
+            { punto: "Suprarrenales", par: "Recto", padecimiento: "Leptospira" },
+            { punto: "Suprarrenales", par: "Pulmón", padecimiento: "Pseudomona aureginosa" },
+            { punto: "Suprarrenales", par: "Todo el frente", padecimiento: "Asma alérgica" },
+            { punto: "Suprarrenales", par: "Suprarrenal", padecimiento: "Disfunción" },
+            { punto: "Flanco", par: "Flanco", padecimiento: "Yersinia Pestis" },
+            { punto: "Cava", par: "Cava", padecimiento: "Tricophyto" },
+            { punto: "Escapula", par: "Escapula", padecimiento: "Micobacterium leprae" },
+            { punto: "Dorsal", par: "Dorsal", padecimiento: "Blastocistis hominis, Legionella" },
+            { punto: "Dorso", par: "Lumbar", padecimiento: "Meningococo" },
+            { punto: "Lumbar", par: "Lumbar", padecimiento: "Neisseria gonorreae" },
+            { punto: "Cervical", par: "Sacro", padecimiento: "Sistema nervioso parasimpático" },
+            { punto: "Cervical", par: "Supraespinoso", padecimiento: "Balantidium tifo" },
+            { punto: "Cervical", par: "Dorsal", padecimiento: "Pasciano, bursitis, tendinitis" },
+            { punto: "Plexo cervical", par: "Plexo cervical", padecimiento: "Estreptococo fecalis" },
+            { punto: "Cuello", par: "Cuello", padecimiento: "Blastocistis hominis" },
+            { punto: "Esternocleidomastoideo", par: "Esternocleidomastoideo", padecimiento: "Sistema nervioso simpático" },
+            { punto: "Atlas", par: "Atlas", padecimiento: "Juana, Conflictos de libido." },
+            { punto: "Occipital", par: "Occipital", padecimiento: "Epstein Bar virus" },
+            { punto: "Bulbo raquídeo", par: "Tiroides", padecimiento: "Meningitis viral" },
+            { punto: "Bulbo raquídeo", par: "Cerebelo", padecimiento: "New Castle virus" },
+            { punto: "Bulbo raquídeo", par: "Vejiga", padecimiento: "Dengue hemorrágico virus" },
+            { punto: "Temporooccipital", par: "Temporooccipital", padecimiento: "Micoplasma" },
+            { punto: "Temporal", par: "Temporal", padecimiento: "Tifo exantemático, Bonilla (agresividad), Polioma" },
+            { punto: "Poligono de Willis", par: "Poligono de Willis", padecimiento: "Reovirus" },
+            { punto: "Quiasma", par: "Quiasma", padecimiento: "Lucina. Regula el flujo linfático." },
+            { punto: "Malar", par: "Malar", padecimiento: "Enterovirus" },
+            { punto: "Craneal", par: "Craneal", padecimiento: "Bacilo Antrax" },
+            { punto: "Interciliar", par: "Bulbo", padecimiento: "David. Carácter por trauma. Crecimiento" },
+            { punto: "Interciliar", par: "Sacro", padecimiento: "Congreso. Repertorio de parásitos." },
+            { punto: "Supraciliar", par: "Bulbo", padecimiento: "Vivian. Integridad corporal. Enanismo" },
+            { punto: "Parpado", par: "Parpado", padecimiento: "Neisseria catharralis" },
+            { punto: "Comisura", par: "Comisura", padecimiento: "Herpes 4" },
+            { punto: "Piso orbitario", par: "Piso orbitario", padecimiento: "Orf virus" },
+            { punto: "Lacrimal", par: "Lacrimal", padecimiento: "Klebsiella pneumoniae" },
+            { punto: "Nariz", par: "Nariz", padecimiento: "Toxoide" },
+            { punto: "Canto", par: "Canto", padecimiento: "Aspergillus" },
+            { punto: "Angina", par: "Angina", padecimiento: "Herpes 2" },
+            { punto: "Gonion", par: "Gonion", padecimiento: "Estreptococo fragilis" },
+            { punto: "Seno frontal", par: "Seno frontal", padecimiento: "Sinusitis viral" },
+            { punto: "Seno paranasal", par: "Seno paranasal", padecimiento: "Sinusitis viral" },
+            { punto: "Polo", par: "Polo", padecimiento: "Abraham. Equilibrio vertical. Dislexia." },
+            { punto: "Nervio vago", par: "Riñón", padecimiento: "Benavides" },
+            { punto: "Nervio facial", par: "Nervio facial", padecimiento: "Sordera" },
+            { punto: "Tráquea", par: "Tráquea", padecimiento: "Influenza virus" },
+            { punto: "Esternon", par: "Suprarrenales", padecimiento: "Lucio. Hiperglobulinemia." },
+            { punto: "Mango", par: "Mango", padecimiento: "Coxsackie virus" },
+            { punto: "Esófago", par: "Esófago", padecimiento: "Fasciolosis buski" },
+            { punto: "Esófago", par: "Vejiga", padecimiento: "Histoplasma capsulatum" },
+            { punto: "Hiato esofágico", par: "Testículo", padecimiento: "Helicobacter pilory" },
+            { punto: "Hiato esofágico", par: "Esófago", padecimiento: "Enterobacter pneumoniae" },
+            { punto: "Carina", par: "Carina", padecimiento: "Aftosa virus" },
+            { punto: "Condral", par: "Condral", padecimiento: "Pneumocistis carinni" },
+            { punto: "Costal", par: "Costal", padecimiento: "Proteus mirabilis" },
+            { punto: "Diafragma", par: "Diafragma", padecimiento: "Candida albicans" },
+            { punto: "Diafragma", par: "Riñón", padecimiento: "Brucella abortus" },
+            { punto: "Carótida", par: "Carótida", padecimiento: "Marimar. Regula la presión arterial." },
+            { punto: "Seno auriculoventricular", par: "Riñón", padecimiento: "Ana Alicia. Arritmias." },
+            { punto: "Coronarias", par: "Pulmón", padecimiento: "Estreptococo alfa" },
+            { punto: "Costilla", par: "Costilla", padecimiento: "Tricophyto" },
+            { punto: "Aorta", par: "Aorta", padecimiento: "Presión arterial, trigliceridos." },
+            { punto: "Arco cigomático", par: "Arco cigomático", padecimiento: "Virus Ebóla" },
+            { punto: "Plantar", par: "Plantar", padecimiento: "Alteraciones en piernas" },
+            { punto: "Empeine", par: "Empeine", padecimiento: "Orzuelo" }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('accordion-container');
+
+            // Agrupar los pares por el 'punto'
+            const groupedPairs = biomagneticPairs.reduce((acc, pair) => {
+                const { punto, par, padecimiento } = pair;
+                // Limpiar el nombre del punto para agrupar mejor (ej. "Parietal izquierdo" -> "Parietal")
+                const mainPoint = punto.split(' ')[0];
+                if (!acc[mainPoint]) {
+                    acc[mainPoint] = [];
+                }
+                acc[mainPoint].push({ punto, par, padecimiento });
+                return acc;
+            }, {});
+
+            // Crear el HTML para el acordeón
+            for (const groupName in groupedPairs) {
+                const pairs = groupedPairs[groupName];
+                const accordionItem = document.createElement('div');
+                accordionItem.className = 'accordion-item bg-white rounded-lg shadow-sm border border-slate-200';
+                
+                let contentHTML = '';
+                pairs.forEach(pair => {
+                    contentHTML += `
+                        <div class="py-3 border-b border-slate-100 last:border-b-0">
+                            <p class="font-semibold text-slate-700">${pair.punto} - ${pair.par}</p>
+                            <p class="text-slate-500 text-sm mt-1">${pair.padecimiento}</p>
+                        </div>
+                    `;
+                });
+
+                accordionItem.innerHTML = `
+                    <button class="accordion-trigger w-full flex justify-between items-center text-left p-4">
+                        <span class="font-semibold text-lg text-slate-800">${groupName}</span>
+                        <svg class="chevron-icon w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content bg-slate-50/50">
+                        ${contentHTML}
+                    </div>
+                `;
+                container.appendChild(accordionItem);
+            }
+
+            // Añadir el event listener para abrir/cerrar
+            container.addEventListener('click', (event) => {
+                const trigger = event.target.closest('.accordion-trigger');
+                if (trigger) {
+                    const item = trigger.parentElement;
+                    item.classList.toggle('active');
+                }
+            });
+        });
+
+        function filterAccordion() {
+            const filter = document.getElementById('searchInput').value.toUpperCase();
+            const items = document.querySelectorAll('.accordion-item');
+            let resultsFound = false;
+
+            items.forEach(item => {
+                const groupName = item.querySelector('.accordion-trigger span').textContent.toUpperCase();
+                const pairsContent = item.querySelector('.accordion-content').innerText.toUpperCase();
+                
+                const hasMatch = groupName.includes(filter) || pairsContent.includes(filter);
+                
+                if (hasMatch) {
+                    item.style.display = '';
+                    resultsFound = true;
+                    // Si la búsqueda no está vacía y coincide con el contenido, expandir
+                    if (filter.length > 0 && pairsContent.includes(filter)) {
+                        item.classList.add('active');
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            document.getElementById('no-results').style.display = resultsFound ? 'none' : 'block';
+        }
+
+    </script>
+
+</body>
+</html>
