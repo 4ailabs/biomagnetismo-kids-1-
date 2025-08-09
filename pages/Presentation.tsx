@@ -412,13 +412,26 @@ const Presentation: React.FC = () => {
     // SLIDE 23: SHOCKS GESTACIONALES - PRIMERA PARTE
     {
       id: 23,
-      title: "SHOCKS GESTACIONALES (1-10)",
+      title: "SHOCKS GESTACIONALES (1-5)",
       content: [
         "1. Amenaza de aborto - Suprarrenal-Suprarrenal",
         "2. Diagnóstico médico alarmante - Bulbo-Suprarrenal",
         "3. Pérdida de un ser querido - Pericardio-Pulmón",
         "4. Separación de pareja - Plexo-Riñón der",
         "5. Violencia hacia la madre - Temporal izq-Temporal der"
+      ],
+      type: 'content'
+    },
+    // SLIDE 23B: SHOCKS GESTACIONALES - SEGUNDA PARTE
+    {
+      id: 23.5,
+      title: "SHOCKS GESTACIONALES (6-10)",
+      content: [
+        "6. Accidente o caída - Bulbo-Suprarrenal",
+        "7. Hospitalización prolongada - Plexo-Riñón izq",
+        "8. Problemas económicos graves - Estómago-Estómago",
+        "9. Mudanza forzada - Occipital-Sacro",
+        "10. Conflictos familiares intensos - Plexo-Riñón derecho"
       ],
       type: 'content'
     },
@@ -888,7 +901,7 @@ const Presentation: React.FC = () => {
                 </div>
               )}
 
-                            {(currentSlideData.id === 23 || currentSlideData.id === 24) && (
+                            {(currentSlideData.id === 23 || currentSlideData.id === 23.5 || currentSlideData.id === 24) && (
                 <div className="space-y-6">
                   {currentSlideData.content.map((item, index) => {
                     const colors = [
@@ -899,7 +912,7 @@ const Presentation: React.FC = () => {
                       { bg: 'from-purple-50 to-violet-50', border: 'border-purple-200', circle: 'from-purple-500 to-violet-500', icon: '😨' }
                     ];
                     const colorIndex = index % colors.length;
-                    const shockNumber = currentSlideData.id === 23 ? index + 1 : index + 11;
+                    const shockNumber = currentSlideData.id === 23 ? index + 1 : currentSlideData.id === 23.5 ? index + 6 : index + 11;
                     
                     return (
                       <div 
@@ -996,7 +1009,7 @@ const Presentation: React.FC = () => {
                 </div>
               )}
 
-              {currentSlideData.type === 'content' && ![22, 23, 24, 25, 26, 27].includes(currentSlideData.id) && (
+              {currentSlideData.type === 'content' && ![22, 23, 23.5, 24, 25, 26, 27].includes(currentSlideData.id) && (
                 <div className="space-y-4">
                   {currentSlideData.content.map((item, index) => {
                     const colors = [
