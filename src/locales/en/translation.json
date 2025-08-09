@@ -100,37 +100,6 @@
         }
       },
       "approach": "Working with children requires evaluating the complete family system. Biomagnetic pairs must be selected considering not only the child's symptoms, but also underlying family patterns, creating a therapeutic effect that benefits the family system in its entirety."
-    },
-    "belongingLaws": {
-      "title": "Belonging and Systemic Laws of the Child",
-      "intro": "In the context of pediatric biomagnetism, it is fundamental to understand the belonging laws that govern the family system and how these manifest in the child's energetic field. These laws determine the family energetic dynamics and patterns that can manifest as specific symptoms.",
-      "laws": {
-        "title": "Fundamental Laws of Systemic Belonging",
-        "loyalty": {
-          "title": "Family Loyalty Law",
-          "content": "\"I will follow you until death\" - The child maintains absolute energetic loyalty towards their family system. This loyalty can manifest as symptoms that 'follow' family patterns, requiring biomagnetic pairs that address both loyalty and the underlying pattern."
-        },
-        "sacrifice": {
-          "title": "Systemic Sacrifice Law",
-          "content": "\"I prefer to die before you, Better I die than you\" - Children can energetically assume the suffering of other family system members. This sacrifice manifests as symptoms that 'protect' others, requiring pairs that release the sacrificial burden and restore balance."
-        },
-        "guilt": {
-          "title": "Guilt Repair Law",
-          "content": "\"Repair of personal guilt\" - Children can manifest symptoms that 'repair' guilts or unresolved conflicts from previous generations. Biomagnetism must address both the current symptom and the underlying family guilt pattern."
-        },
-        "direction": {
-          "title": "Energetic Direction Law",
-          "content": "\"I direct my gaze towards...\" - Children direct their energy towards specific family system patterns. This direction can manifest as symptoms that 'look' towards unresolved conflicts, requiring pairs that reorient energy towards healthy patterns."
-        }
-      },
-      "application": {
-        "title": "Biomagnetic Application of Systemic Laws",
-        "loyaltyPairs": "Adrenal-Adrenal, Plexus-Kidney, Pericardium-Lung",
-        "sacrificePairs": "Thymus-Adrenal, Bulb-Plexus, Heart-Adrenal",
-        "guiltPairs": "Pituitary-Pineal, Temporal-Temporal, Occipital-Sacrum",
-        "directionPairs": "Bulb-Cerebellum, Plexus-Kidney, Stomach-Stomach"
-      },
-      "therapeutic": "When applying pediatric biomagnetism, it is essential to identify which systemic law is active in the child. Pairs must be selected not only to treat physical symptoms, but to release systemic patterns that keep the child in unbalanced family dynamics."
     }
   },
   "bioenergeticProtocol": {
@@ -392,6 +361,37 @@
     "systemicApproach": {
       "title": "Complete Systemic Approach",
       "content": "Pediatric biomagnetism requires a holistic vision that considers not only the child's symptoms, but also the complete family system."
+    },
+    "belongingLaws": {
+      "title": "Belonging and Systemic Laws of the Child",
+      "intro": "In the context of pediatric biomagnetism, it is fundamental to understand the belonging laws that govern the family system and how these manifest in the child's energetic field. These laws determine the family energetic dynamics and patterns that can manifest as specific symptoms.",
+      "laws": {
+        "title": "Fundamental Laws of Systemic Belonging",
+        "loyalty": {
+          "title": "Family Loyalty Law",
+          "content": "\"I will follow you until death\" - The child maintains absolute energetic loyalty towards their family system. This loyalty can manifest as symptoms that 'follow' family patterns, requiring biomagnetic pairs that address both loyalty and the underlying pattern."
+        },
+        "sacrifice": {
+          "title": "Systemic Sacrifice Law",
+          "content": "\"I prefer to die before you, Better I die than you\" - Children can energetically assume the suffering of other family system members. This sacrifice manifests as symptoms that 'protect' others, requiring pairs that release the sacrificial burden and restore balance."
+        },
+        "guilt": {
+          "title": "Guilt Repair Law",
+          "content": "\"Repair of personal guilt\" - Children can manifest symptoms that 'repair' guilts or unresolved conflicts from previous generations. Biomagnetism must address both the current symptom and the underlying family guilt pattern."
+        },
+        "direction": {
+          "title": "Energetic Direction Law",
+          "content": "\"I direct my gaze towards...\" - Children direct their energy towards specific family system patterns. This direction can manifest as symptoms that 'look' towards unresolved conflicts, requiring pairs that reorient energy towards healthy patterns."
+        }
+      },
+      "application": {
+        "title": "Biomagnetic Application of Systemic Laws",
+        "loyaltyPairs": "Adrenal-Adrenal, Plexus-Kidney, Pericardium-Lung",
+        "sacrificePairs": "Thymus-Adrenal, Bulb-Plexus, Heart-Adrenal",
+        "guiltPairs": "Pituitary-Pineal, Temporal-Temporal, Occipital-Sacrum",
+        "directionPairs": "Bulb-Cerebellum, Plexus-Kidney, Stomach-Stomach"
+      },
+      "therapeutic": "When applying pediatric biomagnetism, it is essential to identify which systemic law is active in the child. Pairs must be selected not only to treat physical symptoms, but to release systemic patterns that keep the child in unbalanced family dynamics."
     }
   },
   "bioenergeticProtocol": {

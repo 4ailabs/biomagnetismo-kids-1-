@@ -199,56 +199,6 @@ const Block1Content = () => {
                         );
                     })}
                 </div>
-
-                <SubSectionTitle title={t('block1.belongingLaws.title')} />
-                <p className="text-base sm:text-lg leading-relaxed mb-6">
-                    {t('block1.belongingLaws.intro')}
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
-                        <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
-                            <span className="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
-                            {t('block1.belongingLaws.laws.loyalty.title')}
-                        </h5>
-                        <p className="text-sm text-slate-700">
-                            {t('block1.belongingLaws.laws.loyalty.content')}
-                        </p>
-                    </div>
-                    <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
-                        <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
-                            <span className="w-2 h-2 bg-orange-400 rounded-full mr-2"></span>
-                            {t('block1.belongingLaws.laws.sacrifice.title')}
-                        </h5>
-                        <p className="text-sm text-slate-700">
-                            {t('block1.belongingLaws.laws.sacrifice.content')}
-                        </p>
-                    </div>
-                    <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
-                        <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
-                            <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-                            {t('block1.belongingLaws.laws.guilt.title')}
-                        </h5>
-                        <p className="text-sm text-slate-700">
-                            {t('block1.belongingLaws.laws.guilt.content')}
-                        </p>
-                    </div>
-                    <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
-                        <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
-                            <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                            {t('block1.belongingLaws.laws.direction.title')}
-                        </h5>
-                        <p className="text-sm text-slate-700">
-                            {t('block1.belongingLaws.laws.direction.content')}
-                        </p>
-                    </div>
-                </div>
-                
-                <div className="mt-6 p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-lg border-l-4 border-teal-500">
-                    <p className="text-sm text-slate-700 leading-relaxed">
-                        <strong>{t('block1.belongingLaws.therapeutic')}</strong>
-                    </p>
-                </div>
             </div>
         </>
     );
@@ -359,6 +309,56 @@ const Block5Content = () => {
 
                 <SubSectionTitle title={t('block5.systemicApproach.title')} />
                 <p>{t('block5.systemicApproach.content')}</p>
+
+                <SubSectionTitle title={t('block5.belongingLaws.title')} />
+                <p className="text-base sm:text-lg leading-relaxed mb-6">
+                    {t('block5.belongingLaws.intro')}
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
+                        <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
+                            <span className="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                            {t('block5.belongingLaws.laws.loyalty.title')}
+                        </h5>
+                        <p className="text-sm text-slate-700">
+                            {t('block5.belongingLaws.laws.loyalty.content')}
+                        </p>
+                    </div>
+                    <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
+                        <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
+                            <span className="w-2 h-2 bg-orange-400 rounded-full mr-2"></span>
+                            {t('block5.belongingLaws.laws.sacrifice.title')}
+                        </h5>
+                        <p className="text-sm text-slate-700">
+                            {t('block5.belongingLaws.laws.sacrifice.content')}
+                        </p>
+                    </div>
+                    <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
+                        <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
+                            <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                            {t('block5.belongingLaws.laws.guilt.title')}
+                        </h5>
+                        <p className="text-sm text-slate-700">
+                            {t('block5.belongingLaws.laws.guilt.content')}
+                        </p>
+                    </div>
+                    <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
+                        <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
+                            <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                            {t('block5.belongingLaws.laws.direction.title')}
+                        </h5>
+                        <p className="text-sm text-slate-700">
+                            {t('block5.belongingLaws.laws.direction.content')}
+                        </p>
+                    </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-lg border-l-4 border-teal-500">
+                    <p className="text-sm text-slate-700 leading-relaxed">
+                        <strong>{t('block5.belongingLaws.therapeutic')}</strong>
+                    </p>
+                </div>
             </div>
         </>
     );

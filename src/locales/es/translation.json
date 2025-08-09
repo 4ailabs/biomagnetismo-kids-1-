@@ -101,37 +101,7 @@
       },
       "approach": "El trabajo con niños requiere evaluar el sistema familiar completo. Los pares biomagnéticos deben seleccionarse considerando no solo los síntomas del niño, sino también los patrones familiares subyacentes, creando un efecto terapéutico que beneficie al sistema familiar en su totalidad."
     },
-    "belongingLaws": {
-      "title": "Leyes de Pertenencia y Sistémicas del Niño",
-      "intro": "En el contexto del biomagnetismo pediátrico, es fundamental comprender las leyes de pertenencia que rigen el sistema familiar y cómo estas se manifiestan en el campo energético del niño. Estas leyes determinan la dinámica energética familiar y los patrones que pueden manifestarse como síntomas específicos.",
-      "laws": {
-        "title": "Leyes Fundamentales de Pertenencia Sistémica",
-        "loyalty": {
-          "title": "Ley de Lealtad Familiar",
-          "content": "\"Te seguiré hasta la muerte\" - El niño mantiene una lealtad energética absoluta hacia su sistema familiar. Esta lealtad puede manifestarse como síntomas que \"siguen\" patrones familiares, requiriendo pares biomagnéticos que aborden tanto la lealtad como el patrón subyacente."
-        },
-        "sacrifice": {
-          "title": "Ley de Sacrificio Sistémico",
-          "content": "\"Prefiero morir yo antes que tú, Mejor muero yo que tú\" - Los niños pueden asumir energéticamente el sufrimiento de otros miembros del sistema familiar. Este sacrificio se manifiesta como síntomas que \"protegen\" a otros, requiriendo pares que liberen la carga sacrificial y restablezcan el equilibrio."
-        },
-        "guilt": {
-          "title": "Ley de Reparación de Culpa",
-          "content": "\"Reparación de la culpa personal\" - Los niños pueden manifestar síntomas que \"reparan\" culpas o conflictos no resueltos de generaciones anteriores. El biomagnetismo debe abordar tanto el síntoma actual como el patrón de culpa familiar subyacente."
-        },
-        "direction": {
-          "title": "Ley de Dirección Energética",
-          "content": "\"Dirijo mi mirada hacia...\" - Los niños dirigen su energía hacia patrones específicos del sistema familiar. Esta dirección puede manifestarse como síntomas que \"miran\" hacia conflictos no resueltos, requiriendo pares que reorienten la energía hacia patrones saludables."
-        }
-      },
-      "application": {
-        "title": "Aplicación Biomagnética de las Leyes Sistémicas",
-        "loyaltyPairs": "Suprarrenal-Suprarrenal, Plexo-Riñón, Pericardio-Pulmón",
-        "sacrificePairs": "Timo-Suprarrenal, Bulbo-Plexo, Corazón-Suprarrenal",
-        "guiltPairs": "Hipófisis-Pineal, Temporal-Temporal, Occipital-Sacro",
-        "directionPairs": "Bulbo-Cerebelo, Plexo-Riñón, Estómago-Estómago"
-      },
-      "therapeutic": "Al aplicar biomagnetismo pediátrico, es esencial identificar qué ley sistémica está activa en el niño. Los pares deben seleccionarse no solo para tratar síntomas físicos, sino para liberar patrones sistémicos que mantienen al niño en dinámicas familiares desequilibradas."
-    },
+
     "gestationalShocks": {
       "title": "Lista Completa: 20 Shocks Vivenciales Gestacionales y sus Pares",
       "headers": ["#", "Shock Vivencial", "Pares Biomagnéticos", "Beneficios Esperados"],
@@ -446,6 +416,37 @@
     "systemicApproach": {
       "title": "Enfoque Sistémico Completo",
       "content": "El biomagnetismo pediátrico requiere una visión holística que considere no solo los síntomas del niño, sino también el sistema familiar completo."
+    },
+    "belongingLaws": {
+      "title": "Leyes de Pertenencia y Sistémicas del Niño",
+      "intro": "En el contexto del biomagnetismo pediátrico, es fundamental comprender las leyes de pertenencia que rigen el sistema familiar y cómo estas se manifiestan en el campo energético del niño. Estas leyes determinan la dinámica energética familiar y los patrones que pueden manifestarse como síntomas específicos.",
+      "laws": {
+        "title": "Leyes Fundamentales de Pertenencia Sistémica",
+        "loyalty": {
+          "title": "Ley de Lealtad Familiar",
+          "content": "\"Te seguiré hasta la muerte\" - El niño mantiene una lealtad energética absoluta hacia su sistema familiar. Esta lealtad puede manifestarse como síntomas que \"siguen\" patrones familiares, requiriendo pares biomagnéticos que aborden tanto la lealtad como el patrón subyacente."
+        },
+        "sacrifice": {
+          "title": "Ley de Sacrificio Sistémico",
+          "content": "\"Prefiero morir yo antes que tú, Mejor muero yo que tú\" - Los niños pueden asumir energéticamente el sufrimiento de otros miembros del sistema familiar. Este sacrificio se manifiesta como síntomas que \"protegen\" a otros, requiriendo pares que liberen la carga sacrificial y restablezcan el equilibrio."
+        },
+        "guilt": {
+          "title": "Ley de Reparación de Culpa",
+          "content": "\"Reparación de la culpa personal\" - Los niños pueden manifestar síntomas que \"reparan\" culpas o conflictos no resueltos de generaciones anteriores. El biomagnetismo debe abordar tanto el síntoma actual como el patrón de culpa familiar subyacente."
+        },
+        "direction": {
+          "title": "Ley de Dirección Energética",
+          "content": "\"Dirijo mi mirada hacia...\" - Los niños dirigen su energía hacia patrones específicos del sistema familiar. Esta dirección puede manifestarse como síntomas que \"miran\" hacia conflictos no resueltos, requiriendo pares que reorienten la energía hacia patrones saludables."
+        }
+      },
+      "application": {
+        "title": "Aplicación Biomagnética de las Leyes Sistémicas",
+        "loyaltyPairs": "Suprarrenal-Suprarrenal, Plexo-Riñón, Pericardio-Pulmón",
+        "sacrificePairs": "Timo-Suprarrenal, Bulbo-Plexo, Corazón-Suprarrenal",
+        "guiltPairs": "Hipófisis-Pineal, Temporal-Temporal, Occipital-Sacro",
+        "directionPairs": "Bulbo-Cerebelo, Plexo-Riñón, Estómago-Estómago"
+      },
+      "therapeutic": "Al aplicar biomagnetismo pediátrico, es esencial identificar qué ley sistémica está activa en el niño. Los pares deben seleccionarse no solo para tratar síntomas físicos, sino para liberar patrones sistémicos que mantienen al niño en dinámicas familiares desequilibradas."
     }
   },
   "bioenergeticProtocol": {
