@@ -1,6 +1,30 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { X, ChevronLeft, ChevronRight, Play, Pause, Home } from 'lucide-react';
+import { 
+  X, 
+  ChevronLeft, 
+  ChevronRight, 
+  Play, 
+  Pause, 
+  Home,
+  BookOpen,
+  Beaker,
+  Baby,
+  Rocket,
+  Target,
+  Heart,
+  Brain,
+  Sparkles,
+  Lightbulb,
+  Users,
+  Clock,
+  GraduationCap,
+  AlertTriangle,
+  Table,
+  History,
+  Download,
+  Shield
+} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 interface Slide {
@@ -221,19 +245,110 @@ const Presentation: React.FC = () => {
         {/* Slide Content - Full Screen */}
         <div className="absolute inset-0 pt-24 pb-32 px-12 flex items-center justify-center">
           <div className="w-full max-w-6xl text-center">
-            {/* Slide Title */}
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-12 leading-tight">
-              {currentSlideData.title}
-            </h2>
+            {/* Slide Title with Icon */}
+            <div className="flex items-center justify-center mb-8">
+              {currentSlideData.id === 1 && <BookOpen className="w-16 h-16 text-teal-600 mr-4" />}
+              {currentSlideData.id === 2 && <Brain className="w-16 h-16 text-blue-600 mr-4" />}
+              {currentSlideData.id === 3 && <AlertTriangle className="w-16 h-16 text-red-600 mr-4" />}
+              {currentSlideData.id === 4 && <Users className="w-16 h-16 text-purple-600 mr-4" />}
+              {currentSlideData.id === 5 && <Target className="w-16 h-16 text-green-600 mr-4" />}
+              {currentSlideData.id === 6 && <Heart className="w-16 h-16 text-pink-600 mr-4" />}
+              {currentSlideData.id === 7 && <Sparkles className="w-16 h-16 text-yellow-600 mr-4" />}
+              {currentSlideData.id === 8 && <Lightbulb className="w-16 h-16 text-orange-600 mr-4" />}
+              {currentSlideData.id === 9 && <Table className="w-16 h-16 text-indigo-600 mr-4" />}
+              {currentSlideData.id === 10 && <GraduationCap className="w-16 h-16 text-teal-600 mr-4" />}
+              {currentSlideData.id === 11 && <Baby className="w-16 h-16 text-blue-600 mr-4" />}
+              {currentSlideData.id === 12 && <Rocket className="w-16 h-16 text-green-600 mr-4" />}
+              {currentSlideData.id === 13 && <Target className="w-16 h-16 text-purple-600 mr-4" />}
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-tight">
+                {currentSlideData.title}
+              </h2>
+            </div>
 
-            {/* Slide Content */}
-            <div className="space-y-8">
+            {/* Slide Content with Enhanced Layout */}
+            <div className="space-y-6">
               {currentSlideData.content.map((item, index) => (
-                <div key={index} className="text-3xl md:text-4xl lg:text-5xl text-slate-700 leading-relaxed">
-                  {item}
+                <div key={index} className="flex items-center justify-center space-x-4">
+                  <div className="flex-shrink-0">
+                    {currentSlideData.type === 'key-points' && (
+                      <div className="w-8 h-8 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-lg">{index + 1}</span>
+                      </div>
+                    )}
+                    {currentSlideData.type === 'content' && (
+                      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-lg">•</span>
+                      </div>
+                    )}
+                    {currentSlideData.type === 'summary' && (
+                      <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-lg">✓</span>
+                      </div>
+                    )}
+                  </div>
+                  <div className="text-2xl md:text-3xl lg:text-4xl text-slate-700 leading-relaxed font-medium">
+                    {item}
+                  </div>
                 </div>
               ))}
             </div>
+
+            {/* Additional Information for Specific Slides */}
+            {currentSlideData.id === 1 && (
+              <div className="mt-12 p-6 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl border border-teal-200">
+                <div className="flex items-center justify-center space-x-4 mb-4">
+                  <Clock className="w-8 h-8 text-teal-600" />
+                  <span className="text-xl text-teal-700 font-semibold">Módulo 1: El Inicio Invisible</span>
+                </div>
+                <p className="text-lg text-slate-600">Cuando la Historia Empieza Antes de Nacer</p>
+              </div>
+            )}
+
+            {currentSlideData.id === 3 && (
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 bg-red-50 rounded-lg border border-red-200">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <AlertTriangle className="w-6 h-6 text-red-600" />
+                    <span className="font-semibold text-red-700">Supervivencia</span>
+                  </div>
+                  <p className="text-sm text-red-600">Amenaza de aborto, hemorragias</p>
+                </div>
+                <div className="p-4 bg-orange-50 rounded-lg border border-orange-200">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Shield className="w-6 h-6 text-orange-600" />
+                    <span className="font-semibold text-orange-700">Protección</span>
+                  </div>
+                  <p className="text-sm text-orange-600">Violencia, entornos hostiles</p>
+                </div>
+              </div>
+            )}
+
+            {currentSlideData.id === 5 && (
+              <div className="mt-8 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200">
+                <div className="flex items-center justify-center space-x-2 mb-4">
+                  <Target className="w-8 h-8 text-green-600" />
+                  <span className="text-xl text-green-700 font-semibold">Protocolo Bioenergético</span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                    <span>Identificación del conflicto</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                    <span>Recesión de edad</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                    <span>Selección de pares</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                    <span>Conscientización</span>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
