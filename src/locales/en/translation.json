@@ -1,0 +1,291 @@
+{
+  "header": {
+    "title": "MODULE 1",
+    "subtitle": "\"The Invisible Beginning: When History Starts Before Birth\"",
+    "course": "Course: Biomagnetism Kids",
+    "modality": "Modality: Online Class",
+    "duration": "Duration: 8 hours"
+  },
+  "moduleStructure": {
+    "title": "Module Structure",
+    "objective": "General Module Objective",
+    "objectiveText": "Understand how gestational and perinatal experiences influence the baby's energetic field, learning to identify, trace, and balance imbalances through specific biomagnetic pairs for each developmental stage.",
+    "structureTitle": "Module Structure",
+    "tableHeaders": {
+      "block": "Block",
+      "topic": "Topic",
+      "focus": "Main Focus"
+    },
+    "blocks": {
+      "block1": {
+        "title": "Intrauterine Life and Biological Conflicts",
+        "focus": "Theoretical foundations"
+      },
+      "block2": {
+        "title": "Tracing and Protocols in Gestation",
+        "focus": "Application techniques"
+      },
+      "block3": {
+        "title": "Newborn (0-1 month)",
+        "focus": "Specific pathologies"
+      },
+      "block4": {
+        "title": "Development (1-3 months)",
+        "focus": "Postnatal shocks"
+      },
+      "block5": {
+        "title": "Systemic Integration",
+        "focus": "Holistic vision"
+      }
+    }
+  },
+  "block1": {
+    "title": "BLOCK 1: Intrauterine Life and Biological Conflicts",
+    "fundamentals": {
+      "title": "Theoretical Foundations",
+      "bioelectricField": {
+        "title": "The Maternal-Fetal Bioelectric Field",
+        "content": "During gestation, mother and baby form a unified energetic ecosystem. Every change in the maternal magnetic field generates direct resonance in the fetal energetic system. The baby absorbs all maternal vibrations with total permeability, while their tissues record significant events creating cellular memory. This stage is characterized by maximum plasticity that allows great adaptation capacity, but also by extreme vulnerability to external imbalances."
+      },
+      "principles": {
+        "title": "Fundamental Principles",
+        "resonance": "Maternal-Filial Resonance Law: Everything the mother feels, the baby lives.",
+        "imprint": "Energetic Imprint Law: The first 100 days define 70% of the adult energetic pattern.",
+        "plasticity": "Decreasing Plasticity Law: The capacity for energetic modification is maximum at birth."
+      }
+    },
+    "conflicts": {
+      "title": "The 5 Fundamental Biological Conflicts",
+      "survival": {
+        "title": "SURVIVAL CONFLICT",
+        "content": "This conflict is activated when there is a real or perceived threat to the continuity of pregnancy. Manifestations include threat of miscarriage, gestational hemorrhages, serious medical diagnoses, and accidents. The main biomagnetic pair is Adrenal - Right Kidney, and its effect on the baby translates into hypervigilance, chronic stress, and sleep disorders."
+      },
+      "protection": {
+        "title": "PROTECTION CONFLICT",
+        "content": "It occurs when the environment is perceived as unsafe or hostile. Includes situations of violence, aggression, and chaotic environments. The main pair is Temporal - Temporal, manifesting in the baby as muscle hypertonia, startles, and auditory hypersensitivity."
+      },
+      "separation": {
+        "title": "SEPARATION CONFLICT",
+        "content": "Arises from physical or emotional separation from important figures. Encompasses hospitalization, father's absence, grief, and isolation. It is worked with Solar Plexus - Left Kidney, generating in the baby colic, feeding difficulties, and lethargy."
+      },
+      "identity": {
+        "title": "IDENTITY CONFLICT",
+        "content": "Appears when there are doubts about the baby's desirability or identity. Includes unwanted pregnancy and unfulfilled expectations. The Pituitary - Pineal pair works on these aspects, potentially causing growth disorders and hormonal problems."
+      },
+      "territory": {
+        "title": "TERRITORY CONFLICT",
+        "content": "Develops from loss or threat to safe vital space. Encompasses moving, loss of housing, and drastic changes. The Bulb - Cerebellum pair generates irritability and adaptation difficulties in the baby."
+      }
+    },
+    "systemicApproach": {
+      "title": "The Child as a Family Energetic System",
+      "intro": "In pediatric biomagnetism, it is fundamental to understand that the child does not exist in isolation, but as part of a family energetic system. Their magnetic field is interconnected with that of their parents, siblings, and environment, creating an energetic ecosystem that directly influences their development and health.",
+      "principles": {
+        "title": "Principles of Systemic Approach in Biomagnetism",
+        "interconnection": {
+          "title": "Family Energetic Interconnection",
+          "content": "The child's energetic field is directly connected to that of their parents and siblings. Family imbalances are reflected in the infant's energetic system, requiring an approach that considers the complete system, not just the child in isolation."
+        },
+        "generational": {
+          "title": "Generational Pattern Transmission",
+          "content": "Energetic patterns are transmitted from generation to generation. Unresolved conflicts from parents or grandparents can manifest in the child as specific symptoms, requiring biomagnetic pairs that address both the current symptom and its family origin."
+        },
+        "sensitivity": {
+          "title": "Sensitivity to Family Field",
+          "content": "Children act as 'antennas' of the family system, capturing and manifesting imbalances that other members do not perceive. Their greater energetic sensitivity makes them precise indicators of the complete family system's state."
+        },
+        "resonance": {
+          "title": "Systemic Resonance Effect",
+          "content": "When the child's energetic field is balanced, a resonance is produced that positively affects the complete family system. Pediatric biomagnetism can catalyze energetic changes throughout the family, creating a multiplying therapeutic effect."
+        }
+      },
+      "approach": "Working with children requires evaluating the complete family system. Biomagnetic pairs must be selected considering not only the child's symptoms, but also underlying family patterns, creating a therapeutic effect that benefits the family system in its entirety."
+    },
+    "belongingLaws": {
+      "title": "Belonging and Systemic Laws of the Child",
+      "intro": "In the context of pediatric biomagnetism, it is fundamental to understand the belonging laws that govern the family system and how these manifest in the child's energetic field. These laws determine the family energetic dynamics and patterns that can manifest as specific symptoms.",
+      "laws": {
+        "title": "Fundamental Laws of Systemic Belonging",
+        "loyalty": {
+          "title": "Family Loyalty Law",
+          "content": "\"I will follow you until death\" - The child maintains absolute energetic loyalty towards their family system. This loyalty can manifest as symptoms that 'follow' family patterns, requiring biomagnetic pairs that address both loyalty and the underlying pattern."
+        },
+        "sacrifice": {
+          "title": "Systemic Sacrifice Law",
+          "content": "\"I prefer to die before you, Better I die than you\" - Children can energetically assume the suffering of other family system members. This sacrifice manifests as symptoms that 'protect' others, requiring pairs that release the sacrificial burden and restore balance."
+        },
+        "guilt": {
+          "title": "Guilt Repair Law",
+          "content": "\"Repair of personal guilt\" - Children can manifest symptoms that 'repair' guilts or unresolved conflicts from previous generations. Biomagnetism must address both the current symptom and the underlying family guilt pattern."
+        },
+        "direction": {
+          "title": "Energetic Direction Law",
+          "content": "\"I direct my gaze towards...\" - Children direct their energy towards specific family system patterns. This direction can manifest as symptoms that 'look' towards unresolved conflicts, requiring pairs that reorient energy towards healthy patterns."
+        }
+      },
+      "application": {
+        "title": "Biomagnetic Application of Systemic Laws",
+        "loyaltyPairs": "Adrenal-Adrenal, Plexus-Kidney, Pericardium-Lung",
+        "sacrificePairs": "Thymus-Adrenal, Bulb-Plexus, Heart-Adrenal",
+        "guiltPairs": "Pituitary-Pineal, Temporal-Temporal, Occipital-Sacrum",
+        "directionPairs": "Bulb-Cerebellum, Plexus-Kidney, Stomach-Stomach"
+      },
+      "therapeutic": "When applying pediatric biomagnetism, it is essential to identify which systemic law is active in the child. Pairs must be selected not only to treat physical symptoms, but to release systemic patterns that keep the child in unbalanced family dynamics."
+    }
+  },
+  "bioenergeticProtocol": {
+    "title": "BIOENERGETIC AND BIOMAGNETISM PROTOCOL",
+    "fundamentals": {
+      "title": "Protocol Fundamentals",
+      "content": "This protocol integrates bioenergetics with biomagnetism to perform deep healing work that addresses not only current symptoms, but the energetic origin of the conflict from the moment of conception."
+    },
+    "objective": {
+      "title": "Protocol Objective",
+      "content": "Identify the exact instant where the energetic conflict originated and make the information conscious so that the mother can process and release the pattern that affects the child."
+    },
+    "steps": {
+      "title": "Protocol Steps",
+      "identification": {
+        "title": "Conflict Identification",
+        "content": "Ask about the specific sensation or conflict using the lists in this application. Through muscle testing, identify which is the main conflict affecting the child."
+      },
+      "recession": {
+        "title": "Age Recession",
+        "content": "Perform an age recession to find the exact instant of the conflict. Starting from the current moment, go backwards until finding the instant where the conflict originated, which can reach the moment of conception."
+      },
+      "selection": {
+        "title": "Biomagnetic Pairs Selection",
+        "content": "Once the instant is identified, determine which pair supports the information. Pairs are chosen from the tracing points list or pairs suggested in the application."
+      },
+      "application": {
+        "title": "Application and Evaluation",
+        "content": "The selected pairs are impacted and it is evaluated how many pairs are necessary for complete treatment. Continuous evaluation of the process is performed."
+      },
+      "consciousness": {
+        "title": "Information Consciousness",
+        "content": "The final step is to make the information conscious so that the mother can process and understand the conflict. This allows discharging the energetic memory of the conflict, releasing the pattern that affects the child."
+      }
+    },
+    "considerations": {
+      "title": "Important Considerations",
+      "muscleTest": {
+        "title": "Muscle Testing",
+        "content": "It is fundamental to master muscle testing to correctly identify the conflict and evaluate treatment effectiveness at each step."
+      },
+      "recession": {
+        "title": "Age Recession",
+        "content": "The recession must be guided carefully, respecting the mother's and child's rhythm. The instant can be at any moment from conception to the present."
+      },
+      "selection": {
+        "title": "Pairs Selection",
+        "content": "Pairs must be selected according to information obtained in the recession, not only by current symptoms. The application list is a valuable guide."
+      },
+      "consciousness": {
+        "title": "Consciousness",
+        "content": "Consciousness is the most important step to discharge the energetic memory of the conflict. Without it, the pattern can manifest again. The mother must understand and process the conflict information."
+      }
+    },
+    "feelingPhrases": {
+      "title": "Feeling Phrases Method for Discharge",
+      "intro": "Once the conflict is identified and the instant is performed, it is fundamental to elaborate feeling phrases that the mother must repeat to allow emotional and energetic discharge of the conflict.",
+      "objective": {
+        "title": "Method Objective",
+        "content": "Feeling phrases allow the mother to express and release emotions contained in the conflict, facilitating the discharge of energetic memory and healing the pattern that affects the child."
+      },
+      "process": {
+        "title": "Phrase Elaboration Process",
+        "identification": {
+          "title": "Emotion Identification",
+          "content": "During age recession, identify the main emotion experienced in the conflict instant."
+        },
+        "elaboration": {
+          "title": "Phrase Elaboration",
+          "content": "Create a simple and direct phrase that expresses the feeling: \"I feel [emotion] because [situation]\"."
+        },
+        "repetition": {
+          "title": "Guided Repetition",
+          "content": "The mother repeats the phrase while biomagnetic pairs are applied, allowing emotional discharge."
+        }
+      },
+      "examples": {
+        "title": "Feeling Phrases Examples",
+        "fear": {
+          "title": "Fear Emotions",
+          "phrases": [
+            "\"I feel scared because I don't know if my baby will be okay\"",
+            "\"I feel fearful because I feel something bad will happen\"",
+            "\"I feel anxious because I can't protect my child\""
+          ]
+        },
+        "sadness": {
+          "title": "Sadness Emotions",
+          "phrases": [
+            "\"I feel sad because I lost someone important\"",
+            "\"I feel alone because I don't have the support I need\"",
+            "\"I feel desperate because I can't change the situation\""
+          ]
+        },
+        "anger": {
+          "title": "Anger Emotions",
+          "phrases": [
+            "\"I feel angry because I was betrayed\"",
+            "\"I feel furious because they don't listen to me\"",
+            "\"I feel indignant because they hurt me\""
+          ]
+        },
+        "guilt": {
+          "title": "Guilt Emotions",
+          "phrases": [
+            "\"I feel guilty because I couldn't protect my baby\"",
+            "\"I feel responsible because I did something wrong\"",
+            "\"I feel regretful because I didn't act as I should have\""
+          ]
+        }
+      },
+      "technique": {
+        "title": "Application Technique",
+        "process": {
+          "title": "Repetition Process",
+          "steps": [
+            "The mother is placed in a comfortable and relaxed position",
+            "The identified biomagnetic pairs are applied",
+            "The mother repeats the feeling phrase 3-5 times",
+            "Emotional and physical response is observed",
+            "The process is repeated until discharge is felt"
+          ]
+        },
+        "indicators": {
+          "title": "Discharge Indicators",
+          "items": [
+            "Deep breathing and tension release",
+            "Tears or emotional expression",
+            "Feeling of relief and inner peace",
+            "Change in muscle testing (from weak to strong)",
+            "Improvement in child's symptoms"
+          ]
+        }
+      }
+    },
+    "integrated": "This protocol combines the precision of biomagnetism with the depth of bioenergetics, creating a unique approach that allows healing not only symptoms, but the energetic origin of the conflict. Age recession, consciousness, and feeling phrases are fundamental to discharge the energetic memory of the conflict. It is especially effective for complex cases where current symptoms have deep roots in gestation."
+  },
+  "footer": {
+    "title": "Congratulations on completing Module 1!",
+    "content": "You have taken the first step towards specialization in one of the most rewarding areas of biomagnetism. Remember that your sensitivity as a therapist will be as important as the technique you apply.",
+    "badges": {
+      "completed": "Module Completed",
+      "certification": "Certification Available",
+      "nextModule": "Next Module"
+    },
+    "author": {
+      "title": "Method created by:",
+      "name": "Dr. Miguel Ojeda Rios",
+      "institute": "Centrobioenergetica Institute",
+      "website": "www.institutocentrobioenergetica.com"
+    }
+  },
+  "common": {
+    "language": "Language",
+    "spanish": "Español",
+    "english": "English"
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   BookOpen, 
   Beaker, 
@@ -25,88 +26,99 @@ const handleResourceAction = (type: string) => {
   }
 };
 
-const ManualHeader = () => (
-    <header className="text-center mb-12 sm:mb-16">
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 sm:p-10">
-            <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-teal-400 to-blue-500 rounded-full shadow-lg mb-6 sm:mb-8">
-                <span className="text-2xl sm:text-3xl">📚</span>
+const ManualHeader = () => {
+    const { t } = useTranslation();
+    
+    return (
+        <header className="text-center mb-12 sm:mb-16">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 sm:p-10">
+                <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-teal-400 to-blue-500 rounded-full shadow-lg mb-6 sm:mb-8">
+                    <span className="text-2xl sm:text-3xl">📚</span>
+                </div>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight pb-2">
+                    {t('header.title')}
+                </h1>
+                <p className="mt-6 sm:mt-8 text-lg sm:text-xl lg:text-2xl text-slate-700 max-w-4xl mx-auto font-medium px-4 leading-relaxed">
+                    {t('header.subtitle')}
+                </p>
+                <div className="mt-8 sm:mt-10 flex flex-wrap justify-center gap-3 sm:gap-4 text-sm sm:text-base text-slate-500">
+                    <span className="flex items-center bg-slate-100 rounded-full px-4 sm:px-5 py-2">
+                        <span className="w-2 h-2 bg-teal-400 rounded-full mr-2 sm:mr-3"></span>
+                        {t('header.course')}
+                    </span>
+                    <span className="flex items-center bg-slate-100 rounded-full px-4 sm:px-5 py-2">
+                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-2 sm:mr-3"></span>
+                        {t('header.modality')}
+                    </span>
+                    <span className="flex items-center bg-slate-100 rounded-full px-4 sm:px-5 py-2">
+                        <span className="w-2 h-2 bg-purple-400 rounded-full mr-2 sm:mr-3"></span>
+                        {t('header.duration')}
+                    </span>
+                </div>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight pb-2">
-                MÓDULO 1
-            </h1>
-            <p className="mt-6 sm:mt-8 text-lg sm:text-xl lg:text-2xl text-slate-700 max-w-4xl mx-auto font-medium px-4 leading-relaxed">
-                "El Inicio Invisible: Cuando la Historia Empieza Antes de Nacer"
-            </p>
-            <div className="mt-8 sm:mt-10 flex flex-wrap justify-center gap-3 sm:gap-4 text-sm sm:text-base text-slate-500">
-                <span className="flex items-center bg-slate-100 rounded-full px-4 sm:px-5 py-2">
-                    <span className="w-2 h-2 bg-teal-400 rounded-full mr-2 sm:mr-3"></span>
-                    Curso: Biomagnetismo Kids
-                </span>
-                <span className="flex items-center bg-slate-100 rounded-full px-4 sm:px-5 py-2">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2 sm:mr-3"></span>
-                    Modalidad: Clase online
-                </span>
-                <span className="flex items-center bg-slate-100 rounded-full px-4 sm:px-5 py-2">
-                    <span className="w-2 h-2 bg-purple-400 rounded-full mr-2 sm:mr-3"></span>
-                    Duración: 8 horas
-                </span>
+        </header>
+    );
+};
+
+const ModuleStructure = () => {
+    const { t } = useTranslation();
+    
+    return (
+        <section className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 sm:p-10 mb-12">
+            <SubSectionTitle title={t('moduleStructure.objective')} />
+             <blockquote className="border-l-4 border-teal-500 pl-6 py-6 my-8 text-lg sm:text-xl text-slate-700 bg-gradient-to-r from-teal-50 to-blue-50 rounded-r-xl shadow-md">
+                {t('moduleStructure.objectiveText')}
+            </blockquote>
+
+            <SubSectionTitle title={t('moduleStructure.structureTitle')} />
+            <div className="mt-8">
+                <StyledTable 
+                    headers={[t('moduleStructure.tableHeaders.block'), t('moduleStructure.tableHeaders.topic'), t('moduleStructure.tableHeaders.focus')]}
+                    data={[
+                        [<strong key="b1" className="text-teal-700">1</strong>, t('moduleStructure.blocks.block1.title'), t('moduleStructure.blocks.block1.focus')],
+                        [<strong key="b2" className="text-teal-700">2</strong>, t('moduleStructure.blocks.block2.title'), t('moduleStructure.blocks.block2.focus')],
+                        [<strong key="b3" className="text-teal-700">3</strong>, t('moduleStructure.blocks.block3.title'), t('moduleStructure.blocks.block3.focus')],
+                        [<strong key="b4" className="text-teal-700">4</strong>, t('moduleStructure.blocks.block4.title'), t('moduleStructure.blocks.block4.focus')],
+                        [<strong key="b5" className="text-teal-700">5</strong>, t('moduleStructure.blocks.block5.title'), t('moduleStructure.blocks.block5.focus')],
+                    ]}
+                />
             </div>
-        </div>
-    </header>
-);
+        </section>
+    );
+};
 
-const ModuleStructure = () => (
-    <section className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 sm:p-10 mb-12">
-        <SubSectionTitle title="Objetivo General del Módulo" />
-         <blockquote className="border-l-4 border-teal-500 pl-6 py-6 my-8 text-lg sm:text-xl text-slate-700 bg-gradient-to-r from-teal-50 to-blue-50 rounded-r-xl shadow-md">
-            Comprender cómo las experiencias gestacionales y perinatales influyen en el campo energético del bebé, aprendiendo a identificar, rastrear y equilibrar los desequilibrios mediante pares biomagnéticos específicos para cada etapa de desarrollo.
-        </blockquote>
+const Block1Content = () => {
+    const { t } = useTranslation();
+    
+    return (
+        <>
+            <SectionTitle id="block-1" icon={<BookOpen className="w-8 h-8" />} title={t('block1.title')} />
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 sm:p-10 space-y-10">
+                <SubSectionTitle title={t('block1.fundamentals.title')} />
+                <MinorSectionTitle title={t('block1.fundamentals.bioelectricField.title')} />
+                <p className="text-base sm:text-lg leading-relaxed">{t('block1.fundamentals.bioelectricField.content')}</p>
+                <MinorSectionTitle title={t('block1.fundamentals.principles.title')} />
+                <ul className="list-disc list-outside ml-6 space-y-3 text-base sm:text-lg">
+                    <li><strong>{t('block1.fundamentals.principles.resonance')}</strong></li>
+                    <li><strong>{t('block1.fundamentals.principles.imprint')}</strong></li>
+                    <li><strong>{t('block1.fundamentals.principles.plasticity')}</strong></li>
+                </ul>
 
-        <SubSectionTitle title="Estructura del Módulo" />
-        <div className="mt-8">
-            <StyledTable 
-                headers={['Bloque', 'Tema', 'Enfoque Principal']}
-                data={[
-                    [<strong key="b1" className="text-teal-700">1</strong>, 'Vida Intrauterina y Conflictos Biológicos', 'Fundamentos teóricos'],
-                    [<strong key="b2" className="text-teal-700">2</strong>, 'Rastreo y Protocolos en Gestación', 'Técnicas de aplicación'],
-                    [<strong key="b3" className="text-teal-700">3</strong>, 'Recién Nacido (0-1 mes)', 'Patologías específicas'],
-                    [<strong key="b4" className="text-teal-700">4</strong>, 'Desarrollo (1-3 meses)', 'Shocks postnatales'],
-                    [<strong key="b5" className="text-teal-700">5</strong>, 'Integración Sistémica', 'Visión holística'],
-                ]}
-            />
-        </div>
-    </section>
-);
+                <SubSectionTitle title={t('block1.conflicts.title')} />
+                <ConflictTitle color="bg-red-500" title={t('block1.conflicts.survival.title')} />
+                <p className="text-base sm:text-lg leading-relaxed mb-6">{t('block1.conflicts.survival.content')}</p>
 
-const Block1Content = () => (
-    <>
-        <SectionTitle id="block-1" icon={<BookOpen className="w-8 h-8" />} title="BLOQUE 1: Vida Intrauterina y Conflictos Biológicos" />
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 sm:p-10 space-y-10">
-            <SubSectionTitle title="Fundamentos Teóricos" />
-            <MinorSectionTitle title="El Campo Bioeléctrico Materno-Fetal" />
-            <p className="text-base sm:text-lg leading-relaxed">Durante la gestación, madre y bebé forman un <strong>ecosistema energético unificado</strong>. Todo cambio en el campo magnético materno genera resonancia directa en el sistema energético fetal. El bebé absorbe todas las vibraciones maternas con permeabilidad total, mientras sus tejidos registran eventos significativos creando memoria celular. Esta etapa se caracteriza por una plasticidad máxima que permite gran capacidad de adaptación, pero también por una vulnerabilidad extrema a desequilibrios externos.</p>
-            <MinorSectionTitle title="Principios Fundamentales" />
-            <ul className="list-disc list-outside ml-6 space-y-3 text-base sm:text-lg">
-                <li><strong>Ley de Resonancia Materno-Filial:</strong> Todo lo que siente la madre, lo vive el bebé.</li>
-                <li><strong>Ley de Impronta Energética:</strong> Los primeros 100 días definen el 70% del patrón energético adulto.</li>
-                <li><strong>Ley de Plasticidad Decreciente:</strong> La capacidad de modificación energética es máxima al nacer.</li>
-            </ul>
+                <ConflictTitle color="bg-orange-500" title={t('block1.conflicts.protection.title')} />
+                <p className="text-base sm:text-lg leading-relaxed mb-6">{t('block1.conflicts.protection.content')}</p>
 
-            <SubSectionTitle title="Los 5 Conflictos Biológicos Fundamentales" />
-            <ConflictTitle color="bg-red-500" title="CONFLICTO DE SUPERVIVENCIA" />
-            <p className="text-base sm:text-lg leading-relaxed mb-6">Este conflicto se activa cuando existe una amenaza real o percibida a la continuidad del embarazo. Las manifestaciones incluyen amenaza de aborto, hemorragias gestacionales, diagnósticos médicos graves y accidentes. El par biomagnético principal es <strong>Suprarrenal - Riñón Derecho</strong>, y su efecto en el bebé se traduce en hipervigilancia, estrés crónico y trastornos del sueño.</p>
+                <ConflictTitle color="bg-yellow-400" title={t('block1.conflicts.separation.title')} />
+                <p className="text-base sm:text-lg leading-relaxed mb-6">{t('block1.conflicts.separation.content')}</p>
 
-            <ConflictTitle color="bg-orange-500" title="CONFLICTO DE PROTECCIÓN" />
-            <p className="text-base sm:text-lg leading-relaxed mb-6">Se presenta cuando el entorno es percibido como inseguro o hostil. Incluye situaciones de violencia, agresiones y entornos caóticos. El par principal es <strong>Temporal - Temporal</strong>, manifestándose en el bebé como hipertonía muscular, sobresaltos e hipersensibilidad auditiva.</p>
+                <ConflictTitle color="bg-green-500" title={t('block1.conflicts.identity.title')} />
+                <p className="text-base sm:text-lg leading-relaxed mb-6">{t('block1.conflicts.identity.content')}</p>
 
-            <ConflictTitle color="bg-yellow-400" title="CONFLICTO DE SEPARACIÓN" />
-            <p className="text-base sm:text-lg leading-relaxed mb-6">Surge por separación física o emocional de figuras importantes. Abarca hospitalización, ausencia del padre, duelo y aislamiento. Se trabaja con <strong>Plexo Solar - Riñón Izquierdo</strong>, generando en el bebé cólicos, dificultades alimentarias y letargia.</p>
-
-            <ConflictTitle color="bg-green-500" title="CONFLICTO DE IDENTIDAD" />
-            <p className="text-base sm:text-lg leading-relaxed mb-6">Aparece cuando hay dudas sobre la deseabilidad o identidad del bebé. Incluye embarazo no deseado y expectativas no cumplidas. El par <strong>Hipófisis - Pineal</strong> trabaja estos aspectos, pudiendo causar trastornos del crecimiento y problemas hormonales.</p>
-
-            <ConflictTitle color="bg-blue-500" title="CONFLICTO DE TERRITORIO" />
-            <p className="text-base sm:text-lg leading-relaxed mb-8">Se desarrolla por pérdida o amenaza del espacio vital seguro. Engloba mudanzas, pérdida de vivienda y cambios drásticos. El par <strong>Bulbo - Cerebelo</strong> genera en el bebé irritabilidad y dificultades de adaptación.</p>
+                <ConflictTitle color="bg-blue-500" title={t('block1.conflicts.territory.title')} />
+                <p className="text-base sm:text-lg leading-relaxed mb-8">{t('block1.conflicts.territory.content')}</p>
 
             <SubSectionTitle title="Lista Completa: 20 Shocks Vivenciales Gestacionales y sus Pares" />
             <div className="mt-8">
@@ -447,14 +459,14 @@ const Block1Content = () => (
                 
                 <div className="mt-6 p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-lg border-l-4 border-teal-500">
                     <p className="text-sm text-slate-700 leading-relaxed">
-                        <strong>Enfoque Terapéutico Sistémico:</strong> Al aplicar biomagnetismo pediátrico, es esencial identificar qué ley sistémica está activa en el niño. 
-                        Los pares deben seleccionarse no solo para tratar síntomas físicos, sino para liberar patrones sistémicos que mantienen al niño en dinámicas familiares desequilibradas.
+                        <strong>{t('block1.belongingLaws.therapeutic')}</strong>
                     </p>
                 </div>
             </div>
         </div>
-    </>
-);
+        </>
+    );
+};
 
 const Block2Content = () => (
     <>

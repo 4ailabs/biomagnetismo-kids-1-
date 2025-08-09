@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+    const { t } = useTranslation();
+    
     return (
         <footer className="relative bg-white/80 backdrop-blur-md mt-12 sm:mt-16 border-t border-white/20 shadow-lg">
             <div className="max-w-7xl mx-auto py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
@@ -14,29 +17,29 @@ const Footer: React.FC = () => {
                         </h3>
                     </div>
                     <p className="text-xs sm:text-sm text-slate-600 mb-2">
-                        &copy; {new Date().getFullYear()} Biomagnetismo Kids. Todos los derechos reservados.
+                        &copy; {new Date().getFullYear()} Biomagnetismo Kids. {t('footer.badges.completed')}.
                     </p>
                     <p className="text-xs text-slate-500 mb-3 sm:mb-4">
-                        Este material es para fines educativos y de formación profesional.
+                        {t('footer.content')}
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-slate-400">
                         <span className="flex items-center">
                             <span className="w-1 h-1 bg-green-400 rounded-full mr-1.5 sm:mr-2"></span>
-                            Módulo 1 Completado
+                            {t('footer.badges.completed')}
                         </span>
                         <span className="flex items-center">
                             <span className="w-1 h-1 bg-blue-400 rounded-full mr-1.5 sm:mr-2"></span>
-                            Contenido Interactivo
+                            {t('header.course')}
                         </span>
                         <span className="flex items-center">
                             <span className="w-1 h-1 bg-purple-400 rounded-full mr-1.5 sm:mr-2"></span>
-                            Certificación Disponible
+                            {t('footer.badges.certification')}
                         </span>
                     </div>
                     <div className="mt-4 pt-4 border-t border-slate-200/30">
-                        <p className="text-teal-600 font-medium text-xs"><strong>Método creado por:</strong> Dr. Miguel Ojeda Rios</p>
-                        <p className="text-slate-500 text-xs mt-1">Instituto Centrobioenergética</p>
-                        <p className="text-slate-500 text-xs">www.institutocentrobioenergetica.com</p>
+                        <p className="text-teal-600 font-medium text-xs"><strong>{t('footer.author.title')}</strong> {t('footer.author.name')}</p>
+                        <p className="text-slate-500 text-xs mt-1">{t('footer.author.institute')}</p>
+                        <p className="text-slate-500 text-xs">{t('footer.author.website')}</p>
                     </div>
                 </div>
             </div>

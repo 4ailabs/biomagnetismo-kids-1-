@@ -1,0 +1,291 @@
+{
+  "header": {
+    "title": "MÓDULO 1",
+    "subtitle": "\"El Inicio Invisible: Cuando la Historia Empieza Antes de Nacer\"",
+    "course": "Curso: Biomagnetismo Kids",
+    "modality": "Modalidad: Clase online",
+    "duration": "Duración: 8 horas"
+  },
+  "moduleStructure": {
+    "title": "Estructura del Módulo",
+    "objective": "Objetivo General del Módulo",
+    "objectiveText": "Comprender cómo las experiencias gestacionales y perinatales influyen en el campo energético del bebé, aprendiendo a identificar, rastrear y equilibrar los desequilibrios mediante pares biomagnéticos específicos para cada etapa de desarrollo.",
+    "structureTitle": "Estructura del Módulo",
+    "tableHeaders": {
+      "block": "Bloque",
+      "topic": "Tema",
+      "focus": "Enfoque Principal"
+    },
+    "blocks": {
+      "block1": {
+        "title": "Vida Intrauterina y Conflictos Biológicos",
+        "focus": "Fundamentos teóricos"
+      },
+      "block2": {
+        "title": "Rastreo y Protocolos en Gestación",
+        "focus": "Técnicas de aplicación"
+      },
+      "block3": {
+        "title": "Recién Nacido (0-1 mes)",
+        "focus": "Patologías específicas"
+      },
+      "block4": {
+        "title": "Desarrollo (1-3 meses)",
+        "focus": "Shocks postnatales"
+      },
+      "block5": {
+        "title": "Integración Sistémica",
+        "focus": "Visión holística"
+      }
+    }
+  },
+  "block1": {
+    "title": "BLOQUE 1: Vida Intrauterina y Conflictos Biológicos",
+    "fundamentals": {
+      "title": "Fundamentos Teóricos",
+      "bioelectricField": {
+        "title": "El Campo Bioeléctrico Materno-Fetal",
+        "content": "Durante la gestación, madre y bebé forman un ecosistema energético unificado. Todo cambio en el campo magnético materno genera resonancia directa en el sistema energético fetal. El bebé absorbe todas las vibraciones maternas con permeabilidad total, mientras sus tejidos registran eventos significativos creando memoria celular. Esta etapa se caracteriza por una plasticidad máxima que permite gran capacidad de adaptación, pero también por una vulnerabilidad extrema a desequilibrios externos."
+      },
+      "principles": {
+        "title": "Principios Fundamentales",
+        "resonance": "Ley de Resonancia Materno-Filial: Todo lo que siente la madre, lo vive el bebé.",
+        "imprint": "Ley de Impronta Energética: Los primeros 100 días definen el 70% del patrón energético adulto.",
+        "plasticity": "Ley de Plasticidad Decreciente: La capacidad de modificación energética es máxima al nacer."
+      }
+    },
+    "conflicts": {
+      "title": "Los 5 Conflictos Biológicos Fundamentales",
+      "survival": {
+        "title": "CONFLICTO DE SUPERVIVENCIA",
+        "content": "Este conflicto se activa cuando existe una amenaza real o percibida a la continuidad del embarazo. Las manifestaciones incluyen amenaza de aborto, hemorragias gestacionales, diagnósticos médicos graves y accidentes. El par biomagnético principal es Suprarrenal - Riñón Derecho, y su efecto en el bebé se traduce en hipervigilancia, estrés crónico y trastornos del sueño."
+      },
+      "protection": {
+        "title": "CONFLICTO DE PROTECCIÓN",
+        "content": "Se presenta cuando el entorno es percibido como inseguro o hostil. Incluye situaciones de violencia, agresiones y entornos caóticos. El par principal es Temporal - Temporal, manifestándose en el bebé como hipertonía muscular, sobresaltos e hipersensibilidad auditiva."
+      },
+      "separation": {
+        "title": "CONFLICTO DE SEPARACIÓN",
+        "content": "Surge por separación física o emocional de figuras importantes. Abarca hospitalización, ausencia del padre, duelo y aislamiento. Se trabaja con Plexo Solar - Riñón Izquierdo, generando en el bebé cólicos, dificultades alimentarias y letargia."
+      },
+      "identity": {
+        "title": "CONFLICTO DE IDENTIDAD",
+        "content": "Aparece cuando hay dudas sobre la deseabilidad o identidad del bebé. Incluye embarazo no deseado y expectativas no cumplidas. El par Hipófisis - Pineal trabaja estos aspectos, pudiendo causar trastornos del crecimiento y problemas hormonales."
+      },
+      "territory": {
+        "title": "CONFLICTO DE TERRITORIO",
+        "content": "Se desarrolla por pérdida o amenaza del espacio vital seguro. Engloba mudanzas, pérdida de vivienda y cambios drásticos. El par Bulbo - Cerebelo genera en el bebé irritabilidad y dificultades de adaptación."
+      }
+    },
+    "systemicApproach": {
+      "title": "El Niño como Sistema Energético Familiar",
+      "intro": "En biomagnetismo pediátrico, es fundamental comprender que el niño no existe de forma aislada, sino como parte de un sistema energético familiar. Su campo magnético está interconectado con el de sus padres, hermanos y entorno, creando un ecosistema energético que influye directamente en su desarrollo y salud.",
+      "principles": {
+        "title": "Principios del Enfoque Sistémico en Biomagnetismo",
+        "interconnection": {
+          "title": "Interconexión Energética Familiar",
+          "content": "El campo energético del niño está directamente conectado con el de sus padres y hermanos. Los desequilibrios familiares se reflejan en el sistema energético infantil, requiriendo un abordaje que considere el sistema completo, no solo al niño de forma aislada."
+        },
+        "generational": {
+          "title": "Transmisión Generacional de Patrones",
+          "content": "Los patrones energéticos se transmiten de generación en generación. Conflictos no resueltos de los padres o abuelos pueden manifestarse en el niño como síntomas específicos, requiriendo pares biomagnéticos que aborden tanto el síntoma actual como su origen familiar."
+        },
+        "sensitivity": {
+          "title": "Sensibilidad al Campo Familiar",
+          "content": "Los niños actúan como \"antenas\" del sistema familiar, captando y manifestando desequilibrios que otros miembros no perciben. Su mayor sensibilidad energética los convierte en indicadores precisos del estado del sistema familiar completo."
+        },
+        "resonance": {
+          "title": "Efecto Resonancia Sistémica",
+          "content": "Cuando se equilibra el campo energético del niño, se produce una resonancia que afecta positivamente al sistema familiar completo. El biomagnetismo pediátrico puede catalizar cambios energéticos en toda la familia, creando un efecto terapéutico multiplicador."
+        }
+      },
+      "approach": "El trabajo con niños requiere evaluar el sistema familiar completo. Los pares biomagnéticos deben seleccionarse considerando no solo los síntomas del niño, sino también los patrones familiares subyacentes, creando un efecto terapéutico que beneficie al sistema familiar en su totalidad."
+    },
+    "belongingLaws": {
+      "title": "Leyes de Pertenencia y Sistémicas del Niño",
+      "intro": "En el contexto del biomagnetismo pediátrico, es fundamental comprender las leyes de pertenencia que rigen el sistema familiar y cómo estas se manifiestan en el campo energético del niño. Estas leyes determinan la dinámica energética familiar y los patrones que pueden manifestarse como síntomas específicos.",
+      "laws": {
+        "title": "Leyes Fundamentales de Pertenencia Sistémica",
+        "loyalty": {
+          "title": "Ley de Lealtad Familiar",
+          "content": "\"Te seguiré hasta la muerte\" - El niño mantiene una lealtad energética absoluta hacia su sistema familiar. Esta lealtad puede manifestarse como síntomas que \"siguen\" patrones familiares, requiriendo pares biomagnéticos que aborden tanto la lealtad como el patrón subyacente."
+        },
+        "sacrifice": {
+          "title": "Ley de Sacrificio Sistémico",
+          "content": "\"Prefiero morir yo antes que tú, Mejor muero yo que tú\" - Los niños pueden asumir energéticamente el sufrimiento de otros miembros del sistema familiar. Este sacrificio se manifiesta como síntomas que \"protegen\" a otros, requiriendo pares que liberen la carga sacrificial y restablezcan el equilibrio."
+        },
+        "guilt": {
+          "title": "Ley de Reparación de Culpa",
+          "content": "\"Reparación de la culpa personal\" - Los niños pueden manifestar síntomas que \"reparan\" culpas o conflictos no resueltos de generaciones anteriores. El biomagnetismo debe abordar tanto el síntoma actual como el patrón de culpa familiar subyacente."
+        },
+        "direction": {
+          "title": "Ley de Dirección Energética",
+          "content": "\"Dirijo mi mirada hacia...\" - Los niños dirigen su energía hacia patrones específicos del sistema familiar. Esta dirección puede manifestarse como síntomas que \"miran\" hacia conflictos no resueltos, requiriendo pares que reorienten la energía hacia patrones saludables."
+        }
+      },
+      "application": {
+        "title": "Aplicación Biomagnética de las Leyes Sistémicas",
+        "loyaltyPairs": "Suprarrenal-Suprarrenal, Plexo-Riñón, Pericardio-Pulmón",
+        "sacrificePairs": "Timo-Suprarrenal, Bulbo-Plexo, Corazón-Suprarrenal",
+        "guiltPairs": "Hipófisis-Pineal, Temporal-Temporal, Occipital-Sacro",
+        "directionPairs": "Bulbo-Cerebelo, Plexo-Riñón, Estómago-Estómago"
+      },
+      "therapeutic": "Al aplicar biomagnetismo pediátrico, es esencial identificar qué ley sistémica está activa en el niño. Los pares deben seleccionarse no solo para tratar síntomas físicos, sino para liberar patrones sistémicos que mantienen al niño en dinámicas familiares desequilibradas."
+    }
+  },
+  "bioenergeticProtocol": {
+    "title": "PROTOCOLO CON BIOENERGÉTICA Y BIOMAGNETISMO",
+    "fundamentals": {
+      "title": "Fundamentos del Protocolo",
+      "content": "Este protocolo integra la bioenergética con el biomagnetismo para realizar un trabajo profundo de sanación que aborda no solo los síntomas actuales, sino el origen energético del conflicto desde el momento de la concepción."
+    },
+    "objective": {
+      "title": "Objetivo del Protocolo",
+      "content": "Identificar el instante exacto donde se originó el conflicto energético y hacer consciente la información para que la madre pueda procesar y liberar el patrón que afecta al niño."
+    },
+    "steps": {
+      "title": "Pasos del Protocolo",
+      "identification": {
+        "title": "Identificación del Conflicto",
+        "content": "Preguntar por la sensación o conflicto específico utilizando las listas de esta aplicación. A través del test muscular, identificar cuál es el conflicto principal que está afectando al niño."
+      },
+      "recession": {
+        "title": "Recesión de Edad",
+        "content": "Realizar una recesión de edad para encontrar el instante exacto del conflicto. Partiendo del momento actual, se va hacia atrás hasta encontrar el instante donde se originó el conflicto, que puede llegar hasta el momento de la concepción."
+      },
+      "selection": {
+        "title": "Selección de Pares Biomagnéticos",
+        "content": "Una vez identificado el instante, se determina cuál es el par que soporta la información. Se eligen los pares de la lista de puntos de rastreo o los pares sugeridos en la aplicación."
+      },
+      "application": {
+        "title": "Aplicación y Evaluación",
+        "content": "Se impactan los pares seleccionados y se evalúa cuántos pares son necesarios para el tratamiento completo. Se realiza una evaluación continua del proceso."
+      },
+      "consciousness": {
+        "title": "Conscientización de la Información",
+        "content": "El paso final es hacer consciente la información para que la madre pueda procesar y comprender el conflicto. Esto permite descargar la memoria energética del conflicto, liberando el patrón que afecta al niño."
+      }
+    },
+    "considerations": {
+      "title": "Consideraciones Importantes",
+      "muscleTest": {
+        "title": "Test Muscular",
+        "content": "Es fundamental dominar el test muscular para identificar correctamente el conflicto y evaluar la efectividad del tratamiento en cada paso."
+      },
+      "recession": {
+        "title": "Recesión de Edad",
+        "content": "La recesión debe ser guiada con cuidado, respetando el ritmo de la madre y el niño. El instante puede estar en cualquier momento desde la concepción hasta el presente."
+      },
+      "selection": {
+        "title": "Selección de Pares",
+        "content": "Los pares deben seleccionarse según la información obtenida en la recesión, no solo por síntomas actuales. La lista de la aplicación es una guía valiosa."
+      },
+      "consciousness": {
+        "title": "Conscientización",
+        "content": "La conscientización es el paso más importante para descargar la memoria energética del conflicto. Sin ella, el patrón puede volver a manifestarse. La madre debe comprender y procesar la información del conflicto."
+      }
+    },
+    "feelingPhrases": {
+      "title": "Método de Frases del Sentir para la Descarga",
+      "intro": "Una vez identificado el conflicto y realizado el instante, es fundamental elaborar frases del sentir que la madre debe repetir para permitir la descarga emocional y energética del conflicto.",
+      "objective": {
+        "title": "Objetivo del Método",
+        "content": "Las frases del sentir permiten que la madre exprese y libere las emociones contenidas en el conflicto, facilitando la descarga de la memoria energética y la sanación del patrón que afecta al niño."
+      },
+      "process": {
+        "title": "Proceso de Elaboración de Frases",
+        "identification": {
+          "title": "Identificación de la Emoción",
+          "content": "Durante la recesión de edad, identificar la emoción principal que se experimentó en el instante del conflicto."
+        },
+        "elaboration": {
+          "title": "Elaboración de la Frase",
+          "content": "Crear una frase simple y directa que exprese el sentir: \"Me siento [emoción] porque [situación]\"."
+        },
+        "repetition": {
+          "title": "Repetición Guiada",
+          "content": "La madre repite la frase mientras se aplican los pares biomagnéticos, permitiendo la descarga emocional."
+        }
+      },
+      "examples": {
+        "title": "Ejemplos de Frases del Sentir",
+        "fear": {
+          "title": "Emociones de Miedo",
+          "phrases": [
+            "\"Me siento asustada porque no sé si mi bebé estará bien\"",
+            "\"Me siento temerosa porque siento que algo malo va a pasar\"",
+            "\"Me siento angustiada porque no puedo proteger a mi hijo\""
+          ]
+        },
+        "sadness": {
+          "title": "Emociones de Tristeza",
+          "phrases": [
+            "\"Me siento triste porque perdí a alguien importante\"",
+            "\"Me siento sola porque no tengo el apoyo que necesito\"",
+            "\"Me siento desesperada porque no puedo cambiar la situación\""
+          ]
+        },
+        "anger": {
+          "title": "Emociones de Ira",
+          "phrases": [
+            "\"Me siento enojada porque me traicionaron\"",
+            "\"Me siento furiosa porque no me escuchan\"",
+            "\"Me siento indignada porque me hicieron daño\""
+          ]
+        },
+        "guilt": {
+          "title": "Emociones de Culpa",
+          "phrases": [
+            "\"Me siento culpable porque no pude proteger a mi bebé\"",
+            "\"Me siento responsable porque hice algo malo\"",
+            "\"Me siento arrepentida porque no actué como debía\""
+          ]
+        }
+      },
+      "technique": {
+        "title": "Técnica de Aplicación",
+        "process": {
+          "title": "Proceso de Repetición",
+          "steps": [
+            "La madre se coloca en posición cómoda y relajada",
+            "Se aplican los pares biomagnéticos identificados",
+            "La madre repite la frase del sentir 3-5 veces",
+            "Se observa la respuesta emocional y física",
+            "Se repite el proceso hasta sentir la descarga"
+          ]
+        },
+        "indicators": {
+          "title": "Indicadores de Descarga",
+          "items": [
+            "Respiración profunda y liberación de tensión",
+            "Lágrimas o expresión emocional",
+            "Sensación de alivio y paz interior",
+            "Cambio en el test muscular (de débil a fuerte)",
+            "Mejora en los síntomas del niño"
+          ]
+        }
+      }
+    },
+    "integrated": "Este protocolo combina la precisión del biomagnetismo con la profundidad de la bioenergética, creando un abordaje único que permite sanar no solo los síntomas, sino el origen energético del conflicto. La recesión de edad, la conscientización y las frases del sentir son fundamentales para descargar la memoria energética del conflicto. Es especialmente efectivo para casos complejos donde los síntomas actuales tienen raíces profundas en la gestación."
+  },
+  "footer": {
+    "title": "¡Felicitaciones por completar el Módulo 1!",
+    "content": "Has dado el primer paso hacia la especialización en una de las áreas más gratificantes del biomagnetismo. Recuerda que tu sensibilidad como terapeuta será tan importante como la técnica que apliques.",
+    "badges": {
+      "completed": "Módulo Completado",
+      "certification": "Certificación Disponible",
+      "nextModule": "Próximo Módulo"
+    },
+    "author": {
+      "title": "Método creado por:",
+      "name": "Dr. Miguel Ojeda Rios",
+      "institute": "Instituto Centrobioenergética",
+      "website": "www.institutocentrobioenergetica.com"
+    }
+  },
+  "common": {
+    "language": "Idioma",
+    "spanish": "Español",
+    "english": "English"
+  }
+}
