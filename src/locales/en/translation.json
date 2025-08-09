@@ -7,6 +7,10 @@
     "presentation": "Presentation",
     "paresList": "Biomagnetic Pairs List"
   },
+  "paresList": {
+    "description": "Access the complete list of biomagnetic pairs for consultation during the protocol",
+    "buttonText": "Open Pairs List"
+  },
   "blockSelector": {
     "title": "Navigate through the Blocks",
     "block1": "Block 1: Beginnings",

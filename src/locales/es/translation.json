@@ -7,6 +7,10 @@
     "presentation": "Presentación",
     "paresList": "Lista de Pares Biomagnéticos"
   },
+  "paresList": {
+    "description": "Accede a la lista completa de pares biomagnéticos para consulta durante el protocolo",
+    "buttonText": "Abrir Lista de Pares"
+  },
   "blockSelector": {
     "title": "Navega por los Bloques",
     "block1": "Bloque 1: Inicios",
