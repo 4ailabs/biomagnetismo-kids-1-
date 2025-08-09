@@ -745,6 +745,8 @@ const Presentation: React.FC = () => {
       <div className="relative w-full h-screen bg-white overflow-hidden">
         {/* Header */}
         <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-teal-600 to-blue-600 text-white p-3 sm:p-6 z-10">
+          {/* Spacer to prevent content from being hidden behind fixed header */}
+          <div className="h-0 sm:h-0"></div>
           <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
             <h1 className="text-lg sm:text-2xl md:text-3xl font-bold text-center sm:text-left">Biomagnetismo Kids - Módulo 1</h1>
             <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-6">
@@ -773,7 +775,7 @@ const Presentation: React.FC = () => {
         </div>
 
         {/* Slide Content - Full Screen */}
-        <div className="absolute inset-0 pt-16 sm:pt-20 md:pt-24 pb-20 sm:pb-24 md:pb-32 px-4 sm:px-8 md:px-12 flex items-center justify-center">
+        <div className="absolute inset-0 pt-24 sm:pt-28 md:pt-32 pb-20 sm:pb-24 md:pb-32 px-4 sm:px-8 md:px-12 flex items-center justify-center">
           <div className="w-full max-w-6xl text-center">
             {/* Slide Title with Icon */}
             <div className="flex flex-col sm:flex-row items-center justify-center mb-4 sm:mb-6 md:mb-8 animate-fade-in-up space-y-2 sm:space-y-0">
