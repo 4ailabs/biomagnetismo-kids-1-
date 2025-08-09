@@ -420,7 +420,7 @@ const Presentation: React.FC = () => {
         "4. Separación de pareja - Plexo-Riñón der",
         "5. Violencia hacia la madre - Temporal izq-Temporal der"
       ],
-      type: 'content'
+      type: 'title'
     },
     // SLIDE 24: SHOCKS GESTACIONALES - SEGUNDA PARTE
     {
@@ -433,7 +433,7 @@ const Presentation: React.FC = () => {
         "14. Conflictos familiares - Plexo-Riñón derecho",
         "15. Embarazo después de pérdida - Suprarrenal-Suprarrenal"
       ],
-      type: 'content'
+      type: 'title'
     },
     // SLIDE 25: SENSACIONES VITALES PRENATALES
     {
@@ -458,7 +458,7 @@ const Presentation: React.FC = () => {
         "Violencia gestacional: Agresiones, abuso",
         "Rechazo fetal: Embarazo no deseado, dudas"
       ],
-      type: 'content'
+      type: 'title'
     },
     // SLIDE 27: LEYES DE PERTENENCIA
     {
