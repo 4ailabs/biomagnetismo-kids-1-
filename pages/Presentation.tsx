@@ -965,60 +965,60 @@ const Presentation: React.FC = () => {
           </div>
         </div>
 
-        {/* Large Navigation Arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
-        >
-          <ChevronLeft size={32} />
-        </button>
+                            {/* Navigation Arrows */}
+                    <button
+                      onClick={prevSlide}
+                      className="absolute left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105 z-20"
+                    >
+                      <ChevronLeft size={24} />
+                    </button>
 
-        <button
-          onClick={nextSlide}
-          className="absolute right-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
-        >
-          <ChevronRight size={32} />
-        </button>
+                    <button
+                      onClick={nextSlide}
+                      className="absolute right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105 z-20"
+                    >
+                      <ChevronRight size={24} />
+                    </button>
 
-        {/* Bottom Navigation */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/90 to-transparent p-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-6">
-              <span className="text-white text-2xl font-semibold">
-                {currentSlide + 1} / {slides.length}
-              </span>
-              <div className="flex space-x-3">
-                {slides.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-4 h-4 rounded-full transition-colors ${
-                      index === currentSlide ? 'bg-white' : 'bg-white/40'
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
+                            {/* Bottom Navigation */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/90 to-transparent p-6">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-4">
+                          <span className="text-white text-lg font-semibold">
+                            {currentSlide + 1} / {slides.length}
+                          </span>
+                          <div className="flex space-x-2">
+                            {slides.map((_, index) => (
+                              <button
+                                key={index}
+                                onClick={() => setCurrentSlide(index)}
+                                className={`w-2 h-2 rounded-full transition-colors ${
+                                  index === currentSlide ? 'bg-white' : 'bg-white/40'
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        </div>
 
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={prevSlide}
-                className="flex items-center space-x-3 px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors text-lg"
-              >
-                <ChevronLeft size={24} />
-                <span>Anterior</span>
-              </button>
+                        <div className="flex items-center space-x-3">
+                          <button
+                            onClick={prevSlide}
+                            className="flex items-center space-x-2 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors text-sm"
+                          >
+                            <ChevronLeft size={18} />
+                            <span>Anterior</span>
+                          </button>
 
-              <button
-                onClick={nextSlide}
-                className="flex items-center space-x-3 px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors text-lg"
-              >
-                <span>Siguiente</span>
-                <ChevronRight size={24} />
-              </button>
-            </div>
-          </div>
-        </div>
+                          <button
+                            onClick={nextSlide}
+                            className="flex items-center space-x-2 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors text-sm"
+                          >
+                            <span>Siguiente</span>
+                            <ChevronRight size={18} />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
 
         {/* Keyboard Navigation */}
         <div className="absolute inset-0 focus:outline-none" tabIndex={0} onKeyDown={(e) => {
