@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { X, ChevronLeft, ChevronRight, Play, Pause, Home } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface Slide {
   id: number;
@@ -9,8 +10,9 @@ interface Slide {
   type: 'title' | 'content' | 'key-points' | 'summary' | 'image';
 }
 
-const PresentationPage: React.FC<{ onClose: () => void }> = ({ onClose }) => {
+const Presentation: React.FC = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
 
@@ -168,6 +170,10 @@ const PresentationPage: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     setIsAutoPlay(!isAutoPlay);
   };
 
+  const goHome = () => {
+    navigate('/');
+  };
+
   React.useEffect(() => {
     let interval: NodeJS.Timeout;
     if (isAutoPlay) {
@@ -181,8 +187,8 @@ const PresentationPage: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const currentSlideData = slides[currentSlide];
 
   return (
-    <div className="fixed inset-0 z-50 bg-black flex items-center justify-center">
-      <div className="relative w-full h-full bg-white overflow-hidden">
+    <div className="min-h-screen bg-black">
+      <div className="relative w-full h-screen bg-white overflow-hidden">
         {/* Header */}
         <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-teal-600 to-blue-600 text-white p-6 z-10">
           <div className="flex items-center justify-between">
@@ -196,14 +202,14 @@ const PresentationPage: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 <span>{isAutoPlay ? 'Pausar' : 'Auto'}</span>
               </button>
               <button
-                onClick={onClose}
+                onClick={goHome}
                 className="flex items-center space-x-3 px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors text-lg"
               >
                 <Home size={20} />
                 <span>Inicio</span>
               </button>
               <button
-                onClick={onClose}
+                onClick={goHome}
                 className="p-3 hover:bg-white/20 rounded-lg transition-colors"
               >
                 <X size={24} />
@@ -290,7 +296,7 @@ const PresentationPage: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         <div className="absolute inset-0 focus:outline-none" tabIndex={0} onKeyDown={(e) => {
           if (e.key === 'ArrowRight') nextSlide();
           if (e.key === 'ArrowLeft') prevSlide();
-          if (e.key === 'Escape') onClose();
+          if (e.key === 'Escape') goHome();
           if (e.key === ' ') {
             e.preventDefault();
             toggleAutoPlay();
@@ -301,4 +307,4 @@ const PresentationPage: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   );
 };
 
-export default PresentationPage;
+export default Presentation;
