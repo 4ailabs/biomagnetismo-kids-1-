@@ -1,10 +1,12 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import BlockSelector from './components/BlockSelector';
 import Manual from './components/Manual';
+import Presentation from './pages/Presentation';
 
-const App: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 text-slate-800 relative overflow-hidden">
       {/* Animated background elements */}
@@ -27,6 +29,15 @@ const App: React.FC = () => {
         <Footer />
       </div>
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/presentation" element={<Presentation />} />
+    </Routes>
   );
 };
 
