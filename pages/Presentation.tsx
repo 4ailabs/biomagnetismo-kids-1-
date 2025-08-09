@@ -755,52 +755,52 @@ const Presentation: React.FC = () => {
         <div className="absolute inset-0 pt-24 pb-32 px-12 flex items-center justify-center">
           <div className="w-full max-w-6xl text-center">
             {/* Slide Title with Icon */}
-            <div className="flex items-center justify-center mb-8">
-              {currentSlideData.id === 1 && <BookOpen className="w-16 h-16 text-teal-600 mr-4" />}
-              {currentSlideData.id === 2 && <Brain className="w-16 h-16 text-blue-600 mr-4" />}
-              {currentSlideData.id === 3 && <Heart className="w-16 h-16 text-red-600 mr-4" />}
-              {currentSlideData.id === 4 && <Lightbulb className="w-16 h-16 text-yellow-600 mr-4" />}
-              {currentSlideData.id === 5 && <AlertTriangle className="w-16 h-16 text-orange-600 mr-4" />}
-              {currentSlideData.id === 6 && <Shield className="w-16 h-16 text-red-600 mr-4" />}
-              {currentSlideData.id === 7 && <Shield className="w-16 h-16 text-orange-600 mr-4" />}
-              {currentSlideData.id === 8 && <Users className="w-16 h-16 text-blue-600 mr-4" />}
-              {currentSlideData.id === 9 && <GraduationCap className="w-16 h-16 text-purple-600 mr-4" />}
-              {currentSlideData.id === 10 && <Target className="w-16 h-16 text-green-600 mr-4" />}
-              {currentSlideData.id === 11 && <Users className="w-16 h-16 text-purple-600 mr-4" />}
-              {currentSlideData.id === 12 && <Users className="w-16 h-16 text-blue-600 mr-4" />}
-              {currentSlideData.id === 13 && <Users className="w-16 h-16 text-indigo-600 mr-4" />}
-              {currentSlideData.id === 14 && <Users className="w-16 h-16 text-pink-600 mr-4" />}
-              {currentSlideData.id === 15 && <Sparkles className="w-16 h-16 text-teal-600 mr-4" />}
-              {currentSlideData.id === 16 && <Target className="w-16 h-16 text-green-600 mr-4" />}
-              {currentSlideData.id === 17 && <Search className="w-16 h-16 text-blue-600 mr-4" />}
-              {currentSlideData.id === 18 && <History className="w-16 h-16 text-purple-600 mr-4" />}
-              {currentSlideData.id === 19 && <Table className="w-16 h-16 text-indigo-600 mr-4" />}
-              {currentSlideData.id === 20 && <CheckCircle className="w-16 h-16 text-green-600 mr-4" />}
-              {currentSlideData.id === 21 && <Brain className="w-16 h-16 text-teal-600 mr-4" />}
-              {currentSlideData.id === 22 && <Heart className="w-16 h-16 text-pink-600 mr-4" />}
-              {currentSlideData.id === 23 && <List className="w-16 h-16 text-red-600 mr-4" />}
-              {currentSlideData.id === 24 && <List className="w-16 h-16 text-orange-600 mr-4" />}
-              {currentSlideData.id === 25 && <Sparkles className="w-16 h-16 text-yellow-600 mr-4" />}
-              {currentSlideData.id === 26 && <List className="w-16 h-16 text-purple-600 mr-4" />}
-              {currentSlideData.id === 27 && <Lightbulb className="w-16 h-16 text-orange-600 mr-4" />}
-              {currentSlideData.id === 28 && <Heart className="w-16 h-16 text-red-600 mr-4" />}
-              {currentSlideData.id === 29 && <Shield className="w-16 h-16 text-orange-600 mr-4" />}
-              {currentSlideData.id === 30 && <AlertTriangle className="w-16 h-16 text-yellow-600 mr-4" />}
-              {currentSlideData.id === 31 && <Target className="w-16 h-16 text-green-600 mr-4" />}
-              {currentSlideData.id === 32 && <Table className="w-16 h-16 text-indigo-600 mr-4" />}
-              {currentSlideData.id === 33 && <Table className="w-16 h-16 text-blue-600 mr-4" />}
-              {currentSlideData.id === 34 && <GraduationCap className="w-16 h-16 text-teal-600 mr-4" />}
-              {currentSlideData.id === 35 && <Search className="w-16 h-16 text-blue-600 mr-4" />}
-              {currentSlideData.id === 36 && <MessageCircle className="w-16 h-16 text-purple-600 mr-4" />}
-              {currentSlideData.id === 37 && <MessageCircle className="w-16 h-16 text-pink-600 mr-4" />}
-              {currentSlideData.id === 38 && <Baby className="w-16 h-16 text-blue-600 mr-4" />}
-              {currentSlideData.id === 39 && <Baby className="w-16 h-16 text-green-600 mr-4" />}
-              {currentSlideData.id === 40 && <Baby className="w-16 h-16 text-blue-600 mr-4" />}
-              {currentSlideData.id === 41 && <Baby className="w-16 h-16 text-orange-600 mr-4" />}
-              {currentSlideData.id === 42 && <Rocket className="w-16 h-16 text-green-600 mr-4" />}
-              {currentSlideData.id === 43 && <BarChart className="w-16 h-16 text-teal-600 mr-4" />}
-              {currentSlideData.id === 44 && <AlertCircle className="w-16 h-16 text-yellow-600 mr-4" />}
-              {currentSlideData.id === 45 && <Target className="w-16 h-16 text-purple-600 mr-4" />}
+            <div className="flex items-center justify-center mb-8 animate-fade-in-up">
+              {currentSlideData.id === 1 && <BookOpen className="w-16 h-16 text-teal-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 2 && <Brain className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 3 && <Heart className="w-16 h-16 text-red-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 4 && <Lightbulb className="w-16 h-16 text-yellow-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 5 && <AlertTriangle className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 6 && <Shield className="w-16 h-16 text-red-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 7 && <Shield className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 8 && <Users className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 9 && <GraduationCap className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 10 && <Target className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 11 && <Users className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 12 && <Users className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 13 && <Users className="w-16 h-16 text-indigo-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 14 && <Users className="w-16 h-16 text-pink-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 15 && <Sparkles className="w-16 h-16 text-teal-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 16 && <Target className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 17 && <Search className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 18 && <History className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 19 && <Table className="w-16 h-16 text-indigo-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 20 && <CheckCircle className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 21 && <Brain className="w-16 h-16 text-teal-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 22 && <Heart className="w-16 h-16 text-pink-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 23 && <List className="w-16 h-16 text-red-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 24 && <List className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 25 && <Sparkles className="w-16 h-16 text-yellow-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 26 && <List className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 27 && <Lightbulb className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 28 && <Heart className="w-16 h-16 text-red-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 29 && <Shield className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 30 && <AlertTriangle className="w-16 h-16 text-yellow-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 31 && <Target className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 32 && <Table className="w-16 h-16 text-indigo-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 33 && <Table className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 34 && <GraduationCap className="w-16 h-16 text-teal-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 35 && <Search className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 36 && <MessageCircle className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 37 && <MessageCircle className="w-16 h-16 text-pink-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 38 && <Baby className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 39 && <Baby className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 40 && <Baby className="w-16 h-16 text-blue-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 41 && <Baby className="w-16 h-16 text-orange-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 42 && <Rocket className="w-16 h-16 text-green-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 43 && <BarChart className="w-16 h-16 text-teal-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 44 && <AlertCircle className="w-16 h-16 text-yellow-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
+              {currentSlideData.id === 45 && <Target className="w-16 h-16 text-purple-600 mr-4 transform transition-all duration-500 hover:scale-110" />}
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-tight">
                 {currentSlideData.title}
               </h2>
@@ -882,9 +882,16 @@ const Presentation: React.FC = () => {
                     ];
                     const colorIndex = index % colors.length;
                     return (
-                      <div key={index} className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-6 border ${colors[colorIndex].border} shadow-lg`}>
+                      <div 
+                        key={index} 
+                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl p-6 border ${colors[colorIndex].border} shadow-lg transform transition-all duration-700 ease-out animate-slide-in-right`}
+                        style={{ 
+                          animationDelay: `${index * 200}ms`,
+                          animationFillMode: 'both'
+                        }}
+                      >
                         <div className="flex items-center space-x-3 mb-3">
-                          <div className={`w-8 h-8 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center`}>
+                          <div className={`w-8 h-8 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110`}>
                             <span className="text-white font-bold text-xs">✓</span>
                           </div>
                         </div>
