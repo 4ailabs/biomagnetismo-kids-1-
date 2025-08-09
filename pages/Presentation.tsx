@@ -930,46 +930,46 @@ const Presentation: React.FC = () => {
             )}
 
             {currentSlideData.id === 16 && (
-              <div className="mt-8 p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200 shadow-xl animate-fade-in-up">
-                <div className="flex items-center justify-center space-x-3 mb-6">
-                  <Target className="w-10 h-10 text-green-600 animate-pulse-slow" />
-                  <span className="text-2xl text-green-700 font-bold">Protocolo Bioenergético</span>
+              <div className="mt-4 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200 shadow-xl animate-fade-in-up">
+                <div className="flex items-center justify-center space-x-3 mb-4">
+                  <Target className="w-8 h-8 text-green-600 animate-pulse-slow" />
+                  <span className="text-xl text-green-700 font-bold">Protocolo Bioenergético</span>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div className="bg-white/60 rounded-lg p-4 border border-green-300 transform transition-all duration-500 hover:scale-105">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="bg-white/60 rounded-lg p-3 border border-green-300 transform transition-all duration-500 hover:scale-105">
                     <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse-slow"></div>
-                      <span className="font-semibold text-green-700">1. Identificación</span>
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse-slow"></div>
+                      <span className="font-semibold text-green-700 text-sm">1. Identificación</span>
                     </div>
-                    <p className="text-sm text-slate-600">Test muscular del conflicto</p>
+                    <p className="text-xs text-slate-600">Test muscular del conflicto</p>
                   </div>
-                  <div className="bg-white/60 rounded-lg p-4 border border-green-300 transform transition-all duration-500 hover:scale-105">
+                  <div className="bg-white/60 rounded-lg p-3 border border-green-300 transform transition-all duration-500 hover:scale-105">
                     <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse-slow"></div>
-                      <span className="font-semibold text-green-700">2. Recesión</span>
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse-slow"></div>
+                      <span className="font-semibold text-green-700 text-sm">2. Recesión</span>
                     </div>
-                    <p className="text-sm text-slate-600">Encontrar el instante exacto</p>
+                    <p className="text-xs text-slate-600">Encontrar el instante exacto</p>
                   </div>
-                  <div className="bg-white/60 rounded-lg p-4 border border-green-300 transform transition-all duration-500 hover:scale-105">
+                  <div className="bg-white/60 rounded-lg p-3 border border-green-300 transform transition-all duration-500 hover:scale-105">
                     <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse-slow"></div>
-                      <span className="font-semibold text-green-700">3. Selección</span>
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse-slow"></div>
+                      <span className="font-semibold text-green-700 text-sm">3. Selección</span>
                     </div>
-                    <p className="text-sm text-slate-600">Pares biomagnéticos</p>
+                    <p className="text-xs text-slate-600">Pares biomagnéticos</p>
                   </div>
-                  <div className="bg-white/60 rounded-lg p-4 border border-green-300 transform transition-all duration-500 hover:scale-105">
+                  <div className="bg-white/60 rounded-lg p-3 border border-green-300 transform transition-all duration-500 hover:scale-105">
                     <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse-slow"></div>
-                      <span className="font-semibold text-green-700">4. Aplicación</span>
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse-slow"></div>
+                      <span className="font-semibold text-green-700 text-sm">4. Aplicación</span>
                     </div>
-                    <p className="text-sm text-slate-600">Impacto de pares</p>
+                    <p className="text-xs text-slate-600">Impacto de pares</p>
                   </div>
-                  <div className="bg-white/60 rounded-lg p-4 border border-green-300 transform transition-all duration-500 hover:scale-105">
+                  <div className="bg-white/60 rounded-lg p-3 border border-green-300 transform transition-all duration-500 hover:scale-105">
                     <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse-slow"></div>
-                      <span className="font-semibold text-green-700">5. Conscientización</span>
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse-slow"></div>
+                      <span className="font-semibold text-green-700 text-sm">5. Conscientización</span>
                     </div>
-                    <p className="text-sm text-slate-600">Descarga energética</p>
+                    <p className="text-xs text-slate-600">Descarga energética</p>
                   </div>
                 </div>
               </div>
@@ -1020,51 +1020,7 @@ const Presentation: React.FC = () => {
               </div>
             )}
 
-            {currentSlideData.id === 16 && (
-              <div className="mt-8 p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200 shadow-xl">
-                <div className="flex items-center justify-center space-x-3 mb-6">
-                  <Target className="w-10 h-10 text-green-600" />
-                  <span className="text-2xl text-green-700 font-bold">Protocolo Bioenergético</span>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                      <span className="font-semibold text-green-700">1. Identificación</span>
-                    </div>
-                    <p className="text-sm text-slate-600">Test muscular del conflicto</p>
-                  </div>
-                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                      <span className="font-semibold text-green-700">2. Recesión</span>
-                    </div>
-                    <p className="text-sm text-slate-600">Encontrar el instante exacto</p>
-                  </div>
-                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                      <span className="font-semibold text-green-700">3. Selección</span>
-                    </div>
-                    <p className="text-sm text-slate-600">Pares biomagnéticos</p>
-                  </div>
-                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                      <span className="font-semibold text-green-700">4. Aplicación</span>
-                    </div>
-                    <p className="text-sm text-slate-600">Impacto de pares</p>
-                  </div>
-                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                      <span className="font-semibold text-green-700">5. Conscientización</span>
-                    </div>
-                    <p className="text-sm text-slate-600">Descarga energética</p>
-                  </div>
-                </div>
-              </div>
-            )}
+
 
             {currentSlideData.id === 23 && (
               <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
