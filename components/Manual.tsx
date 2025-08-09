@@ -832,11 +832,138 @@ const BioenergeticProtocol = () => (
                 </div>
             </div>
 
+            <SubSectionTitle title="Método de Frases del Sentir para la Descarga" />
+            <p className="text-base sm:text-lg leading-relaxed mb-6">
+                Una vez identificado el conflicto y realizado el instante, es fundamental elaborar <strong>frases del sentir</strong> que la madre debe repetir para permitir la descarga emocional y energética del conflicto.
+            </p>
+
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border-l-4 border-purple-500 mb-8">
+                <h4 className="font-bold text-slate-800 mb-4 text-center">Objetivo del Método</h4>
+                <p className="text-sm text-slate-700 leading-relaxed">
+                    Las frases del sentir permiten que la madre <strong>exprese y libere</strong> las emociones contenidas en el conflicto, 
+                    facilitando la descarga de la memoria energética y la sanación del patrón que afecta al niño.
+                </p>
+            </div>
+
+            <div className="space-y-6">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-6 sm:p-8">
+                    <h5 className="font-semibold text-slate-800 mb-4 text-center">Proceso de Elaboración de Frases</h5>
+                    
+                    <div className="space-y-4">
+                        <div className="flex items-start space-x-4">
+                            <div className="flex-shrink-0 w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center">
+                                <span className="text-teal-600 text-xs font-bold">1</span>
+                            </div>
+                            <div>
+                                <h6 className="font-semibold text-slate-800 mb-2">Identificación de la Emoción</h6>
+                                <p className="text-sm text-slate-700">
+                                    Durante la recesión de edad, identificar la emoción principal que se experimentó en el instante del conflicto.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                            <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                                <span className="text-blue-600 text-xs font-bold">2</span>
+                            </div>
+                            <div>
+                                <h6 className="font-semibold text-slate-800 mb-2">Elaboración de la Frase</h6>
+                                <p className="text-sm text-slate-700">
+                                    Crear una frase simple y directa que exprese el sentir: "Me siento [emoción] porque [situación]".
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                            <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
+                                <span className="text-purple-600 text-xs font-bold">3</span>
+                            </div>
+                            <div>
+                                <h6 className="font-semibold text-slate-800 mb-2">Repetición Guiada</h6>
+                                <p className="text-sm text-slate-700">
+                                    La madre repite la frase mientras se aplican los pares biomagnéticos, permitiendo la descarga emocional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-6 sm:p-8">
+                    <h5 className="font-semibold text-slate-800 mb-4 text-center">Ejemplos de Frases del Sentir</h5>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-lg p-4 border border-red-200">
+                            <h6 className="font-semibold text-red-800 mb-2">Emociones de Miedo</h6>
+                            <ul className="text-sm text-red-700 space-y-1">
+                                <li>• "Me siento asustada porque no sé si mi bebé estará bien"</li>
+                                <li>• "Me siento temerosa porque siento que algo malo va a pasar"</li>
+                                <li>• "Me siento angustiada porque no puedo proteger a mi hijo"</li>
+                            </ul>
+                        </div>
+
+                        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4 border border-blue-200">
+                            <h6 className="font-semibold text-blue-800 mb-2">Emociones de Tristeza</h6>
+                            <ul className="text-sm text-blue-700 space-y-1">
+                                <li>• "Me siento triste porque perdí a alguien importante"</li>
+                                <li>• "Me siento sola porque no tengo el apoyo que necesito"</li>
+                                <li>• "Me siento desesperada porque no puedo cambiar la situación"</li>
+                            </ul>
+                        </div>
+
+                        <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-4 border border-yellow-200">
+                            <h6 className="font-semibold text-yellow-800 mb-2">Emociones de Ira</h6>
+                            <ul className="text-sm text-yellow-700 space-y-1">
+                                <li>• "Me siento enojada porque me traicionaron"</li>
+                                <li>• "Me siento furiosa porque no me escuchan"</li>
+                                <li>• "Me siento indignada porque me hicieron daño"</li>
+                            </ul>
+                        </div>
+
+                        <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-lg p-4 border border-green-200">
+                            <h6 className="font-semibold text-green-800 mb-2">Emociones de Culpa</h6>
+                            <ul className="text-sm text-green-700 space-y-1">
+                                <li>• "Me siento culpable porque no pude proteger a mi bebé"</li>
+                                <li>• "Me siento responsable porque hice algo malo"</li>
+                                <li>• "Me siento arrepentida porque no actué como debía"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-6 sm:p-8">
+                    <h5 className="font-semibold text-slate-800 mb-4 text-center">Técnica de Aplicación</h5>
+                    
+                    <div className="space-y-4">
+                        <div className="bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg p-4 border-l-4 border-teal-500">
+                            <h6 className="font-semibold text-slate-800 mb-2">Proceso de Repetición</h6>
+                            <ol className="text-sm text-slate-700 space-y-2 ml-4">
+                                <li><strong>1.</strong> La madre se coloca en posición cómoda y relajada</li>
+                                <li><strong>2.</strong> Se aplican los pares biomagnéticos identificados</li>
+                                <li><strong>3.</strong> La madre repite la frase del sentir 3-5 veces</li>
+                                <li><strong>4.</strong> Se observa la respuesta emocional y física</li>
+                                <li><strong>5.</strong> Se repite el proceso hasta sentir la descarga</li>
+                            </ol>
+                        </div>
+
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-4 border-l-4 border-purple-500">
+                            <h6 className="font-semibold text-slate-800 mb-2">Indicadores de Descarga</h6>
+                            <ul className="text-sm text-slate-700 space-y-1 ml-4">
+                                <li>• <strong>Respiración profunda</strong> y liberación de tensión</li>
+                                <li>• <strong>Lágrimas</strong> o expresión emocional</li>
+                                <li>• <strong>Sensación de alivio</strong> y paz interior</li>
+                                <li>• <strong>Cambio en el test muscular</strong> (de débil a fuerte)</li>
+                                <li>• <strong>Mejora en los síntomas</strong> del niño</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div className="mt-8 p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-lg border-l-4 border-teal-500">
                 <p className="text-sm text-slate-700 leading-relaxed">
                     <strong>Protocolo Integrado:</strong> Este protocolo combina la precisión del biomagnetismo con la profundidad de la bioenergética, 
                     creando un abordaje único que permite sanar no solo los síntomas, sino el origen energético del conflicto. 
-                    La <strong>recesión de edad</strong> y la <strong>conscientización</strong> son fundamentales para 
+                    La <strong>recesión de edad</strong>, la <strong>conscientización</strong> y las <strong>frases del sentir</strong> son fundamentales para 
                     <strong>descargar la memoria energética del conflicto</strong>. Es especialmente efectivo para casos complejos donde los síntomas actuales tienen raíces profundas en la gestación.
                 </p>
             </div>
