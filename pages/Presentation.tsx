@@ -341,11 +341,11 @@ const Presentation: React.FC = () => {
       id: 24,
       title: "SHOCKS GESTACIONALES (11-20)",
       content: [
-        "11. Mother's serious illness - Bulb-Adrenal",
-        "12. Threat of premature birth - Pituitary-Adrenal",
-        "13. Fetal malformation - Thymus-Adrenal",
-        "14. Family conflicts - Plexus-Right Kidney",
-        "15. Pregnancy after loss - Adrenal-Adrenal"
+        "11. Enfermedad grave de la madre - Bulbo-Suprarrenal",
+        "12. Amenaza de parto prematuro - Hipófisis-Suprarrenal",
+        "13. Malformación fetal - Timo-Suprarrenal",
+        "14. Conflictos familiares - Plexo-Riñón derecho",
+        "15. Embarazo después de pérdida - Suprarrenal-Suprarrenal"
       ],
       type: 'content'
     },
@@ -366,11 +366,11 @@ const Presentation: React.FC = () => {
       id: 26,
       title: "SENSACIONES VITALES - DETALLES",
       content: [
-        "Threat of loss: Risk of miscarriage, hemorrhages",
-        "Vital insecurity: Alarming diagnoses, hospitalization",
-        "Emotional abandonment: Father's absence, separation",
-        "Gestational violence: Aggressions, abuse",
-        "Fetal rejection: Unwanted pregnancy, doubts"
+        "Amenaza de pérdida: Riesgo de aborto, hemorragias",
+        "Inseguridad vital: Diagnósticos alarmantes, hospitalización",
+        "Abandono emocional: Ausencia del padre, separación",
+        "Violencia gestacional: Agresiones, abuso",
+        "Rechazo fetal: Embarazo no deseado, dudas"
       ],
       type: 'content'
     },
