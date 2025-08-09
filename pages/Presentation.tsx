@@ -733,84 +733,231 @@ const Presentation: React.FC = () => {
 
             {/* Slide Content with Enhanced Layout */}
             <div className="space-y-6">
-              {currentSlideData.content.map((item, index) => (
-                <div key={index} className="flex items-center justify-center space-x-4">
-                  <div className="flex-shrink-0">
-                    {currentSlideData.type === 'key-points' && (
-                      <div className="w-8 h-8 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold text-lg">{index + 1}</span>
+              {currentSlideData.type === 'key-points' && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {currentSlideData.content.map((item, index) => (
+                    <div key={index} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200 shadow-lg">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-lg">{index + 1}</span>
+                        </div>
+                        <h3 className="text-lg font-semibold text-blue-800">Punto {index + 1}</h3>
                       </div>
-                    )}
-                    {currentSlideData.type === 'content' && (
-                      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold text-lg">•</span>
-                      </div>
-                    )}
-                    {currentSlideData.type === 'summary' && (
-                      <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold text-lg">✓</span>
-                      </div>
-                    )}
-                  </div>
-                  <div className="text-2xl md:text-3xl lg:text-4xl text-slate-700 leading-relaxed font-medium">
-                    {item}
-                  </div>
+                      <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
+              
+              {currentSlideData.type === 'content' && (
+                <div className="space-y-4">
+                  {currentSlideData.content.map((item, index) => (
+                    <div key={index} className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200 shadow-lg">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-sm">•</span>
+                        </div>
+                        <h3 className="text-lg font-semibold text-purple-800">Información {index + 1}</h3>
+                      </div>
+                      <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+              
+              {currentSlideData.type === 'summary' && (
+                <div className="grid grid-cols-1 gap-6">
+                  {currentSlideData.content.map((item, index) => (
+                    <div key={index} className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200 shadow-lg">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-lg">✓</span>
+                        </div>
+                        <h3 className="text-lg font-semibold text-green-800">Conclusión {index + 1}</h3>
+                      </div>
+                      <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Additional Information for Specific Slides */}
             {currentSlideData.id === 1 && (
-              <div className="mt-12 p-6 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl border border-teal-200">
-                <div className="flex items-center justify-center space-x-4 mb-4">
-                  <Clock className="w-8 h-8 text-teal-600" />
-                  <span className="text-xl text-teal-700 font-semibold">Módulo 1: El Inicio Invisible</span>
+              <div className="mt-12 p-8 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl border border-teal-200 shadow-xl">
+                <div className="flex items-center justify-center space-x-4 mb-6">
+                  <Clock className="w-10 h-10 text-teal-600" />
+                  <span className="text-2xl text-teal-700 font-bold">Módulo 1: El Inicio Invisible</span>
                 </div>
-                <p className="text-lg text-slate-600">Cuando la Historia Empieza Antes de Nacer</p>
+                <p className="text-xl text-slate-600 text-center">Cuando la Historia Empieza Antes de Nacer</p>
               </div>
             )}
 
-            {currentSlideData.id === 3 && (
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="p-4 bg-red-50 rounded-lg border border-red-200">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <AlertTriangle className="w-6 h-6 text-red-600" />
-                    <span className="font-semibold text-red-700">Supervivencia</span>
+            {currentSlideData.id === 4 && (
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border border-red-200 shadow-lg">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <Heart className="w-8 h-8 text-red-600" />
+                    <h3 className="text-lg font-bold text-red-700">Resonancia Materno-Filial</h3>
                   </div>
-                  <p className="text-sm text-red-600">Amenaza de aborto, hemorragias</p>
+                  <p className="text-sm text-red-600">Todo lo que siente la madre, lo vive el bebé</p>
                 </div>
-                <div className="p-4 bg-orange-50 rounded-lg border border-orange-200">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Shield className="w-6 h-6 text-orange-600" />
-                    <span className="font-semibold text-orange-700">Protección</span>
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200 shadow-lg">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <Brain className="w-8 h-8 text-blue-600" />
+                    <h3 className="text-lg font-bold text-blue-700">Impronta Energética</h3>
                   </div>
-                  <p className="text-sm text-orange-600">Violencia, entornos hostiles</p>
+                  <p className="text-sm text-blue-600">Primeros 100 días definen el 70% del patrón adulto</p>
                 </div>
               </div>
             )}
 
             {currentSlideData.id === 5 && (
-              <div className="mt-8 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200">
-                <div className="flex items-center justify-center space-x-2 mb-4">
-                  <Target className="w-8 h-8 text-green-600" />
-                  <span className="text-xl text-green-700 font-semibold">Protocolo Bioenergético</span>
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-4 border border-red-200 shadow-lg">
+                  <div className="flex items-center space-x-2 mb-3">
+                    <Shield className="w-6 h-6 text-red-600" />
+                    <span className="font-bold text-red-700">Supervivencia</span>
+                  </div>
+                  <p className="text-xs text-red-600">Amenaza de aborto, hemorragias</p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                    <span>Identificación del conflicto</span>
+                <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-4 border border-orange-200 shadow-lg">
+                  <div className="flex items-center space-x-2 mb-3">
+                    <Shield className="w-6 h-6 text-orange-600" />
+                    <span className="font-bold text-orange-700">Protección</span>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                    <span>Recesión de edad</span>
+                  <p className="text-xs text-orange-600">Violencia, entornos hostiles</p>
+                </div>
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-200 shadow-lg">
+                  <div className="flex items-center space-x-2 mb-3">
+                    <Users className="w-6 h-6 text-blue-600" />
+                    <span className="font-bold text-blue-700">Separación</span>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                    <span>Selección de pares</span>
+                  <p className="text-xs text-blue-600">Pérdidas, aislamiento</p>
+                </div>
+              </div>
+            )}
+
+            {currentSlideData.id === 16 && (
+              <div className="mt-8 p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200 shadow-xl">
+                <div className="flex items-center justify-center space-x-3 mb-6">
+                  <Target className="w-10 h-10 text-green-600" />
+                  <span className="text-2xl text-green-700 font-bold">Protocolo Bioenergético</span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                      <span className="font-semibold text-green-700">1. Identificación</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Test muscular del conflicto</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                    <span>Conscientización</span>
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                      <span className="font-semibold text-green-700">2. Recesión</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Encontrar el instante exacto</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                      <span className="font-semibold text-green-700">3. Selección</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Pares biomagnéticos</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                      <span className="font-semibold text-green-700">4. Aplicación</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Impacto de pares</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                      <span className="font-semibold text-green-700">5. Conscientización</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Descarga energética</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {currentSlideData.id === 23 && (
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-4 border border-red-200 shadow-lg">
+                  <h3 className="font-bold text-red-700 mb-3">Shocks 1-5</h3>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span className="text-red-600">Amenaza de aborto</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span className="text-red-600">Diagnóstico alarmante</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                      <span className="text-red-600">Pérdida de ser querido</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-4 border border-orange-200 shadow-lg">
+                  <h3 className="font-bold text-orange-700 mb-3">Shocks 6-10</h3>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                      <span className="text-orange-600">Separación de pareja</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                      <span className="text-orange-600">Violencia hacia madre</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                      <span className="text-orange-600">Accidentes y caídas</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {currentSlideData.id === 27 && (
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border border-red-200 shadow-lg">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <Heart className="w-8 h-8 text-red-600" />
+                    <h3 className="text-lg font-bold text-red-700">Ley de Lealtad</h3>
+                  </div>
+                  <p className="text-sm text-red-600 mb-3">"Te seguiré hasta la muerte"</p>
+                  <p className="text-xs text-red-500">El niño mantiene lealtad energética absoluta hacia su sistema familiar</p>
+                </div>
+                <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 border border-orange-200 shadow-lg">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <Shield className="w-8 h-8 text-orange-600" />
+                    <h3 className="text-lg font-bold text-orange-700">Ley de Sacrificio</h3>
+                  </div>
+                  <p className="text-sm text-orange-600 mb-3">"Prefiero morir yo antes que tú"</p>
+                  <p className="text-xs text-orange-500">Los niños asumen energéticamente el sufrimiento de otros</p>
+                </div>
+              </div>
+            )}
+
+            {currentSlideData.id === 39 && (
+              <div className="mt-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200 shadow-lg">
+                <div className="flex items-center space-x-3 mb-4">
+                  <Baby className="w-8 h-8 text-green-600" />
+                  <h3 className="text-lg font-bold text-green-700">Caso Clínico: Trastornos del Sueño</h3>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
+                    <h4 className="font-semibold text-green-700 mb-2">Diagnóstico</h4>
+                    <p className="text-sm text-slate-600">Niño de 3 años con problemas severos de sueño</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-4 border border-green-300">
+                    <h4 className="font-semibold text-green-700 mb-2">Resultado</h4>
+                    <p className="text-sm text-slate-600">Mejora del 80% en patrones de sueño</p>
                   </div>
                 </div>
               </div>
