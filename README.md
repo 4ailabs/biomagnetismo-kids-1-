@@ -10,29 +10,29 @@ Un curso completo de biomagnetismo pediátrico que aborda las experiencias gesta
 - **Leyes de Pertenencia**: Incluye las leyes fundamentales que rigen el sistema familiar
 - **Protocolos Específicos**: Pares biomagnéticos adaptados para cada etapa de desarrollo
 - **Interfaz Moderna**: Diseño responsive y profesional
-- **Contenido Completo**: 5 bloques temáticos con más de 8 horas de contenido
+- **Contenido Completo**: 5 bloques temáticos con contenido extenso y detallado
 
 ## 🏗️ Estructura del Módulo
 
-### Bloque 1: Vida Intrauterina y Conflictos Biológicos (70 min)
+### Bloque 1: Vida Intrauterina y Conflictos Biológicos
 - Fundamentos teóricos del campo bioeléctrico materno-fetal
 - Los 5 conflictos biológicos fundamentales
 - 20 shocks vivenciales gestacionales y sus pares
 - Enfoque sistémico del niño en el contexto familiar
 
-### Bloque 2: Rastreo y Protocolos en Gestación (80 min)
+### Bloque 2: Rastreo y Protocolos en Gestación
 - Técnicas de aplicación específicas para gestación
 - Protocolos de rastreo energético
 
-### Bloque 3: Recién Nacido (0-1 mes) (70 min)
+### Bloque 3: Recién Nacido (0-1 mes)
 - Patologías específicas del recién nacido
 - Protocolos de aplicación
 
-### Bloque 4: Desarrollo (1-3 meses) (60 min)
+### Bloque 4: Desarrollo (1-3 meses)
 - Shocks postnatales
 - Desarrollo energético temprano
 
-### Bloque 5: Integración Sistémica (40 min)
+### Bloque 5: Integración Sistémica
 - Visión holística del tratamiento
 - Integración de todos los conceptos
 
