@@ -116,7 +116,7 @@
     },
 
     "gestationalShocks": {
-      "title": "Lista Completa: 20 Shocks Vivenciales Gestacionales y sus Pares",
+              "title": "20 Shocks Vivenciales Gestacionales",
       "headers": ["#", "Shock Vivencial", "Pares Biomagnéticos", "Beneficios Esperados"],
       "data": [
         ["1", "Amenaza de aborto", "Suprarrenal–Suprarrenal / Pericardio–Suprarrenal", "Fortalece eje vital y calma estrés"],
