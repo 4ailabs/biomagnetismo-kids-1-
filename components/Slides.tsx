@@ -139,42 +139,42 @@ const Slides: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, on
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="relative w-full max-w-6xl aspect-video bg-white rounded-2xl shadow-2xl overflow-hidden">
+    <div className="fixed inset-0 z-50 bg-black flex items-center justify-center">
+      <div className="relative w-full h-full bg-white overflow-hidden">
         {/* Header */}
-        <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-teal-600 to-blue-600 text-white p-4 z-10">
+        <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-teal-600 to-blue-600 text-white p-6 z-10">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">Biomagnetismo Kids - Módulo 1</h1>
-            <div className="flex items-center space-x-4">
+            <h1 className="text-3xl font-bold">Biomagnetismo Kids - Módulo 1</h1>
+            <div className="flex items-center space-x-6">
               <button
                 onClick={toggleAutoPlay}
-                className="flex items-center space-x-2 px-3 py-1 bg-white/20 rounded-lg hover:bg-white/30 transition-colors"
+                className="flex items-center space-x-3 px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors text-lg"
               >
-                {isAutoPlay ? <Pause size={16} /> : <Play size={16} />}
-                <span className="text-sm">{isAutoPlay ? 'Pausar' : 'Auto'}</span>
+                {isAutoPlay ? <Pause size={20} /> : <Play size={20} />}
+                <span>{isAutoPlay ? 'Pausar' : 'Auto'}</span>
               </button>
               <button
                 onClick={onClose}
-                className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                className="p-3 hover:bg-white/20 rounded-lg transition-colors"
               >
-                <X size={20} />
+                <X size={24} />
               </button>
             </div>
           </div>
         </div>
 
-        {/* Slide Content */}
-        <div className="absolute inset-0 pt-20 pb-16 px-8 flex items-center justify-center">
-          <div className="w-full max-w-4xl text-center">
+        {/* Slide Content - Full Screen */}
+        <div className="absolute inset-0 pt-24 pb-32 px-12 flex items-center justify-center">
+          <div className="w-full max-w-6xl text-center">
             {/* Slide Title */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-8 leading-tight">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-12 leading-tight">
               {currentSlideData.title}
             </h2>
 
             {/* Slide Content */}
-            <div className="space-y-6">
+            <div className="space-y-8">
               {currentSlideData.content.map((item, index) => (
-                <div key={index} className="text-2xl md:text-3xl lg:text-4xl text-slate-700 leading-relaxed">
+                <div key={index} className="text-3xl md:text-4xl lg:text-5xl text-slate-700 leading-relaxed">
                   {item}
                 </div>
               ))}
@@ -182,27 +182,34 @@ const Slides: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, on
           </div>
         </div>
 
-        {/* Navigation */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/80 to-transparent p-6">
-          <div className="flex items-center justify-between">
-            <button
-              onClick={prevSlide}
-              className="flex items-center space-x-2 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors"
-            >
-              <ChevronLeft size={20} />
-              <span>Anterior</span>
-            </button>
+        {/* Large Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
+        >
+          <ChevronLeft size={32} />
+        </button>
 
-            <div className="flex items-center space-x-4">
-              <span className="text-white text-lg">
+        <button
+          onClick={nextSlide}
+          className="absolute right-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
+        >
+          <ChevronRight size={32} />
+        </button>
+
+        {/* Bottom Navigation */}
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/90 to-transparent p-8">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-6">
+              <span className="text-white text-2xl font-semibold">
                 {currentSlide + 1} / {slides.length}
               </span>
-              <div className="flex space-x-2">
+              <div className="flex space-x-3">
                 {slides.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
+                    className={`w-4 h-4 rounded-full transition-colors ${
                       index === currentSlide ? 'bg-white' : 'bg-white/40'
                     }`}
                   />
@@ -210,13 +217,23 @@ const Slides: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, on
               </div>
             </div>
 
-            <button
-              onClick={nextSlide}
-              className="flex items-center space-x-2 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors"
-            >
-              <span>Siguiente</span>
-              <ChevronRight size={20} />
-            </button>
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={prevSlide}
+                className="flex items-center space-x-3 px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors text-lg"
+              >
+                <ChevronLeft size={24} />
+                <span>Anterior</span>
+              </button>
+
+              <button
+                onClick={nextSlide}
+                className="flex items-center space-x-3 px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors text-lg"
+              >
+                <span>Siguiente</span>
+                <ChevronRight size={24} />
+              </button>
+            </div>
           </div>
         </div>
 
