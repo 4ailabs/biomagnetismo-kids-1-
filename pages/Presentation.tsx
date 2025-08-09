@@ -758,6 +758,17 @@ const Presentation: React.FC = () => {
       <div className="relative w-full h-screen bg-white overflow-hidden">
 
 
+        {/* Back to Main Button */}
+        <div className="absolute top-4 right-4 z-20">
+          <button
+            onClick={goHome}
+            className="flex items-center space-x-2 px-4 py-2 bg-white/90 hover:bg-white text-slate-700 hover:text-slate-900 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm border border-white/20"
+          >
+            <Home size={20} />
+            <span className="hidden sm:inline font-medium">Inicio</span>
+          </button>
+        </div>
+
         {/* Slide Content - Full Screen */}
         <div className="absolute inset-0 pt-8 sm:pt-12 md:pt-16 pb-20 sm:pb-24 md:pb-32 px-4 sm:px-8 md:px-12 flex items-center justify-center">
           <div className="w-full max-w-6xl text-center">
