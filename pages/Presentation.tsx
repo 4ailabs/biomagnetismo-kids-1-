@@ -756,39 +756,10 @@ const Presentation: React.FC = () => {
   return (
     <div className="min-h-screen bg-black">
       <div className="relative w-full h-screen bg-white overflow-hidden">
-        {/* Header */}
-        <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-teal-600 to-blue-600 text-white p-3 sm:p-6 z-10">
-          {/* Spacer to prevent content from being hidden behind fixed header */}
-          <div className="h-0 sm:h-0"></div>
-          <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
-            <h1 className="text-lg sm:text-2xl md:text-3xl font-bold text-center sm:text-left">Biomagnetismo Kids - Módulo 1</h1>
-            <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-6">
-              <button
-                onClick={toggleAutoPlay}
-                className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors text-xs sm:text-sm md:text-lg"
-              >
-                {isAutoPlay ? <Pause size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6" /> : <Play size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />}
-                <span className="hidden sm:inline">{isAutoPlay ? 'Pausar' : 'Auto'}</span>
-              </button>
-              <button
-                onClick={goHome}
-                className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors text-xs sm:text-sm md:text-lg"
-              >
-                <Home size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                <span className="hidden sm:inline">Inicio</span>
-              </button>
-              <button
-                onClick={goHome}
-                className="p-2 sm:p-3 hover:bg-white/20 rounded-lg transition-colors"
-              >
-                <X size={20} className="sm:w-6 sm:h-6" />
-              </button>
-            </div>
-          </div>
-        </div>
+
 
         {/* Slide Content - Full Screen */}
-        <div className="absolute inset-0 pt-24 sm:pt-28 md:pt-32 pb-20 sm:pb-24 md:pb-32 px-4 sm:px-8 md:px-12 flex items-center justify-center">
+        <div className="absolute inset-0 pt-8 sm:pt-12 md:pt-16 pb-20 sm:pb-24 md:pb-32 px-4 sm:px-8 md:px-12 flex items-center justify-center">
           <div className="w-full max-w-6xl text-center">
             {/* Slide Title with Icon */}
             <div className="flex flex-col sm:flex-row items-center justify-center mb-4 sm:mb-6 md:mb-8 animate-fade-in-up space-y-2 sm:space-y-0">
@@ -902,7 +873,7 @@ const Presentation: React.FC = () => {
               )}
 
                             {(currentSlideData.id === 23 || currentSlideData.id === 23.5 || currentSlideData.id === 24) && (
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {currentSlideData.content.map((item, index) => {
                     const colors = [
                       { bg: 'from-red-50 to-pink-50', border: 'border-red-200', circle: 'from-red-500 to-pink-500', icon: '💔' },
@@ -917,23 +888,23 @@ const Presentation: React.FC = () => {
                     return (
                       <div 
                         key={index} 
-                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-2xl border-2 ${colors[colorIndex].border} shadow-xl transform transition-all duration-700 ease-out animate-fade-in-up`}
+                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl border ${colors[colorIndex].border} shadow-lg transform transition-all duration-300 hover:shadow-xl`}
                         style={{ 
-                          animationDelay: `${index * 150}ms`,
+                          animationDelay: `${index * 100}ms`,
                           animationFillMode: 'both'
                         }}
                       >
-                        <div className="p-6 sm:p-8">
-                          <div className="flex items-start space-x-4 sm:space-x-6">
-                            <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110 flex-shrink-0 shadow-lg`}>
-                              <span className="text-white font-bold text-xl sm:text-2xl">{shockNumber}</span>
+                        <div className="p-4 sm:p-5">
+                          <div className="flex items-start space-x-3 sm:space-x-4">
+                            <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-300 hover:scale-110 flex-shrink-0 shadow-md`}>
+                              <span className="text-white font-bold text-sm sm:text-base">{shockNumber}</span>
                             </div>
                             <div className="flex-1 min-w-0">
-                              <div className="flex items-center space-x-3 mb-3">
-                                <span className="text-2xl sm:text-3xl">{colors[colorIndex].icon}</span>
-                                <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 leading-tight">Shock Vivencial</h4>
+                              <div className="flex items-center space-x-2 mb-2">
+                                <span className="text-lg sm:text-xl">{colors[colorIndex].icon}</span>
+                                <h4 className="text-sm sm:text-base font-semibold text-slate-800">Shock Vivencial</h4>
                               </div>
-                              <p className="text-base sm:text-lg text-slate-700 leading-relaxed">{item}</p>
+                              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{item}</p>
                             </div>
                           </div>
                         </div>
@@ -969,7 +940,7 @@ const Presentation: React.FC = () => {
               )}
 
               {currentSlideData.id === 26 && (
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {currentSlideData.content.map((item, index) => {
                     const colors = [
                       { bg: 'from-red-50 to-pink-50', border: 'border-red-200', circle: 'from-red-500 to-pink-500', icon: '😰' },
@@ -983,23 +954,23 @@ const Presentation: React.FC = () => {
                     return (
                       <div 
                         key={index} 
-                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-2xl border-2 ${colors[colorIndex].border} shadow-xl transform transition-all duration-700 ease-out animate-fade-in-up`}
+                        className={`bg-gradient-to-br ${colors[colorIndex].bg} rounded-xl border ${colors[colorIndex].border} shadow-lg transform transition-all duration-300 hover:shadow-xl`}
                         style={{ 
-                          animationDelay: `${index * 150}ms`,
+                          animationDelay: `${index * 100}ms`,
                           animationFillMode: 'both'
                         }}
                       >
-                        <div className="p-6 sm:p-8">
-                          <div className="flex items-start space-x-4 sm:space-x-6">
-                            <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-500 hover:scale-110 flex-shrink-0 shadow-lg`}>
-                              <span className="text-white font-bold text-xl sm:text-2xl">{index + 1}</span>
+                        <div className="p-4 sm:p-5">
+                          <div className="flex items-start space-x-3 sm:space-x-4">
+                            <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${colors[colorIndex].circle} rounded-full flex items-center justify-center transform transition-all duration-300 hover:scale-110 flex-shrink-0 shadow-md`}>
+                              <span className="text-white font-bold text-sm sm:text-base">{index + 1}</span>
                             </div>
                             <div className="flex-1 min-w-0">
-                              <div className="flex items-center space-x-3 mb-3">
-                                <span className="text-2xl sm:text-3xl">{colors[colorIndex].icon}</span>
-                                <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 leading-tight">Sensación Vital</h4>
+                              <div className="flex items-center space-x-2 mb-2">
+                                <span className="text-lg sm:text-xl">{colors[colorIndex].icon}</span>
+                                <h4 className="text-sm sm:text-base font-semibold text-slate-800">Sensación Vital</h4>
                               </div>
-                              <p className="text-base sm:text-lg text-slate-700 leading-relaxed">{item}</p>
+                              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{item}</p>
                             </div>
                           </div>
                         </div>
