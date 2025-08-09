@@ -739,9 +739,9 @@ const BioenergeticProtocol = () => (
                         <span className="text-blue-600 text-sm font-bold">2</span>
                     </div>
                     <div>
-                        <h5 className="font-semibold text-slate-800 mb-2">Regresión de Edad</h5>
+                        <h5 className="font-semibold text-slate-800 mb-2">Recesión de Edad</h5>
                         <p className="text-sm text-slate-700 leading-relaxed">
-                            Realizar una <strong>regresión de edad</strong> para encontrar el instante exacto del conflicto. 
+                            Realizar una <strong>recesión de edad</strong> para encontrar el instante exacto del conflicto. 
                             Partiendo del momento actual, se va hacia atrás hasta encontrar el instante donde se originó el conflicto, 
                             que puede llegar hasta el momento de la <strong>concepción</strong>.
                         </p>
@@ -782,7 +782,8 @@ const BioenergeticProtocol = () => (
                         <h5 className="font-semibold text-slate-800 mb-2">Conscientización de la Información</h5>
                         <p className="text-sm text-slate-700 leading-relaxed">
                             El paso final es hacer <strong>consciente la información</strong> para que la madre pueda procesar y comprender 
-                            el patrón que afecta al niño. Esto permite que la información se vuelva consciente y se pueda liberar.
+                            el conflicto. Esto permite <strong>descargar la memoria energética del conflicto</strong>, liberando el patrón 
+                            que afecta al niño.
                         </p>
                     </div>
                 </div>
@@ -803,10 +804,10 @@ const BioenergeticProtocol = () => (
                 <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
                     <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                        Regresión de Edad
+                        Recesión de Edad
                     </h5>
                     <p className="text-sm text-slate-700">
-                        La regresión debe ser guiada con cuidado, respetando el ritmo de la madre y el niño. El instante puede estar en cualquier momento desde la concepción hasta el presente.
+                        La recesión debe ser guiada con cuidado, respetando el ritmo de la madre y el niño. El instante puede estar en cualquier momento desde la concepción hasta el presente.
                     </p>
                 </div>
                 
@@ -826,7 +827,7 @@ const BioenergeticProtocol = () => (
                         Conscientización
                     </h5>
                     <p className="text-sm text-slate-700">
-                        La conscientización es el paso más importante. Sin ella, el patrón puede volver a manifestarse. La madre debe comprender y procesar la información.
+                        La conscientización es el paso más importante para <strong>descargar la memoria energética del conflicto</strong>. Sin ella, el patrón puede volver a manifestarse. La madre debe comprender y procesar la información del conflicto.
                     </p>
                 </div>
             </div>
@@ -835,7 +836,8 @@ const BioenergeticProtocol = () => (
                 <p className="text-sm text-slate-700 leading-relaxed">
                     <strong>Protocolo Integrado:</strong> Este protocolo combina la precisión del biomagnetismo con la profundidad de la bioenergética, 
                     creando un abordaje único que permite sanar no solo los síntomas, sino el origen energético del conflicto. 
-                    Es especialmente efectivo para casos complejos donde los síntomas actuales tienen raíces profundas en la gestación.
+                    La <strong>recesión de edad</strong> y la <strong>conscientización</strong> son fundamentales para 
+                    <strong>descargar la memoria energética del conflicto</strong>. Es especialmente efectivo para casos complejos donde los síntomas actuales tienen raíces profundas en la gestación.
                 </p>
             </div>
         </div>
