@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
-import Slides from './Slides';
-import PresentationIcon from './icons/PresentationIcon';
 
 const Header: React.FC = () => {
   const { t } = useTranslation();
-  const [isSlidesOpen, setIsSlidesOpen] = useState(false);
 
   return (
     <header className="relative bg-white/80 backdrop-blur-md shadow-xl border-b border-white/20">
@@ -14,17 +11,6 @@ const Header: React.FC = () => {
         {/* Language Selector */}
         <div className="absolute top-4 right-4 z-10">
           <LanguageSelector />
-        </div>
-        
-        {/* Hidden Presentation Button - Bottom */}
-        <div className="absolute bottom-4 right-4 z-10">
-          <button
-            onClick={() => setIsSlidesOpen(true)}
-            className="flex items-center justify-center w-10 h-10 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-all duration-300 opacity-70 hover:opacity-100 shadow-sm hover:shadow-md"
-            title={t('header.presentation')}
-          >
-            <PresentationIcon className="w-5 h-5" />
-          </button>
         </div>
         
         <div className="text-center">
@@ -53,9 +39,6 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      
-      {/* Slides Component */}
-      <Slides isOpen={isSlidesOpen} onClose={() => setIsSlidesOpen(false)} />
     </header>
   );
 };

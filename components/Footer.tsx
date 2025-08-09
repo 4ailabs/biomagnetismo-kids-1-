@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import Slides from './Slides';
+import PresentationIcon from './icons/PresentationIcon';
 
 const Footer: React.FC = () => {
     const { t } = useTranslation();
+    const [isSlidesOpen, setIsSlidesOpen] = useState(false);
     
     return (
         <footer className="relative bg-white/80 backdrop-blur-md mt-12 sm:mt-16 border-t border-white/20 shadow-lg">
@@ -41,8 +44,22 @@ const Footer: React.FC = () => {
                         <p className="text-slate-500 text-xs mt-1">{t('footer.author.institute')}</p>
                         <p className="text-slate-500 text-xs">{t('footer.author.website')}</p>
                     </div>
+                    
+                    {/* Hidden Presentation Button */}
+                    <div className="mt-4 flex justify-center">
+                        <button
+                            onClick={() => setIsSlidesOpen(true)}
+                            className="flex items-center justify-center w-10 h-10 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-all duration-300 opacity-60 hover:opacity-100"
+                            title={t('header.presentation')}
+                        >
+                            <PresentationIcon className="w-5 h-5" />
+                        </button>
+                    </div>
                 </div>
             </div>
+            
+            {/* Slides Component */}
+            <Slides isOpen={isSlidesOpen} onClose={() => setIsSlidesOpen(false)} />
         </footer>
     );
 }
