@@ -407,7 +407,7 @@ const Presentation: React.FC = () => {
         t('slides.shocks.example2'),
         t('slides.shocks.example3')
       ],
-      type: 'content'
+      type: 'title'
     },
     // SLIDE 23: SHOCKS GESTACIONALES - PRIMERA PARTE
     {
@@ -445,7 +445,7 @@ const Presentation: React.FC = () => {
         t('slides.sensations.example2'),
         t('slides.sensations.example3')
       ],
-      type: 'content'
+      type: 'title'
     },
     // SLIDE 26: SENSACIONES VITALES - DETALLES
     {
@@ -470,7 +470,7 @@ const Presentation: React.FC = () => {
         t('slides.belonging.guilt'),
         t('slides.belonging.direction')
       ],
-      type: 'key-points'
+      type: 'title'
     },
     // SLIDE 28: LEY DE LEALTAD FAMILIAR
     {
