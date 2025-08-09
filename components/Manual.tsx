@@ -701,6 +701,147 @@ const Block5Content = () => (
     </>
 );
 
+const BioenergeticProtocol = () => (
+    <>
+        <SectionTitle id="bioenergetic-protocol" icon={<Brain className="w-8 h-8" />} title="PROTOCOLO CON BIOENERGÉTICA Y BIOMAGNETISMO" />
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 sm:p-10 space-y-10">
+            
+            <SubSectionTitle title="Fundamentos del Protocolo" />
+            <p className="text-base sm:text-lg leading-relaxed mb-6">
+                Este protocolo integra la <strong>bioenergética</strong> con el <strong>biomagnetismo</strong> para realizar un trabajo profundo de sanación que aborda no solo los síntomas actuales, sino el origen energético del conflicto desde el momento de la concepción.
+            </p>
+
+            <div className="bg-gradient-to-r from-teal-50 to-blue-50 rounded-xl p-6 border-l-4 border-teal-500">
+                <h4 className="font-bold text-slate-800 mb-4 text-center">Objetivo del Protocolo</h4>
+                <p className="text-sm text-slate-700 leading-relaxed">
+                    Identificar el <strong>instante exacto</strong> donde se originó el conflicto energético y hacer consciente la información para que la madre pueda procesar y liberar el patrón que afecta al niño.
+                </p>
+            </div>
+
+            <SubSectionTitle title="Pasos del Protocolo" />
+            
+            <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center">
+                        <span className="text-teal-600 text-sm font-bold">1</span>
+                    </div>
+                    <div>
+                        <h5 className="font-semibold text-slate-800 mb-2">Identificación del Conflicto</h5>
+                        <p className="text-sm text-slate-700 leading-relaxed">
+                            Preguntar por la sensación o conflicto específico utilizando las listas de esta aplicación. 
+                            A través del <strong>test muscular</strong>, identificar cuál es el conflicto principal que está afectando al niño.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span className="text-blue-600 text-sm font-bold">2</span>
+                    </div>
+                    <div>
+                        <h5 className="font-semibold text-slate-800 mb-2">Regresión de Edad</h5>
+                        <p className="text-sm text-slate-700 leading-relaxed">
+                            Realizar una <strong>regresión de edad</strong> para encontrar el instante exacto del conflicto. 
+                            Partiendo del momento actual, se va hacia atrás hasta encontrar el instante donde se originó el conflicto, 
+                            que puede llegar hasta el momento de la <strong>concepción</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                        <span className="text-purple-600 text-sm font-bold">3</span>
+                    </div>
+                    <div>
+                        <h5 className="font-semibold text-slate-800 mb-2">Selección de Pares Biomagnéticos</h5>
+                        <p className="text-sm text-slate-700 leading-relaxed">
+                            Una vez identificado el instante, se determina cuál es el <strong>par que soporta la información</strong>. 
+                            Se eligen los pares de la lista de puntos de rastreo o los pares sugeridos en la aplicación.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">
+                        <span className="text-pink-600 text-sm font-bold">4</span>
+                    </div>
+                    <div>
+                        <h5 className="font-semibold text-slate-800 mb-2">Aplicación y Evaluación</h5>
+                        <p className="text-sm text-slate-700 leading-relaxed">
+                            Se impactan los pares seleccionados y se evalúa cuántos pares son necesarios para el tratamiento completo. 
+                            Se realiza una evaluación continua del proceso.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                        <span className="text-green-600 text-sm font-bold">5</span>
+                    </div>
+                    <div>
+                        <h5 className="font-semibold text-slate-800 mb-2">Conscientización de la Información</h5>
+                        <p className="text-sm text-slate-700 leading-relaxed">
+                            El paso final es hacer <strong>consciente la información</strong> para que la madre pueda procesar y comprender 
+                            el patrón que afecta al niño. Esto permite que la información se vuelva consciente y se pueda liberar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <SubSectionTitle title="Consideraciones Importantes" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
+                    <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-teal-400 rounded-full mr-2"></span>
+                        Test Muscular
+                    </h5>
+                    <p className="text-sm text-slate-700">
+                        Es fundamental dominar el test muscular para identificar correctamente el conflicto y evaluar la efectividad del tratamiento en cada paso.
+                    </p>
+                </div>
+                
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
+                    <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                        Regresión de Edad
+                    </h5>
+                    <p className="text-sm text-slate-700">
+                        La regresión debe ser guiada con cuidado, respetando el ritmo de la madre y el niño. El instante puede estar en cualquier momento desde la concepción hasta el presente.
+                    </p>
+                </div>
+                
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
+                    <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                        Selección de Pares
+                    </h5>
+                    <p className="text-sm text-slate-700">
+                        Los pares deben seleccionarse según la información obtenida en la regresión, no solo por síntomas actuales. La lista de la aplicación es una guía valiosa.
+                    </p>
+                </div>
+                
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md border border-white/20">
+                    <h5 className="font-semibold text-slate-800 mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-pink-400 rounded-full mr-2"></span>
+                        Conscientización
+                    </h5>
+                    <p className="text-sm text-slate-700">
+                        La conscientización es el paso más importante. Sin ella, el patrón puede volver a manifestarse. La madre debe comprender y procesar la información.
+                    </p>
+                </div>
+            </div>
+
+            <div className="mt-8 p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-lg border-l-4 border-teal-500">
+                <p className="text-sm text-slate-700 leading-relaxed">
+                    <strong>Protocolo Integrado:</strong> Este protocolo combina la precisión del biomagnetismo con la profundidad de la bioenergética, 
+                    creando un abordaje único que permite sanar no solo los síntomas, sino el origen energético del conflicto. 
+                    Es especialmente efectivo para casos complejos donde los síntomas actuales tienen raíces profundas en la gestación.
+                </p>
+            </div>
+        </div>
+    </>
+);
+
 const ManualFooter = () => (
     <div className="text-center mt-8 sm:mt-12">
         <div className="bg-gradient-to-r from-teal-50 via-blue-50 to-purple-50 rounded-2xl shadow-xl border border-white/20 p-6 sm:p-8">
@@ -749,6 +890,7 @@ const Manual: React.FC = () => {
             <Block3Content />
             <Block4Content />
             <Block5Content />
+            <BioenergeticProtocol />
             <ManualFooter />
         </article>
     );
