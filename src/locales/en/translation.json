@@ -257,6 +257,117 @@
       }
     }
   },
+  "module2": {
+    "block1": {
+      "title": "BLOCK 1: Fundamentals of Early Childhood Biomagnetism",
+      "objective": {
+        "title": "Block Objective",
+        "content": "Understand how gestational biological conflicts continue to manifest in early childhood (3m-5y), learning to identify the 8 fundamental conflicts and apply specific biomagnetic techniques for each age range."
+      },
+      "fundamentals": {
+        "title": "Theoretical Fundamentals",
+        "historyContinues": {
+          "title": "The Story Continues After Birth",
+          "content": "Imagine that birth is not the end of a story, but the beginning of a new chapter. The experiences the baby lived in the mother's womb don't magically disappear at birth. During the first 5 years of life, these energetic memories find ways to express themselves: through inexplicable tantrums, fears that don't make sense, sudden regressions, or physical symptoms that doctors can't explain.",
+          "biomagnetism": "Biomagnetism teaches us that the child's body 'speaks' of what their mind cannot yet put into words. Each symptom, each behavior, is valuable communication about energetic imbalances that require our attention and understanding."
+        },
+        "conflicts": {
+          "title": "The 8 Great Conflicts of Childhood",
+          "intro": "After years of clinical observation, we have identified 8 universal patterns that repeat in children. These are not simple 'behavioral problems', but deep expressions of biological conflicts seeking resolution:",
+          "list": [
+            {
+              "title": "Separation & Abandonment",
+              "description": "When the child feels they might lose who they love most"
+            },
+            {
+              "title": "Not Being Heard",
+              "description": "When their signals are ignored or misinterpreted"
+            },
+            {
+              "title": "Territory & Control",
+              "description": "When they feel they have lost all autonomy"
+            },
+            {
+              "title": "Survival Threat",
+              "description": "When they perceive real or imaginary vital danger"
+            },
+            {
+              "title": "I'm Not Enough",
+              "description": "When they receive messages that they don't meet expectations"
+            },
+            {
+              "title": "Relational Chaos",
+              "description": "When they live extreme inconsistencies in care"
+            },
+            {
+              "title": "Loss of Secure Base",
+              "description": "When drastic changes alter their known world"
+            },
+            {
+              "title": "Boundary Invasion",
+              "description": "When their bodily or emotional space is violated"
+            }
+          ]
+        },
+        "whyItWorks": {
+          "title": "Why Biomagnetism Works in Children",
+          "principles": [
+            {
+              "number": "1",
+              "title": "Their body speaks first:",
+              "content": "Before a child can say 'my heart hurts from separation', their body is already shouting it through symptoms."
+            },
+            {
+              "number": "2",
+              "title": "Maximum plasticity:",
+              "content": "Children's energetic field is still forming, making it easier to correct imbalances before they become chronic patterns."
+            },
+            {
+              "number": "3",
+              "title": "Family resonance:",
+              "content": "When we balance the child, we often balance the entire family system, creating a multiplying therapeutic effect."
+            }
+          ]
+        }
+      },
+      "navigation": {
+        "title": "Navigation Map",
+        "intro": "Working with children requires a different approach than with adults. Here you have a step-by-step guide that we have perfected after thousands of pediatric consultations:",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Become a Detective",
+            "content": "Observe everything: when did the symptoms start? What changes were there at home? How does he behave with mom vs. dad? Children don't lie with their body, but we must learn their language."
+          },
+          {
+            "number": "2",
+            "title": "Find the Pattern",
+            "content": "Of the 8 fundamental conflicts, which one resonates most with what you observe? Don't look for the perfect one, look for the one that makes the most sense in the child's story."
+          },
+          {
+            "number": "3",
+            "title": "Locate the Trauma Point",
+            "content": "Gently place the negative magnet on the point corresponding to the conflict. Children are more sensitive, so less pressure and more intuition."
+          },
+          {
+            "number": "4",
+            "title": "Seek Balance",
+            "content": "Find the second point where the positive magnet creates harmony. The legs align, but more importantly: observe if the child relaxes or changes their expression."
+          },
+          {
+            "number": "5",
+            "title": "Maintain Connection",
+            "content": "15-20 minutes maximum. Stay present, speak softly, allow the child to move slightly if needed. Their body will tell you when it's enough."
+          },
+          {
+            "number": "6",
+            "title": "Celebrate Changes",
+            "content": "Changes in children can be immediate or appear in the following days. Trust the process and observe the subtle transformations."
+          }
+        ]
+      }
+    }
+  },
   "bioenergeticProtocol": {
     "title": "BIOENERGETIC AND BIOMAGNETISM PROTOCOL",
     "fundamentals": {

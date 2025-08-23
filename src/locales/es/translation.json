@@ -477,6 +477,117 @@
       }
     }
   },
+  "module2": {
+    "block1": {
+      "title": "BLOQUE 1: Fundamentos del Biomagnetismo en Primera Infancia",
+      "objective": {
+        "title": "Objetivo del Bloque",
+        "content": "Comprender cómo los conflictos biológicos gestacionales continúan manifestándose en la primera infancia (3m-5a), aprendiendo a identificar los 8 conflictos fundamentales y aplicar técnicas biomagnéticas específicas para cada rango de edad."
+      },
+      "fundamentals": {
+        "title": "Fundamentos Teóricos",
+        "historyContinues": {
+          "title": "La Historia Continúa Después del Nacimiento",
+          "content": "Imagina que el nacimiento no es el final de una historia, sino el comienzo de un nuevo capítulo. Las experiencias que vivió el bebé en el vientre materno no se borran mágicamente al nacer. Durante los primeros 5 años de vida, estas memorias energéticas encuentran formas de expresarse: a través de berrinches inexplicables, miedos que no tienen sentido, regresiones repentinas, o síntomas físicos que los médicos no logran explicar.",
+          "biomagnetism": "El biomagnetismo nos enseña que el cuerpo del niño 'habla' de lo que su mente aún no puede poner en palabras. Cada síntoma, cada conducta, es una comunicación valiosa sobre desequilibrios energéticos que requieren nuestra atención y comprensión."
+        },
+        "conflicts": {
+          "title": "Los 8 Grandes Conflictos de la Infancia",
+          "intro": "Después de años de observación clínica, hemos identificado 8 patrones universales que se repiten en los niños. Estos no son simples 'problemas de conducta', sino expresiones profundas de conflictos biológicos que buscan resolución:",
+          "list": [
+            {
+              "title": "Separación & Abandono",
+              "description": "Cuando el niño siente que puede perder a quien más ama"
+            },
+            {
+              "title": "No Ser Escuchado",
+              "description": "Cuando sus señales son ignoradas o malinterpretadas"
+            },
+            {
+              "title": "Territorio & Control",
+              "description": "Cuando siente que ha perdido toda autonomía"
+            },
+            {
+              "title": "Amenaza de Supervivencia",
+              "description": "Cuando percibe peligro vital real o imaginario"
+            },
+            {
+              "title": "No Soy Suficiente",
+              "description": "Cuando recibe mensajes de que no cumple expectativas"
+            },
+            {
+              "title": "Caos Relacional",
+              "description": "Cuando vive inconsistencias extremas en el cuidado"
+            },
+            {
+              "title": "Pérdida de Base Segura",
+              "description": "Cuando cambios drásticos alteran su mundo conocido"
+            },
+            {
+              "title": "Invasión de Límites",
+              "description": "Cuando su espacio corporal o emocional es violado"
+            }
+          ]
+        },
+        "whyItWorks": {
+          "title": "Por Qué Funciona el Biomagnetismo en Niños",
+          "principles": [
+            {
+              "number": "1",
+              "title": "Su cuerpo habla primero:",
+              "content": "Antes de que un niño pueda decir 'me duele el corazón por la separación', su cuerpo ya lo está gritando a través de síntomas."
+            },
+            {
+              "number": "2",
+              "title": "Plasticidad máxima:",
+              "content": "El campo energético de los niños aún se está formando, facilitando la corrección de desequilibrios antes de que se conviertan en patrones crónicos."
+            },
+            {
+              "number": "3",
+              "title": "Resonancia familiar:",
+              "content": "Cuando equilibramos al niño, a menudo equilibramos todo el sistema familiar, creando un efecto terapéutico multiplicador."
+            }
+          ]
+        }
+      },
+      "navigation": {
+        "title": "Mapa de Navegación",
+        "intro": "Trabajar con niños requiere un enfoque diferente al de los adultos. Aquí tienes una guía paso a paso que hemos perfeccionado después de miles de consultas pediátricas:",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Conviértete en Detective",
+            "content": "Observa todo: ¿cuándo empezaron los síntomas? ¿Qué cambios hubo en casa? ¿Cómo se comporta con mamá vs. papá? Los niños no mienten con su cuerpo, pero nosotros debemos aprender su lenguaje."
+          },
+          {
+            "number": "2",
+            "title": "Encuentra el Patrón",
+            "content": "De los 8 conflictos fundamentales, ¿cuál resuena más con lo que observas? No busques el perfecto, busca el que más sentido hace en la historia del niño."
+          },
+          {
+            "number": "3",
+            "title": "Localiza el Punto Trauma",
+            "content": "Coloca suavemente el imán negativo en el punto correspondiente al conflicto. Los niños son más sensibles, así que menos presión y más intuición."
+          },
+          {
+            "number": "4",
+            "title": "Busca el Equilibrio",
+            "content": "Encuentra el segundo punto donde el imán positivo crea la armonía. Las piernas se alinean, pero más importante: observa si el niño se relaja o cambia su expresión."
+          },
+          {
+            "number": "5",
+            "title": "Mantén la Conexión",
+            "content": "15-20 minutos máximo. Mantente presente, habla suavemente, permite que el niño se mueva ligeramente si lo necesita. Su cuerpo te dirá cuándo es suficiente."
+          },
+          {
+            "number": "6",
+            "title": "Celebra los Cambios",
+            "content": "Los cambios en niños pueden ser inmediatos o aparecer en días siguientes. Confía en el proceso y observa las transformaciones sutiles."
+          }
+        ]
+      }
+    }
+  },
   "bioenergeticProtocol": {
     "title": "PROTOCOLO CON BIOENERGÉTICA Y BIOMAGNETISMO",
     "fundamentals": {
