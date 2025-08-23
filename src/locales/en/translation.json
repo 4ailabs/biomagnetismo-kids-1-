@@ -5,7 +5,11 @@
     "course": "Course: Biomagnetism Kids",
     "modality": "Modality: Online Class",
     "presentation": "Presentation",
-    "paresList": "Biomagnetic Pairs List"
+    "paresList": "Biomagnetic Pairs List",
+    "module2": {
+      "title": "MODULE 2",
+      "subtitle": "From Attachment to Autonomy: Energetic Patterns from 3 Months to 5 Years"
+    }
   },
   "paresList": {
     "description": "Access the complete list of biomagnetic pairs for consultation during the protocol",
@@ -17,7 +21,18 @@
     "block2": "Block 2: Gestation",
     "block3": "Block 3: Neonate",
     "block4": "Block 4: Development",
-    "block5": "Block 5: Close"
+    "block5": "Block 5: Close",
+    "module2": {
+      "title": "Module 2 - Navigate through the Blocks",
+      "block1": "Block 1: Fundamentals",
+      "block2": "Block 2: Development",
+      "block3": "Block 3: Protocols",
+      "block4": "Block 4: Integration",
+      "block5": "Block 5: Evaluation",
+      "block6": "Block 6: Vital Sensations",
+      "block7": "Block 7: Systemic Order",
+      "block8": "Block 8: Dental Conflictology"
+    }
   },
   "moduleStructure": {
     "title": "Module Structure",

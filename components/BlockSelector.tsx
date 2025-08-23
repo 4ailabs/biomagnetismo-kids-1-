@@ -29,14 +29,14 @@ const BlockSelector: React.FC = () => {
       ];
     } else if (activeModule === 2) {
       return [
-        { id: 1, title: "Fundamentos", subtitle: "Teoría del Apego", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
-        { id: 2, title: "Desarrollo", subtitle: "Patrones Energéticos", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-blue-400 to-cyan-500' },
-        { id: 3, title: "Protocolos", subtitle: "Aplicaciones Prácticas", icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-purple-400 to-violet-500' },
-        { id: 4, title: "Integración", subtitle: "Sistémica Familiar", icon: <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-orange-400 to-amber-500' },
-        { id: 5, title: "Evaluación", subtitle: "Herramientas", icon: <Target className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-emerald-500' },
-        { id: 6, title: "Sensaciones", subtitle: "Vitales", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-indigo-400 to-purple-500' },
-        { id: 7, title: "Orden", subtitle: "Sistémico", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-emerald-400 to-teal-500' },
-        { id: 8, title: "Conflictología", subtitle: "Dental", icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-rose-400 to-pink-500' },
+        { id: 1, title: t('blockSelector.module2.block1'), subtitle: "Teoría del Apego", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
+        { id: 2, title: t('blockSelector.module2.block2'), subtitle: "Patrones Energéticos", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-blue-400 to-cyan-500' },
+        { id: 3, title: t('blockSelector.module2.block3'), subtitle: "Aplicaciones Prácticas", icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-purple-400 to-violet-500' },
+        { id: 4, title: t('blockSelector.module2.block4'), subtitle: "Sistémica Familiar", icon: <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-orange-400 to-amber-500' },
+        { id: 5, title: t('blockSelector.module2.block5'), subtitle: "Herramientas", icon: <Target className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-emerald-500' },
+        { id: 6, title: t('blockSelector.module2.block6'), subtitle: "Vitales", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-indigo-400 to-purple-500' },
+        { id: 7, title: t('blockSelector.module2.block7'), subtitle: "Sistémico", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-emerald-400 to-teal-500' },
+        { id: 8, title: t('blockSelector.module2.block8'), subtitle: "Dental", icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-rose-400 to-pink-500' },
       ];
     } else {
       // Módulos futuros
@@ -65,7 +65,7 @@ const BlockSelector: React.FC = () => {
     <div className="bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-2 sm:p-3 lg:p-4 border border-white/20">
       <div className="text-center mb-2 sm:mb-3 lg:mb-4">
         <h2 className="text-sm sm:text-base lg:text-lg font-semibold text-slate-700 mb-1 sm:mb-2">
-          {activeModule === 1 ? t('blockSelector.title') : `Módulo ${activeModule} - Navega por los Bloques`}
+          {activeModule === 1 ? t('blockSelector.title') : t('blockSelector.module2.title')}
         </h2>
         <div className="w-8 sm:w-10 lg:w-12 xl:w-16 h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full mx-auto"></div>
       </div>
