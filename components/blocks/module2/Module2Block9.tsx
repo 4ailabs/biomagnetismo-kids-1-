@@ -21,18 +21,18 @@ const Module2Block9: React.FC = () => {
           <div className="bg-gradient-to-r from-violet-50 to-purple-50 rounded-2xl p-6 shadow-md border-l-4 border-violet-200">
             <h3 className="text-xl font-bold text-violet-800 mb-4">¿Qué son los Hologramas?</h3>
             <p className="text-slate-700 leading-relaxed text-base mb-4">
-              {t('module2.block9.fundamentals.intro')}
+              Los hologramas son eventos inesperados en la persona o en el ambiente que generan desequilibrio energético (campos energéticos sutiles materiales, trans-materiales y centros magnéticos). Activan improntas neurológicas y memoria biológica, se almacenan como información subconsciente y activan programas biológicos instintivos y reactivos.
             </p>
             <div className="bg-white/70 rounded-lg p-4 border border-violet-100">
               <h4 className="font-semibold text-violet-700 mb-2">Eventos Poblacionales</h4>
               <p className="text-slate-600 text-sm">
-                {t('module2.block9.fundamentals.population')}
+                Puede haber sucesos en toda una población. Activan la respuesta metabólica al trauma y activan mecanismos de defensa. Trauma simple: solución mental. Trauma complejo: sin solución mental o solución compleja.
               </p>
             </div>
             <div className="bg-white/70 rounded-lg p-4 border border-violet-100 mt-4">
               <h4 className="font-semibold text-violet-700 mb-2">Definición Clave</h4>
               <p className="text-slate-600 text-sm">
-                {t('module2.block9.fundamentals.definition')}
+                Conflicto altamente significativo en tiempo y espacio que determina toda o parte de una vida que sucede por eventos inesperados o situaciones repentinas, casi siempre sin solución mental pronta.
               </p>
             </div>
           </div>
