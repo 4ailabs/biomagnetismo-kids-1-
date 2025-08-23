@@ -285,22 +285,23 @@ const Module2Presentation: React.FC = () => {
       case 'comparison':
         return (
           <div className="w-full h-full flex flex-col justify-center">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-800 mb-4 text-center animate-fade-in-up">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 text-center animate-fade-in-up">
                 {currentSlideData.title}
               </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-3">
                 {currentSlideData.content.map((item, index) => (
-                  <div key={index} className="group relative overflow-hidden rounded-xl p-3 sm:p-4 bg-gradient-to-br from-slate-50 to-gray-100 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up" style={{ animationDelay: `${index * 0.15}s` }}>
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                  <div key={index} className="group relative overflow-hidden rounded-lg p-2 sm:p-3 bg-gradient-to-br from-slate-50 to-gray-100 border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in-up" style={{ animationDelay: `${index * 0.15}s` }}>
+                    <div className="flex items-start space-x-2">
+                      <div className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
                         <span className="text-white text-xs font-bold">{index + 1}</span>
                       </div>
-                      <h3 className="text-xs sm:text-sm font-semibold text-slate-800">Punto Clave</h3>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-xs sm:text-sm text-slate-700 leading-tight font-medium">
+                          {item}
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      {item}
-                    </p>
                   </div>
                 ))}
               </div>
