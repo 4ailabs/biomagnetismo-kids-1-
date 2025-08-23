@@ -37,7 +37,7 @@ interface Slide {
   id: number;
   title: string;
   content: string[];
-  type: 'title' | 'content' | 'key-points' | 'summary' | 'image';
+  type: 'hero' | 'title' | 'content' | 'key-points' | 'summary' | 'image' | 'timeline' | 'comparison' | 'process';
 }
 
 const Module2Presentation: React.FC = () => {
@@ -138,7 +138,7 @@ const Module2Presentation: React.FC = () => {
       id: 1,
       title: "MÓDULO 2: PRIMERA INFANCIA",
       content: ["\"La Historia Continúa: Cuando el Cuerpo Encuentra su Voz\""],
-      type: 'title'
+      type: 'hero'
     },
     
     // SLIDE 2: OBJETIVO DEL MÓDULO 2
@@ -151,7 +151,7 @@ const Module2Presentation: React.FC = () => {
         "y aplicar técnicas biomagnéticas específicas para cada rango de edad",
         "con un enfoque práctico y accesible para terapeutas"
       ],
-      type: 'key-points'
+      type: 'process'
     },
     
     // SLIDE 3: LOS 8 GRANDES CONFLICTOS DE LA INFANCIA
@@ -165,7 +165,7 @@ const Module2Presentation: React.FC = () => {
         "4. Amenaza de Supervivencia - Cuando percibe peligro vital real o imaginario",
         "5. No Soy Suficiente - Cuando recibe mensajes de que no cumple expectativas"
       ],
-      type: 'key-points'
+      type: 'comparison'
     },
     
     // SLIDE 4: LOS 8 GRANDES CONFLICTOS (CONTINUACIÓN)
@@ -180,7 +180,7 @@ const Module2Presentation: React.FC = () => {
         "Estos no son simples 'problemas de conducta', sino expresiones profundas",
         "de conflictos biológicos que buscan resolución"
       ],
-      type: 'key-points'
+      type: 'timeline'
     },
     
     // SLIDE 5: POR QUÉ FUNCIONA EL BIOMAGNETISMO EN NIÑOS
@@ -196,7 +196,7 @@ const Module2Presentation: React.FC = () => {
         "Sanación natural: Su sistema inmune está en desarrollo activo",
         "Máxima plasticidad: El cerebro infantil es como arcilla fresca"
       ],
-      type: 'key-points'
+      type: 'content'
     },
     
     // SLIDE 6: PARES BIOMAGNÉTICOS PRÁCTICOS (3M-5A)
@@ -210,7 +210,7 @@ const Module2Presentation: React.FC = () => {
         "Amenaza de Supervivencia: Plexo Solar (-) → Riñón Derecho (+)",
         "No Soy Suficiente: Suprarrenal (-) → Suprarrenal (+)"
       ],
-      type: 'key-points'
+      type: 'comparison'
     },
     
     // SLIDE 7: PARES BIOMAGNÉTICOS (CONTINUACIÓN)
@@ -238,7 +238,7 @@ const Module2Presentation: React.FC = () => {
         "",
         "6 pasos fundamentales para el rastreo exitoso en primera infancia"
       ],
-      type: 'title'
+      type: 'hero'
     },
     
     // SLIDE 9: PASO 1: CONVIÉRTETE EN DETECTIVE
@@ -253,7 +253,7 @@ const Module2Presentation: React.FC = () => {
         "Los niños no mienten con su cuerpo, pero nosotros",
         "debemos aprender su lenguaje"
       ],
-      type: 'key-points'
+      type: 'process'
     },
     
     // SLIDE 10: PASO 2: ENCUENTRA EL PATRÓN
@@ -383,7 +383,7 @@ const Module2Presentation: React.FC = () => {
         "Para Desarrollo del Lenguaje:",
         "• Lengua (-) → Hioides (+): Facilita articulación y expresión"
       ],
-      type: 'key-points'
+      type: 'comparison'
     },
     
     // SLIDE 18: PROTOCOLO PREESCOLAR (3-5 AÑOS)
@@ -559,7 +559,7 @@ const Module2Presentation: React.FC = () => {
         "18m-3a: La Revolución - '¿Puedo Ser Yo?'",
         "Par clave: Suprarrenal-Suprarrenal para navegar la tormenta emocional"
       ],
-      type: 'key-points'
+      type: 'timeline'
     },
     
     // SLIDE 28: PROTOCOLO INTEGRADO (CONTINUACIÓN)
@@ -609,7 +609,7 @@ const Module2Presentation: React.FC = () => {
         "• Una nueva perspectiva sobre el desarrollo infantil",
         "Has completado el Módulo 2 de Biomagnetismo Kids"
       ],
-      type: 'summary'
+      type: 'hero'
     }
   ];
 
@@ -676,6 +676,45 @@ const Module2Presentation: React.FC = () => {
 
   const getSlideContent = () => {
     switch (currentSlideData.type) {
+      case 'hero':
+        return (
+          <div className="max-w-6xl mx-auto text-center">
+            <div className="relative">
+              {/* Background decorative elements */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-96 h-96 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse-slow"></div>
+              </div>
+              
+              {/* Main content */}
+              <div className="relative z-10">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-slate-800 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6 sm:mb-8 animate-fade-in-up">
+                  {currentSlideData.title}
+                </h1>
+                <div className="max-w-4xl mx-auto">
+                  {currentSlideData.content.map((line, index) => (
+                    <p key={index} className="text-xl sm:text-2xl lg:text-3xl text-slate-600 mb-4 sm:mb-6 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                      {line}
+                    </p>
+                  ))}
+                </div>
+                
+                {/* Decorative icons */}
+                <div className="flex justify-center space-x-8 mt-8 sm:mt-12">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow">
+                    <span className="text-white text-2xl">🧲</span>
+                  </div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow" style={{ animationDelay: '0.5s' }}>
+                    <span className="text-white text-2xl">👶</span>
+                  </div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow" style={{ animationDelay: '1s' }}>
+                    <span className="text-white text-2xl">💫</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      
       case 'title':
         return (
           <div className="text-center">
@@ -759,26 +798,151 @@ const Module2Presentation: React.FC = () => {
           </div>
         );
       
-      case 'summary':
+      case 'process':
         return (
-          <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-8 animate-fade-in-up">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-8 text-center animate-fade-in-up">
               {currentSlideData.title}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-              {currentSlideData.content.map((point, index) => (
-                <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
-                  {point.startsWith('•') ? (
-                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 sm:p-6 border border-green-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                      <p className="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed font-medium">
-                        {point}
+            <div className="space-y-6 sm:space-y-8">
+              {currentSlideData.content.map((step, index) => (
+                <div key={index} className="flex items-start space-x-4 sm:space-x-6 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                  {/* Step number */}
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-white text-lg sm:text-xl font-bold">{index + 1}</span>
+                  </div>
+                  
+                  {/* Step content */}
+                  <div className="flex-1 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-4 sm:p-6 border border-slate-200 shadow-md">
+                    <p className="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed font-medium">
+                      {step}
+                    </p>
+                  </div>
+                  
+                  {/* Connecting line */}
+                  {index < currentSlideData.content.length - 1 && (
+                    <div className="absolute left-6 sm:left-8 w-0.5 h-12 sm:h-16 bg-gradient-to-b from-blue-500 to-indigo-600 ml-6 sm:ml-8"></div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      
+      case 'comparison':
+        return (
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-8 text-center animate-fade-in-up">
+              {currentSlideData.title}
+            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+              {currentSlideData.content.map((item, index) => (
+                <div key={index} className="group relative overflow-hidden rounded-2xl p-6 sm:p-8 bg-gradient-to-br from-slate-50 to-gray-100 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up" style={{ animationDelay: `${index * 0.15}s` }}>
+                  {/* Background pattern */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm sm:text-base font-bold">{index + 1}</span>
+                      </div>
+                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800">Punto Clave</h3>
+                    </div>
+                    <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+                      {item}
+                    </p>
+                  </div>
+                  
+                  {/* Hover effect */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      
+      case 'timeline':
+        return (
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-8 text-center animate-fade-in-up">
+              {currentSlideData.title}
+            </h2>
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
+              
+              <div className="space-y-6 sm:space-y-8">
+                {currentSlideData.content.map((item, index) => (
+                  <div key={index} className="flex items-start space-x-6 sm:space-x-8 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                    {/* Timeline dot */}
+                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                      <span className="text-white text-lg sm:text-xl font-bold">{index + 1}</span>
+                    </div>
+                    
+                    {/* Content card */}
+                    <div className="flex-1 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-4 sm:p-6 border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300">
+                      <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
+                        {item}
                       </p>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      
+      case 'summary':
+        return (
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-8 text-center animate-fade-in-up">
+              {currentSlideData.title}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              {currentSlideData.content.map((point, index) => (
+                <div key={index} className="group relative overflow-hidden animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                  {point.startsWith('•') ? (
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 sm:p-8 border border-green-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
+                      {/* Background pattern */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-green-100/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      {/* Content */}
+                      <div className="relative z-10">
+                        <div className="flex items-center space-x-3 mb-4">
+                          <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
+                            <span className="text-white text-sm font-bold">✓</span>
+                          </div>
+                          <h3 className="text-lg font-semibold text-green-800">Herramienta</h3>
+                        </div>
+                        <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
+                          {point}
+                        </p>
+                      </div>
+                      
+                      {/* Hover effect */}
+                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    </div>
                   ) : (
-                    <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-4 sm:p-6 border border-amber-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                      <p className="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed font-medium">
-                        {point}
-                      </p>
+                    <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 sm:p-8 border border-amber-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
+                      {/* Background pattern */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-amber-100/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      {/* Content */}
+                      <div className="relative z-10">
+                        <div className="flex items-center space-x-3 mb-4">
+                          <div className="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center">
+                            <span className="text-white text-sm font-bold">⭐</span>
+                          </div>
+                          <h3 className="text-lg font-semibold text-amber-800">Beneficio</h3>
+                        </div>
+                        <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
+                          {point}
+                        </p>
+                      </div>
+                      
+                      {/* Hover effect */}
+                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                     </div>
                   )}
                 </div>
