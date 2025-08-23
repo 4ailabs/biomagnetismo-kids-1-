@@ -1,8 +1,8 @@
 import React from 'react';
 import { useModule } from '../src/contexts/ModuleContext';
-import { 
+import {
   Block1, Block2, Block3, Block4, Block5,
-  Module2Block1, Module2Block2, Module2Block3, Module2Block4, Module2Block5, Module2Block6, Module2Block7, Module2Block8
+  Module2Block1, Module2Block2, Module2Block3, Module2Block4, Module2Block5, Module2Block6, Module2Block7, Module2Block8, Module2Block9
 } from './blocks';
 import Manual from './Manual';
 
@@ -15,20 +15,21 @@ const DynamicManual: React.FC = () => {
   }
 
   // Renderizar módulo 2
-  if (activeModule === 2) {
-    return (
-      <div className="space-y-12">
-        <Module2Block1 />
-        <Module2Block2 />
-        <Module2Block3 />
-        <Module2Block4 />
-        <Module2Block5 />
-        <Module2Block6 />
-        <Module2Block7 />
-        <Module2Block8 />
-      </div>
-    );
-  }
+            if (activeModule === 2) {
+            return (
+              <div className="space-y-12">
+                <Module2Block1 />
+                <Module2Block2 />
+                <Module2Block3 />
+                <Module2Block4 />
+                <Module2Block5 />
+                <Module2Block6 />
+                <Module2Block7 />
+                <Module2Block8 />
+                <Module2Block9 />
+              </div>
+            );
+          }
 
   // Módulos futuros (3 y 4)
   if (activeModule === 3 || activeModule === 4) {

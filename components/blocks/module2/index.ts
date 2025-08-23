@@ -6,3 +6,4 @@ export { default as Module2Block5 } from './Module2Block5';
 export { default as Module2Block6 } from './Module2Block6';
 export { default as Module2Block7 } from './Module2Block7';
 export { default as Module2Block8 } from './Module2Block8';
+export { default as Module2Block9 } from './Module2Block9';
