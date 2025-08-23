@@ -9,13 +9,13 @@ const Module2Block9: React.FC = () => {
   return (
     <div id="block-9" className="space-y-12 w-full overflow-hidden">
       <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
-        <h2 className="text-xl font-semibold text-slate-700 mb-3">{t('module2.block9.objective.title')}</h2>
+        <h2 className="text-xl font-semibold text-slate-700 mb-3">Objetivo del Bloque 9</h2>
         <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
-          {t('module2.block9.objective.content')}
+          Comprender cómo los eventos inesperados y situaciones ambientales generan desequilibrios energéticos en los niños, creando improntas holográficas que activan patrones neurológicos y memoria biológica, afectando su desarrollo y comportamiento.
         </p>
       </section>
 
-      <CourseSection title={t('module2.block9.fundamentals.title')} icon={<Brain />}>
+      <CourseSection title="Fundamentos Teóricos" icon={<Brain />}>
         <div className="space-y-8">
           {/* Introducción a los hologramas */}
           <div className="bg-gradient-to-r from-violet-50 to-purple-50 rounded-2xl p-6 shadow-md border-l-4 border-violet-200">
@@ -47,34 +47,201 @@ const Module2Block9: React.FC = () => {
             </p>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {(t('module2.block9.holograms', { returnObjects: true }) as any[]).map((hologram, index) => (
-                <div key={index} className="bg-white/80 rounded-xl p-5 shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mr-3">
-                      <span className="text-white font-bold text-lg">{hologram.number}</span>
-                    </div>
-                    <h4 className="text-lg font-bold text-indigo-800">{hologram.title}</h4>
+              {/* Holograma 1 */}
+              <div className="bg-white/80 rounded-xl p-5 shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-lg">1</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-indigo-800">Impacto Frontal</h4>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="bg-indigo-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-indigo-700 text-sm mb-2 flex items-center">
+                      <AlertTriangle className="w-4 h-4 mr-2" />
+                      Manifestación General
+                    </h5>
+                    <p className="text-slate-600 text-sm">Impacto inesperado. Susto. Accidente. Miedo frontal. Desconexión del cuerpo y la mente. Estado anestésico con disociación. Caídas. Golpizas.</p>
                   </div>
                   
-                  <div className="space-y-3">
-                    <div className="bg-indigo-50 rounded-lg p-3">
-                      <h5 className="font-semibold text-indigo-700 text-sm mb-2 flex items-center">
-                        <AlertTriangle className="w-4 h-4 mr-2" />
-                        Manifestación General
-                      </h5>
-                      <p className="text-slate-600 text-sm">{hologram.description}</p>
-                    </div>
-                    
-                    <div className="bg-purple-50 rounded-lg p-3">
-                      <h5 className="font-semibold text-purple-700 text-sm mb-2 flex items-center">
-                        <Heart className="w-4 h-4 mr-2" />
-                        En el Niño
-                      </h5>
-                      <p className="text-slate-600 text-sm">{hologram.child}</p>
-                    </div>
+                  <div className="bg-purple-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-purple-700 text-sm mb-2 flex items-center">
+                      <Heart className="w-4 h-4 mr-2" />
+                      En el Niño
+                    </h5>
+                    <p className="text-slate-600 text-sm">Susto, caídas, miedo que aterroriza, impactos súbitos que desconectan al niño de su cuerpo y mente.</p>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Holograma 2 */}
+              <div className="bg-white/80 rounded-xl p-5 shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-lg">2</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-indigo-800">Impacto Posterior</h4>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="bg-indigo-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-indigo-700 text-sm mb-2 flex items-center">
+                      <AlertTriangle className="w-4 h-4 mr-2" />
+                      Manifestación General
+                    </h5>
+                    <p className="text-slate-600 text-sm">Constelación fronto-occipital. Traición. Mal de amores. Síndrome del corazón roto. Fractura del cuerpo etéreo.</p>
+                  </div>
+                  
+                  <div className="bg-purple-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-purple-700 text-sm mb-2 flex items-center">
+                      <Heart className="w-4 h-4 mr-2" />
+                      En el Niño
+                    </h5>
+                    <p className="text-slate-600 text-sm">Rechazo, no ser el preferido. Abandono. Necesito amor y contacto de mis padres.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Holograma 3 */}
+              <div className="bg-white/80 rounded-xl p-5 shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-lg">3</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-indigo-800">He Fallado</h4>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="bg-indigo-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-indigo-700 text-sm mb-2 flex items-center">
+                      <AlertTriangle className="w-4 h-4 mr-2" />
+                      Manifestación General
+                    </h5>
+                    <p className="text-slate-600 text-sm">Desvalorización. Constelación del tronco cerebral. Constelación de túbulos colectores del riñón. Autocastigo.</p>
+                  </div>
+                  
+                  <div className="bg-purple-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-purple-700 text-sm mb-2 flex items-center">
+                      <Heart className="w-4 h-4 mr-2" />
+                      En el Niño
+                    </h5>
+                    <p className="text-slate-600 text-sm">Rechazo, ignominia, exigencia, crítica, sentimiento de fracaso e inutilidad.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Holograma 4 */}
+              <div className="bg-white/80 rounded-xl p-5 shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-lg">4</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-indigo-800">Alguien Tiene la Culpa</h4>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="bg-indigo-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-indigo-700 text-sm mb-2 flex items-center">
+                      <AlertTriangle className="w-4 h-4 mr-2" />
+                      Manifestación General
+                    </h5>
+                    <p className="text-slate-600 text-sm">Traicionado por la vida. Reparación transgeneracional. Yaciente. Víctima. Incorporación.</p>
+                  </div>
+                  
+                  <div className="bg-purple-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-purple-700 text-sm mb-2 flex items-center">
+                      <Heart className="w-4 h-4 mr-2" />
+                      En el Niño
+                    </h5>
+                    <p className="text-slate-600 text-sm">Separación de los padres, enfermedad de los padres. Hermano parásito. Cambio de mirada.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Holograma 5 */}
+              <div className="bg-white/80 rounded-xl p-5 shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-lg">5</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-indigo-800">Tengo una Razón</h4>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="bg-indigo-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-indigo-700 text-sm mb-2 flex items-center">
+                      <AlertTriangle className="w-4 h-4 mr-2" />
+                      Manifestación General
+                    </h5>
+                    <p className="text-slate-600 text-sm">Idea, deseo, anhelo y nadie me hace caso. Incomprensión. Mente en blanco, confusión. Secretos.</p>
+                  </div>
+                  
+                  <div className="bg-purple-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-purple-700 text-sm mb-2 flex items-center">
+                      <Heart className="w-4 h-4 mr-2" />
+                      En el Niño
+                    </h5>
+                    <p className="text-slate-600 text-sm">Racionalización, prueba difícil. Conflictos sin solución mental. Reflujo emocional.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Holograma 6 */}
+              <div className="bg-white/80 rounded-xl p-5 shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-lg">6</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-indigo-800">Me Siento Ultrajado</h4>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="bg-indigo-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-indigo-700 text-sm mb-2 flex items-center">
+                      <AlertTriangle className="w-4 h-4 mr-2" />
+                      Manifestación General
+                    </h5>
+                    <p className="text-slate-600 text-sm">Humillación. Sentimiento de ultraje y vulneración.</p>
+                  </div>
+                  
+                  <div className="bg-purple-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-purple-700 text-sm mb-2 flex items-center">
+                      <Heart className="w-4 h-4 mr-2" />
+                      En el Niño
+                    </h5>
+                    <p className="text-slate-600 text-sm">Abuso, golpes, indefenso. Madre peligrosa, sentirse humillado e impotente.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Holograma 7 */}
+              <div className="bg-white/80 rounded-xl p-5 shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-lg">7</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-indigo-800">Ya No Puedo Más</h4>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="bg-indigo-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-indigo-700 text-sm mb-2 flex items-center">
+                      <AlertTriangle className="w-4 h-4 mr-2" />
+                      Manifestación General
+                    </h5>
+                    <p className="text-slate-600 text-sm">Programa de destrucción. Vivo-muerto. Inversión psicológica. Programa de muerte. Cripta genealógica.</p>
+                  </div>
+                  
+                  <div className="bg-purple-50 rounded-lg p-3">
+                    <h5 className="font-semibold text-purple-700 text-sm mb-2 flex items-center">
+                      <Heart className="w-4 h-4 mr-2" />
+                      En el Niño
+                    </h5>
+                    <p className="text-slate-600 text-sm">Sufrimiento extremo. Asimilación dolorosa. Experiencias cercanas a la muerte. Marcado.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
