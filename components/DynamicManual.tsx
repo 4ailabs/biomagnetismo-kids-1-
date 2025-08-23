@@ -2,7 +2,7 @@ import React from 'react';
 import { useModule } from '../src/contexts/ModuleContext';
 import { 
   Block1, Block2, Block3, Block4, Block5,
-  Module2Block1, Module2Block2, Module2Block3, Module2Block4, Module2Block5, Module2Block6, Module2Block7
+  Module2Block1, Module2Block2, Module2Block3, Module2Block4, Module2Block5, Module2Block6, Module2Block7, Module2Block8
 } from './blocks';
 import Manual from './Manual';
 
@@ -25,6 +25,7 @@ const DynamicManual: React.FC = () => {
         <Module2Block5 />
         <Module2Block6 />
         <Module2Block7 />
+        <Module2Block8 />
       </div>
     );
   }
