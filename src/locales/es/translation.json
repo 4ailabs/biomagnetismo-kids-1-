@@ -37,6 +37,7 @@
       "block6": "Bloque 6: Sensaciones Vitales",
       "block7": "Bloque 7: Orden Sistémico",
       "block8": "Bloque 8: Conflictología Dental",
+      "block9": "Bloque 9: Hologramas",
       "subtitles": {
         "block1": "Teoría del Apego",
         "block2": "Patrones Energéticos",
@@ -45,7 +46,8 @@
         "block5": "Herramientas",
         "block6": "Vitales",
         "block7": "Sistémico",
-        "block8": "Dental"
+        "block8": "Dental",
+        "block9": "Hologramas"
       }
     }
   },
@@ -583,6 +585,63 @@
             "number": "6",
             "title": "Celebra los Cambios",
             "content": "Los cambios en niños pueden ser inmediatos o aparecer en días siguientes. Confía en el proceso y observa las transformaciones sutiles."
+          }
+        ]
+      },
+      "block9": {
+        "title": "BLOQUE 9: Hologramas en Primera Infancia",
+        "objective": {
+          "title": "Objetivo del Bloque",
+          "content": "Comprender cómo los eventos inesperados y situaciones ambientales generan desequilibrios energéticos en los niños, creando improntas holográficas que activan patrones neurológicos y memoria biológica, afectando su desarrollo y comportamiento."
+        },
+        "fundamentals": {
+          "title": "Fundamentos Teóricos",
+          "intro": "Los hologramas son eventos inesperados en la persona o en el ambiente que generan desequilibrio energético (campos energéticos sutiles materiales, trans-materiales y centros magnéticos). Activan improntas neurológicas y memoria biológica, se almacenan como información subconsciente y activan programas biológicos instintivos y reactivos.",
+          "population": "Puede haber sucesos en toda una población. Activan la respuesta metabólica al trauma y activan mecanismos de defensa. Trauma simple: solución mental. Trauma complejo: sin solución mental o solución compleja.",
+          "definition": "Conflicto altamente significativo en tiempo y espacio que determina toda o parte de una vida que sucede por eventos inesperados o situaciones repentinas, casi siempre sin solución mental pronta."
+        },
+        "holograms": [
+          {
+            "number": "1",
+            "title": "Impacto Frontal",
+            "description": "Impacto inesperado. Susto. Accidente. Miedo frontal. Desconexión del cuerpo y la mente. Estado anestésico con disociación. Caídas. Golpizas. Emoción con pérdida del estado de conciencia. Visión de horror.",
+            "child": "Susto, caídas, miedo que aterroriza, impactos súbitos que desconectan al niño de su cuerpo y mente."
+          },
+          {
+            "number": "2",
+            "title": "Impacto Posterior",
+            "description": "Constelación fronto-occipital. Traición. Mal de amores. Síndrome del corazón roto. Rechazo y frustración sexual. Fractura o ruptura del cuerpo etéreo. Estado de abandono y vacío.",
+            "child": "Rechazo, no ser el preferido. Abandono. Necesito amor y contacto de mis padres."
+          },
+          {
+            "number": "3",
+            "title": "He Fallado",
+            "description": "Desvalorización. Constelación del tronco cerebral (desorientado, vacío, fracaso). Constelación de túbulos colectores del riñón (conflicto activo existencial o abandono). Orgullo. Buscar transgeneracional. Autocastigo.",
+            "child": "Rechazo, ignominia, exigencia, crítica, sentimiento de fracaso e inutilidad."
+          },
+          {
+            "number": "4",
+            "title": "Alguien Tiene la Culpa",
+            "description": "Traicionado por la vida. Reparación transgeneracional. Yaciente. Reparador transgeneracional. Víctima. Incorporación.",
+            "child": "Separación de los padres, enfermedad de los padres. Hermano parásito. Cambio de mirada, sentirse responsable de problemas familiares."
+          },
+          {
+            "number": "5",
+            "title": "Tengo una Razón",
+            "description": "Idea, deseo, anhelo y nadie me hace caso. Incomprensión. Mente en blanco, confusión. Conflicto por racionalización. Secretos. No dicho.",
+            "child": "Racionalización, prueba difícil. Conflictos sin solución mental. Reflujo emocional. No estoy a gusto en mi espacio."
+          },
+          {
+            "number": "6",
+            "title": "Me Siento Ultrajado",
+            "description": "Humillación.",
+            "child": "Abuso, golpes, indefenso. Madre peligrosa, sentirse humillado e impotente."
+          },
+          {
+            "number": "7",
+            "title": "Ya No Puedo Más",
+            "description": "Programa de destrucción. Vivo-muerto. Inversión psicológica. Programa de muerte. Cripta genealógica.",
+            "child": "Sufrimiento extremo. Asimilación dolorosa. Experiencias cercanas a la muerte: deshidratación, sangrado, envenenamiento, intoxicación. Marcado, sentimiento de estar al límite."
           }
         ]
       }

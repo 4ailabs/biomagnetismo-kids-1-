@@ -10,7 +10,8 @@ import {
   Heart,
   Compass,
   Shield,
-  Lightbulb
+  Lightbulb,
+  Sparkles
 } from 'lucide-react';
 
 const BlockSelector: React.FC = () => {
@@ -37,6 +38,7 @@ const BlockSelector: React.FC = () => {
         { id: 6, title: t('blockSelector.module2.block6'), subtitle: t('blockSelector.module2.subtitles.block6'), icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-indigo-400 to-purple-500' },
         { id: 7, title: t('blockSelector.module2.block7'), subtitle: t('blockSelector.module2.subtitles.block7'), icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-emerald-400 to-teal-500' },
         { id: 8, title: t('blockSelector.module2.block8'), subtitle: t('blockSelector.module2.subtitles.block8'), icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-rose-400 to-pink-500' },
+        { id: 9, title: t('blockSelector.module2.block9'), subtitle: t('blockSelector.module2.subtitles.block9'), icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-violet-400 to-purple-500' },
       ];
     } else {
       // Módulos futuros

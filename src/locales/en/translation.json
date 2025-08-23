@@ -37,6 +37,7 @@
       "block6": "Block 6: Vital Sensations",
       "block7": "Block 7: Systemic Order",
       "block8": "Block 8: Dental Conflictology",
+      "block9": "Block 9: Holograms",
       "subtitles": {
         "block1": "Attachment Theory",
         "block2": "Energetic Patterns",
@@ -45,7 +46,8 @@
         "block5": "Tools",
         "block6": "Vital",
         "block7": "Systemic",
-        "block8": "Dental"
+        "block8": "Dental",
+        "block9": "Holograms"
       }
     }
   },
@@ -363,6 +365,63 @@
             "number": "6",
             "title": "Celebrate Changes",
             "content": "Changes in children can be immediate or appear in the following days. Trust the process and observe the subtle transformations."
+          }
+        ]
+      },
+      "block9": {
+        "title": "BLOCK 9: Holograms in Early Childhood",
+        "objective": {
+          "title": "Block Objective",
+          "content": "Understand how unexpected events and environmental situations generate energetic imbalances in children, creating holographic imprints that activate neurological patterns and biological memory, affecting their development and behavior."
+        },
+        "fundamentals": {
+          "title": "Theoretical Fundamentals",
+          "intro": "Holograms are unexpected events in the person or environment that generate energetic imbalance (subtle material, trans-material energetic fields and magnetic centers). They activate neurological imprints and biological memory, storing as subconscious information and activating instinctive and reactive biological programs.",
+          "population": "There can be events affecting an entire population. They activate the metabolic response to trauma and defense mechanisms. Simple trauma: mental solution. Complex trauma: no mental solution or complex solution.",
+          "definition": "A highly significant conflict in time and space that determines all or part of a life, happening through unexpected events or sudden situations, almost always without immediate mental solution."
+        },
+        "holograms": [
+          {
+            "number": "1",
+            "title": "Frontal Impact",
+            "description": "Unexpected impact. Fright. Accident. Frontal fear. Disconnection of body and mind. Anesthetic state with dissociation. Falls. Beatings. Emotion with loss of consciousness. Horror vision.",
+            "child": "Fright, falls, terrifying fear, sudden impacts that disconnect the child from their body and mind."
+          },
+          {
+            "number": "2",
+            "title": "Posterior Impact",
+            "description": "Fronto-occipital constellation. Betrayal. Heartbreak syndrome. Sexual rejection and frustration. Fracture or rupture of the ethereal body. State of abandonment and emptiness.",
+            "child": "Rejection, not being the favorite. Abandonment. I need love and contact from my parents."
+          },
+          {
+            "number": "3",
+            "title": "I Have Failed",
+            "description": "Devaluation. Brainstem constellation (disoriented, empty, failure). Kidney collecting tubules constellation (active existential conflict or abandonment). Pride. Seek transgenerational. Self-punishment.",
+            "child": "Rejection, ignominy, demands, criticism, feeling of failure and worthlessness."
+          },
+          {
+            "number": "4",
+            "title": "Someone is to Blame",
+            "description": "Betrayed by life. Transgenerational reparation. Yaciente. Transgenerational repairer. Victim. Incorporation.",
+            "child": "Separation from parents, parents' illness. Parasitic brother. Change of gaze, feeling responsible for family problems."
+          },
+          {
+            "number": "5",
+            "title": "I Have a Reason",
+            "description": "Idea, desire, longing and no one listens to me. Misunderstanding. Blank mind, confusion. Conflict by rationalization. Secrets. Unsaid.",
+            "child": "Rationalization, difficult test. Conflicts without mental solution. Emotional reflux. I'm not comfortable in my space."
+          },
+          {
+            "number": "6",
+            "title": "I Feel Outraged",
+            "description": "Humiliation.",
+            "child": "Abuse, blows, defenseless. Dangerous mother, feeling humiliated and powerless."
+          },
+          {
+            "number": "7",
+            "title": "I Can't Take It Anymore",
+            "description": "Destruction program. Living-dead. Psychological inversion. Death program. Genealogical crypt.",
+            "child": "Extreme suffering. Painful assimilation. Near-death experiences: dehydration, bleeding, poisoning, intoxication. Marked, feeling of being at the limit."
           }
         ]
       }
