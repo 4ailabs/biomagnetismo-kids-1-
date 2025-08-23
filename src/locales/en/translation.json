@@ -36,7 +36,17 @@
       "block5": "Block 5: Evaluation",
       "block6": "Block 6: Vital Sensations",
       "block7": "Block 7: Systemic Order",
-      "block8": "Block 8: Dental Conflictology"
+      "block8": "Block 8: Dental Conflictology",
+      "subtitles": {
+        "block1": "Attachment Theory",
+        "block2": "Energetic Patterns",
+        "block3": "Practical Applications",
+        "block4": "Family Systemic",
+        "block5": "Tools",
+        "block6": "Vital",
+        "block7": "Systemic",
+        "block8": "Dental"
+      }
     }
   },
   "moduleStructure": {
@@ -187,6 +197,64 @@
         "Natural disaster: Disasters, evacuation",
         "Family conflict: Disputes, separation"
       ]
+    }
+  },
+  "vitalSensationsModule2": {
+    "title": "Vital Sensations in Early Childhood",
+    "intro": "Early childhood vital sensations are deep emotional experiences that shape the child's energetic field from 3 months to 5 years, creating patterns that influence their development and can manifest as specific imbalances.",
+    "contextTitle": "Vital Sensations by Developmental Stage",
+    "contextIntro": "These vital sensations are specifically adapted to early childhood development stages. They represent emotional experiences that shape the child's energetic field, creating patterns that can manifest as specific imbalances identifiable through biomagnetic pairs.",
+    "byStage": {
+      "attachment": {
+        "title": "Attachment Stage (3-9 months)",
+        "sensations": [
+          "Fear of abandonment: Separation anxiety, clinginess",
+          "Insecurity: Lack of consistent care, unpredictability",
+          "Rejection: Feeling unwanted, maternal stress",
+          "Overprotection: Excessive control, lack of autonomy",
+          "Emotional neglect: Absence of emotional response"
+        ]
+      },
+      "exploration": {
+        "title": "Exploration Stage (9-18 months)",
+        "sensations": [
+          "Fear of exploration: Overprotective environment",
+          "Insecurity in movement: Lack of confidence",
+          "Separation trauma: Sudden separations, changes",
+          "Control anxiety: Excessive restrictions",
+          "Independence fear: Discouragement of autonomy"
+        ]
+      },
+      "autonomy": {
+        "title": "Autonomy Stage (18m-3 years)",
+        "sensations": [
+          "Power struggle: Excessive control, rebellion",
+          "Boundary confusion: Inconsistent limits",
+          "Shame: Excessive criticism, perfectionism",
+          "Guilt: Over-responsibility, emotional burden",
+          "Identity crisis: Role confusion, expectations"
+        ]
+      },
+      "initiative": {
+        "title": "Initiative Stage (3-5 years)",
+        "sensations": [
+          "Creativity inhibition: Criticism of expression",
+          "Social anxiety: Peer rejection, isolation",
+          "Performance pressure: Excessive expectations",
+          "Competition stress: Comparison with others",
+          "Failure fear: Discouragement of attempts"
+        ]
+      },
+      "transversal": {
+        "title": "Transversal Sensations (All Stages)",
+        "sensations": [
+          "Family conflict: Parental disputes, separation",
+          "Economic stress: Financial insecurity, changes",
+          "Environmental trauma: Natural disasters, moves",
+          "Health anxiety: Illness, medical procedures",
+          "Social isolation: Lack of community support"
+        ]
+      }
     }
   },
   "bioenergeticProtocol": {

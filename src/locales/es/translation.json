@@ -36,7 +36,17 @@
       "block5": "Bloque 5: Evaluación",
       "block6": "Bloque 6: Sensaciones Vitales",
       "block7": "Bloque 7: Orden Sistémico",
-      "block8": "Bloque 8: Conflictología Dental"
+      "block8": "Bloque 8: Conflictología Dental",
+      "subtitles": {
+        "block1": "Teoría del Apego",
+        "block2": "Patrones Energéticos",
+        "block3": "Aplicaciones Prácticas",
+        "block4": "Sistémica Familiar",
+        "block5": "Herramientas",
+        "block6": "Vitales",
+        "block7": "Sistémico",
+        "block8": "Dental"
+      }
     }
   },
   "moduleStructure": {
@@ -405,6 +415,64 @@
           "\"Honro a mi hermano que partió y acepto mi derecho a vivir\"",
           "\"Mi vida tiene valor por sí misma, no en comparación\"",
           "\"Llevo el amor por mi hermano en mi corazón, pero vivo mi propia vida\""
+        ]
+      }
+    }
+  },
+  "vitalSensationsModule2": {
+    "title": "Sensaciones Vitales en Primera Infancia",
+    "intro": "Las sensaciones vitales en primera infancia son experiencias emocionales profundas que moldean el campo energético del niño desde los 3 meses hasta los 5 años, creando patrones que influyen en su desarrollo y pueden manifestarse como desequilibrios específicos.",
+    "contextTitle": "Sensaciones Vitales por Etapa de Desarrollo",
+    "contextIntro": "Estas sensaciones vitales están específicamente adaptadas a las etapas de desarrollo de la primera infancia. Representan experiencias emocionales que moldean el campo energético del niño, creando patrones que pueden manifestarse como desequilibrios específicos identificables a través de pares biomagnéticos.",
+    "byStage": {
+      "attachment": {
+        "title": "Etapa de Apego (3-9 meses)",
+        "sensations": [
+          "Miedo al abandono: Ansiedad de separación, dependencia",
+          "Inseguridad: Falta de cuidado consistente, imprevisibilidad",
+          "Rechazo: Sentirse no deseado, estrés materno",
+          "Sobreprotección: Control excesivo, falta de autonomía",
+          "Negligencia emocional: Ausencia de respuesta emocional"
+        ]
+      },
+      "exploration": {
+        "title": "Etapa de Exploración (9-18 meses)",
+        "sensations": [
+          "Miedo a explorar: Ambiente sobreprotector",
+          "Inseguridad en el movimiento: Falta de confianza",
+          "Trauma de separación: Separaciones súbitas, cambios",
+          "Ansiedad de control: Restricciones excesivas",
+          "Miedo a la independencia: Desánimo de la autonomía"
+        ]
+      },
+      "autonomy": {
+        "title": "Etapa de Autonomía (18m-3 años)",
+        "sensations": [
+          "Lucha de poder: Control excesivo, rebeldía",
+          "Confusión de límites: Límites inconsistentes",
+          "Vergüenza: Crítica excesiva, perfeccionismo",
+          "Culpa: Sobre-responsabilidad, carga emocional",
+          "Crisis de identidad: Confusión de roles, expectativas"
+        ]
+      },
+      "initiative": {
+        "title": "Etapa de Iniciativa (3-5 años)",
+        "sensations": [
+          "Inhibición de creatividad: Crítica de la expresión",
+          "Ansiedad social: Rechazo de pares, aislamiento",
+          "Presión de rendimiento: Expectativas excesivas",
+          "Estrés de competencia: Comparación con otros",
+          "Miedo al fracaso: Desánimo de intentos"
+        ]
+      },
+      "transversal": {
+        "title": "Sensaciones Transversales (Todas las Etapas)",
+        "sensations": [
+          "Conflicto familiar: Disputas parentales, separación",
+          "Estrés económico: Inseguridad financiera, cambios",
+          "Trauma ambiental: Desastres naturales, mudanzas",
+          "Ansiedad de salud: Enfermedad, procedimientos médicos",
+          "Aislamiento social: Falta de apoyo comunitario"
         ]
       }
     }

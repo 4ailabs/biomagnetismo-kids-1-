@@ -29,14 +29,14 @@ const BlockSelector: React.FC = () => {
       ];
     } else if (activeModule === 2) {
       return [
-        { id: 1, title: t('blockSelector.module2.block1'), subtitle: "Teoría del Apego", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
-        { id: 2, title: t('blockSelector.module2.block2'), subtitle: "Patrones Energéticos", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-blue-400 to-cyan-500' },
-        { id: 3, title: t('blockSelector.module2.block3'), subtitle: "Aplicaciones Prácticas", icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-purple-400 to-violet-500' },
-        { id: 4, title: t('blockSelector.module2.block4'), subtitle: "Sistémica Familiar", icon: <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-orange-400 to-amber-500' },
-        { id: 5, title: t('blockSelector.module2.block5'), subtitle: "Herramientas", icon: <Target className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-emerald-500' },
-        { id: 6, title: t('blockSelector.module2.block6'), subtitle: "Vitales", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-indigo-400 to-purple-500' },
-        { id: 7, title: t('blockSelector.module2.block7'), subtitle: "Sistémico", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-emerald-400 to-teal-500' },
-        { id: 8, title: t('blockSelector.module2.block8'), subtitle: "Dental", icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-rose-400 to-pink-500' },
+        { id: 1, title: t('blockSelector.module2.block1'), subtitle: t('blockSelector.module2.subtitles.block1'), icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
+        { id: 2, title: t('blockSelector.module2.block2'), subtitle: t('blockSelector.module2.subtitles.block2'), icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-blue-400 to-cyan-500' },
+        { id: 3, title: t('blockSelector.module2.block3'), subtitle: t('blockSelector.module2.subtitles.block3'), icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-purple-400 to-violet-500' },
+        { id: 4, title: t('blockSelector.module2.block4'), subtitle: t('blockSelector.module2.subtitles.block4'), icon: <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-orange-400 to-amber-500' },
+        { id: 5, title: t('blockSelector.module2.block5'), subtitle: t('blockSelector.module2.subtitles.block5'), icon: <Target className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-emerald-500' },
+        { id: 6, title: t('blockSelector.module2.block6'), subtitle: t('blockSelector.module2.subtitles.block6'), icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-indigo-400 to-purple-500' },
+        { id: 7, title: t('blockSelector.module2.block7'), subtitle: t('blockSelector.module2.subtitles.block7'), icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-emerald-400 to-teal-500' },
+        { id: 8, title: t('blockSelector.module2.block8'), subtitle: t('blockSelector.module2.subtitles.block8'), icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-rose-400 to-pink-500' },
       ];
     } else {
       // Módulos futuros
