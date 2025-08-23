@@ -48,7 +48,7 @@ const Header: React.FC = () => {
         
         {/* Botón de Diapositivas - solo visible cuando estamos en el Módulo 2 */}
         {isInModule && activeModule === 2 && (
-          <div className="absolute top-2 sm:top-3 lg:top-4 right-16 sm:right-20 lg:right-24 z-10">
+          <div className="absolute top-2 sm:top-3 lg:top-4 right-28 sm:right-32 lg:right-36 z-10">
             <Link 
               to="/presentation-modulo2"
               className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 bg-white/80 backdrop-blur-sm text-slate-600 text-xs sm:text-sm font-medium rounded-md sm:rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50"
