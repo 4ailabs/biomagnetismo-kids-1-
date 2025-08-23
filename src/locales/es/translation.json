@@ -3,13 +3,18 @@
     "title": "MÓDULO 1",
     "subtitle": "\"El Inicio Invisible: Cuando la Historia Empieza Antes de Nacer\"",
     "course": "Curso: Biomagnetismo Kids",
-    "modality": "Modalidad: Clase online",
+    "modalidad": "Modalidad: Clase online",
     "presentation": "Presentación",
     "paresList": "Lista de Pares Biomagnéticos",
     "module2": {
       "title": "MÓDULO 2",
       "subtitle": "Del Apego a la Autonomía: Patrones Energéticos de 3 Meses a 5 Años"
     }
+  },
+  "common": {
+    "language": "Idioma",
+    "spanish": "Español",
+    "english": "Inglés"
   },
   "paresList": {
     "description": "Accede a la lista completa de pares biomagnéticos para consulta durante el protocolo",

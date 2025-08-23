@@ -11,6 +11,11 @@
       "subtitle": "From Attachment to Autonomy: Energetic Patterns from 3 Months to 5 Years"
     }
   },
+  "common": {
+    "language": "Language",
+    "spanish": "Spanish",
+    "english": "English"
+  },
   "paresList": {
     "description": "Access the complete list of biomagnetic pairs for consultation during the protocol",
     "buttonText": "Open Pairs List"
