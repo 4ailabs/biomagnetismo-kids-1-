@@ -17,7 +17,7 @@ const Module2Block1 = () => {
         </p>
       </section>
 
-      <CourseSection title="Fundamentos Teóricos" icon={<BookOpen />}>
+      <CourseSection title="BLOQUE 1: FUNDAMENTOS TEÓRICOS" icon={<BookOpen />}>
         <div className="space-y-8">
           {/* Primera sección - fluida sin numeración */}
           <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">

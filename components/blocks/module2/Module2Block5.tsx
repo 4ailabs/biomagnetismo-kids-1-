@@ -17,7 +17,7 @@ const Module2Block5: React.FC = () => {
         </p>
       </section>
 
-      <CourseSection title="La Sinfonía del Desarrollo" icon={<BookOpen />}>
+      <CourseSection title="BLOQUE 5: LA SINFONÍA DEL DESARROLLO" icon={<BookOpen />}>
         <div className="space-y-8">
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">El Hilo Conductor de los Primeros Años</h3>

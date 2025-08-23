@@ -17,7 +17,7 @@ const Module2Block4: React.FC = () => {
         </p>
       </section>
 
-      <CourseSection title="Fundamentos Teóricos" icon={<BookOpen />}>
+      <CourseSection title="BLOQUE 4: FUNDAMENTOS TEÓRICOS" icon={<BookOpen />}>
         <div className="space-y-8">
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">La Explosión de la Personalidad</h3>
