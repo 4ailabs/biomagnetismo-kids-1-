@@ -7,7 +7,7 @@ const Module2Block5: React.FC = () => {
   const { t } = useTranslation();
   
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 w-full overflow-hidden">
       <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
         <h2 className="text-xl font-semibold text-slate-700 mb-3">Objetivo del Bloque</h2>
         <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -17,11 +17,11 @@ const Module2Block5: React.FC = () => {
         </p>
       </section>
 
-      <CourseSection title="BLOQUE 5: LA SINFONÍA DEL DESARROLLO" icon={<BookOpen />}>
+      <CourseSection title="La Sinfonía del Desarrollo" icon={<BookOpen />}>
         <div className="space-y-8">
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">El Hilo Conductor de los Primeros Años</h3>
-            <p className="text-slate-700 leading-relaxed text-lg">
+            <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">El Hilo Conductor de los Primeros Años</h3>
+            <p className="text-slate-700 leading-relaxed text-base break-words">
               Cada etapa que hemos explorado es como un movimiento en una sinfonía. No son episodios aislados, 
               sino capítulos de una historia que se construye día a día. El bebé que necesitaba cercanía a los 
               3 meses se convierte en el explorador valiente de los 12 meses, luego en el pequeño rebelde de 
@@ -129,7 +129,7 @@ const Module2Block5: React.FC = () => {
 
       <CourseSection title="La Mesa de Trabajo del Terapeuta" icon={<Table />}>
         <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-          <h3 className="text-2xl font-bold text-slate-800 mb-4">Checklist de la Sesión Perfecta</h3>
+          <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">Checklist de la Sesión Perfecta</h3>
           <p className="text-slate-700 leading-relaxed text-lg mb-6">
             Una sesión efectiva con niños no depende de la técnica perfecta, sino de la preparación adecuada 
             y la flexibilidad para adaptarse al mundo del pequeño. Aquí está tu guía paso a paso:
@@ -214,7 +214,7 @@ const Module2Block5: React.FC = () => {
       <CourseSection title="Tu Nuevo Comienzo" icon={<Sparkles />}>
         <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-8 shadow-md border-l-4 border-slate-200 text-center">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">El Terapeuta que Ya Eres</h3>
+            <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">El Terapeuta que Ya Eres</h3>
             <p className="text-slate-700 leading-relaxed text-lg mb-6">
               Al terminar este módulo, no solo conoces protocolos y técnicas. Tienes una nueva forma de ver 
               a los niños - no como pacientes que necesitan ser "arreglados", sino como pequeños seres humanos 

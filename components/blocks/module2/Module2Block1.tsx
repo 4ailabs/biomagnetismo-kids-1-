@@ -9,7 +9,7 @@ const Module2Block1 = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 w-full overflow-hidden">
       <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
         <h2 className="text-xl font-semibold text-slate-700 mb-3">Objetivo del Bloque</h2>
         <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -17,12 +17,12 @@ const Module2Block1 = () => {
         </p>
       </section>
 
-      <CourseSection title="BLOQUE 1: FUNDAMENTOS TEÓRICOS" icon={<BookOpen />}>
+      <CourseSection title="Fundamentos Teóricos" icon={<BookOpen />}>
         <div className="space-y-8">
           {/* Primera sección - fluida sin numeración */}
           <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-                            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-pink-800 mb-3 sm:mb-4">La Historia Continúa Después del Nacimiento</h3>
-            <p className="text-slate-700 leading-relaxed text-sm sm:text-base lg:text-lg">
+            <h3 className="text-xl font-bold text-slate-800 mb-4">La Historia Continúa Después del Nacimiento</h3>
+            <p className="text-slate-700 leading-relaxed text-base">
               Imagina que el nacimiento no es el final de una historia, sino el comienzo de un nuevo capítulo.
               Las experiencias que vivió el bebé en el vientre materno no se borran mágicamente al nacer.
               Durante los primeros 5 años de vida, estas memorias energéticas encuentran formas de expresarse: 
@@ -118,13 +118,13 @@ const Module2Block1 = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Conflictos Biológicos y Pares Biomagnéticos (3m-5a)" icon={<Table />}>
+      <CourseSection title="Conflictos y Pares Biomagnéticos" icon={<Table />}>
         <Module2ConflictTable data={MODULE2_CONFLICTS_DATA} />
       </CourseSection>
 
-      <CourseSection title="Tu Mapa de Navegación: Cómo Rastrear en Primera Infancia" icon={<Beaker />}>
+      <CourseSection title="Mapa de Navegación" icon={<Beaker />}>
         <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-          <p className="text-slate-700 leading-relaxed text-sm sm:text-base lg:text-lg mb-6 sm:mb-8">
+          <p className="text-slate-700 leading-relaxed text-base mb-6">
             Trabajar con niños requiere un enfoque diferente al de los adultos. Aquí tienes una guía paso a paso
             que hemos perfeccionado después de miles de consultas pediátricas:
           </p>
@@ -217,13 +217,13 @@ const Module2Block1 = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Historias Reales: Cuando el Cuerpo Encuentra su Voz" icon={<Lightbulb />}>
+      <CourseSection title="Casos Clínicos Reales" icon={<Lightbulb />}>
         <div className="space-y-6">
           {/* Caso 1 - Narrativo */}
           <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <div className="flex items-start space-x-3 sm:space-x-4">
-                              <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-slate-200 rounded-full flex items-center justify-center">
-                                  <span className="text-slate-700 font-bold text-sm sm:text-base lg:text-lg">S</span>
+              <div className="flex-shrink-0 w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center">
+                <span className="text-slate-700 font-bold text-lg">S</span>
               </div>
               <div>
                                   <h5 className="font-bold text-slate-800 text-lg sm:text-xl mb-2 sm:mb-3">Sofia, 18 meses: "¿Dónde está papá?"</h5>
@@ -274,8 +274,8 @@ const Module2Block1 = () => {
       <CourseSection title="Reflexión Final" icon={<Sparkles />}>
         <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 shadow-md border-l-4 border-slate-200 text-center">
           <div className="max-w-3xl mx-auto">
-                          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-amber-800 mb-3 sm:mb-4">Tu Nueva Mirada</h3>
-            <p className="text-slate-700 leading-relaxed text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">
+            <h3 className="text-xl font-bold text-slate-800 mb-4">Tu Nueva Mirada</h3>
+            <p className="text-slate-700 leading-relaxed text-base mb-6">
               A partir de ahora, cada vez que veas a un niño con "problemas de conducta", recuerda que
               estás ante un pequeño ser humano cuyo cuerpo está gritando una verdad que aún no puede expresar con 
               palabras.

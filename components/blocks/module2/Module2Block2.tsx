@@ -7,7 +7,7 @@ const Module2Block2: React.FC = () => {
   const { t } = useTranslation();
   
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 w-full overflow-hidden">
       <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
         <h2 className="text-xl font-semibold text-slate-700 mb-3">Objetivo del Bloque</h2>
         <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -16,11 +16,11 @@ const Module2Block2: React.FC = () => {
         </p>
       </section>
 
-      <CourseSection title="BLOQUE 2: FUNDAMENTOS TEÓRICOS" icon={<BookOpen />}>
+      <CourseSection title="Fundamentos Teóricos" icon={<BookOpen />}>
         <div className="space-y-8">
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">La Etapa Exploratoria: Libertad con Base Segura</h3>
-            <p className="text-slate-700 leading-relaxed text-lg">
+            <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">La Etapa Exploratoria: Libertad con Base Segura</h3>
+            <p className="text-slate-700 leading-relaxed text-base break-words">
               Entre los 9 y 18 meses, el niño descubre un nuevo superpoder: puede alejarse de mamá y papá 
               y explorar el mundo, pero siempre sabe que puede regresar a sus brazos. Esta etapa marca el 
               equilibrio perfecto entre dependencia e independencia. El niño se convierte en un pequeño 
@@ -61,8 +61,8 @@ const Module2Block2: React.FC = () => {
           </div>
 
           <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">El Desarrollo del Sistema Motor</h3>
-            <p className="text-slate-700 leading-relaxed text-lg">
+            <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">El Desarrollo del Sistema Motor</h3>
+            <p className="text-slate-700 leading-relaxed text-base break-words">
               Esta es la etapa donde el cuerpo se convierte en el mejor aliado del niño. Caminar, correr, 
               subir, bajar - cada nuevo logro motor es una victoria que aumenta su confianza y autonomía. 
               Pero también puede generar frustración cuando el deseo supera a la capacidad física.
@@ -112,7 +112,7 @@ const Module2Block2: React.FC = () => {
 
       <CourseSection title="Protocolo de Rastreo Específico" icon={<Table />}>
         <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-          <h3 className="text-2xl font-bold text-slate-800 mb-4">Evaluación de la Exploración Segura</h3>
+          <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">Evaluación de la Exploración Segura</h3>
           <p className="text-slate-700 leading-relaxed text-lg mb-6">
             Para esta etapa, el rastreo debe centrarse en el equilibrio entre el sistema motor, el sistema 
             de apego y el sistema de alerta. Observa estos patrones clave:
@@ -210,7 +210,7 @@ const Module2Block2: React.FC = () => {
       <CourseSection title="Reflexión Final" icon={<Sparkles />}>
         <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-8 shadow-md border-l-4 border-slate-200 text-center">
           <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">El Equilibrio Perfecto</h3>
+            <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">El Equilibrio Perfecto</h3>
             <p className="text-slate-700 leading-relaxed text-lg mb-6">
               Esta etapa nos enseña que la verdadera independencia nace de la seguridad, no de la separación. 
               Un niño que confía en que su base segura estará ahí cuando la necesite, puede aventurarse 

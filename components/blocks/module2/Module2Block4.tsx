@@ -7,7 +7,7 @@ const Module2Block4: React.FC = () => {
   const { t } = useTranslation();
   
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 w-full overflow-hidden">
       <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
         <h2 className="text-xl font-semibold text-slate-700 mb-3">Objetivo del Bloque</h2>
         <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -17,11 +17,11 @@ const Module2Block4: React.FC = () => {
         </p>
       </section>
 
-      <CourseSection title="BLOQUE 4: FUNDAMENTOS TEÓRICOS" icon={<BookOpen />}>
+      <CourseSection title="Fundamentos Teóricos" icon={<BookOpen />}>
         <div className="space-y-8">
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">La Explosión de la Personalidad</h3>
-            <p className="text-slate-700 leading-relaxed text-lg">
+            <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">La Explosión de la Personalidad</h3>
+            <p className="text-slate-700 leading-relaxed text-base break-words">
               Entre los 3 y 5 años asistimos a un espectáculo fascinante: el nacimiento de la personalidad única. 
               El niño ya no es solo "el hijo de" o "el hermano de" - ahora es alguien con gustos, preferencias, 
               ideas propias y, lo más importante, con proyectos. Quiere construir torres, inventar historias, 
@@ -63,8 +63,8 @@ const Module2Block4: React.FC = () => {
           </div>
 
           <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">El Cerebro Social en Desarrollo</h3>
-            <p className="text-slate-700 leading-relaxed text-lg">
+            <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">El Cerebro Social en Desarrollo</h3>
+            <p className="text-slate-700 leading-relaxed text-base break-words">
               Esta etapa marca el despertar del "cerebro social" - la capacidad de entender que otros 
               tienen pensamientos, sentimientos y perspectivas diferentes a las suyas. Esto abre un 
               universo de posibilidades pero también de complejidades. El niño debe aprender a navegar 
@@ -114,7 +114,7 @@ const Module2Block4: React.FC = () => {
 
       <CourseSection title="Guía de Preparación Escolar" icon={<Table />}>
         <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-          <h3 className="text-2xl font-bold text-slate-800 mb-4">El Verdadero "School Readiness"</h3>
+          <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">El Verdadero "School Readiness"</h3>
           <p className="text-slate-700 leading-relaxed text-lg mb-6">
             La preparación escolar va más allá de saber letras y números. Un niño está listo para la escuela 
             cuando puede separarse de sus cuidadores sin drama excesivo, puede pedir ayuda cuando la necesita, 
@@ -214,7 +214,7 @@ const Module2Block4: React.FC = () => {
       <CourseSection title="Reflexión Final" icon={<Sparkles />}>
         <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-8 shadow-md border-l-4 border-slate-200 text-center">
           <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">La Edad de la Posibilidad</h3>
+            <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">La Edad de la Posibilidad</h3>
             <p className="text-slate-700 leading-relaxed text-lg mb-6">
               Entre los 3 y 5 años, el niño descubre que puede ser creador de su propia experiencia. 
               Puede inventar, proponer, liderar y transformar el mundo que lo rodea. Nuestro trabajo no es 

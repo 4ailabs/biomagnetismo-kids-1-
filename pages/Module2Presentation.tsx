@@ -1,37 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { 
+  Home, 
   X, 
   ChevronLeft, 
   ChevronRight, 
   Play, 
-  Pause, 
-  Home,
-  BookOpen,
-  Beaker,
-  Baby,
-  Rocket,
-  Target,
-  Heart,
-  Brain,
-  Sparkles,
-  Lightbulb,
-  Users,
-  Clock,
-  GraduationCap,
-  AlertTriangle,
-  Table,
-  History,
-  Download,
-  Shield,
-  Search,
-  CheckCircle,
-  List,
-  MessageCircle,
-  BarChart,
-  AlertCircle
+  Pause 
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 
 interface Slide {
   id: number;
@@ -41,7 +17,6 @@ interface Slide {
 }
 
 const Module2Presentation: React.FC = () => {
-  const { t } = useTranslation();
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
@@ -110,7 +85,7 @@ const Module2Presentation: React.FC = () => {
       }
       
       .slide-transition {
-        transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-out;
       }
       
       button:disabled {
@@ -146,10 +121,10 @@ const Module2Presentation: React.FC = () => {
       id: 2,
       title: "OBJETIVO DEL MÓDULO 2",
       content: [
-        "Comprender cómo los conflictos biológicos gestacionales continúan manifestándose",
-        "en la primera infancia (3m-5a), aprendiendo a identificar los 8 conflictos fundamentales",
-        "y aplicar técnicas biomagnéticas específicas para cada rango de edad",
-        "con un enfoque práctico y accesible para terapeutas"
+        "Comprender conflictos biológicos gestacionales en primera infancia (3m-5a)",
+        "Identificar los 8 conflictos fundamentales de esta etapa",
+        "Aplicar técnicas biomagnéticas específicas por rango de edad",
+        "Enfoque práctico y accesible para terapeutas"
       ],
       type: 'process'
     },
@@ -159,11 +134,11 @@ const Module2Presentation: React.FC = () => {
       id: 3,
       title: "LOS 8 GRANDES CONFLICTOS DE LA INFANCIA",
       content: [
-        "1. Separación & Abandono - Cuando el niño siente que puede perder a quien más ama",
-        "2. No Ser Escuchado - Cuando sus señales son ignoradas o malinterpretadas",
-        "3. Territorio & Control - Cuando siente que ha perdido toda autonomía",
-        "4. Amenaza de Supervivencia - Cuando percibe peligro vital real o imaginario",
-        "5. No Soy Suficiente - Cuando recibe mensajes de que no cumple expectativas"
+        "Separación & Abandono - Miedo a perder a quien más ama",
+        "No Ser Escuchado - Señales ignoradas o malinterpretadas",
+        "Territorio & Control - Pérdida de autonomía",
+        "Amenaza de Supervivencia - Peligro vital real o imaginario",
+        "No Soy Suficiente - No cumple expectativas"
       ],
       type: 'comparison'
     },
@@ -173,12 +148,11 @@ const Module2Presentation: React.FC = () => {
       id: 4,
       title: "LOS 8 GRANDES CONFLICTOS (CONTINUACIÓN)",
       content: [
-        "6. Caos Relacional - Cuando vive inconsistencias extremas en el cuidado",
-        "7. Pérdida de Base Segura - Cuando cambios drásticos alteran su mundo conocido",
-        "8. Invasión de Límites - Cuando su espacio corporal o emocional es violado",
-        "9. Trauma de Separación - Cuando la ausencia prolongada genera miedo existencial",
-        "Estos no son simples 'problemas de conducta', sino expresiones profundas",
-        "de conflictos biológicos que buscan resolución"
+        "Caos Relacional - Inconsistencias extremas en el cuidado",
+        "Pérdida de Base Segura - Cambios drásticos alteran su mundo",
+        "Invasión de Límites - Espacio corporal o emocional violado",
+        "Trauma de Separación - Ausencia prolongada genera miedo existencial",
+        "No son simples 'problemas de conducta', sino conflictos biológicos profundos"
       ],
       type: 'timeline'
     },
@@ -188,432 +162,181 @@ const Module2Presentation: React.FC = () => {
       id: 5,
       title: "POR QUÉ FUNCIONA EL BIOMAGNETISMO EN NIÑOS",
       content: [
-        "Su cuerpo habla primero: Antes de que un niño pueda decir 'me duele el corazón'",
-        "por la separación, su cuerpo ya lo está gritando a través de síntomas",
-        "Respuesta inmediata: Los niños responden más rápido que los adultos",
-        "La energía no miente: Mientras que un niño puede fingir estar bien para complacer",
-        "a los adultos, su campo energético siempre revela la verdad",
-        "Sanación natural: Su sistema inmune está en desarrollo activo",
-        "Máxima plasticidad: El cerebro infantil es como arcilla fresca"
+        "Su cuerpo habla primero - Síntomas antes que palabras",
+        "Respuesta inmediata - Más rápido que los adultos",
+        "La energía no miente - Campo energético revela la verdad",
+        "Sanación natural - Sistema inmune en desarrollo activo",
+        "Máxima plasticidad - Cerebro como arcilla fresca"
       ],
       type: 'content'
-    },
-    
-    // SLIDE 6: PARES BIOMAGNÉTICOS PRÁCTICOS (3M-5A)
-    {
-      id: 6,
-      title: "PARES BIOMAGNÉTICOS PRÁCTICOS (3M-5A)",
-      content: [
-        "Separación & Abandono: Pericardio (-) → Timo (+)",
-        "No Ser Escuchado: Temporal Izq (-) → Temporal Der (+)",
-        "Territorio & Control: Bulbo Raquídeo (-) → Suprarrenal (+)",
-        "Amenaza de Supervivencia: Plexo Solar (-) → Riñón Derecho (+)",
-        "No Soy Suficiente: Suprarrenal (-) → Suprarrenal (+)"
-      ],
-      type: 'comparison'
-    },
-    
-    // SLIDE 7: PARES BIOMAGNÉTICOS (CONTINUACIÓN)
-    {
-      id: 7,
-      title: "PARES BIOMAGNÉTICOS (CONTINUACIÓN)",
-      content: [
-        "Caos Relacional: Timo (-) → Bazo (+) | Pericardio (-) → Timo (+)",
-        "Pérdida de Base Segura: Bulbo Raquídeo (-) → Suprarrenal (+) | Temporal Izq (-) → Temporal Der (+)",
-        "Invasión de Límites: Plexo Solar (-) → Riñón Derecho (+) | Suprarrenal (-) → Suprarrenal (+)",
-        "Trauma de Separación: Pericardio (-) → Pulmón (+) | Bulbo Raquídeo (-) → Plexo Solar (+)",
-        "Todos estos pares son fáciles de localizar y aplicar en la práctica clínica"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 8: TU MAPA DE NAVEGACIÓN: CÓMO RASTREAR EN PRIMERA INFANCIA
-    {
-      id: 8,
-      title: "TU MAPA DE NAVEGACIÓN: CÓMO RASTREAR EN PRIMERA INFANCIA",
-      content: [
-        "Trabajar con niños requiere un enfoque diferente al de los adultos",
-        "Aquí tienes una guía paso a paso que hemos perfeccionado",
-        "después de miles de consultas pediátricas:",
-        "",
-        "6 pasos fundamentales para el rastreo exitoso en primera infancia"
-      ],
-      type: 'hero'
-    },
-    
-    // SLIDE 9: PASO 1: CONVIÉRTETE EN DETECTIVE
-    {
-      id: 9,
-      title: "PASO 1: CONVIÉRTETE EN DETECTIVE",
-      content: [
-        "Observa todo: ¿cuándo empezaron los síntomas?",
-        "¿Qué cambios hubo en casa?",
-        "¿Cómo se comporta con mamá vs. papá?",
-        "Presta atención a los patrones de sueño y alimentación",
-        "Los niños no mienten con su cuerpo, pero nosotros",
-        "debemos aprender su lenguaje"
-      ],
-      type: 'process'
-    },
-    
-    // SLIDE 10: PASO 2: ENCUENTRA EL PATRÓN
-    {
-      id: 10,
-      title: "PASO 2: ENCUENTRA EL PATRÓN",
-      content: [
-        "De los 8 conflictos fundamentales, ¿cuál resuena más",
-        "con lo que observas?",
-        "Considera el contexto familiar y social del niño",
-        "No busques el perfecto, busca el que más sentido hace",
-        "en la historia del niño",
-        "Observa las reacciones emocionales y físicas",
-        "Confía en tu intuición y observación clínica"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 11: PASO 3: LOCALIZA EL PUNTO TRAUMA
-    {
-      id: 11,
-      title: "PASO 3: LOCALIZA EL PUNTO TRAUMA",
-      content: [
-        "Coloca suavemente el imán negativo en el punto correspondiente",
-        "al conflicto identificado",
-        "Mantén el imán por 3-5 minutos para niños pequeños",
-        "Los niños son más sensibles, así que menos presión",
-        "y más intuición",
-        "",
-        "Observa las reacciones del niño durante la localización"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 12: PASO 4: BUSCA EL EQUILIBRIO
-    {
-      id: 12,
-      title: "PASO 4: BUSCA EL EQUILIBRIO",
-      content: [
-        "Encuentra el segundo punto donde el imán positivo",
-        "crea la armonía",
-        "",
-        "Las piernas se alinean, pero más importante:",
-        "observa si el niño se relaja o cambia su expresión",
-        "La respuesta puede ser inmediata o gradual",
-        "El cuerpo del niño te dirá cuándo has encontrado el equilibrio"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 13: PASO 5: MANTÉN LA CONEXIÓN
-    {
-      id: 13,
-      title: "PASO 5: MANTÉN LA CONEXIÓN",
-      content: [
-        "15-20 minutos máximo",
-        "Los niños tienen menor tolerancia que los adultos",
-        "Mantente presente, habla suavemente, permite que el niño",
-        "se mueva ligeramente si lo necesita",
-        "La paciencia es fundamental en esta etapa",
-        "Su cuerpo te dirá cuándo es suficiente",
-        "Confía en las señales del niño"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 14: PASO 6: CELEBRA LOS CAMBIOS
-    {
-      id: 14,
-      title: "PASO 6: CELEBRA LOS CAMBIOS",
-      content: [
-        "Los cambios en niños pueden ser inmediatos o aparecer",
-        "en días siguientes",
-        "La respuesta varía según la edad y el conflicto",
-        "Confía en el proceso y mantente disponible para ajustes",
-        "si es necesario",
-        "La consistencia es clave para resultados duraderos",
-        "Cada pequeño cambio es un paso hacia la sanación"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 15: HISTORIAS REALES: SOFIA, 18 MESES
-    {
-      id: 15,
-      title: "HISTORIA REAL: SOFIA, 18 MESES",
-      content: [
-        "Sofia llegó a consulta con berrinches que duraban horas",
-        "Sus padres se habían divorciado hace un mes",
-        "El trauma de separación era evidente",
-        "Su cuerpo hablaba: 'He perdido mi seguridad, necesito saber",
-        "que no me van a abandonar'",
-        "La intervención fue específica y directa",
-        "Intervención: Plexo Solar (-) → Riñón Derecho (+)",
-        "Resultado: Después de 2 sesiones, Sofia comenzó a jugar sola"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 16: HISTORIA REAL: DIEGO, 3 AÑOS
-    {
-      id: 16,
-      title: "HISTORIA REAL: DIEGO, 3 AÑOS",
-      content: [
-        "Diego hablaba perfectamente en casa, pero en el jardín",
-        "no pronunciaba una palabra",
-        "La inhibición selectiva era clara",
-        "Su cuerpo hablaba: 'Solo me siento seguro para expresarme",
-        "donde sé que me escuchan'",
-        "El miedo al juicio social era evidente",
-        "Intervención: Temporal Izq (-) → Temporal Der (+)",
-        "Resultado: En la tercera sesión comenzó a susurrar con su maestra"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 17: PROTOCOLO ANTI-BERRINCHES (18M-3A)
-    {
-      id: 17,
-      title: "PROTOCOLO ANTI-BERRINCHES (18M-3A)",
-      content: [
-        "Para Berrinches Explosivos:",
-        "• Suprarrenal (-) → Suprarrenal (+): Calma la hiperactivación del estrés",
-        "• Temporal Izq (-) → Temporal Der (+): Equilibra la sobrecarga sensorial",
-        "• Bulbo Raquídeo (-) → Plexo Solar (+): Regula el sistema nervioso autónomo",
-        "Para Berrinches por Frustración:",
-        "Para Desarrollo del Lenguaje:",
-        "• Lengua (-) → Hioides (+): Facilita articulación y expresión"
-      ],
-      type: 'comparison'
-    },
-    
-    // SLIDE 18: PROTOCOLO PREESCOLAR (3-5 AÑOS)
-    {
-      id: 18,
-      title: "PROTOCOLO PREESCOLAR (3-5 AÑOS)",
-      content: [
-        "Para Timidez e Inhibición:",
-        "• Pericardio (-) → Timo (+): Fortalece la autoestima y confianza",
-        "• Plexo Solar (-) → Riñón Der (+): Libera miedo al juicio",
-        "• Tiroides (-) → Paratiroides (+): Facilita la expresión",
-        "Para Ansiedad Social:",
-        "Para Hiperactividad y Agresividad:",
-        "• Suprarrenal (-) → Suprarrenal (+): Regula la hiperactivación"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 19: GUÍA DE INTERVENCIÓN INMEDIATA
-    {
-      id: 19,
-      title: "GUÍA DE INTERVENCIÓN INMEDIATA",
-      content: [
-        "Cuando un niño está en crisis, sigue estos 3 pasos:",
-        "Respira profundamente y mantén la calma",
-        "1. CALMA: Suprarrenal-Suprarrenal para reducir la activación del estrés",
-        "2. CENTRA: Plexo Solar-Riñón Derecho para estabilizar emocionalmente",
-        "3. CONECTA: Temporal Izq-Temporal Der para equilibrar la percepción sensorial",
-        "Observa los cambios en la respiración del niño",
-        "Aplica cada par por 5-10 minutos, observando la respuesta del niño"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 20: PUNTOS DE REFERENCIA FÁCILES
-    {
-      id: 20,
-      title: "PUNTOS DE REFERENCIA FÁCILES",
-      content: [
-        "Para facilitar la localización de los pares biomagnéticos:",
-        "Usa la palma de tu mano como referencia de tamaño",
-        "• Suprarrenal: 2 dedos por encima del ombligo, a los lados",
-        "• Plexo Solar: En el centro del abdomen, debajo del esternón",
-        "• Temporal: En las sienes, a los lados de la cabeza",
-        "• Pericardio: En el centro del pecho, sobre el corazón",
-        "• Timo: En el centro superior del pecho, debajo de la garganta"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 21: LA GRAN TRANSFORMACIÓN: DE BEBÉ A NIÑO
-    {
-      id: 21,
-      title: "LA GRAN TRANSFORMACIÓN: DE BEBÉ A NIÑO",
-      content: [
-        "Entre los 18 meses y 3 años ocurre una revolución silenciosa",
-        "El desarrollo neurológico se acelera exponencialmente",
-        "El bebé que dependía completamente de otros ahora quiere",
-        "hacerlo todo solo",
-        "La frustración es parte natural del proceso de aprendizaje",
-        "Su cerebro está desarrollando el concepto de 'yo', y con eso",
-        "viene una necesidad imperiosa de control y autonomía",
-        "Los 'terribles dos años' no son terribles - son necesarios"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 22: ENTENDIENDO LOS BERRINCHES DESDE EL BIOMAGNETISMO
-    {
-      id: 22,
-      title: "ENTENDIENDO LOS BERRINCHES DESDE EL BIOMAGNETISMO",
-      content: [
-        "Un berrinche no es simplemente 'mal comportamiento'",
-        "Es una respuesta fisiológica normal del desarrollo",
-        "Es una descarga energética intensa cuando el sistema nervioso",
-        "del niño se sobrecarga",
-        "Los berrinches tienen un propósito evolutivo",
-        "Desde la perspectiva biomagnética, los berrinches indican",
-        "desequilibrios específicos que podemos corregir:",
-        "• Berrinche por Frustración: Conflicto de Territorio/Control",
-        "• Berrinche por Límites: Conflicto de Territorio/Autonomía"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 23: EL DESARROLLO DEL LENGUAJE Y LA FRUSTRACIÓN
-    {
-      id: 23,
-      title: "EL DESARROLLO DEL LENGUAJE Y LA FRUSTRACIÓN",
-      content: [
-        "Esta etapa presenta una paradoja fascinante:",
-        "El desarrollo cognitivo avanza más rápido que el verbal",
-        "El niño sabe exactamente lo que quiere, pero aún no tiene",
-        "las palabras para expresarlo",
-        "La frustración se acumula y busca salida",
-        "Su comprensión supera por mucho su capacidad de expresión,",
-        "creando una brecha frustrante que puede manifestarse como",
-        "berrinches, regresiones o incluso síntomas físicos",
-        "El biomagnetismo puede acelerar el desarrollo del lenguaje"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 24: LA EXPLOSIÓN DE LA PERSONALIDAD (3-5 AÑOS)
-    {
-      id: 24,
-      title: "LA EXPLOSIÓN DE LA PERSONALIDAD (3-5 AÑOS)",
-      content: [
-        "Entre los 3 y 5 años asistimos a un espectáculo fascinante:",
-        "el nacimiento de la personalidad única",
-        "La individualidad emerge con fuerza",
-        "El niño ya no es solo 'el hijo de' o 'el hermano de' -",
-        "ahora es alguien con gustos, preferencias, ideas propias",
-        "La creatividad se desborda naturalmente",
-        "Quiere construir torres, inventar historias, liderar juegos",
-        "y crear mundos fantásticos",
-        "Esta explosión creativa viene acompañada de nuevos desafíos"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 25: LOS NUEVOS CONFLICTOS DE ESTA ETAPA
-    {
-      id: 25,
-      title: "LOS NUEVOS CONFLICTOS DE ESTA ETAPA",
-      content: [
-        "A medida que el mundo del niño se expande hacia la escuela,",
-        "los amigos y las actividades estructuradas, aparecen",
-        "conflictos energéticos específicos:",
-        "La socialización trae nuevos desafíos",
-        "• Miedo al Juicio: Miedo a hacer el ridículo o ser criticado",
-        "• Ansiedad de Separación: Dificultad para separarse en la escuela",
-        "• Inhibición Creativa: No se atreve a proponer ideas o liderar",
-        "La presión del grupo se intensifica",
-        "Estos conflictos pueden manifestarse como inhibición,",
-        "perfeccionismo o dificultades de socialización"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 26: EL CEREBRO SOCIAL EN DESARROLLO
-    {
-      id: 26,
-      title: "EL CEREBRO SOCIAL EN DESARROLLO",
-      content: [
-        "Esta etapa marca el despertar del 'cerebro social' -",
-        "la capacidad de entender que otros tienen pensamientos,",
-        "sentimientos y perspectivas diferentes a las suyas",
-        "La empatía se desarrolla naturalmente",
-        "Esto abre un universo de posibilidades pero también de",
-        "complejidades. El niño debe aprender a navegar amistades,",
-        "manejar conflictos, compartir atención y negociar deseos",
-        "Las habilidades sociales se perfeccionan",
-        "Cuando este desarrollo no fluye naturalmente, podemos ver",
-        "niños excesivamente tímidos, agresivos o que se aíslan"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 27: PROTOCOLO INTEGRADO POR EDAD
-    {
-      id: 27,
-      title: "PROTOCOLO INTEGRADO POR EDAD",
-      content: [
-        "La Caja de Herramientas del Terapeuta Pediátrico:",
-        "Cada etapa tiene sus necesidades específicas",
-        "3-9 meses: La Base - '¿Puedo Confiar?'",
-        "Par clave: Pericardio-Timo para fortalecer la confianza primordial",
-        "La seguridad es fundamental en esta etapa",
-        "9-18 meses: La Aventura - '¿Puedo Explorar?'",
-        "Par clave: Bulbo Raquídeo-Suprarrenal para equilibrar curiosidad y prudencia",
-        "El equilibrio entre libertad y protección",
-        "18m-3a: La Revolución - '¿Puedo Ser Yo?'",
-        "Par clave: Suprarrenal-Suprarrenal para navegar la tormenta emocional"
-      ],
-      type: 'timeline'
-    },
-    
-    // SLIDE 28: PROTOCOLO INTEGRADO (CONTINUACIÓN)
-    {
-      id: 28,
-      title: "PROTOCOLO INTEGRADO (CONTINUACIÓN)",
-      content: [
-        "3-5 años: La Creación - '¿Puedo Crear?'",
-        "Par clave: Pericardio-Timo para liberar la creatividad sin miedo al juicio",
-        "La expresión artística se libera naturalmente",
-        "Cada etapa que hemos explorado es como un movimiento en una sinfonía",
-        "La evolución sigue un patrón natural y predecible",
-        "No son episodios aislados, sino capítulos de una historia",
-        "que se construye día a día",
-        "Cada transición prepara la siguiente",
-        "El biomagnetismo no cambia esta historia natural - la facilita"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 29: REFLEXIÓN FINAL: TU NUEVA MIRADA
-    {
-      id: 29,
-      title: "REFLEXIÓN FINAL: TU NUEVA MIRADA",
-      content: [
-        "A partir de ahora, cada vez que veas a un niño con",
-        "'problemas de conducta', recuerda que estás ante un pequeño",
-        "ser humano cuyo cuerpo está gritando una verdad que aún",
-        "no puede expresar con palabras",
-        "Tu mirada cambia cuando entiendes el lenguaje del cuerpo",
-        "El cuerpo del niño habla antes que sus palabras,",
-        "y el biomagnetismo nos da el diccionario para entenderlo"
-      ],
-      type: 'key-points'
-    },
-    
-    // SLIDE 30: LO QUE LLEVAS CONTIGO
-    {
-      id: 30,
-      title: "LO QUE LLEVAS CONTIGO",
-      content: [
-        "• Los 8 conflictos fundamentales que rigen la infancia",
-        "• Un método de rastreo adaptado específicamente para niños",
-        "• La certeza de que cada síntoma tiene sentido y solución",
-        "• Protocolos prácticos para cada etapa evolutiva",
-        "• La confianza para intervenir con precisión y amor",
-        "• Una nueva perspectiva sobre el desarrollo infantil",
-        "Has completado el Módulo 2 de Biomagnetismo Kids"
-      ],
-      type: 'hero'
     }
   ];
 
   const currentSlideData = slides[currentSlide];
+
+  const getSlideContent = () => {
+    switch (currentSlideData.type) {
+      case 'hero':
+        return (
+          <div className="w-full h-full flex flex-col justify-center items-center text-center">
+            <div className="relative max-w-5xl">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold bg-gradient-to-r from-slate-800 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-3 sm:mb-4 animate-fade-in-up">
+                {currentSlideData.title}
+              </h1>
+              <div className="max-w-4xl mx-auto">
+                {currentSlideData.content.map((line, index) => (
+                  <p key={index} className="text-base sm:text-lg lg:text-xl text-slate-600 mb-2 sm:mb-3 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                    {line}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      
+      case 'title':
+        return (
+          <div className="w-full h-full flex flex-col justify-center items-center text-center">
+            <div className="max-w-5xl">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-800 mb-4 animate-fade-in-up">
+                {currentSlideData.title}
+              </h1>
+              {currentSlideData.content.map((line, index) => (
+                <p key={index} className="text-base sm:text-lg lg:text-xl text-slate-600 mb-2 animate-fade-in-up" style={{ animationDelay: `${(index + 1) * 0.2}s` }}>
+                  {line}
+                </p>
+              ))}
+            </div>
+          </div>
+        );
+      
+      case 'key-points':
+        return (
+          <div className="w-full h-full flex flex-col justify-center">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-800 mb-4 text-center animate-fade-in-up">
+                {currentSlideData.title}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3">
+                {currentSlideData.content.map((point, index) => (
+                  <div key={index} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-3 sm:p-4 border border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-slide-in-left" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <div className="flex items-start space-x-2">
+                      <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-md">
+                        <span className="text-white text-xs sm:text-sm font-bold">{index + 1}</span>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm sm:text-base lg:text-lg text-slate-800 leading-relaxed font-semibold">
+                          {point}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      
+      case 'content':
+        return (
+          <div className="w-full h-full flex flex-col justify-center">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-800 mb-4 text-center animate-fade-in-up">
+                {currentSlideData.title}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3">
+                {currentSlideData.content.map((line, index) => (
+                  <div key={index} className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-3 sm:p-4 border border-indigo-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-slide-in-right" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <p className="text-sm sm:text-base lg:text-lg text-slate-800 leading-relaxed font-semibold">
+                      {line}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      
+      case 'process':
+        return (
+          <div className="w-full h-full flex flex-col justify-center">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-800 mb-4 text-center animate-fade-in-up">
+                {currentSlideData.title}
+              </h2>
+              <div className="space-y-3 sm:space-y-4">
+                {currentSlideData.content.map((step, index) => (
+                  <div key={index} className="flex items-start space-x-3 sm:space-x-4 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-white text-xs sm:text-sm font-bold">{index + 1}</span>
+                    </div>
+                    <div className="flex-1 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-2 sm:p-3 border border-slate-200 shadow-md">
+                      <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
+                        {step}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      
+      case 'comparison':
+        return (
+          <div className="w-full h-full flex flex-col justify-center">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-800 mb-4 text-center animate-fade-in-up">
+                {currentSlideData.title}
+              </h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
+                {currentSlideData.content.map((item, index) => (
+                  <div key={index} className="group relative overflow-hidden rounded-xl p-3 sm:p-4 bg-gradient-to-br from-slate-50 to-gray-100 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up" style={{ animationDelay: `${index * 0.15}s` }}>
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">{index + 1}</span>
+                      </div>
+                      <h3 className="text-xs sm:text-sm font-semibold text-slate-800">Punto Clave</h3>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      
+      case 'timeline':
+        return (
+          <div className="w-full h-full flex flex-col justify-center">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-800 mb-4 text-center animate-fade-in-up">
+                {currentSlideData.title}
+              </h2>
+              <div className="space-y-3 sm:space-y-4">
+                {currentSlideData.content.map((item, index) => (
+                  <div key={index} className="flex items-start space-x-3 sm:space-x-4 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+                      <span className="text-white text-xs sm:text-sm font-bold">{index + 1}</span>
+                    </div>
+                    <div className="flex-1 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-2 sm:p-3 border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300">
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
+                        {item}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      
+      default:
+        return null;
+    }
+  };
 
   const nextSlide = () => {
     if (currentSlide < slides.length - 1) {
@@ -667,298 +390,14 @@ const Module2Presentation: React.FC = () => {
         } else {
           setIsAutoPlay(false);
         }
-      }, 8000);
+      }, 5000);
     }
     return () => {
-      if (interval) clearInterval(interval);
+      if (interval) {
+        clearInterval(interval);
+      }
     };
   }, [isAutoPlay, currentSlide]);
-
-  const getSlideContent = () => {
-    switch (currentSlideData.type) {
-      case 'hero':
-        return (
-          <div className="w-full h-full flex flex-col justify-center items-center text-center">
-            <div className="relative max-w-5xl">
-              {/* Background decorative elements */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-80 h-80 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse-slow"></div>
-              </div>
-              
-              {/* Main content */}
-              <div className="relative z-10">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-slate-800 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6 animate-fade-in-up">
-                  {currentSlideData.title}
-                </h1>
-                <div className="max-w-4xl mx-auto">
-                  {currentSlideData.content.map((line, index) => (
-                    <p key={index} className="text-lg sm:text-xl lg:text-2xl text-slate-600 mb-3 sm:mb-4 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
-                      {line}
-                    </p>
-                  ))}
-                </div>
-                
-                {/* Decorative icons */}
-                <div className="flex justify-center space-x-6 mt-6 sm:mt-8">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow">
-                    <span className="text-white text-lg sm:text-xl">🧲</span>
-                  </div>
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow" style={{ animationDelay: '0.5s' }}>
-                    <span className="text-white text-lg sm:text-xl">👶</span>
-                  </div>
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow" style={{ animationDelay: '1s' }}>
-                    <span className="text-white text-lg sm:text-xl">💫</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-      
-      case 'title':
-        return (
-          <div className="w-full h-full flex flex-col justify-center items-center text-center">
-            <div className="max-w-5xl">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 mb-6 animate-fade-in-up">
-                {currentSlideData.title}
-              </h1>
-              {currentSlideData.content.map((line, index) => (
-                <p key={index} className="text-lg sm:text-xl lg:text-2xl text-slate-600 mb-3 animate-fade-in-up" style={{ animationDelay: `${(index + 1) * 0.2}s` }}>
-                  {line}
-                </p>
-              ))}
-            </div>
-          </div>
-        );
-      
-      case 'key-points':
-        return (
-          <div className="w-full h-full flex flex-col justify-center">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-6 text-center animate-fade-in-up">
-                {currentSlideData.title}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-              {currentSlideData.content.map((point, index) => {
-                const colorSchemes = [
-                  { bg: 'from-blue-50 to-indigo-50', border: 'border-blue-200', circle: 'from-blue-500 to-indigo-600', text: 'text-slate-800' },
-                  { bg: 'from-green-50 to-emerald-50', border: 'border-green-200', circle: 'from-green-500 to-emerald-600', text: 'text-slate-800' },
-                  { bg: 'from-purple-50 to-pink-50', border: 'border-purple-200', circle: 'from-purple-500 to-pink-600', text: 'text-slate-800' },
-                  { bg: 'from-amber-50 to-orange-50', border: 'border-amber-200', circle: 'from-amber-500 to-orange-600', text: 'text-slate-800' },
-                  { bg: 'from-teal-50 to-cyan-50', border: 'border-teal-200', circle: 'from-teal-500 to-cyan-600', text: 'text-slate-800' },
-                  { bg: 'from-rose-50 to-red-50', border: 'border-rose-200', circle: 'from-rose-500 to-red-600', text: 'text-slate-800' },
-                  { bg: 'from-indigo-50 to-blue-50', border: 'border-indigo-200', circle: 'from-indigo-500 to-blue-600', text: 'text-slate-800' },
-                  { bg: 'from-emerald-50 to-green-50', border: 'border-emerald-200', circle: 'from-emerald-500 to-green-600', text: 'text-slate-800' }
-                ];
-                const colorScheme = colorSchemes[index % colorSchemes.length];
-                
-                return (
-                  <div key={index} className={`bg-gradient-to-br ${colorScheme.bg} rounded-xl p-4 sm:p-6 border ${colorScheme.border} shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-slide-in-left`} style={{ animationDelay: `${index * 0.1}s` }}>
-                    <div className="flex items-start space-x-3">
-                      <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br ${colorScheme.circle} rounded-full flex items-center justify-center shadow-md`}>
-                        <span className="text-white text-sm sm:text-base font-bold">{index + 1}</span>
-                      </div>
-                      <div className="flex-1">
-                        <p className={`text-base sm:text-lg lg:text-xl ${colorScheme.text} leading-relaxed font-semibold`}>
-                          {point}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        );
-      
-      case 'content':
-        return (
-          <div className="w-full h-full flex flex-col justify-center">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-6 text-center animate-fade-in-up">
-                {currentSlideData.title}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-              {currentSlideData.content.map((line, index) => {
-                const colorSchemes = [
-                  { bg: 'from-indigo-50 to-purple-50', border: 'border-indigo-200', text: 'text-slate-800' },
-                  { bg: 'from-pink-50 to-rose-50', border: 'border-pink-200', text: 'text-slate-800' },
-                  { bg: 'from-cyan-50 to-blue-50', border: 'border-cyan-200', text: 'text-slate-800' },
-                  { bg: 'from-emerald-50 to-teal-50', border: 'border-emerald-200', text: 'text-slate-800' },
-                  { bg: 'from-orange-50 to-amber-50', border: 'border-orange-200', text: 'text-slate-800' },
-                  { bg: 'from-violet-50 to-purple-50', border: 'border-violet-200', text: 'text-slate-800' }
-                ];
-                const colorScheme = colorSchemes[index % colorSchemes.length];
-                
-                return (
-                  <div key={index} className={`bg-gradient-to-br ${colorScheme.bg} rounded-xl p-4 sm:p-6 border ${colorScheme.border} shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-slide-in-right`} style={{ animationDelay: `${index * 0.1}s` }}>
-                    <p className={`text-base sm:text-lg lg:text-xl ${colorScheme.text} leading-relaxed font-semibold`}>
-                      {line}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        );
-      
-      case 'process':
-        return (
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-8 text-center animate-fade-in-up">
-              {currentSlideData.title}
-            </h2>
-            <div className="space-y-6 sm:space-y-8">
-              {currentSlideData.content.map((step, index) => (
-                <div key={index} className="flex items-start space-x-4 sm:space-x-6 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
-                  {/* Step number */}
-                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-                    <span className="text-white text-lg sm:text-xl font-bold">{index + 1}</span>
-                  </div>
-                  
-                  {/* Step content */}
-                  <div className="flex-1 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-4 sm:p-6 border border-slate-200 shadow-md">
-                    <p className="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed font-medium">
-                      {step}
-                    </p>
-                  </div>
-                  
-                  {/* Connecting line */}
-                  {index < currentSlideData.content.length - 1 && (
-                    <div className="absolute left-6 sm:left-8 w-0.5 h-12 sm:h-16 bg-gradient-to-b from-blue-500 to-indigo-600 ml-6 sm:ml-8"></div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        );
-      
-      case 'comparison':
-        return (
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-8 text-center animate-fade-in-up">
-              {currentSlideData.title}
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-              {currentSlideData.content.map((item, index) => (
-                <div key={index} className="group relative overflow-hidden rounded-2xl p-6 sm:p-8 bg-gradient-to-br from-slate-50 to-gray-100 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up" style={{ animationDelay: `${index * 0.15}s` }}>
-                  {/* Background pattern */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Content */}
-                  <div className="relative z-10">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm sm:text-base font-bold">{index + 1}</span>
-                      </div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800">Punto Clave</h3>
-                    </div>
-                    <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-                      {item}
-                    </p>
-                  </div>
-                  
-                  {/* Hover effect */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        );
-      
-      case 'timeline':
-        return (
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-8 text-center animate-fade-in-up">
-              {currentSlideData.title}
-            </h2>
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
-              
-              <div className="space-y-6 sm:space-y-8">
-                {currentSlideData.content.map((item, index) => (
-                  <div key={index} className="flex items-start space-x-6 sm:space-x-8 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
-                    {/* Timeline dot */}
-                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
-                      <span className="text-white text-lg sm:text-xl font-bold">{index + 1}</span>
-                    </div>
-                    
-                    {/* Content card */}
-                    <div className="flex-1 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-4 sm:p-6 border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300">
-                      <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
-                        {item}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        );
-      
-      case 'summary':
-        return (
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-8 text-center animate-fade-in-up">
-              {currentSlideData.title}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-              {currentSlideData.content.map((point, index) => (
-                <div key={index} className="group relative overflow-hidden animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
-                  {point.startsWith('•') ? (
-                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 sm:p-8 border border-green-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
-                      {/* Background pattern */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-green-100/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      
-                      {/* Content */}
-                      <div className="relative z-10">
-                        <div className="flex items-center space-x-3 mb-4">
-                          <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
-                            <span className="text-white text-sm font-bold">✓</span>
-                          </div>
-                          <h3 className="text-lg font-semibold text-green-800">Herramienta</h3>
-                        </div>
-                        <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
-                          {point}
-                        </p>
-                      </div>
-                      
-                      {/* Hover effect */}
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                    </div>
-                  ) : (
-                    <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 sm:p-8 border border-amber-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
-                      {/* Background pattern */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-amber-100/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      
-                      {/* Content */}
-                      <div className="relative z-10">
-                        <div className="flex items-center space-x-3 mb-4">
-                          <div className="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center">
-                            <span className="text-white text-sm font-bold">⭐</span>
-                          </div>
-                          <h3 className="text-lg font-semibold text-amber-800">Beneficio</h3>
-                        </div>
-                        <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
-                          {point}
-                        </p>
-                      </div>
-                      
-                      {/* Hover effect */}
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        );
-      
-      default:
-        return null;
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
@@ -1035,15 +474,6 @@ const Module2Presentation: React.FC = () => {
           >
             <ChevronRight size={20} className="sm:w-6 sm:h-6 md:w-6 md:h-6" />
           </button>
-
-          {/* Keyboard Shortcuts Info */}
-          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-2 text-white text-xs sm:text-sm opacity-60 hover:opacity-100 transition-opacity duration-300">
-            <div className="flex items-center space-x-4">
-              <span>← → Navegar</span>
-              <span>Espacio Siguiente</span>
-              <span>Esc Salir</span>
-            </div>
-          </div>
 
           {/* Bottom Navigation */}
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/90 to-transparent p-3 sm:p-4 md:p-6">

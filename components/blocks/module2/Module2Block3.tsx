@@ -7,7 +7,7 @@ const Module2Block3: React.FC = () => {
   const { t } = useTranslation();
   
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 w-full overflow-hidden">
       <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
         <h2 className="text-xl font-semibold text-slate-700 mb-3">Objetivo del Bloque</h2>
         <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -16,11 +16,11 @@ const Module2Block3: React.FC = () => {
         </p>
       </section>
 
-      <CourseSection title="BLOQUE 3: FUNDAMENTOS TEÓRICOS" icon={<BookOpen />}>
+      <CourseSection title="Fundamentos Teóricos" icon={<BookOpen />}>
         <div className="space-y-8">
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">La Gran Transformación: De Bebé a Niño</h3>
-            <p className="text-slate-700 leading-relaxed text-lg">
+            <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">La Gran Transformación: De Bebé a Niño</h3>
+            <p className="text-slate-700 leading-relaxed text-base break-words">
               Entre los 18 meses y 3 años ocurre una revolución silenciosa. El bebé que dependía completamente 
               de otros ahora quiere hacerlo todo solo. Su cerebro está desarrollando el concepto de "yo", 
               y con eso viene una necesidad imperiosa de control y autonomía. Los "terribles dos años" no son 
@@ -61,8 +61,8 @@ const Module2Block3: React.FC = () => {
           </div>
 
           <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">El Desarrollo del Lenguaje y la Frustración</h3>
-            <p className="text-slate-700 leading-relaxed text-lg">
+            <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">El Desarrollo del Lenguaje y la Frustración</h3>
+            <p className="text-slate-700 leading-relaxed text-base break-words">
               Esta etapa presenta una paradoja fascinante: el niño sabe exactamente lo que quiere, pero aún 
               no tiene las palabras para expresarlo. Su comprensión supera por mucho su capacidad de expresión, 
               creando una brecha frustrante que puede manifestarse como berrinches, regresiones o incluso 
@@ -112,7 +112,7 @@ const Module2Block3: React.FC = () => {
 
       <CourseSection title="Guía de Intervención Inmediata" icon={<Table />}>
         <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-          <h3 className="text-2xl font-bold text-slate-800 mb-4">Protocolo de Emergencia para Berrinches</h3>
+          <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">Protocolo de Emergencia para Berrinches</h3>
           <p className="text-slate-700 leading-relaxed text-lg mb-6">
             Cuando te encuentres con un berrinche activo, aquí tienes un protocolo de emergencia 
             que ha demostrado ser efectivo en miles de casos:
@@ -210,7 +210,7 @@ const Module2Block3: React.FC = () => {
       <CourseSection title="Reflexión Final" icon={<Sparkles />}>
         <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-8 shadow-md border-l-4 border-slate-200 text-center">
           <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">Los Berrinches Como Maestros</h3>
+            <h3 className="text-xl font-bold text-slate-800 mb-4 break-words">Los Berrinches Como Maestros</h3>
             <p className="text-slate-700 leading-relaxed text-lg mb-6">
               Esta etapa nos enseña que los berrinches no son el enemigo - son el síntoma. Detrás de cada 
               explosión emocional hay un niño pequeño tratando de comunicar algo importante. Nuestro trabajo 
