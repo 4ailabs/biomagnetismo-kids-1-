@@ -8,10 +8,10 @@ const SystemicOrder: React.FC = () => {
   
   return (
     <div className="space-y-12">
-      <section className="bg-slate-600 text-white rounded-xl shadow-lg p-8 text-center ring-4 ring-slate-200 ring-offset-4 ring-offset-slate-50">
-        <UserGroupIcon className="w-16 h-16 mx-auto mb-4" />
-        <h2 className="text-3xl font-bold mb-3">{t('systemicOrder.title')}</h2>
-        <p className="text-lg max-w-4xl mx-auto font-light">
+      <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
+        <UserGroupIcon className="w-12 h-12 mx-auto mb-4 text-slate-600" />
+        <h2 className="text-xl font-semibold text-slate-700 mb-3">{t('systemicOrder.title')}</h2>
+        <p className="text-base text-slate-600 max-w-4xl mx-auto leading-relaxed">
           {t('systemicOrder.intro')}
         </p>
       </section>
@@ -28,7 +28,7 @@ const SystemicOrder: React.FC = () => {
         <div className="space-y-8">
           
           {/* Primer Hijo */}
-          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 border-l-4 border-blue-400">
+          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">{t('systemicOrder.positions.firstChild.title')}</h3>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -60,7 +60,7 @@ const SystemicOrder: React.FC = () => {
           </div>
 
           {/* Segundo Hijo */}
-          <div className="bg-gradient-to-r from-green-50 to-slate-50 rounded-2xl p-6 border-l-4 border-green-400">
+          <div className="bg-gradient-to-r from-green-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">{t('systemicOrder.positions.secondChild.title')}</h3>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -92,7 +92,7 @@ const SystemicOrder: React.FC = () => {
           </div>
 
           {/* Hijos Posteriores */}
-          <div className="bg-gradient-to-r from-amber-50 to-slate-50 rounded-2xl p-6 border-l-4 border-amber-400">
+          <div className="bg-gradient-to-r from-amber-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">{t('systemicOrder.positions.laterChildren.title')}</h3>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -124,7 +124,7 @@ const SystemicOrder: React.FC = () => {
           </div>
 
           {/* Hijo Único */}
-          <div className="bg-gradient-to-r from-purple-50 to-slate-50 rounded-2xl p-6 border-l-4 border-purple-400">
+          <div className="bg-gradient-to-r from-purple-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">{t('systemicOrder.positions.onlyChild.title')}</h3>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -231,7 +231,7 @@ const SystemicOrder: React.FC = () => {
           </div>
 
           {/* Adopción */}
-          <div className="bg-gradient-to-r from-indigo-50 to-slate-50 rounded-2xl p-6 border-l-4 border-indigo-400">
+          <div className="bg-gradient-to-r from-indigo-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">{t('systemicOrder.specialSituations.adoption.title')}</h3>
             <p className="text-slate-700 leading-relaxed text-lg mb-6">
               {t('systemicOrder.specialSituations.adoption.description')}
@@ -271,7 +271,7 @@ const SystemicOrder: React.FC = () => {
         <div className="space-y-8">
           
           {/* Evaluación */}
-          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 border-l-4 border-slate-400">
+          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">{t('systemicOrder.therapeuticApproach.assessment.title')}</h3>
             <div className="space-y-4">
               {(t('systemicOrder.therapeuticApproach.assessment.steps', { returnObjects: true }) as string[]).map((step: string, index: number) => (
@@ -288,7 +288,7 @@ const SystemicOrder: React.FC = () => {
           </div>
 
           {/* Intervención */}
-          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 border-l-4 border-blue-400">
+          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">{t('systemicOrder.therapeuticApproach.intervention.title')}</h3>
             <div className="space-y-3">
               {(t('systemicOrder.therapeuticApproach.intervention.protocol', { returnObjects: true }) as string[]).map((step: string, index: number) => (
@@ -305,7 +305,7 @@ const SystemicOrder: React.FC = () => {
         <div className="space-y-8">
           
           {/* Frases para Primer Hijo */}
-          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 border-l-4 border-blue-300">
+          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-xl font-bold text-slate-800 mb-4">Frases Sanadoras para el Primer Hijo</h3>
             <div className="space-y-3">
               {(t('systemicOrder.therapeuticApproach.phrases.firstChild', { returnObjects: true }) as string[]).map((phrase: string, index: number) => (
@@ -317,7 +317,7 @@ const SystemicOrder: React.FC = () => {
           </div>
 
           {/* Frases para Segundo Hijo */}
-          <div className="bg-gradient-to-r from-green-50 to-slate-50 rounded-2xl p-6 border-l-4 border-green-300">
+          <div className="bg-gradient-to-r from-green-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-xl font-bold text-slate-800 mb-4">Frases Sanadoras para el Segundo Hijo</h3>
             <div className="space-y-3">
               {(t('systemicOrder.therapeuticApproach.phrases.secondChild', { returnObjects: true }) as string[]).map((phrase: string, index: number) => (
@@ -341,7 +341,7 @@ const SystemicOrder: React.FC = () => {
           </div>
 
           {/* Nota Final */}
-          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 border-l-4 border-slate-400 text-center">
+          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200 text-center">
             <h3 className="text-xl font-bold text-slate-800 mb-4">Recordatorio Fundamental</h3>
             <p className="text-slate-700 leading-relaxed text-lg">
               El trabajo sistémico requiere honrar a todos los miembros del sistema, especialmente a los excluidos. 

@@ -8,10 +8,10 @@ const VitalSensationsModule2: React.FC = () => {
   
   return (
     <div className="space-y-12">
-      <section className="bg-slate-600 text-white rounded-xl shadow-lg p-8 text-center ring-4 ring-slate-200 ring-offset-4 ring-offset-slate-50">
-        <HeartIcon className="w-16 h-16 mx-auto mb-4" />
-        <h2 className="text-3xl font-bold mb-3">{t('vitalSensationsModule2.title')}</h2>
-        <p className="text-lg max-w-4xl mx-auto font-light">
+      <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
+        <HeartIcon className="w-12 h-12 mx-auto mb-4 text-slate-600" />
+        <h2 className="text-xl font-semibold text-slate-700 mb-3">{t('vitalSensationsModule2.title')}</h2>
+        <p className="text-base text-slate-600 max-w-4xl mx-auto leading-relaxed">
           {t('vitalSensationsModule2.intro')}
         </p>
       </section>
@@ -23,7 +23,7 @@ const VitalSensationsModule2: React.FC = () => {
           </p>
 
           {/* 3-9 meses - Etapa del Apego */}
-          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 border-l-4 border-blue-300">
+          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">{t('vitalSensationsModule2.byStage.attachment.title')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {(t('vitalSensationsModule2.byStage.attachment.sensations', { returnObjects: true }) as string[]).map((sensation: string, index: number) => {
@@ -41,7 +41,7 @@ const VitalSensationsModule2: React.FC = () => {
           </div>
 
           {/* 9-18 meses - Etapa de Exploración */}
-          <div className="bg-gradient-to-r from-green-50 to-slate-50 rounded-2xl p-6 border-l-4 border-green-300">
+          <div className="bg-gradient-to-r from-green-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">{t('vitalSensationsModule2.byStage.exploration.title')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {(t('vitalSensationsModule2.byStage.exploration.sensations', { returnObjects: true }) as string[]).map((sensation: string, index: number) => {
@@ -59,7 +59,7 @@ const VitalSensationsModule2: React.FC = () => {
           </div>
 
           {/* 18 meses-3 años - Etapa de Autonomía */}
-          <div className="bg-gradient-to-r from-amber-50 to-slate-50 rounded-2xl p-6 border-l-4 border-amber-300">
+          <div className="bg-gradient-to-r from-amber-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">{t('vitalSensationsModule2.byStage.autonomy.title')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {(t('vitalSensationsModule2.byStage.autonomy.sensations', { returnObjects: true }) as string[]).map((sensation: string, index: number) => {
@@ -77,7 +77,7 @@ const VitalSensationsModule2: React.FC = () => {
           </div>
 
           {/* 3-5 años - Etapa de Iniciativa */}
-          <div className="bg-gradient-to-r from-purple-50 to-slate-50 rounded-2xl p-6 border-l-4 border-purple-300">
+          <div className="bg-gradient-to-r from-purple-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">{t('vitalSensationsModule2.byStage.initiative.title')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {(t('vitalSensationsModule2.byStage.initiative.sensations', { returnObjects: true }) as string[]).map((sensation: string, index: number) => {
@@ -95,7 +95,7 @@ const VitalSensationsModule2: React.FC = () => {
           </div>
 
           {/* Transversales */}
-          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 border-l-4 border-slate-400">
+          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">{t('vitalSensationsModule2.byStage.transversal.title')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {(t('vitalSensationsModule2.byStage.transversal.sensations', { returnObjects: true }) as string[]).map((sensation: string, index: number) => {
@@ -113,7 +113,7 @@ const VitalSensationsModule2: React.FC = () => {
           </div>
 
           {/* Nota importante */}
-          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 border-l-4 border-blue-400">
+          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-xl font-bold text-slate-800 mb-4">Aplicación Terapéutica</h3>
             <p className="text-slate-700 leading-relaxed">
               Cada una de estas sensaciones vitales tiene correlación directa con puntos corporales específicos 

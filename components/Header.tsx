@@ -31,7 +31,7 @@ const Header: React.FC = () => {
 
         {/* Botón Volver al Inicio - solo visible cuando estamos en un módulo */}
         {isInModule && (
-          <div className="absolute top-2 sm:top-3 lg:top-4 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="absolute top-2 sm:top-3 lg:top-4 left-2 sm:left-3 lg:left-4 z-10">
             <Link 
               to="/"
               className="inline-flex items-center px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-slate-500 to-slate-600 text-white text-xs sm:text-sm font-medium rounded-md sm:rounded-lg hover:from-slate-600 hover:to-slate-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
@@ -41,6 +41,22 @@ const Header: React.FC = () => {
               </svg>
               <span className="hidden sm:inline">Volver al Inicio</span>
               <span className="sm:hidden">Inicio</span>
+            </Link>
+          </div>
+        )}
+        
+        {/* Botón de Diapositivas - solo visible cuando estamos en el Módulo 2 */}
+        {isInModule && activeModule === 2 && (
+          <div className="absolute top-2 sm:top-3 lg:top-4 right-2 sm:right-3 lg:right-4 z-10">
+            <Link 
+              to="/presentation-modulo2"
+              className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 bg-white/80 backdrop-blur-sm text-slate-600 text-xs sm:text-sm font-medium rounded-md sm:rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50"
+            >
+              <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <span className="hidden sm:inline">Diapositivas</span>
+              <span className="sm:hidden">Slides</span>
             </Link>
           </div>
         )}

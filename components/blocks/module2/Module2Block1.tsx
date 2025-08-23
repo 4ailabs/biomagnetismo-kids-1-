@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
 import CourseSection from '../../CourseSection';
-import { BookOpenIcon, UserGroupIcon, BeakerIcon, LightBulbIcon, SparklesIcon, TableCellsIcon } from '../../icons';
+import { BookOpen, Users, Beaker, Lightbulb, Sparkles, Table } from 'lucide-react';
 import Module2ConflictTable from '../../Module2ConflictTable';
 import { MODULE2_CONFLICTS_DATA } from '../../../constants';
 
@@ -9,18 +9,18 @@ const Module2Block1 = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="space-y-6 sm:space-y-8 lg:space-y-12">
-      <section className="bg-slate-600 text-white rounded-lg sm:rounded-xl lg:rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 text-center ring-2 sm:ring-4 ring-slate-200 ring-offset-2 sm:ring-offset-4 ring-offset-slate-50">
-        <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold mb-2 sm:mb-3">Objetivo del Bloque</h2>
-        <p className="text-sm sm:text-base lg:text-lg max-w-2xl sm:max-w-3xl mx-auto font-light leading-relaxed">
+    <div className="space-y-12">
+      <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
+        <h2 className="text-xl font-semibold text-slate-700 mb-3">Objetivo del Bloque</h2>
+        <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Comprender cómo los conflictos biológicos gestacionales continúan manifestándose en la primera infancia (3m-5a), aprendiendo a identificar los 8 conflictos fundamentales y aplicar técnicas biomagnéticas específicas para cada rango de edad.
         </p>
       </section>
 
-      <CourseSection title="Fundamentos Teóricos" icon={<BookOpenIcon />}>
+      <CourseSection title="Fundamentos Teóricos" icon={<BookOpen />}>
         <div className="space-y-8">
           {/* Primera sección - fluida sin numeración */}
-          <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl p-6 border-l-4 border-pink-400">
+          <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
                             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-pink-800 mb-3 sm:mb-4">La Historia Continúa Después del Nacimiento</h3>
             <p className="text-slate-700 leading-relaxed text-sm sm:text-base lg:text-lg">
               Imagina que el nacimiento no es el final de una historia, sino el comienzo de un nuevo capítulo.
@@ -37,7 +37,7 @@ const Module2Block1 = () => {
           </div>
           
           {/* Segunda sección - conflictos explicados de forma atractiva */}
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border-l-4 border-blue-400">
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
                             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-800 mb-4 sm:mb-6">Los 8 Grandes Conflictos de la Infancia</h3>
             <p className="text-slate-700 leading-relaxed text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">
               Después de años de observación clínica, hemos identificado 8 patrones universales que
@@ -82,7 +82,7 @@ const Module2Block1 = () => {
           </div>
           
           {/* Tercera sección - principios explicados de forma humana */}
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 border-l-4 border-green-400">
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
                             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-800 mb-3 sm:mb-4">Por Qué Funciona el Biomagnetismo en Niños</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
@@ -118,12 +118,12 @@ const Module2Block1 = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Conflictos Biológicos y Pares Biomagnéticos (3m-5a)" icon={<TableCellsIcon />}>
+      <CourseSection title="Conflictos Biológicos y Pares Biomagnéticos (3m-5a)" icon={<Table />}>
         <Module2ConflictTable data={MODULE2_CONFLICTS_DATA} />
       </CourseSection>
 
-      <CourseSection title="Tu Mapa de Navegación: Cómo Rastrear en Primera Infancia" icon={<BeakerIcon />}>
-        <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-6 border-l-4 border-purple-400">
+      <CourseSection title="Tu Mapa de Navegación: Cómo Rastrear en Primera Infancia" icon={<Beaker />}>
+        <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
           <p className="text-slate-700 leading-relaxed text-sm sm:text-base lg:text-lg mb-6 sm:mb-8">
             Trabajar con niños requiere un enfoque diferente al de los adultos. Aquí tienes una guía paso a paso
             que hemos perfeccionado después de miles de consultas pediátricas:
@@ -217,10 +217,10 @@ const Module2Block1 = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Historias Reales: Cuando el Cuerpo Encuentra su Voz" icon={<LightBulbIcon />}>
+      <CourseSection title="Historias Reales: Cuando el Cuerpo Encuentra su Voz" icon={<Lightbulb />}>
         <div className="space-y-6">
           {/* Caso 1 - Narrativo */}
-          <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl p-6 border-l-4 border-pink-400">
+          <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <div className="flex items-start space-x-3 sm:space-x-4">
                               <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-slate-200 rounded-full flex items-center justify-center">
                                   <span className="text-slate-700 font-bold text-sm sm:text-base lg:text-lg">S</span>
@@ -245,7 +245,7 @@ const Module2Block1 = () => {
           </div>
           
           {/* Caso 2 - Narrativo */}
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border-l-4 border-blue-400">
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <div className="flex items-start space-x-3 sm:space-x-4">
                               <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-slate-200 rounded-full flex items-center justify-center">
                                   <span className="text-slate-700 font-bold text-sm sm:text-base lg:text-lg">D</span>
@@ -271,8 +271,8 @@ const Module2Block1 = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Reflexión Final" icon={<SparklesIcon />}>
-        <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 border-l-4 border-amber-400 text-center">
+      <CourseSection title="Reflexión Final" icon={<Sparkles />}>
+        <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 shadow-md border-l-4 border-slate-200 text-center">
           <div className="max-w-3xl mx-auto">
                           <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-amber-800 mb-3 sm:mb-4">Tu Nueva Mirada</h3>
             <p className="text-slate-700 leading-relaxed text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">

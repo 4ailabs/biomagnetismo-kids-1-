@@ -8,9 +8,9 @@ import { BookOpenIcon, TableCellsIcon, BeakerIcon, LightBulbIcon, HeartIcon } fr
 const Block3: React.FC = () => {
     return (
         <div className="space-y-12">
-            <section className="bg-teal-600 text-white rounded-xl shadow-lg p-8 text-center ring-4 ring-teal-200 ring-offset-4 ring-offset-slate-50">
-                <h2 className="text-3xl font-bold mb-3">Objetivo del Bloque</h2>
-                <p className="text-lg max-w-3xl mx-auto font-light">
+            <section className="bg-slate-100 text-slate-700 rounded-lg sm:rounded-xl lg:rounded-xl shadow-sm p-3 sm:p-4 lg:p-6 text-center border border-slate-200">
+                <h2 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3">Objetivo del Bloque</h2>
+                <p className="text-sm sm:text-base max-w-2xl sm:max-w-3xl mx-auto leading-relaxed">
                     Comprender, identificar y equilibrar los desequilibrios energéticos más frecuentes en los bebés durante su primer mes de vida, aplicando la lógica del Biomagnetismo de forma segura y adaptada a esta etapa.
                 </p>
             </section>

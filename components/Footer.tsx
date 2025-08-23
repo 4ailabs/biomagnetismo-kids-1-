@@ -1,9 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useModule } from '../src/contexts/ModuleContext';
 import PresentationIcon from './icons/PresentationIcon';
 
 const Footer: React.FC = () => {
     const { t } = useTranslation();
+    const { activeModule } = useModule();
     
     return (
         <footer className="relative bg-white/80 backdrop-blur-md mt-12 sm:mt-16 border-t border-white/20 shadow-lg">
@@ -43,12 +45,15 @@ const Footer: React.FC = () => {
                         <p className="text-slate-500 text-xs">{t('footer.author.website')}</p>
                     </div>
                     
-                    {/* Hidden Presentation Button */}
+                    {/* Dynamic Presentation Button */}
                     <div className="mt-4 flex justify-center">
                         <button
-                            onClick={() => window.open('/presentation', '_blank')}
+                            onClick={() => {
+                                const presentationUrl = activeModule === 2 ? '/presentation-modulo2' : '/presentation';
+                                window.open(presentationUrl, '_blank');
+                            }}
                             className="flex items-center justify-center w-10 h-10 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-all duration-300 opacity-60 hover:opacity-100"
-                            title={t('header.presentation')}
+                            title={activeModule === 2 ? 'Diapositivas Módulo 2' : t('header.presentation')}
                         >
                             <PresentationIcon className="w-5 h-5" />
                         </button>

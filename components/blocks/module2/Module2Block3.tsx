@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { BookOpenIcon, TableCellsIcon, BeakerIcon, LightBulbIcon, SparklesIcon } from '../../icons';
+import { BookOpen, Table, Beaker, Lightbulb, Sparkles } from 'lucide-react';
 import CourseSection from '../../CourseSection';
 
 const Module2Block3: React.FC = () => {
@@ -8,17 +8,17 @@ const Module2Block3: React.FC = () => {
   
   return (
     <div className="space-y-12">
-      <section className="bg-slate-600 text-white rounded-xl shadow-lg p-8 text-center ring-4 ring-slate-200 ring-offset-4 ring-offset-slate-50">
-        <h2 className="text-3xl font-bold mb-3">Objetivo del Bloque</h2>
-        <p className="text-lg max-w-3xl mx-auto font-light">
+      <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
+        <h2 className="text-xl font-semibold text-slate-700 mb-3">Objetivo del Bloque</h2>
+        <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Aprender a manejar la etapa más desafiante de la primera infancia (18 meses-3 años) usando biomagnetismo 
           para equilibrar berrinches, desarrollar autonomía saludable y facilitar el desarrollo del lenguaje.
         </p>
       </section>
 
-      <CourseSection title="Fundamentos Teóricos" icon={<BookOpenIcon />}>
+      <CourseSection title="Fundamentos Teóricos" icon={<BookOpen />}>
         <div className="space-y-8">
-          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 border-l-4 border-slate-400">
+          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">La Gran Transformación: De Bebé a Niño</h3>
             <p className="text-slate-700 leading-relaxed text-lg">
               Entre los 18 meses y 3 años ocurre una revolución silenciosa. El bebé que dependía completamente 
@@ -33,7 +33,7 @@ const Module2Block3: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 border-l-4 border-blue-300">
+          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">Entendiendo los Berrinches Desde el Biomagnetismo</h3>
             <p className="text-slate-700 leading-relaxed text-lg mb-6">
               Un berrinche no es simplemente "mal comportamiento". Es una descarga energética intensa cuando el 
@@ -60,7 +60,7 @@ const Module2Block3: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 border-l-4 border-gray-400">
+          <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">El Desarrollo del Lenguaje y la Frustración</h3>
             <p className="text-slate-700 leading-relaxed text-lg">
               Esta etapa presenta una paradoja fascinante: el niño sabe exactamente lo que quiere, pero aún 
@@ -76,7 +76,7 @@ const Module2Block3: React.FC = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Pares Biomagnéticos para Berrinches y Autonomía" icon={<BeakerIcon />}>
+      <CourseSection title="Pares Biomagnéticos para Berrinches y Autonomía" icon={<Beaker />}>
         <div className="space-y-6">
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-xl p-6 border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Protocolo Anti-Berrinches (18m-3a)</h4>
@@ -110,9 +110,9 @@ const Module2Block3: React.FC = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Guía de Intervención Inmediata" icon={<TableCellsIcon />}>
-        <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 border-l-4 border-slate-400">
-          <h3 className="text-2xl font-bold text-slate-800 mb-4">Guía de Intervención Inmediata</h3>
+      <CourseSection title="Guía de Intervención Inmediata" icon={<Table />}>
+        <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
+          <h3 className="text-2xl font-bold text-slate-800 mb-4">Protocolo de Emergencia para Berrinches</h3>
           <p className="text-slate-700 leading-relaxed text-lg mb-6">
             Cuando te encuentres con un berrinche activo, aquí tienes un protocolo de emergencia 
             que ha demostrado ser efectivo en miles de casos:
@@ -161,35 +161,9 @@ const Module2Block3: React.FC = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Pares Biomagnéticos para Autonomía y Límites (18m-3a)" icon={<BeakerIcon />}>
+      <CourseSection title="Casos Clínicos Reales" icon={<Lightbulb />}>
         <div className="space-y-6">
-          <div className="bg-gradient-to-r from-violet-50 to-purple-50 rounded-xl p-6 border border-violet-200">
-            <h4 className="font-semibold text-violet-800 mb-4">Conflictos Biológicos Específicos de la Etapa</h4>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h5 className="font-medium text-violet-800 mb-3">Territorio/Autonomía</h5>
-                <ul className="list-disc list-inside space-y-2 text-violet-700">
-                  <li><strong>Hipotálamo (-) → Hipófisis (+):</strong> Equilibra el eje HPA y mejora autorregulación</li>
-                  <li><strong>Corteza Cingulada (-) → Insula (+):</strong> Restaura control emocional y conciencia corporal</li>
-                  <li><strong>Suprarrenal (-) → Plexo Solar (+):</strong> Calma la hiperactivación por frustración</li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-medium text-violet-800 mb-3">No ser escuchado/Comunicación</h5>
-                <ul className="list-disc list-inside space-y-2 text-violet-700">
-                  <li><strong>Temporal Izq (-) → Temporal Der (+):</strong> Equilibra sobrecarga neurosensorial</li>
-                  <li><strong>Lengua (-) → Hioides (+):</strong> Facilita desarrollo del lenguaje expresivo</li>
-                  <li><strong>Vago (-) → Cardíaco (+):</strong> Activa comunicación social y calma</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </CourseSection>
-
-      <CourseSection title="Casos Clínicos Reales" icon={<LightBulbIcon />}>
-        <div className="space-y-6">
-          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 border-l-4 border-slate-400">
+          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0 w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center">
                 <span className="text-slate-700 font-bold text-lg">M</span>
@@ -210,7 +184,7 @@ const Module2Block3: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 border-l-4 border-gray-400">
+          <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
                 <span className="text-slate-700 font-bold text-lg">L</span>
@@ -233,29 +207,8 @@ const Module2Block3: React.FC = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Casos Clínicos: Autonomía y Límites" icon={<LightBulbIcon />}>
-        <div className="space-y-4">
-          <div className="bg-violet-50 rounded-lg p-4 border border-violet-200">
-            <h5 className="font-semibold text-violet-800 mb-2">Caso 1: Niño de 2 años con berrinches extremos</h5>
-            <p className="text-violet-700 text-sm">
-              <strong>Presentación:</strong> Berrinches de 45+ minutos, autoagresión, imposible calmarlo con límites normales.
-              <strong>Conflicto:</strong> Territorio/Autonomía extrema. <strong>Intervención:</strong> Par Hipotálamo-Hipófisis + 
-              Corteza Cingulada-Insula. <strong>Resultado:</strong> Reducción significativa de intensidad y duración de berrinches.
-            </p>
-          </div>
-          <div className="bg-purple-50 rounded-lg p-4 border border-purple-200">
-            <h5 className="font-semibold text-purple-800 mb-2">Caso 2: Niña de 30 meses con retraso del lenguaje y frustración</h5>
-            <p className="text-purple-700 text-sm">
-              <strong>Presentación:</strong> Vocabulario de 20 palabras, no combina, berrinches por no poder comunicarse.
-              <strong>Conflicto:</strong> "No ser escuchado" + desarrollo del lenguaje. <strong>Intervención:</strong> Par Temporal Izq-Temporal Der + 
-              Lengua-Hioides. <strong>Resultado:</strong> Explosión de vocabulario, reducción de frustración comunicativa.
-            </p>
-          </div>
-        </div>
-      </CourseSection>
-
-      <CourseSection title="Reflexión Final" icon={<SparklesIcon />}>
-        <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-8 border-l-4 border-slate-400 text-center">
+      <CourseSection title="Reflexión Final" icon={<Sparkles />}>
+        <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-8 shadow-md border-l-4 border-slate-200 text-center">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">Los Berrinches Como Maestros</h3>
             <p className="text-slate-700 leading-relaxed text-lg mb-6">
@@ -275,13 +228,6 @@ const Module2Block3: React.FC = () => {
             </div>
           </div>
         </div>
-      </CourseSection>
-
-            <CourseSection title="Reflexión del Bloque 3" icon={<SparklesIcon />}>
-        <blockquote className="border-l-4 border-violet-500 pl-4 italic text-slate-800">
-          "La autonomía saludable nace del equilibrio entre la necesidad de control personal y la seguridad de los límites amorosos. 
-          El biomagnetismo armoniza esta aparente contradicción, permitiendo que el niño explore su poder personal desde la seguridad relacional."
-        </blockquote>
       </CourseSection>
     </div>
   );

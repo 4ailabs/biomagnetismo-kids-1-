@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import BlockSelector from './components/BlockSelector';
 import DynamicManual from './components/DynamicManual';
 import Presentation from './pages/Presentation';
+import Module2Presentation from './pages/Module2Presentation';
 import ModuleSelector from './components/ModuleSelector';
 import { ModuleProvider, useModuleFromRoute } from './src/contexts/ModuleContext';
 
@@ -153,6 +154,7 @@ const App: React.FC = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/modulo/:moduleId" element={<ModulePage />} />
         <Route path="/presentation" element={<Presentation />} />
+        <Route path="/presentation-modulo2" element={<Module2Presentation />} />
       </Routes>
     </ModuleProvider>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { BookOpenIcon, TableCellsIcon, BeakerIcon, LightBulbIcon, SparklesIcon } from '../../icons';
+import { BookOpen, Table, Beaker, Lightbulb, Sparkles } from 'lucide-react';
 import CourseSection from '../../CourseSection';
 
 const Module2Block5: React.FC = () => {
@@ -8,18 +8,18 @@ const Module2Block5: React.FC = () => {
   
   return (
     <div className="space-y-12">
-      <section className="bg-slate-600 text-white rounded-xl shadow-lg p-8 text-center ring-4 ring-slate-200 ring-offset-4 ring-offset-slate-50">
-        <h2 className="text-3xl font-bold mb-3">Objetivo del Bloque</h2>
-        <p className="text-lg max-w-3xl mx-auto font-light">
+      <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
+        <h2 className="text-xl font-semibold text-slate-700 mb-3">Objetivo del Bloque</h2>
+        <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Integrar todo el conocimiento del módulo en una visión práctica y coherente, estableciendo 
           protocolos biomagnéticos seguros para cada etapa evolutiva y preparando al terapeuta 
           para intervenir con confianza y precisión.
         </p>
       </section>
 
-      <CourseSection title="La Sinfonía del Desarrollo" icon={<BookOpenIcon />}>
+      <CourseSection title="La Sinfonía del Desarrollo" icon={<BookOpen />}>
         <div className="space-y-8">
-          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 border-l-4 border-slate-400">
+          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">El Hilo Conductor de los Primeros Años</h3>
             <p className="text-slate-700 leading-relaxed text-lg">
               Cada etapa que hemos explorado es como un movimiento en una sinfonía. No son episodios aislados, 
@@ -34,7 +34,7 @@ const Module2Block5: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 border-l-4 border-blue-300">
+          <div className="bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">El Mapa Completo del Viaje</h3>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -93,7 +93,7 @@ const Module2Block5: React.FC = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Protocolos Integrados por Edad" icon={<BeakerIcon />}>
+      <CourseSection title="Protocolos Integrados por Edad" icon={<Beaker />}>
         <div className="space-y-6">
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-xl p-6 border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">La Caja de Herramientas del Terapeuta Pediátrico</h4>
@@ -127,8 +127,8 @@ const Module2Block5: React.FC = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="La Mesa de Trabajo del Terapeuta" icon={<TableCellsIcon />}>
-        <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 border-l-4 border-slate-400">
+      <CourseSection title="La Mesa de Trabajo del Terapeuta" icon={<Table />}>
+        <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Checklist de la Sesión Perfecta</h3>
           <p className="text-slate-700 leading-relaxed text-lg mb-6">
             Una sesión efectiva con niños no depende de la técnica perfecta, sino de la preparación adecuada 
@@ -185,9 +185,9 @@ const Module2Block5: React.FC = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Casos Reales Integrados" icon={<LightBulbIcon />}>
+      <CourseSection title="Casos Reales Integrados" icon={<Lightbulb />}>
         <div className="space-y-6">
-          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 border-l-4 border-slate-400">
+          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0 w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center">
                 <span className="text-slate-700 font-bold text-lg">A</span>
@@ -211,8 +211,8 @@ const Module2Block5: React.FC = () => {
         </div>
       </CourseSection>
 
-      <CourseSection title="Tu Nuevo Comienzo" icon={<SparklesIcon />}>
-        <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-8 border-l-4 border-slate-400 text-center">
+      <CourseSection title="Tu Nuevo Comienzo" icon={<Sparkles />}>
+        <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-8 shadow-md border-l-4 border-slate-200 text-center">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">El Terapeuta que Ya Eres</h3>
             <p className="text-slate-700 leading-relaxed text-lg mb-6">
