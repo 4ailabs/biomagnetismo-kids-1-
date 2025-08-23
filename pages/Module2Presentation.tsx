@@ -678,36 +678,36 @@ const Module2Presentation: React.FC = () => {
     switch (currentSlideData.type) {
       case 'hero':
         return (
-          <div className="max-w-6xl mx-auto text-center">
-            <div className="relative">
+          <div className="w-full h-full flex flex-col justify-center items-center text-center">
+            <div className="relative max-w-5xl">
               {/* Background decorative elements */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-96 h-96 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse-slow"></div>
+                <div className="w-80 h-80 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse-slow"></div>
               </div>
               
               {/* Main content */}
               <div className="relative z-10">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-slate-800 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6 sm:mb-8 animate-fade-in-up">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-slate-800 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6 animate-fade-in-up">
                   {currentSlideData.title}
                 </h1>
                 <div className="max-w-4xl mx-auto">
                   {currentSlideData.content.map((line, index) => (
-                    <p key={index} className="text-xl sm:text-2xl lg:text-3xl text-slate-600 mb-4 sm:mb-6 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                    <p key={index} className="text-lg sm:text-xl lg:text-2xl text-slate-600 mb-3 sm:mb-4 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                       {line}
                     </p>
                   ))}
                 </div>
                 
                 {/* Decorative icons */}
-                <div className="flex justify-center space-x-8 mt-8 sm:mt-12">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow">
-                    <span className="text-white text-2xl">🧲</span>
+                <div className="flex justify-center space-x-6 mt-6 sm:mt-8">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow">
+                    <span className="text-white text-lg sm:text-xl">🧲</span>
                   </div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow" style={{ animationDelay: '0.5s' }}>
-                    <span className="text-white text-2xl">👶</span>
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow" style={{ animationDelay: '0.5s' }}>
+                    <span className="text-white text-lg sm:text-xl">👶</span>
                   </div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow" style={{ animationDelay: '1s' }}>
-                    <span className="text-white text-2xl">💫</span>
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow" style={{ animationDelay: '1s' }}>
+                    <span className="text-white text-lg sm:text-xl">💫</span>
                   </div>
                 </div>
               </div>
@@ -717,25 +717,28 @@ const Module2Presentation: React.FC = () => {
       
       case 'title':
         return (
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 mb-8 animate-fade-in-up">
-              {currentSlideData.title}
-            </h1>
-            {currentSlideData.content.map((line, index) => (
-              <p key={index} className="text-xl sm:text-2xl lg:text-3xl text-slate-600 mb-4 animate-fade-in-up" style={{ animationDelay: `${(index + 1) * 0.2}s` }}>
-                {line}
-              </p>
-            ))}
+          <div className="w-full h-full flex flex-col justify-center items-center text-center">
+            <div className="max-w-5xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 mb-6 animate-fade-in-up">
+                {currentSlideData.title}
+              </h1>
+              {currentSlideData.content.map((line, index) => (
+                <p key={index} className="text-lg sm:text-xl lg:text-2xl text-slate-600 mb-3 animate-fade-in-up" style={{ animationDelay: `${(index + 1) * 0.2}s` }}>
+                  {line}
+                </p>
+              ))}
+            </div>
           </div>
         );
       
       case 'key-points':
         return (
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-8 text-center animate-fade-in-up">
-              {currentSlideData.title}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div className="w-full h-full flex flex-col justify-center">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-6 text-center animate-fade-in-up">
+                {currentSlideData.title}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               {currentSlideData.content.map((point, index) => {
                 const colorSchemes = [
                   { bg: 'from-blue-50 to-indigo-50', border: 'border-blue-200', circle: 'from-blue-500 to-indigo-600', text: 'text-slate-800' },
@@ -770,11 +773,12 @@ const Module2Presentation: React.FC = () => {
       
       case 'content':
         return (
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-8 text-center animate-fade-in-up">
-              {currentSlideData.title}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div className="w-full h-full flex flex-col justify-center">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-6 text-center animate-fade-in-up">
+                {currentSlideData.title}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               {currentSlideData.content.map((line, index) => {
                 const colorSchemes = [
                   { bg: 'from-indigo-50 to-purple-50', border: 'border-indigo-200', text: 'text-slate-800' },
@@ -1008,9 +1012,11 @@ const Module2Presentation: React.FC = () => {
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
         <div className={`w-full max-w-6xl mx-auto ${slideTransition ? 'slide-transition' : ''}`}>
-          {/* Slide Content */}
-          <div className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 sm:p-12 lg:p-16 border border-white/20">
-            {getSlideContent()}
+          {/* Slide Content - Fixed 16:9 Aspect Ratio */}
+          <div className="relative w-full aspect-video bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 sm:p-12 lg:p-16 border border-white/20 overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center p-8 sm:p-12 lg:p-16">
+              {getSlideContent()}
+            </div>
           </div>
 
           {/* Navigation Arrows */}
