@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Magnet, Baby, ArrowRight } from 'lucide-react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import BlockSelector from './components/BlockSelector';
@@ -38,7 +39,7 @@ const HomePage: React.FC = () => {
             <div className="bg-white/90 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border border-white/20 p-4 sm:p-6 lg:p-8 hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-teal-400 to-blue-500 rounded-xl sm:rounded-2xl shadow-lg mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl sm:text-2xl lg:text-3xl">🧲</span>
+                  <Magnet className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">
                   Módulo 1: Biomagnetismo Prenatal
@@ -65,9 +66,7 @@ const HomePage: React.FC = () => {
                   className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 bg-gradient-to-r from-teal-500 to-blue-600 text-white text-xs sm:text-sm font-semibold rounded-lg sm:rounded-xl hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Comenzar Módulo
-                  <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1.5 sm:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1.5 sm:ml-2" />
                 </a>
               </div>
             </div>
@@ -76,7 +75,7 @@ const HomePage: React.FC = () => {
             <div className="bg-white/90 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border border-white/20 p-4 sm:p-6 lg:p-8 hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-pink-400 to-purple-500 rounded-xl sm:rounded-2xl shadow-lg mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl sm:text-2xl lg:text-3xl">👶</span>
+                  <Baby className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">
                   Módulo 2: Desarrollo Infantil
@@ -103,9 +102,7 @@ const HomePage: React.FC = () => {
                   className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs sm:text-sm font-semibold rounded-lg sm:rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Comenzar Módulo
-                  <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1.5 sm:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1.5 sm:ml-2" />
                 </a>
               </div>
             </div>
