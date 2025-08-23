@@ -11,38 +11,30 @@ const Module2Block1 = () => {
   return (
     <div id="block-1" className="space-y-12 w-full overflow-hidden">
       <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
-        <h2 className="text-xl font-semibold text-slate-700 mb-3">Objetivo del Bloque</h2>
+        <h2 className="text-xl font-semibold text-slate-700 mb-3">{t('module2.block1.objective.title')}</h2>
         <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
-          Comprender cómo los conflictos biológicos gestacionales continúan manifestándose en la primera infancia (3m-5a), aprendiendo a identificar los 8 conflictos fundamentales y aplicar técnicas biomagnéticas específicas para cada rango de edad.
+          {t('module2.block1.objective.content')}
         </p>
       </section>
 
-      <CourseSection title="Fundamentos Teóricos" icon={<BookOpen />}>
+      <CourseSection title={t('module2.block1.fundamentals.title')} icon={<BookOpen />}>
         <div className="space-y-8">
           {/* Primera sección - fluida sin numeración */}
           <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-            <h3 className="text-xl font-bold text-slate-800 mb-4">La Historia Continúa Después del Nacimiento</h3>
+            <h3 className="text-xl font-bold text-slate-800 mb-4">{t('module2.block1.fundamentals.historyContinues.title')}</h3>
             <p className="text-slate-700 leading-relaxed text-base">
-              Imagina que el nacimiento no es el final de una historia, sino el comienzo de un nuevo capítulo.
-              Las experiencias que vivió el bebé en el vientre materno no se borran mágicamente al nacer.
-              Durante los primeros 5 años de vida, estas memorias energéticas encuentran formas de expresarse: 
-              a través de berrinches inexplicables, miedos que no tienen sentido, regresiones repentinas, 
-              o síntomas físicos que los médicos no logran explicar.
+              {t('module2.block1.fundamentals.historyContinues.content')}
             </p>
             <p className="text-slate-700 leading-relaxed text-sm sm:text-base lg:text-lg mt-3 sm:mt-4">
-              El biomagnetismo nos enseña que el cuerpo del niño "habla" de lo que su mente aún no puede 
-              poner en palabras. Cada síntoma, cada conducta, es una comunicación valiosa sobre desequilibrios 
-              energéticos que requieren nuestra atención y comprensión.
+              {t('module2.block1.fundamentals.historyContinues.biomagnetism')}
             </p>
           </div>
           
           {/* Segunda sección - conflictos explicados de forma atractiva */}
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
-                            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-800 mb-4 sm:mb-6">Los 8 Grandes Conflictos de la Infancia</h3>
+                            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-800 mb-4 sm:mb-6">{t('module2.block1.fundamentals.conflicts.title')}</h3>
             <p className="text-slate-700 leading-relaxed text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">
-              Después de años de observación clínica, hemos identificado 8 patrones universales que
-              se repiten en los niños. Estos no son simples "problemas de conducta", sino expresiones
-              profundas de conflictos biológicos que buscan resolución:
+              {t('module2.block1.fundamentals.conflicts.intro')}
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
