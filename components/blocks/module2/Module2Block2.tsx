@@ -7,7 +7,7 @@ const Module2Block2: React.FC = () => {
   const { t } = useTranslation();
   
   return (
-    <div className="space-y-12 w-full overflow-hidden">
+    <div id="block-2" className="space-y-12 w-full overflow-hidden">
       <section className="bg-white border border-slate-200 rounded-lg shadow-sm p-6 text-center">
         <h2 className="text-xl font-semibold text-slate-700 mb-3">Objetivo del Bloque</h2>
         <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
