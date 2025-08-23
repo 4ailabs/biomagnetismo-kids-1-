@@ -35,3 +35,13 @@ export interface PathologyData {
     pairs: string;
     benefits: string;
 }
+
+export interface Module2ConflictData {
+  id: number;
+  conflict: string;
+  description: string;
+  ageRange: string;
+  sensations: string;
+  pairs: string;
+  benefits: string;
+}

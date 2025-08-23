@@ -1,4 +1,4 @@
-import { ShockData, KeyPointData, ConditionData, PostnatalShockData, PathologyData } from './types';
+import { ShockData, KeyPointData, ConditionData, PostnatalShockData, PathologyData, Module2ConflictData } from './types';
 
 export const SHOCK_DATA: ShockData[] = [
   {
@@ -371,4 +371,79 @@ export const BABY_REGULATION_POINTS: KeyPointData[] = [
     { point: 'Pericardio', resonance: 'Pulmón', benefit: 'Libera tensión torácica' },
     { point: 'Plexo solar', resonance: 'Riñón derecho', benefit: 'Aumenta sensación de amparo' },
     { point: 'Cardias', resonance: 'Estómago', benefit: 'Facilita cierre del esfínter esofágico' }
+];
+
+export const MODULE2_CONFLICTS_DATA: Module2ConflictData[] = [
+  {
+    id: 1,
+    conflict: 'Separación/Abandono',
+    description: 'El bebé/niño experimenta separaciones bruscas o prolongadas de sus figuras de apego principales.',
+    ageRange: '3 meses - 5 años',
+    sensations: 'Llanto inconsolable, aferramiento extremo, regresiones del sueño, ansiedad ante despedidas, somatizaciones al anticipar separación.',
+    pairs: 'Plexo Solar (-) → Riñón Derecho (+) | Pericardio (-) → Timo (+)',
+    benefits: 'Restaura sensación de amparo y sostén familiar, reactiva capacidad de conexión afectiva.'
+  },
+  {
+    id: 2,
+    conflict: 'No ser escuchado/Invisibilidad',
+    description: 'Sus señales comunicativas son ignoradas o malinterpretadas consistentemente.',
+    ageRange: '6 meses - 5 años',
+    sensations: 'Escalada de síntomas hasta obtener respuesta, berrinches intensos, mutismo selectivo, somatizaciones sin causa física, conductas disruptivas.',
+    pairs: 'Temporal Izq (-) → Temporal Der (+) | Lengua (-) → Hioides (+)',
+    benefits: 'Equilibra sobrecarga neurosensorial, facilita desarrollo del lenguaje expresivo, mejora comunicación.'
+  },
+  {
+    id: 3,
+    conflict: 'Territorio/Pérdida de control',
+    description: 'Limitación extrema de su autonomía o cambios abruptos sin preparación.',
+    ageRange: '18 meses - 5 años',
+    sensations: 'Berrinches explosivos, negativismo extremo, autoagresión, demandas de control excesivo, rigidez en rutinas.',
+    pairs: 'Hipotálamo (-) → Hipófisis (+) | Corteza Cingulada (-) → Insula (+)',
+    benefits: 'Equilibra el eje HPA, mejora autorregulación emocional, restaura control personal saludable.'
+  },
+  {
+    id: 4,
+    conflict: 'Amenaza de supervivencia',
+    description: 'Percepción de peligro vital directo o indirecto (accidentes, violencia, enfermedades graves).',
+    ageRange: '3 meses - 5 años',
+    sensations: 'Miedos extremos, fobias inexplicables, pánico ante separación, sobresaltos exagerados, regresiones marcadas.',
+    pairs: 'Suprarrenal (-) → Suprarrenal (+) | Bulbo Raquídeo (-) → Suprarrenal (+)',
+    benefits: 'Fortalece el eje vital, calma el sistema nervioso, regula respuesta autónoma al estrés.'
+  },
+  {
+    id: 5,
+    conflict: 'Desvalorización/No soy suficiente',
+    description: 'Mensajes explícitos o implícitos de que no cumple expectativas o comparaciones desfavorables.',
+    ageRange: '2 - 5 años',
+    sensations: 'Inhibición extrema, perfeccionismo temprano, miedo al fracaso, autocastigo, retraimiento social.',
+    pairs: 'Timo (-) → Bazo (+) | Pericardio (-) → Timo (+)',
+    benefits: 'Fortalece sistema inmune emocional, activa motivación y autoestima, restaura iniciativa.'
+  },
+  {
+    id: 6,
+    conflict: 'Caos relacional/Doble mensaje',
+    description: 'Inconsistencia extrema en cuidados o mensajes contradictorios de figuras de apego.',
+    ageRange: '6 meses - 5 años',
+    sensations: 'Patrones de apego desorganizado, movimientos estereotipados, disociación, alternancia entre hiper e hipoactivación.',
+    pairs: 'Bulbo Raquídeo (-) → Suprarrenal (+) | Temporal Izq (-) → Temporal Der (+)',
+    benefits: 'Integra sistemas de supervivencia y apego, regula respuesta al miedo y sobrecarga sensorial.'
+  },
+  {
+    id: 7,
+    conflict: 'Pérdida de base segura',
+    description: 'Cambios drásticos en entorno o cuidadores primarios (mudanzas, divorcios, hospitalizaciones).',
+    ageRange: '9 meses - 5 años',
+    sensations: 'Inhibición exploratoria, aferramiento o evitación extrema, regresiones motoras, ansiedad generalizada.',
+    pairs: 'Plexo Solar (-) → Riñón Derecho (+) | Suprarrenal (-) → Suprarrenal (+)',
+    benefits: 'Restaura memoria de seguridad, fortalece sensación de amparo y estabilidad emocional.'
+  },
+  {
+    id: 8,
+    conflict: 'Invasión/Límites violados',
+    description: 'Procedimientos médicos traumáticos, manipulación corporal brusca o abuso.',
+    ageRange: '3 meses - 5 años',
+    sensations: 'Hipervigilancia corporal, rechazo al contacto, somatizaciones específicas del área afectada, disociación corporal.',
+    pairs: 'Pericardio (-) → Pulmón (+) | Bulbo Raquídeo (-) → Plexo Solar (+)',
+    benefits: 'Restaura conciencia corporal saludable, integra experiencia traumática, mejora regulación emocional.'
+  }
 ];

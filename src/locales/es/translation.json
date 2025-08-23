@@ -170,6 +170,225 @@
       ]
     }
   },
+  "vitalSensationsModule2": {
+    "title": "Sensaciones Vitales Postnatales",
+    "intro": "Las sensaciones vitales postnatales son experiencias emocionales intensas del niño o conflictos transmitidos por los cuidadores durante el desarrollo temprano (3 meses-5 años), creando patrones energéticos que influyen en su crecimiento y pueden manifestarse como desequilibrios específicos.",
+    "contextTitle": "Sensaciones Vitales en el Desarrollo Postnatal",
+    "contextIntro": "Estas sensaciones vitales están específicamente adaptadas al contexto del desarrollo postnatal temprano. Representan experiencias emocionales intensas del niño o conflictos transmitidos por los cuidadores que crean patrones energéticos manifestables como desequilibrios específicos identificables mediante pares biomagnéticos. Cada sensación tiene su correlación directa con puntos corporales y pares específicos para el trabajo terapéutico.",
+    "byStage": {
+      "attachment": {
+        "title": "3-9 meses (Etapa del Apego)",
+        "sensations": [
+          "Abandono emocional: Separación temprana, frialdad materna",
+          "Hambre emocional: Necesidades no cubiertas, vacío afectivo",
+          "Inseguridad vital: Ambiente caótico, cuidadores impredecibles",
+          "Rechazo afectivo: Frialdad, ausencia de contacto",
+          "Terror al abandono: Hospitalizaciones, separaciones"
+        ]
+      },
+      "exploration": {
+        "title": "9-18 meses (Etapa de Exploración)",
+        "sensations": [
+          "Miedo al entorno: Sobreprotección, limitación excesiva",
+          "Prohibición de ser: 'No toques', 'No explores', 'Estate quieto'",
+          "Pérdida de seguridad: Accidentes, caídas, lesiones",
+          "Frustración motriz: Limitación del movimiento natural",
+          "Ansiedad de separación: Angustia al alejarse del cuidador"
+        ]
+      },
+      "autonomy": {
+        "title": "18 meses-3 años (Etapa de Autonomía)",
+        "sensations": [
+          "Anulación del yo: 'Tú no puedes', 'Eres muy pequeño'",
+          "Control excesivo: Perfeccionismo, crítica constante",
+          "Invalidación emocional: 'No llores', 'No te enojes'",
+          "Comparación destructiva: 'Tu hermano es mejor', 'Otros niños sí pueden'",
+          "Castigo por autonomía: Reprimendas por intentar independizarse"
+        ]
+      },
+      "initiative": {
+        "title": "3-5 años (Etapa de Iniciativa)",
+        "sensations": [
+          "Humillación pública: Vergüenza, ridiculización",
+          "Miedo al error: Perfeccionismo, terror al fracaso",
+          "Invalidación creativa: 'Eso está mal', 'No sirves para eso'",
+          "Presión de rendimiento: Exigencias académicas prematuras",
+          "Exclusión social: Rechazo de pares, aislamiento"
+        ]
+      },
+      "transversal": {
+        "title": "Transversales (todas las etapas)",
+        "sensations": [
+          "Violencia doméstica: Presenciar agresiones, gritos constantes",
+          "Duelo familiar: Muerte de seres queridos, pérdidas",
+          "Mudanza traumática: Pérdida del hogar, desarraigo",
+          "Enfermedad grave: Hospitalizaciones, intervenciones médicas",
+          "Divorcio conflictivo: Disputas, lealtades divididas",
+          "Crisis económica: Estrés familiar, cambios bruscos"
+        ]
+      }
+    }
+  },
+  "systemicOrder": {
+    "title": "Orden Sistémico del Niño",
+    "intro": "El orden sistémico se refiere al lugar que ocupa el niño dentro del sistema familiar y cómo este posicionamiento influye en su desarrollo energético, emocional y físico. Desde el enfoque de las constelaciones familiares aplicado al biomagnetismo pediátrico, comprender este orden es fundamental para identificar y tratar desequilibrios específicos.",
+    "contextTitle": "El Sistema Familiar como Campo Energético",
+    "contextIntro": "Cada niño nace en un sistema familiar único con una historia, secretos, lealtades invisibles y dinámicas específicas. Su lugar en este sistema - si es el primero, segundo, si hay hermanos fallecidos, o hermanastros - determina patrones energéticos que pueden manifestarse como síntomas físicos o emocionales específicos.",
+    "positions": {
+      "firstChild": {
+        "title": "El Primer Hijo: El Pionero del Sistema",
+        "characteristics": [
+          "Carga energética: Lleva las expectativas y proyecciones parentales más intensas",
+          "Lealtad invisible: Se siente responsable del éxito familiar y del bienestar de los padres",
+          "Conflicto típico: Presión por ser perfecto, miedo al fracaso, hiperresponsabilidad",
+          "Manifestaciones físicas: Tensión en hombros/cuello, problemas digestivos por estrés",
+          "Patrón sistémico: Tiende a asumir roles parentales prematuramente"
+        ],
+        "biomagneticSignature": [
+          "Suprarrenal (-) → Riñón Der (+): Estrés por responsabilidad excesiva",
+          "Cervical Alta (-) → Occipital (+): Tensión mental por presión familiar", 
+          "Plexo Solar (-) → Riñón Izq (+): Ansiedad por expectativas parentales"
+        ]
+      },
+      "secondChild": {
+        "title": "El Segundo Hijo: El Equilibrador",
+        "characteristics": [
+          "Carga energética: Busca encontrar su lugar único diferenciándose del primero",
+          "Lealtad invisible: Compensa lo que el primer hijo no pudo dar al sistema",
+          "Conflicto típico: Lucha por la identidad propia, sentimiento de inferioridad o superioridad",
+          "Manifestaciones físicas: Problemas de autoestima, alergias, trastornos inmunológicos",
+          "Patrón sistémico: Puede desarrollar características opuestas al hermano mayor"
+        ],
+        "biomagneticSignature": [
+          "Pericardio (-) → Timo (+): Fortalece la identidad propia y autoestima",
+          "Bazo (-) → Timo (+): Equilibra el sistema inmunológico afectado por comparaciones",
+          "Temporal Izq (-) → Temporal Der (+): Reduce ansiedad por encontrar su lugar"
+        ]
+      },
+      "laterChildren": {
+        "title": "Hijos Posteriores: Los Libres",
+        "characteristics": [
+          "Carga energética: Mayor libertad pero también posible sensación de invisibilidad",
+          "Lealtad invisible: Pueden cargar con los secretos familiares o ser los 'salvadores'",
+          "Conflicto típico: Sensación de no importar, necesidad excesiva de atención",
+          "Manifestaciones físicas: Hiperactividad, problemas de atención, conductas disruptivas",
+          "Patrón sistémico: Buscan destacar através de comportamientos extremos"
+        ],
+        "biomagneticSignature": [
+          "Bulbo Raquídeo (-) → Suprarrenal (+): Regula hiperactividad por búsqueda de atención",
+          "Pericardio (-) → Timo (+): Refuerza el valor personal y la autoestima",
+          "Frontal (-) → Occipital (+): Mejora concentración y reduce dispersión"
+        ]
+      },
+      "onlyChild": {
+        "title": "Hijo Único: El Centro del Universo",
+        "characteristics": [
+          "Carga energética: Recibe toda la atención pero también toda la presión familiar",
+          "Lealtad invisible: Debe cumplir todos los sueños y expectativas parentales",
+          "Conflicto típico: Dificultad para compartir, miedo a la soledad, presión extrema",
+          "Manifestaciones físicas: Ansiedad de separación, perfeccionismo, somatizaciones",
+          "Patrón sistémico: Puede sentirse agobiado por la intensidad del vínculo parental"
+        ],
+        "biomagneticSignature": [
+          "Suprarrenal (-) → Suprarrenal (+): Equilibra la sobrecarga de expectativas",
+          "Plexo Solar (-) → Riñón Der (+): Reduce ansiedad por separación",
+          "Pericardio (-) → Timo (+): Fortalece la identidad independiente"
+        ]
+      }
+    },
+    "specialSituations": {
+      "title": "Situaciones Sistémicas Especiales",
+      "deadSibling": {
+        "title": "Hermano Fallecido: La Presencia Invisible",
+        "description": "Cuando hay un hermano que murió antes, durante o después del nacimiento del niño, se crea una dinámica energética muy específica.",
+        "impacts": [
+          "El niño vivo puede sentir que 'ocupa el lugar' del fallecido",
+          "Lealtad invisible: 'No tengo derecho a vivir si mi hermano no pudo'",
+          "Síndrome del sobreviviente: Culpa por estar vivo, tendencia autodestructiva",
+          "Los padres pueden proyectar en el niño vivo las cualidades del fallecido",
+          "Manifestaciones: Depresión infantil, retrasos del desarrollo, enfermedades recurrentes"
+        ],
+        "biomagneticApproach": [
+          "Corazón (-) → Corazón (+): Equilibra el dolor sistémico en el campo cardíaco",
+          "Pericardio (-) → Timo (+): Fortalece el derecho a existir y vivir plenamente",
+          "Plexo Solar (-) → Riñón Izq (+): Libera la culpa del sobreviviente"
+        ]
+      },
+      "halfSiblings": {
+        "title": "Hermanastros: Sistemas Familiares Entrelazados",
+        "description": "Los hijos de relaciones anteriores crean dinámicas sistémicas complejas donde el niño debe navegar lealtades divididas.",
+        "impacts": [
+          "Lealtad dividida entre diferentes sistemas familiares",
+          "Puede sentirse 'menos importante' que los hijos de la nueva pareja",
+          "Carga energética: Ser el puente entre dos sistemas familiares",
+          "Conflicto de pertenencia: ¿A qué familia pertenezco realmente?",
+          "Manifestaciones: Confusión identitaria, problemas de conducta, regresiones"
+        ],
+        "biomagneticApproach": [
+          "Temporal Izq (-) → Temporal Der (+): Equilibra la confusión y la sobrecarga emocional",
+          "Pericardio (-) → Timo (+): Fortalece la identidad propia independiente del sistema",
+          "Bulbo Raquídeo (-) → Plexo Solar (+): Regula el estrés de las lealtades divididas"
+        ]
+      },
+      "adoption": {
+        "title": "Adopción: Entre Dos Sistemas",
+        "description": "El niño adoptado lleva la energía de su sistema de origen y debe integrarse al sistema adoptivo.",
+        "impacts": [
+          "Doble lealtad: Al sistema biológico y al adoptivo",
+          "Pregunta existencial: ¿Por qué me abandonaron?",
+          "Puede cargar con la culpa o vergüenza del sistema de origen",
+          "Hipervigilancia: Miedo a un nuevo abandono",
+          "Manifestaciones: Ansiedad de separación extrema, conductas de apego ambivalente"
+        ],
+        "biomagneticApproach": [
+          "Corazón (-) → Corazón (+): Sana la herida primaria del abandono",
+          "Pericardio (-) → Timo (+): Refuerza el sentimiento de pertenencia y valor",
+          "Suprarrenal (-) → Riñón Der (+): Reduce la hipervigilancia y el miedo al abandono"
+        ]
+      }
+    },
+    "therapeuticApproach": {
+      "title": "Abordaje Terapéutico Sistémico",
+      "assessment": {
+        "title": "Evaluación del Orden Sistémico",
+        "steps": [
+          "Crear el genograma familiar: Incluir hermanos fallecidos, adopciones, separaciones",
+          "Identificar la posición del niño: Primero funcional, biológico, emocional",
+          "Detectar lealtades invisibles: ¿A quién está siendo leal el niño con su síntoma?",
+          "Reconocer exclusiones: ¿Quién ha sido excluido del sistema familiar?",
+          "Evaluar la carga transgeneracional: ¿Qué está repitiendo de generaciones anteriores?"
+        ]
+      },
+      "intervention": {
+        "title": "Intervención Biomagnética Sistémica",
+        "protocol": [
+          "1. Rastreo del conflicto sistémico: Identificar el par biomagnético que resuena con la posición sistémica",
+          "2. Aplicación de pares específicos: Según la posición y carga sistémica del niño",
+          "3. Trabajo con los padres: Reconocer y honrar el lugar de cada hijo en el sistema",
+          "4. Rituales de inclusión: Crear espacios para honrar a los excluidos del sistema",
+          "5. Seguimiento: Evaluar cambios en la dinámica familiar tras la intervención"
+        ]
+      },
+      "phrases": {
+        "title": "Frases Sanadoras por Posición Sistémica",
+        "firstChild": [
+          "\"Yo soy el primer hijo y eso me da un lugar especial, no una carga\"",
+          "\"Puedo ser exitoso sin cargar con las expectativas de todos\"",
+          "\"Mi lugar como primero es un regalo, no una responsabilidad\""
+        ],
+        "secondChild": [
+          "\"Yo tengo mi propio lugar único en esta familia\"",
+          "\"No necesito competir, mi valor es diferente y especial\"",
+          "\"Honro a mi hermano mayor y honro mi propia identidad\""
+        ],
+        "withDeadSibling": [
+          "\"Honro a mi hermano que partió y acepto mi derecho a vivir\"",
+          "\"Mi vida tiene valor por sí misma, no en comparación\"",
+          "\"Llevo el amor por mi hermano en mi corazón, pero vivo mi propia vida\""
+        ]
+      }
+    }
+  },
   "bioenergeticProtocol": {
     "title": "PROTOCOLO CON BIOENERGÉTICA Y BIOMAGNETISMO",
     "fundamentals": {
@@ -515,6 +734,74 @@
       }
     },
     "integrated": "Protocolo Integrado: Este protocolo combina la precisión del biomagnetismo con la profundidad de la bioenergética, creando un abordaje único que permite sanar no solo los síntomas, sino el origen energético del conflicto. La recesión de edad, la conscientización y las frases del sentir son fundamentales para descargar la memoria energética del conflicto."
+  },
+  "module2": {
+    "block1": {
+      "title": "BLOQUE 1: Marco Teórico del Desarrollo Infantil (3 meses-5 años)",
+      "neurodevelopment": "Panorama del Desarrollo Neurobiológico",
+      "neurodevelopmentContent": "Entre los 3 meses y los 5 años ocurre la reorganización más acelerada del sistema nervioso humano. Durante este período se producen varios procesos neurobiológicos simultáneos que configuran la base para toda la vida futura.",
+      "synapticProliferation": "Proliferación y Poda Sináptica",
+      "synapticContent": "El cerebro infantil produce inicialmente un exceso de conexiones sinápticas, seguido por un proceso de poda que elimina las menos utilizadas mientras fortalece las más activas.",
+      "myelination": "Mielinización Progresiva",
+      "myelinationContent": "La mielina se deposita progresivamente en las fibras nerviosas, aumentando la velocidad de conducción. Las áreas sensoriales se mielinizan primero.",
+      "serveReturn": "El Concepto de 'Serve & Return'",
+      "serveReturnContent": "El serve & return describe las interacciones bidireccionales entre adulto y bebé donde:",
+      "serveReturnPoints": [
+        "El niño emite una señal (vocalización, gesto, mirada)",
+        "El adulto responde de manera contingente y sensible",
+        "Esta respuesta modela físicamente la arquitectura cerebral"
+      ],
+      "serveReturnConclusion": "Esta danza relacional no es solo social, sino que literalmente esculpe el cerebro en desarrollo.",
+      "plasticity": "Plasticidad y Vulnerabilidad",
+      "opportunities": "Oportunidades",
+      "opportunitiesList": [
+        "Capacidad máxima de recuperación ante lesiones",
+        "Aprendizaje acelerado de patrones sociales",
+        "Establecimiento de circuitos de regulación resilientes"
+      ],
+      "vulnerabilities": "Vulnerabilidades",
+      "vulnerabilitiesList": [
+        "Mayor susceptibilidad al estrés tóxico",
+        "Impacto duradero de experiencias adversas",
+        "Dependencia crítica de la calidad del cuidado"
+      ],
+      "clinicalImportance": "Importancia Clínica",
+      "clinicalContent": "Esta etapa presenta la mayor plasticidad cerebral, lo que significa tanto oportunidades extraordinarias como vulnerabilidades únicas. La calidad de las experiencias relacionales tempranas determina la arquitectura cerebral que sostendrá el desarrollo futuro."
+    },
+    "block2": {
+      "title": "BLOQUE 2: Neurodesarrollo Socioemocional y Teoría del Apego",
+      "attachment": "Teoría del Apego: Fundamentos Neurobiológicos",
+      "attachmentContent": "La teoría del apego no es solo una construcción psicológica, sino que tiene correlatos neurobiológicos específicos. El sistema de apego funciona como un sistema de supervivencia que activa la amígdala ante separación o amenaza.",
+      "attachmentPatterns": "Los Cuatro Patrones de Apego",
+      "secure": "Apego Seguro (65%)",
+      "secureDesc": "Regulación flexible del estrés, capacidad de buscar y recibir consuelo",
+      "avoidant": "Apego Inseguro-Evitativo (20%)",
+      "avoidantDesc": "Supresión de señales de angustia, hiperactivación simpática",
+      "ambivalent": "Apego Inseguro-Ambivalente (15%)",
+      "ambivalentDesc": "Hiperactivación del sistema de apego, dificultad para calmarse",
+      "disorganized": "Apego Desorganizado (5-10%)",
+      "disorganizedDesc": "Estrategias contradictorias, disociación ante estrés extremo",
+      "polyvagal": "Teoría Polivagal Aplicada (Porges)",
+      "polyvagalContent": "La teoría polivagal propone tres circuitos autonómicos evolutivos que median la respuesta al entorno:",
+      "socialEngagement": "Sistema de Compromiso Social (Vago Ventral)",
+      "socialEngagementDesc": "Activación: expresión facial, vocalización, escucha. Estado: calma y conexión.",
+      "mobilization": "Sistema de Movilización (Simpático)",
+      "mobilizationDesc": "Activación: lucha o huida. Estado: alerta y acción.",
+      "immobilization": "Sistema de Inmovilización (Vago Dorsal)",
+      "immobilizationDesc": "Activación: colapso y desconexión. Estado: shutdown o congelamiento.",
+      "erikson": "Desarrollo Psicosocial (Erikson) Ampliado",
+      "trust": "Confianza vs. Desconfianza",
+      "trustPeriod": "0-18 meses",
+      "trustDesc": "Desarrollar sensación de que el mundo es predecible y confiable. Manifestaciones: sueño reparador, alimentación placentera.",
+      "autonomy": "Autonomía vs. Vergüenza",
+      "autonomyPeriod": "18 meses-3 años",
+      "autonomyDesc": "Desarrollar sentido de control personal sin perder autoestima. Manifestaciones: exploración motora, control de esfínteres.",
+      "initiative": "Iniciativa vs. Culpa",
+      "initiativePeriod": "3-5 años",
+      "initiativeDesc": "Afirmar poder e influencia a través de actividades dirigidas. Manifestaciones: juego físico elaborado, expresión gestual rica.",
+      "clinicalApplication": "Aplicación Clínica",
+      "clinicalApplicationContent": "Comprender estos patrones de desarrollo permite identificar desviaciones tempranas y diseñar intervenciones apropiadas que respeten la etapa evolutiva del niño y fortalezcan los factores protectores en cada fase."
+    }
   },
   "common": {
     "language": "Idioma",
