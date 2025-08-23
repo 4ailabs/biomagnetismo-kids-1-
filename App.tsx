@@ -50,15 +50,15 @@ const HomePage: React.FC = () => {
                 <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-xs sm:text-sm text-slate-500">
                   <div className="flex items-center justify-center">
                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-teal-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    Duración: 8 semanas
+                    Gestación y Perinatología
                   </div>
                   <div className="flex items-center justify-center">
                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    5 bloques de contenido
+                    5 bloques especializados
                   </div>
                   <div className="flex items-center justify-center">
                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    Nivel: Básico-Intermedio
+                    Enfoque Sistémico Familiar
                   </div>
                 </div>
                 <a 
@@ -86,15 +86,15 @@ const HomePage: React.FC = () => {
                 <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-xs sm:text-sm text-slate-500">
                   <div className="flex items-center justify-center">
                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-pink-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    Duración: 6 semanas
+                    Primera Infancia (3m-5a)
                   </div>
                   <div className="flex items-center justify-center">
                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    5 bloques de contenido
+                    5 bloques especializados
                   </div>
                   <div className="flex items-center justify-center">
                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-indigo-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    Nivel: Intermedio-Avanzado
+                    Protocolos por Edad
                   </div>
                 </div>
                 <a 
