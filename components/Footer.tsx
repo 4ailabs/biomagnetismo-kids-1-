@@ -44,19 +44,7 @@ const Footer: React.FC = () => {
                         <p className="text-slate-500 text-xs">www.institutocentrobioenergetica.com</p>
                     </div>
                     
-                    {/* Dynamic Presentation Button */}
-                    <div className="mt-4 flex justify-center">
-                        <button
-                            onClick={() => {
-                                const presentationUrl = activeModule === 2 ? '/presentation-modulo2' : '/presentation';
-                                window.open(presentationUrl, '_blank');
-                            }}
-                            className="flex items-center justify-center w-10 h-10 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-all duration-300 opacity-60 hover:opacity-100"
-                            title={activeModule === 2 ? 'Diapositivas Módulo 2' : 'Presentación'}
-                        >
-                            <PresentationIcon className="w-5 h-5" />
-                        </button>
-                    </div>
+
                 </div>
             </div>
         </footer>
