@@ -169,6 +169,356 @@ const Module2Presentation: React.FC = () => {
         "Máxima plasticidad - Cerebro como arcilla fresca"
       ],
       type: 'content'
+    },
+    
+    // SLIDE 6: CONFLICTOS BIOLÓGICOS POSTNATALES
+    {
+      id: 6,
+      title: "CONFLICTOS BIOLÓGICOS POSTNATALES",
+      content: [
+        "Separación del Cuidador Principal - Miedo existencial a la supervivencia",
+        "Pérdida de Territorio - Cambios de casa, ciudad o país",
+        "Amenaza de Abandono - Divorcio, muerte o ausencia prolongada",
+        "Invasión de Límites - Abuso físico, emocional o sexual",
+        "Pérdida de Control - Situaciones donde no puede decidir nada"
+      ],
+      type: 'comparison'
+    },
+    
+    // SLIDE 7: SENSACIONES CLAVE DE LA INFANCIA
+    {
+      id: 7,
+      title: "SENSACIONES CLAVE DE LA INFANCIA",
+      content: [
+        "Miedo - Sensación de peligro constante e inminente",
+        "Abandono - Sentimiento de estar solo en el mundo",
+        "Inseguridad - Falta de base sólida para desarrollarse",
+        "Confusión - No entender qué está pasando a su alrededor",
+        "Frustración - No poder expresar o conseguir lo que necesita"
+      ],
+      type: 'key-points'
+    },
+    
+    // SLIDE 8: PARES BIOMAGNÉTICOS FUNDAMENTALES
+    {
+      id: 8,
+      title: "PARES BIOMAGNÉTICOS FUNDAMENTALES",
+      content: [
+        "Timpanocentro - Timpanocentro (Separación y comunicación)",
+        "Hipófisis - Hipófisis (Control y supervivencia)",
+        "Tiroides - Tiroides (Expresión y autonomía)",
+        "Corazón - Corazón (Amor y protección)",
+        "Estómago - Estómago (Nutrición emocional)"
+      ],
+      type: 'content'
+    },
+    
+    // SLIDE 9: PROTOCOLOS POR EDAD - 3-12 MESES
+    {
+      id: 9,
+      title: "PROTOCOLOS POR EDAD - 3-12 MESES",
+      content: [
+        "Separación del cuidador - Timpanocentro + Corazón",
+        "Cambios de rutina - Hipófisis + Estómago",
+        "Miedo a extraños - Tiroides + Timpanocentro",
+        "Problemas de sueño - Hipófisis + Corazón",
+        "Llanto inconsolable - Corazón + Estómago"
+      ],
+      type: 'process'
+    },
+    
+    // SLIDE 10: PROTOCOLOS POR EDAD - 1-2 AÑOS
+    {
+      id: 10,
+      title: "PROTOCOLOS POR EDAD - 1-2 AÑOS",
+      content: [
+        "Berrinches y rabietas - Tiroides + Corazón",
+        "Miedo a la separación - Timpanocentro + Hipófisis",
+        "Problemas de alimentación - Estómago + Tiroides",
+        "Agresividad - Corazón + Tiroides",
+        "Regresión en el desarrollo - Hipófisis + Estómago"
+      ],
+      type: 'process'
+    },
+    
+    // SLIDE 11: PROTOCOLOS POR EDAD - 2-3 AÑOS
+    {
+      id: 11,
+      title: "PROTOCOLOS POR EDAD - 2-3 AÑOS",
+      content: [
+        "Control de esfínteres - Hipófisis + Estómago",
+        "Límites y disciplina - Tiroides + Corazón",
+        "Miedo a la oscuridad - Timpanocentro + Hipófisis",
+        "Problemas de lenguaje - Timpanocentro + Tiroides",
+        "Celos entre hermanos - Corazón + Estómago"
+      ],
+      type: 'process'
+    },
+    
+    // SLIDE 12: PROTOCOLOS POR EDAD - 3-5 AÑOS
+    {
+      id: 12,
+      title: "PROTOCOLOS POR EDAD - 3-5 AÑOS",
+      content: [
+        "Adaptación escolar - Timpanocentro + Hipófisis",
+        "Miedos específicos - Tiroides + Timpanocentro",
+        "Problemas de socialización - Corazón + Tiroides",
+        "Ansiedad por separación - Timpanocentro + Corazón",
+        "Problemas de conducta - Hipófisis + Tiroides"
+      ],
+      type: 'process'
+    },
+    
+    // SLIDE 13: CASOS CLÍNICOS - SEPARACIÓN DEL CUIDADOR
+    {
+      id: 13,
+      title: "CASOS CLÍNICOS - SEPARACIÓN DEL CUIDADOR",
+      content: [
+        "Niña de 2 años - Llanto inconsolable tras divorcio de padres",
+        "Protocolo: Timpanocentro + Corazón + Hipófisis",
+        "Síntomas: Insomnio, ansiedad, regresión en el lenguaje",
+        "Resultado: Mejora en 3 sesiones, sueño normalizado",
+        "Seguimiento: Estable a los 6 meses"
+      ],
+      type: 'summary'
+    },
+    
+    // SLIDE 14: CASOS CLÍNICOS - PÉRDIDA DE TERRITORIO
+    {
+      id: 14,
+      title: "CASOS CLÍNICOS - PÉRDIDA DE TERRITORIO",
+      content: [
+        "Niño de 4 años - Cambio de ciudad por trabajo de padre",
+        "Protocolo: Hipófisis + Tiroides + Estómago",
+        "Síntomas: Enuresis, miedos nocturnos, agresividad",
+        "Resultado: Control de esfínteres en 2 semanas",
+        "Seguimiento: Adaptación completa en 3 meses"
+      ],
+      type: 'summary'
+    },
+    
+    // SLIDE 15: CASOS CLÍNICOS - INVASIÓN DE LÍMITES
+    {
+      id: 15,
+      title: "CASOS CLÍNICOS - INVASIÓN DE LÍMITES",
+      content: [
+        "Niña de 3 años - Abuso emocional por cuidadora",
+        "Protocolo: Corazón + Timpanocentro + Tiroides",
+        "Síntomas: Miedo extremo, regresión, pesadillas",
+        "Resultado: Recuperación emocional en 4 sesiones",
+        "Seguimiento: Confianza restaurada, desarrollo normal"
+      ],
+      type: 'summary'
+    },
+    
+    // SLIDE 16: EVALUACIÓN DEL DESARROLLO
+    {
+      id: 16,
+      title: "EVALUACIÓN DEL DESARROLLO",
+      content: [
+        "Observación directa del comportamiento del niño",
+        "Entrevista con padres sobre cambios recientes",
+        "Evaluación de síntomas físicos y emocionales",
+        "Identificación de conflictos biológicos activos",
+        "Plan de tratamiento personalizado por edad"
+      ],
+      type: 'key-points'
+    },
+    
+    // SLIDE 17: HERRAMIENTAS DE EVALUACIÓN
+    {
+      id: 17,
+      title: "HERRAMIENTAS DE EVALUACIÓN",
+      content: [
+        "Cuestionario de síntomas por edad (3m-5a)",
+        "Escala de conflictos biológicos postnatales",
+        "Mapeo de pares biomagnéticos específicos",
+        "Registro de progreso y evolución",
+        "Seguimiento a largo plazo del desarrollo"
+      ],
+      type: 'comparison'
+    },
+    
+    // SLIDE 18: PREVENCIÓN Y MANTENIMIENTO
+    {
+      id: 18,
+      title: "PREVENCIÓN Y MANTENIMIENTO",
+      content: [
+        "Sesiones de mantenimiento cada 3-6 meses",
+        "Educación a padres sobre señales de alerta",
+        "Protocolos preventivos para cambios importantes",
+        "Seguimiento del desarrollo normal",
+        "Intervención temprana ante primeros síntomas"
+      ],
+      type: 'key-points'
+    },
+    
+    // SLIDE 19: INTEGRACIÓN CON OTRAS TERAPIAS
+    {
+      id: 19,
+      title: "INTEGRACIÓN CON OTRAS TERAPIAS",
+      content: [
+        "Terapia ocupacional para desarrollo motor",
+        "Logopedia para problemas de comunicación",
+        "Psicología infantil para apoyo emocional",
+        "Pediatría para seguimiento médico",
+        "Biomagnetismo como terapia complementaria"
+      ],
+      type: 'content'
+    },
+    
+    // SLIDE 20: RESULTADOS ESPERADOS
+    {
+      id: 20,
+      title: "RESULTADOS ESPERADOS",
+      content: [
+        "Mejora en síntomas emocionales y conductuales",
+        "Normalización del desarrollo por edad",
+        "Reducción de miedos y ansiedades",
+        "Mejora en la calidad del sueño",
+        "Restauración de la confianza y seguridad"
+      ],
+      type: 'key-points'
+    },
+    
+    // SLIDE 21: SEGUIMIENTO Y EVALUACIÓN
+    {
+      id: 21,
+      title: "SEGUIMIENTO Y EVALUACIÓN",
+      content: [
+        "Evaluación semanal durante las primeras 4 semanas",
+        "Seguimiento mensual durante los primeros 6 meses",
+        "Evaluación trimestral hasta completar el año",
+        "Registro de cambios en síntomas y desarrollo",
+        "Ajuste de protocolos según evolución"
+      ],
+      type: 'timeline'
+    },
+    
+    // SLIDE 22: COMPLICACIONES Y MANEJO
+    {
+      id: 22,
+      title: "COMPLICACIONES Y MANEJO",
+      content: [
+        "Resistencia del niño a la terapia",
+        "Falta de cooperación de los padres",
+        "Síntomas que no mejoran con el protocolo",
+        "Recaídas tras mejoría inicial",
+        "Necesidad de derivación a especialistas"
+      ],
+      type: 'key-points'
+    },
+    
+    // SLIDE 23: ÉTICA Y RESPONSABILIDAD
+    {
+      id: 23,
+      title: "ÉTICA Y RESPONSABILIDAD",
+      content: [
+        "Consentimiento informado de los padres",
+        "Confidencialidad absoluta del caso",
+        "Límites de la práctica biomagnética",
+        "Derivación cuando sea necesario",
+        "Documentación completa de cada sesión"
+      ],
+      type: 'key-points'
+    },
+    
+    // SLIDE 24: INVESTIGACIÓN Y EVIDENCIA
+    {
+      id: 24,
+      title: "INVESTIGACIÓN Y EVIDENCIA",
+      content: [
+        "Estudios de casos documentados",
+        "Resultados de seguimiento a largo plazo",
+        "Comparación con tratamientos convencionales",
+        "Validación por pares en la comunidad",
+        "Publicaciones en revistas especializadas"
+      ],
+      type: 'content'
+    },
+    
+    // SLIDE 25: FORMACIÓN CONTINUA
+    {
+      id: 25,
+      title: "FORMACIÓN CONTINUA",
+      content: [
+        "Actualización en nuevas técnicas biomagnéticas",
+        "Participación en congresos y seminarios",
+        "Intercambio de experiencias con colegas",
+        "Lectura de literatura científica actualizada",
+        "Práctica supervisada y mentoring"
+      ],
+      type: 'key-points'
+    },
+    
+    // SLIDE 26: RECURSOS Y HERRAMIENTAS
+    {
+      id: 26,
+      title: "RECURSOS Y HERRAMIENTAS",
+      content: [
+        "Manual de protocolos por edad",
+        "Fichas de evaluación estandarizadas",
+        "Registros de seguimiento digitales",
+        "Biblioteca de casos clínicos",
+        "Red de profesionales biomagnéticos"
+      ],
+      type: 'content'
+    },
+    
+    // SLIDE 27: FUTURO DEL BIOMAGNETISMO PEDIÁTRICO
+    {
+      id: 27,
+      title: "FUTURO DEL BIOMAGNETISMO PEDIÁTRICO",
+      content: [
+        "Integración en protocolos pediátricos estándar",
+        "Investigación clínica multicéntrica",
+        "Formación universitaria especializada",
+        "Reconocimiento por sistemas de salud",
+        "Acceso universal para todos los niños"
+      ],
+      type: 'timeline'
+    },
+    
+    // SLIDE 28: REFLEXIÓN FINAL
+    {
+      id: 28,
+      title: "REFLEXIÓN FINAL",
+      content: [
+        "Cada niño es único y requiere atención personalizada",
+        "El biomagnetismo ofrece una alternativa natural y efectiva",
+        "La intervención temprana es clave para el éxito",
+        "El trabajo en equipo con otros profesionales es fundamental",
+        "Nuestro compromiso es mejorar la vida de cada niño"
+      ],
+      type: 'hero'
+    },
+    
+    // SLIDE 29: AGRADECIMIENTOS
+    {
+      id: 29,
+      title: "AGRADECIMIENTOS",
+      content: [
+        "A todos los niños que confiaron en nosotros",
+        "A los padres que apostaron por esta terapia",
+        "A la comunidad biomagnética por su apoyo",
+        "A los investigadores que validan nuestra práctica",
+        "A la vida por permitirnos hacer esta labor"
+      ],
+      type: 'title'
+    },
+    
+    // SLIDE 30: CONTACTO Y RECURSOS
+    {
+      id: 30,
+      title: "CONTACTO Y RECURSOS",
+      content: [
+        "Consulta personalizada disponible",
+        "Material educativo para padres",
+        "Grupos de apoyo y comunidad",
+        "Formación para profesionales",
+        "Investigación y desarrollo continuo"
+      ],
+      type: 'summary'
     }
   ];
 
@@ -327,6 +677,48 @@ const Module2Presentation: React.FC = () => {
                         {item}
                       </p>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      
+      case 'summary':
+        return (
+          <div className="w-full h-full flex flex-col justify-center">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-800 mb-4 text-center animate-fade-in-up">
+                {currentSlideData.title}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                {currentSlideData.content.map((point, index) => (
+                  <div key={index} className="group relative overflow-hidden animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                    {point.includes('Protocolo:') || point.includes('Síntomas:') || point.includes('Resultado:') || point.includes('Seguimiento:') ? (
+                      <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-3 sm:p-4 border border-green-200 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 relative overflow-hidden">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <div className="w-5 h-5 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">✓</span>
+                          </div>
+                          <h3 className="text-xs sm:text-sm font-semibold text-green-800">Información</h3>
+                        </div>
+                        <p className="text-xs sm:text-sm text-slate-700 leading-tight font-medium">
+                          {point}
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-3 sm:p-4 border border-blue-200 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 relative overflow-hidden">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">{index + 1}</span>
+                          </div>
+                          <h3 className="text-xs sm:text-sm font-semibold text-blue-800">Punto</h3>
+                        </div>
+                        <p className="text-xs sm:text-sm text-slate-700 leading-tight font-medium">
+                          {point}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
