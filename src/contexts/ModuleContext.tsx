@@ -36,7 +36,7 @@ export const ModuleProvider: React.FC<ModuleProviderProps> = ({ children }) => {
     {
       id: 1,
       title: "MÓDULO 1",
-      subtitle: "El Inicio Invisible: Cuando la Historia Empieza Antes de Nacer",
+      subtitle: "Biomagnetismo Prenatal: Gestación y Perinatología",
       color: "from-teal-400 to-blue-500",
       isActive: true
     },

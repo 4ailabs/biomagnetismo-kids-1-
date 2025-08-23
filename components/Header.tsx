@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, Link } from 'react-router-dom';
+import { Magnet } from 'lucide-react';
 import { useModule } from '../src/contexts/ModuleContext';
 import { useDocumentTitle } from '../src/hooks/useDocumentTitle';
 import LanguageSelector from './LanguageSelector';
@@ -63,7 +64,7 @@ const Header: React.FC = () => {
         
         <div className="text-center">
           <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 bg-gradient-to-br from-teal-400 to-blue-500 rounded-full shadow-lg mb-3 sm:mb-4 lg:mb-6">
-            <span className="text-lg sm:text-xl lg:text-2xl xl:text-3xl">🧲</span>
+            <Magnet className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xl:w-10 xl:h-10 text-white" />
           </div>
           <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold tracking-tight bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 bg-clip-text text-transparent sm:animate-pulse leading-tight pb-2">
             Biomagnetismo Kids
