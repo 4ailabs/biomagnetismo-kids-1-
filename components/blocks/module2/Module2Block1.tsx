@@ -73,6 +73,183 @@ const Module2Block1 = () => {
             </div>
           </div>
           
+          {/* Nueva sección - Experiencias Adversas de la Infancia */}
+          <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-800 mb-4 sm:mb-6">Experiencias Adversas de la Infancia: El Legado Invisible</h3>
+            <p className="text-slate-700 leading-relaxed text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">
+              Las Experiencias Adversas de la Infancia (ACE por sus siglas en inglés) son eventos traumáticos que ocurren antes de los 18 años y que pueden tener impactos profundos en la salud física, mental y emocional a lo largo de toda la vida. En el contexto del biomagnetismo, estas experiencias dejan huellas energéticas específicas que se manifiestan como desequilibrios electromagnéticos en el cuerpo.
+            </p>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+              {/* Primera columna - ACE del hogar */}
+              <div className="space-y-4">
+                <h4 className="font-bold text-orange-700 text-lg border-b-2 border-orange-200 pb-2">ACE del Hogar y Familia:</h4>
+                <div className="space-y-3">
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Abuso Físico</h5>
+                    <p className="text-slate-600 text-xs">Golpes, empujones, quemaduras, lesiones físicas intencionales</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Abuso Emocional</h5>
+                    <p className="text-slate-600 text-xs">Humillaciones, críticas constantes, amenazas, rechazo emocional</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Abuso Sexual</h5>
+                    <p className="text-slate-600 text-xs">Contacto sexual inapropiado, exposición a material sexual</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Negligencia Física</h5>
+                    <p className="text-slate-600 text-xs">Falta de alimentación, higiene, ropa, supervisión médica</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Negligencia Emocional</h5>
+                    <p className="text-slate-600 text-xs">Falta de atención, cariño, apoyo emocional, validación</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Violencia Doméstica</h5>
+                    <p className="text-slate-600 text-xs">Testigo de violencia entre padres o cuidadores</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Separación/Divorcio</h5>
+                    <p className="text-slate-600 text-xs">Pérdida de contacto con uno o ambos padres</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Enfermedad Mental Familiar</h5>
+                    <p className="text-slate-600 text-xs">Depresión, ansiedad, esquizofrenia, trastorno bipolar</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Adicciones Familiares</h5>
+                    <p className="text-slate-600 text-xs">Alcoholismo, drogadicción, ludopatía en cuidadores</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Encarcelamiento Familiar</h5>
+                    <p className="text-slate-600 text-xs">Padre, madre o cuidador en prisión</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Segunda columna - ACE externas y sistémicas */}
+              <div className="space-y-4">
+                <h4 className="font-bold text-orange-700 text-lg border-b-2 border-orange-200 pb-2">ACE Externas y Sistémicas:</h4>
+                <div className="space-y-3">
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Bullying/Acoso Escolar</h5>
+                    <p className="text-slate-600 text-xs">Acoso físico, verbal, social o cibernético</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Discriminación</h5>
+                    <p className="text-slate-600 text-xs">Por raza, etnia, religión, orientación sexual, discapacidad</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Pobreza Extrema</h5>
+                    <p className="text-slate-600 text-xs">Inseguridad alimentaria, falta de vivienda estable</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Migración Forzada</h5>
+                    <p className="text-slate-600 text-xs">Separación de familia, pérdida de raíces culturales</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Desastres Naturales</h5>
+                    <p className="text-slate-600 text-xs">Terremotos, huracanes, incendios, inundaciones</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Guerra/Conflicto Armado</h5>
+                    <p className="text-slate-600 text-xs">Exposición a violencia, pérdida de seres queridos</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Abandono Escolar</h5>
+                    <p className="text-slate-600 text-xs">Falta de acceso a educación o expulsión</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Trabajo Infantil</h5>
+                    <p className="text-slate-600 text-xs">Explotación laboral, trabajo peligroso</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Tráfico de Personas</h5>
+                    <p className="text-slate-600 text-xs">Explotación sexual o laboral forzada</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-3">
+                    <h5 className="font-semibold text-orange-800 text-sm mb-1">Pérdida Traumática</h5>
+                    <p className="text-slate-600 text-xs">Muerte súbita de padres, hermanos o cuidadores</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Manifestaciones Biomagnéticas */}
+            <div className="bg-gradient-to-r from-orange-100 to-amber-100 rounded-xl p-5 mb-6 border border-orange-200">
+              <h4 className="font-bold text-orange-800 text-lg mb-4 text-center">Manifestaciones Biomagnéticas de las ACE</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="text-center">
+                  <h5 className="font-semibold text-orange-700 mb-2">Sistema Nervioso</h5>
+                  <div className="text-xs text-slate-600 space-y-1">
+                    <p>• Ansiedad crónica</p>
+                    <p>• Depresión</p>
+                    <p>• TDAH</p>
+                    <p>• Trastornos del sueño</p>
+                    <p>• Hipervigilancia</p>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <h5 className="font-semibold text-orange-700 mb-2">Sistema Inmune</h5>
+                  <div className="text-xs text-slate-600 space-y-1">
+                    <p>• Infecciones recurrentes</p>
+                    <p>• Alergias</p>
+                    <p>• Enfermedades autoinmunes</p>
+                    <p>• Cicatrización lenta</p>
+                    <p>• Inflamación crónica</p>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <h5 className="font-semibold text-orange-700 mb-2">Sistemas Corporales</h5>
+                  <div className="text-xs text-slate-600 space-y-1">
+                    <p>• Problemas digestivos</p>
+                    <p>• Alteraciones endocrinas</p>
+                    <p>• Dolores crónicos</p>
+                    <p>• Problemas cardíacos</p>
+                    <p>• Trastornos respiratorios</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Enfoque Biomagnético */}
+            <div className="bg-white/80 rounded-xl p-5 border-l-4 border-orange-400 shadow-lg">
+              <h4 className="font-bold text-orange-800 text-lg mb-4">El Enfoque Biomagnético para las ACE</h4>
+              <p className="text-slate-700 text-sm leading-relaxed mb-4">
+                El biomagnetismo aborda las ACE desde una perspectiva energética integral, reconociendo que cada tipo de trauma se almacena en el cuerpo en puntos específicos y afecta diferentes sistemas energéticos. La intervención biomagnética busca restaurar el equilibrio electromagnético alterado por estas experiencias.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg p-4 border border-orange-200">
+                  <h5 className="font-semibold text-orange-800 mb-3">Fase 1: Identificación del Trauma</h5>
+                  <div className="space-y-2 text-sm text-slate-700">
+                    <p>• <strong>Historia clínica detallada:</strong> Mapeo de eventos traumáticos</p>
+                    <p>• <strong>Test de ACE:</strong> Evaluación estandarizada de experiencias</p>
+                    <p>• <strong>Detección biomagnética:</strong> Localización de puntos de conflicto</p>
+                    <p>• <strong>Análisis de síntomas:</strong> Correlación trauma-manifestación</p>
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg p-4 border border-orange-200">
+                  <h5 className="font-semibold text-orange-800 mb-3">Fase 2: Restauración Energética</h5>
+                  <div className="space-y-2 text-sm text-slate-700">
+                    <p>• <strong>Pares biomagnéticos:</strong> Aplicación específica por tipo de ACE</p>
+                    <p>• <strong>Secuencia de tratamiento:</strong> Orden jerárquico de intervención</p>
+                    <p>• <strong>Monitoreo de cambios:</strong> Seguimiento de mejoras energéticas</p>
+                    <p>• <strong>Prevención secundaria:</strong> Fortalecimiento de sistemas afectados</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-4 p-3 bg-orange-50 rounded-lg border border-orange-200">
+                <p className="text-orange-800 text-sm font-medium text-center">
+                  <strong>Nota importante:</strong> El tratamiento biomagnético de las ACE debe realizarse siempre en conjunto con apoyo psicológico profesional y en casos de trauma severo, bajo supervisión médica especializada.
+                </p>
+              </div>
+            </div>
+          </div>
+          
           {/* Tercera sección - principios explicados de forma humana */}
           <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 shadow-md border-l-4 border-slate-200">
                             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-800 mb-3 sm:mb-4">Por Qué Funciona el Biomagnetismo en Niños</h3>
