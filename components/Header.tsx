@@ -70,7 +70,7 @@ const Header: React.FC = () => {
             Biomagnetismo Kids
           </h1>
           <p className="mt-2 sm:mt-3 lg:mt-4 text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-slate-700 max-w-3xl sm:max-w-4xl mx-auto font-medium px-2 sm:px-4 leading-relaxed">
-            {currentModule?.title} – {currentModule?.subtitle}
+            {isInModule ? `${currentModule?.title} – ${currentModule?.subtitle}` : 'Formación Especializada en Biomagnetismo Infantil'}
           </p>
           <div className="mt-3 sm:mt-4 lg:mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm text-slate-500">
             <span className="flex items-center">
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
             </span>
             <span className="flex items-center">
               <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 lg:w-2 lg:h-2 bg-blue-400 rounded-full mr-1 sm:mr-1.5 lg:mr-2 animate-pulse delay-300"></span>
-              {activeModule === 1 ? 'Duración: 8 semanas' : 'Duración: 6 semanas'}
+              {isInModule ? (activeModule === 1 ? 'Duración: 8 semanas' : 'Duración: 6 semanas') : 'Módulos Especializados'}
             </span>
             <span className="flex items-center">
               <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 lg:w-2 lg:h-2 bg-purple-400 rounded-full mr-1 sm:mr-1.5 lg:mr-2 animate-pulse delay-700"></span>
