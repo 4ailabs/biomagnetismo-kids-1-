@@ -10,7 +10,7 @@ const Module2Block8: React.FC = () => {
           <Baby className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
         </div>
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight pb-2 mb-4">
-          BLOQUE 8: DESCODIFICACIÓN DENTAL EN PRIMERA INFANCIA
+          BLOQUE 8: CONFLICTOLOGÍA DENTAL EN PRIMERA INFANCIA
         </h1>
         <p className="text-lg sm:text-xl text-slate-700 max-w-4xl mx-auto font-medium leading-relaxed mb-4">
           Los dientes que hablan antes que las palabras
@@ -34,7 +34,7 @@ const Module2Block8: React.FC = () => {
       <section className="space-y-6">
         <SectionTitle
           icon={<Brain className="w-6 h-6 text-blue-600" />}
-          title="Fundamentos de la Descodificación Dental Pediátrica"
+          title="Fundamentos de la Conflictología Dental Pediátrica"
         />
         
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border-l-4 border-blue-400">
@@ -304,7 +304,7 @@ const Module2Block8: React.FC = () => {
       <section className="space-y-6">
         <SectionTitle
           icon={<Table className="w-6 h-6 text-teal-600" />}
-          title="Protocolo de Evaluación de Descodificación Dental"
+          title="Protocolo de Evaluación de Conflictología Dental"
         />
 
         <div className="space-y-6">
@@ -438,8 +438,8 @@ const Module2Block8: React.FC = () => {
         </h3>
         <div className="space-y-4 text-teal-700">
           <p className="leading-relaxed">
-            La descodificación dental en primera infancia nos revela que nuestros dientes nos conocen, 
-            ellos son el testigo de nuestra identidad. En la descodificación dental no hay acusaciones, 
+            La conflictología dental en primera infancia nos revela que nuestros dientes nos conocen, 
+            ellos son el testigo de nuestra identidad. En la conflictología dental no hay acusaciones, 
             sino informaciones indispensables para el cambio.
           </p>
           <p className="leading-relaxed">
