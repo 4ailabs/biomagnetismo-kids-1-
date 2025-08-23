@@ -29,11 +29,14 @@ const BlockSelector: React.FC = () => {
       ];
     } else if (activeModule === 2) {
       return [
-        { id: 1, title: "3-9 meses", subtitle: "Establecimiento del Apego", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
-        { id: 2, title: "9-18 meses", subtitle: "Exploración con Base Segura", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-blue-400 to-cyan-500' },
-        { id: 3, title: "18m-3 años", subtitle: "Autonomía y Límites", icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-purple-400 to-violet-500' },
-        { id: 4, title: "3-5 años", subtitle: "Iniciativa y Socialización", icon: <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-orange-400 to-amber-500' },
-        { id: 5, title: "Integración", subtitle: "Aplicaciones Prácticas", icon: <Target className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-emerald-500' },
+        { id: 1, title: "Fundamentos", subtitle: "Teoría del Apego", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
+        { id: 2, title: "Desarrollo", subtitle: "Patrones Energéticos", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-blue-400 to-cyan-500' },
+        { id: 3, title: "Protocolos", subtitle: "Aplicaciones Prácticas", icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-purple-400 to-violet-500' },
+        { id: 4, title: "Integración", subtitle: "Sistémica Familiar", icon: <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-orange-400 to-amber-500' },
+        { id: 5, title: "Evaluación", subtitle: "Herramientas", icon: <Target className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-emerald-500' },
+        { id: 6, title: "Sensaciones", subtitle: "Vitales", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-indigo-400 to-purple-500' },
+        { id: 7, title: "Orden", subtitle: "Sistémico", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-emerald-400 to-teal-500' },
+        { id: 8, title: "Conflictología", subtitle: "Dental", icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-rose-400 to-pink-500' },
       ];
     } else {
       // Módulos futuros
@@ -66,7 +69,11 @@ const BlockSelector: React.FC = () => {
         </h2>
         <div className="w-8 sm:w-10 lg:w-12 xl:w-16 h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full mx-auto"></div>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1.5 sm:gap-2 lg:gap-3">
+      <div className={`grid gap-1.5 sm:gap-2 lg:gap-3 ${
+        activeModule === 1 
+          ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5' 
+          : 'grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8'
+      }`}>
         {blocks.map((block) => (
           <button
             key={block.id}
