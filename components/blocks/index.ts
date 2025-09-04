@@ -7,3 +7,6 @@ export { default as Block5 } from './Block5';
 
 // Módulo 2
 export * from './module2';
+
+// Módulo 3
+export * from './module3';

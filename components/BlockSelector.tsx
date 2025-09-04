@@ -1,17 +1,24 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useModule } from '../src/contexts/ModuleContext';
-import { 
-  BookOpen, 
-  Beaker, 
-  Baby, 
-  Rocket, 
+import {
+  BookOpen,
+  Beaker,
+  Baby,
+  Rocket,
   Target,
   Heart,
   Compass,
   Shield,
   Lightbulb,
-  Sparkles
+  Sparkles,
+  Search,
+  MapPin,
+  UserCheck,
+  Microscope,
+  Award,
+  CheckCircle,
+  Users
 } from 'lucide-react';
 
 const BlockSelector: React.FC = () => {
@@ -39,6 +46,17 @@ const BlockSelector: React.FC = () => {
         { id: 7, title: t('blockSelector.module2.block7'), subtitle: t('blockSelector.module2.subtitles.block7'), icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-emerald-400 to-teal-500' },
         { id: 8, title: t('blockSelector.module2.block8'), subtitle: t('blockSelector.module2.subtitles.block8'), icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-rose-400 to-pink-500' },
         { id: 9, title: t('blockSelector.module2.block9'), subtitle: t('blockSelector.module2.subtitles.block9'), icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-violet-400 to-purple-500' },
+      ];
+    } else if (activeModule === 3) {
+      return [
+        { id: 1, title: "Fundamentos", subtitle: "8 Conflictos Escolares", icon: <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-blue-400 to-indigo-500' },
+        { id: 2, title: "Patologías", subtitle: "TDAH, Asma, Bruxismo", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
+        { id: 3, title: "Rastreo", subtitle: "3 Técnicas Integradas", icon: <Search className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-green-400 to-emerald-500' },
+        { id: 4, title: "Evaluación", subtitle: "Mapeo y Sensaciones", icon: <MapPin className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-purple-400 to-indigo-500' },
+        { id: 5, title: "Sistémico", subtitle: "Desórdenes y Dental", icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-orange-400 to-amber-500' },
+        { id: 6, title: "Casos", subtitle: "Clínicos y Emergencia", icon: <UserCheck className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-cyan-500' },
+        { id: 7, title: "Microorganismos", subtitle: "Bacterias, Virus, Hongos", icon: <Microscope className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-red-400 to-pink-500' },
+        { id: 8, title: "Seguimiento", subtitle: "Ética y Recursos", icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-amber-400 to-orange-500' },
       ];
     } else {
       // Módulos futuros

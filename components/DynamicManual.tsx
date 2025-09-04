@@ -2,7 +2,8 @@ import React from 'react';
 import { useModule } from '../src/contexts/ModuleContext';
 import {
   Block1, Block2, Block3, Block4, Block5,
-  Module2Block1, Module2Block2, Module2Block3, Module2Block4, Module2Block5, Module2Block6, Module2Block7, Module2Block8, Module2Block9
+  Module2Block1, Module2Block2, Module2Block3, Module2Block4, Module2Block5, Module2Block6, Module2Block7, Module2Block8, Module2Block9,
+  Module3Block1, Module3Block2, Module3Block3, Module3Block4, Module3Block5, Module3Block6, Module3Block7, Module3Block8
 } from './blocks';
 import Manual from './Manual';
 
@@ -31,8 +32,24 @@ const DynamicManual: React.FC = () => {
             );
           }
 
-  // Módulos futuros (3 y 4)
-  if (activeModule === 3 || activeModule === 4) {
+  // Renderizar módulo 3
+  if (activeModule === 3) {
+    return (
+      <div className="space-y-12">
+        <Module3Block1 />
+        <Module3Block2 />
+        <Module3Block3 />
+        <Module3Block4 />
+        <Module3Block5 />
+        <Module3Block6 />
+        <Module3Block7 />
+        <Module3Block8 />
+      </div>
+    );
+  }
+
+  // Módulos futuros (4)
+  if (activeModule === 4) {
     return (
       <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-12 text-center">
         <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-400 to-violet-500 rounded-full shadow-lg mb-6">

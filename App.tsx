@@ -1,14 +1,100 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { Magnet, Baby, ArrowRight } from 'lucide-react';
+import { Routes, Route, Link } from 'react-router-dom';
+import { Magnet, Baby, ArrowRight, BookOpen } from 'lucide-react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import BlockSelector from './components/BlockSelector';
 import DynamicManual from './components/DynamicManual';
 import Presentation from './pages/Presentation';
 import Module2Presentation from './pages/Module2Presentation';
+import Module3Presentation from './pages/Module3Presentation';
 import ModuleSelector from './components/ModuleSelector';
 import { ModuleProvider, useModuleFromRoute } from './src/contexts/ModuleContext';
+
+const modulesData = [
+  {
+    id: 1,
+    title: 'Módulo 1: Biomagnetismo Prenatal',
+    subtitle: 'El Inicio Invisible: Cuando la Historia Empieza Antes de Nacer',
+    Icon: Magnet,
+    features: ['Gestación y Perinatología', '5 bloques especializados', 'Enfoque Sistémico Familiar'],
+    colors: {
+      bg: 'from-teal-400 to-blue-500',
+      button: 'from-teal-500 to-blue-600',
+      hover: 'hover:from-teal-600 hover:to-blue-700',
+      dot1: 'bg-teal-400',
+      dot2: 'bg-blue-400',
+      dot3: 'bg-purple-400',
+    },
+  },
+  {
+    id: 2,
+    title: 'Módulo 2: Desarrollo Infantil',
+    subtitle: 'Del Apego a la Autonomía: Patrones Energéticos de 3 Meses a 5 Años',
+    Icon: Baby,
+    features: ['Primera Infancia (3m-5a)', '5 bloques especializados', 'Protocolos por Edad'],
+    colors: {
+      bg: 'from-pink-400 to-purple-500',
+      button: 'from-pink-500 to-purple-600',
+      hover: 'hover:from-pink-600 hover:to-purple-700',
+      dot1: 'bg-pink-400',
+      dot2: 'bg-purple-400',
+      dot3: 'bg-indigo-400',
+    },
+  },
+  {
+    id: 3,
+    title: 'Módulo 3: Biomagnetismo Escolar',
+    subtitle: 'Aprender Sin Perderme a Mí Mismo: Patrones Energéticos de 5-12 Años',
+    Icon: BookOpen,
+    features: ['Contexto Escolar (5-12a)', '8 bloques especializados', 'Protocolos Educativos'],
+    colors: {
+      bg: 'from-emerald-400 to-teal-500',
+      button: 'from-emerald-500 to-teal-600',
+      hover: 'hover:from-emerald-600 hover:to-teal-700',
+      dot1: 'bg-emerald-400',
+      dot2: 'bg-teal-400',
+      dot3: 'bg-cyan-400',
+    },
+  },
+];
+
+const ModuleCard: React.FC<(typeof modulesData)[0]> = ({ id, title, subtitle, Icon, features, colors }) => (
+  <div className="bg-white/90 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border border-white/20 p-4 sm:p-6 lg:p-8 hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
+    <div className="text-center">
+      <div className={`inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br ${colors.bg} rounded-xl sm:rounded-2xl shadow-lg mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}>
+        <Icon className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
+      </div>
+      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">
+        {title}
+      </h3>
+      <p className="text-xs sm:text-sm lg:text-base text-slate-600 mb-4 sm:mb-6 leading-relaxed">
+        {subtitle}
+      </p>
+      <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-xs sm:text-sm text-slate-500">
+        <div className="flex items-center justify-center">
+          <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 ${colors.dot1} rounded-full mr-1.5 sm:mr-2`}></span>
+          {features[0]}
+        </div>
+        <div className="flex items-center justify-center">
+          <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 ${colors.dot2} rounded-full mr-1.5 sm:mr-2`}></span>
+          {features[1]}
+        </div>
+        <div className="flex items-center justify-center">
+          <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 ${colors.dot3} rounded-full mr-1.5 sm:mr-2`}></span>
+          {features[2]}
+        </div>
+      </div>
+      <Link
+        to={`/modulo/${id}`}
+        className={`inline-flex items-center px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 bg-gradient-to-r ${colors.button} text-white text-xs sm:text-sm font-semibold rounded-lg sm:rounded-xl ${colors.hover} transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl`}
+      >
+        Comenzar Módulo
+        <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1.5 sm:ml-2" />
+      </Link>
+    </div>
+  </div>
+);
 
 // Página principal con selector de módulos
 const HomePage: React.FC = () => {
@@ -34,78 +120,10 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 max-w-4xl lg:max-w-5xl mx-auto">
-            {/* Módulo 1 */}
-            <div className="bg-white/90 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border border-white/20 p-4 sm:p-6 lg:p-8 hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-teal-400 to-blue-500 rounded-xl sm:rounded-2xl shadow-lg mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Magnet className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
-                </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">
-                  Módulo 1: Biomagnetismo Prenatal
-                </h3>
-                <p className="text-xs sm:text-sm lg:text-base text-slate-600 mb-4 sm:mb-6 leading-relaxed">
-                  El Inicio Invisible: Cuando la Historia Empieza Antes de Nacer
-                </p>
-                <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-xs sm:text-sm text-slate-500">
-                  <div className="flex items-center justify-center">
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-teal-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    Gestación y Perinatología
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    5 bloques especializados
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    Enfoque Sistémico Familiar
-                  </div>
-                </div>
-                <a 
-                  href="/modulo/1" 
-                  className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 bg-gradient-to-r from-teal-500 to-blue-600 text-white text-xs sm:text-sm font-semibold rounded-lg sm:rounded-xl hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  Comenzar Módulo
-                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1.5 sm:ml-2" />
-                </a>
-              </div>
-            </div>
-
-            {/* Módulo 2 */}
-            <div className="bg-white/90 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border border-white/20 p-4 sm:p-6 lg:p-8 hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-pink-400 to-purple-500 rounded-xl sm:rounded-2xl shadow-lg mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Baby className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
-                </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">
-                  Módulo 2: Desarrollo Infantil
-                </h3>
-                <p className="text-xs sm:text-sm lg:text-base text-slate-600 mb-4 sm:mb-6 leading-relaxed">
-                  Del Apego a la Autonomía: Patrones Energéticos de 3 Meses a 5 Años
-                </p>
-                <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-xs sm:text-sm text-slate-500">
-                  <div className="flex items-center justify-center">
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-pink-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    Primera Infancia (3m-5a)
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    5 bloques especializados
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-indigo-400 rounded-full mr-1.5 sm:mr-2"></span>
-                    Protocolos por Edad
-                  </div>
-                </div>
-                <a 
-                  href="/modulo/2" 
-                  className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs sm:text-sm font-semibold rounded-lg sm:rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  Comenzar Módulo
-                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1.5 sm:ml-2" />
-                </a>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 max-w-6xl mx-auto">
+            {modulesData.map((module) => (
+              <ModuleCard key={module.id} {...module} />
+            ))}
           </div>
         </main>
         <Footer />
@@ -152,6 +170,7 @@ const App: React.FC = () => {
         <Route path="/modulo/:moduleId" element={<ModulePage />} />
         <Route path="/presentation" element={<Presentation />} />
         <Route path="/presentation-modulo2" element={<Module2Presentation />} />
+        <Route path="/presentation-modulo3" element={<Module3Presentation />} />
       </Routes>
     </ModuleProvider>
   );

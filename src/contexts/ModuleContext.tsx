@@ -50,8 +50,8 @@ export const ModuleProvider: React.FC<ModuleProviderProps> = ({ children }) => {
     {
       id: 3,
       title: "MÓDULO 3",
-      subtitle: "Por definir",
-      color: "from-purple-400 to-violet-500", 
+      subtitle: "Aprender Sin Perderme a Mí Mismo: Patrones Energéticos de 5-12 Años",
+      color: "from-emerald-400 to-teal-500", 
       isActive: false
     },
     {
