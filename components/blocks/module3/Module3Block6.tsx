@@ -1,6 +1,6 @@
 import React from 'react';
 import CourseSection from '../../CourseSection';
-import { UserCheck, AlertTriangle, Heart, Target, ArrowRight, CheckCircle, Activity, Shield, Zap } from 'lucide-react';
+import { UserCheck, AlertTriangle, Heart, Target, ArrowRight, CheckCircle, Activity, Shield, Zap, Users } from 'lucide-react';
 
 const Module3Block6: React.FC = () => {
   return (
