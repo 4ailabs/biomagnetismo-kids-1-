@@ -28,10 +28,10 @@ const BlockHeader: React.FC<BlockHeaderProps> = ({
             <Icon className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 text-slate-700" />
           </div>
         </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight">
           {title}
         </h1>
-        <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed xl:leading-relaxed">
           {subtitle}
         </p>
       </div>

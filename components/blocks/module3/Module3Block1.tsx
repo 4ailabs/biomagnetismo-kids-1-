@@ -101,9 +101,9 @@ const Module3Block1: React.FC = () => {
                 <div className="p-3 bg-red-100 rounded-full mr-4">
                   <AlertTriangle className="w-8 h-8 text-red-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">1. Autoridad Exterior</h3>
-                  <p className="text-sm text-gray-500">Edad: 5-7 años</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">1. Autoridad Exterior</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">Edad: 5-7 años</p>
                 </div>
               </div>
               
@@ -143,9 +143,9 @@ const Module3Block1: React.FC = () => {
                 <div className="p-3 bg-orange-100 rounded-full mr-4">
                   <Heart className="w-8 h-8 text-orange-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">2. Pertenencia Dividida</h3>
-                  <p className="text-sm text-gray-500">Edad: 6-8 años</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">2. Pertenencia Dividida</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">Edad: 6-8 años</p>
                 </div>
               </div>
               
@@ -179,9 +179,9 @@ const Module3Block1: React.FC = () => {
                 <div className="p-3 bg-yellow-100 rounded-full mr-4">
                   <Brain className="w-8 h-8 text-yellow-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">3. Desvalorización Intelectual</h3>
-                  <p className="text-sm text-gray-500">Edad: 7-12 años</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">3. Desvalorización Intelectual</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">Edad: 7-12 años</p>
                 </div>
               </div>
               
@@ -215,9 +215,9 @@ const Module3Block1: React.FC = () => {
                 <div className="p-3 bg-green-100 rounded-full mr-4">
                   <Users className="w-8 h-8 text-green-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">4. Comparación</h3>
-                  <p className="text-sm text-gray-500">Edad: 8-12 años</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">4. Comparación</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">Edad: 8-12 años</p>
                 </div>
               </div>
               
@@ -251,9 +251,9 @@ const Module3Block1: React.FC = () => {
                 <div className="p-3 bg-blue-100 rounded-full mr-4">
                   <ArrowRight className="w-8 h-8 text-blue-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">5. Pérdida de Libertad</h3>
-                  <p className="text-sm text-gray-500">Edad: 6-9 años</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">5. Pérdida de Libertad</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">Edad: 6-9 años</p>
                 </div>
               </div>
               
@@ -292,9 +292,9 @@ const Module3Block1: React.FC = () => {
                 <div className="p-3 bg-purple-100 rounded-full mr-4">
                   <Brain className="w-8 h-8 text-purple-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">6. Sobrecarga Sensorial</h3>
-                  <p className="text-sm text-gray-500">Edad: 7-11 años</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">6. Sobrecarga Sensorial</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">Edad: 7-11 años</p>
                 </div>
               </div>
               
@@ -328,9 +328,9 @@ const Module3Block1: React.FC = () => {
                 <div className="p-3 bg-pink-100 rounded-full mr-4">
                   <Heart className="w-8 h-8 text-pink-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">7. Amenaza Social</h3>
-                  <p className="text-sm text-gray-500">Edad: 8-12 años</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">7. Amenaza Social</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">Edad: 8-12 años</p>
                 </div>
               </div>
               
@@ -363,9 +363,9 @@ const Module3Block1: React.FC = () => {
                 <div className="p-3 bg-indigo-100 rounded-full mr-4">
                   <Target className="w-8 h-8 text-indigo-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">8. Pérdida de Vínculo Primario</h3>
-                  <p className="text-sm text-gray-500">Edad: 5-8 años</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">8. Pérdida de Vínculo Primario</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">Edad: 5-8 años</p>
                 </div>
               </div>
               

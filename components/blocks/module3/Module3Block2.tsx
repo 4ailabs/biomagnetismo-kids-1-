@@ -67,9 +67,9 @@ const Module3Block2: React.FC = () => {
                 <div className="p-3 bg-yellow-100 rounded-full mr-4">
                   <Brain className="w-8 h-8 text-yellow-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">TDAH Inatento</h3>
-                  <p className="text-sm text-gray-500">"Me desconecto para protegerme"</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">TDAH Inatento</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">"Me desconecto para protegerme"</p>
                 </div>
               </div>
               
@@ -128,9 +128,9 @@ const Module3Block2: React.FC = () => {
                 <div className="p-3 bg-orange-100 rounded-full mr-4">
                   <Activity className="w-8 h-8 text-orange-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">TDAH Hiperactivo</h3>
-                  <p className="text-sm text-gray-500">"Me muevo para liberar tensión y mantenerme alerta"</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">TDAH Hiperactivo</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">"Me muevo para liberar tensión y mantenerme alerta"</p>
                 </div>
               </div>
               
@@ -191,9 +191,9 @@ const Module3Block2: React.FC = () => {
                 <div className="p-3 bg-red-100 rounded-full mr-4">
                   <Zap className="w-8 h-8 text-red-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">TDAH Mixto</h3>
-                  <p className="text-sm text-gray-500">"Oscilo entre desconectarme y hiperactivarme según la amenaza"</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">TDAH Mixto</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">"Oscilo entre desconectarme y hiperactivarme según la amenaza"</p>
                 </div>
               </div>
               
@@ -301,9 +301,9 @@ const Module3Block2: React.FC = () => {
                 <div className="p-3 bg-blue-100 rounded-full mr-4">
                   <Heart className="w-8 h-8 text-blue-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Secuencia de Trabajo para Asma Escolar</h3>
-                  <p className="text-sm text-gray-500">Protocolo de evaluación y tratamiento</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">Secuencia de Trabajo para Asma Escolar</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">Protocolo de evaluación y tratamiento</p>
                 </div>
               </div>
               
@@ -535,9 +535,9 @@ const Module3Block2: React.FC = () => {
                 <div className="p-3 bg-green-100 rounded-full mr-4">
                   <Target className="w-8 h-8 text-green-500" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Secuencia de Trabajo para Bruxismo Escolar</h3>
-                  <p className="text-sm text-gray-500">Protocolo de evaluación y tratamiento</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight mb-1">Secuencia de Trabajo para Bruxismo Escolar</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">Protocolo de evaluación y tratamiento</p>
                 </div>
               </div>
               
@@ -663,7 +663,7 @@ const Module3Block2: React.FC = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 leading-tight">
                 Ansiedad Escolar
               </h3>
               <div className="space-y-4 text-gray-600">
@@ -711,7 +711,7 @@ const Module3Block2: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 leading-tight">
                 Depresión Infantil
               </h3>
               <div className="space-y-4 text-gray-600">
@@ -759,7 +759,7 @@ const Module3Block2: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 leading-tight">
                 Trastornos del Sueño
               </h3>
               <div className="space-y-4 text-gray-600">
@@ -807,7 +807,7 @@ const Module3Block2: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 leading-tight">
                 Trastornos Alimentarios
               </h3>
               <div className="space-y-4 text-gray-600">
