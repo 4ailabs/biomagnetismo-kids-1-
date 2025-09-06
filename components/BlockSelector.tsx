@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useModule } from '../src/contexts/ModuleContext';
+import FloatingBackButton from './FloatingBackButton';
 import {
   BookOpen,
   Beaker,
@@ -28,7 +29,6 @@ import {
 const BlockSelector: React.FC = () => {
   const { t } = useTranslation();
   const { activeModule } = useModule();
-  const [showBackToMenu, setShowBackToMenu] = useState(false);
   const [currentBlock, setCurrentBlock] = useState<number | null>(null);
 
   // Configuración dinámica según el módulo activo
@@ -78,18 +78,6 @@ const BlockSelector: React.FC = () => {
 
   const blocks = getModuleBlocks();
 
-  // Detectar scroll para mostrar botón de volver al menú
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      // Mostrar botón después de 200px de scroll
-      setShowBackToMenu(scrollY > 200);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const handleScroll = (blockId: number) => {
     // Guardar el bloque actual
     setCurrentBlock(blockId);
@@ -121,85 +109,69 @@ const BlockSelector: React.FC = () => {
   };
 
   return (
-    <div className="bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-2 sm:p-3 lg:p-4 border border-white/20">
-      <div className="text-center mb-2 sm:mb-3 lg:mb-4">
-        <h2 className="text-sm sm:text-base lg:text-lg font-semibold text-slate-700 mb-1 sm:mb-2">
-          {activeModule === 1 ? t('blockSelector.title') : 
-           activeModule === 2 ? t('blockSelector.module2.title') :
-           activeModule === 3 ? 'Módulo 3 - Navega por los Bloques' :
-           t('blockSelector.title')}
-        </h2>
-        <div className="w-8 sm:w-10 lg:w-12 xl:w-16 h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full mx-auto"></div>
-      </div>
-      <div className={`grid gap-1.5 sm:gap-2 lg:gap-3 ${
-        activeModule === 1 
-          ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5' 
-          : 'grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8'
-      }`}>
-        {blocks.map((block) => (
-          <button
-            key={block.id}
-            onClick={() => handleScroll(block.id)}
-            className={`
-              group relative overflow-hidden rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 text-center transition-all duration-300 
-              bg-white/80 hover:bg-white shadow-md hover:shadow-lg border border-white/20
-              hover:scale-105 hover:-translate-y-1 focus:outline-none focus:ring-2 
-              focus:ring-offset-1 sm:focus:ring-offset-2 focus:ring-teal-500
-            `}
-          >
-            {/* Background gradient on hover */}
-            <div className={`absolute inset-0 bg-gradient-to-br ${block.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-            
-            {/* Icon */}
-            <div className="relative z-10 mb-1.5 sm:mb-2 lg:mb-3">
-              <div className="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-full group-hover:from-white group-hover:to-slate-50 transition-all duration-300">
-                <div className="text-slate-600 group-hover:text-slate-800 transition-colors duration-300">
-                  {block.icon}
+    <>
+      <div className="bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-2 sm:p-3 lg:p-4 border border-white/20">
+        <div className="text-center mb-2 sm:mb-3 lg:mb-4">
+          <h2 className="text-sm sm:text-base lg:text-lg font-semibold text-slate-700 mb-1 sm:mb-2">
+            {activeModule === 1 ? t('blockSelector.title') : 
+             activeModule === 2 ? t('blockSelector.module2.title') :
+             activeModule === 3 ? 'Módulo 3 - Navega por los Bloques' :
+             t('blockSelector.title')}
+          </h2>
+          <div className="w-8 sm:w-10 lg:w-12 xl:w-16 h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full mx-auto"></div>
+        </div>
+        <div className={`grid gap-1.5 sm:gap-2 lg:gap-3 ${
+          activeModule === 1 
+            ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5' 
+            : 'grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8'
+        }`}>
+          {blocks.map((block) => (
+            <button
+              key={block.id}
+              onClick={() => handleScroll(block.id)}
+              className={`
+                group relative overflow-hidden rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 text-center transition-all duration-300 
+                bg-white/80 hover:bg-white shadow-md hover:shadow-lg border border-white/20
+                hover:scale-105 hover:-translate-y-1 focus:outline-none focus:ring-2 
+                focus:ring-offset-1 sm:focus:ring-offset-2 focus:ring-teal-500
+              `}
+            >
+              {/* Background gradient on hover */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${block.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
+              
+              {/* Icon */}
+              <div className="relative z-10 mb-1.5 sm:mb-2 lg:mb-3">
+                <div className="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-full group-hover:from-white group-hover:to-slate-50 transition-all duration-300">
+                  <div className="text-slate-600 group-hover:text-slate-800 transition-colors duration-300">
+                    {block.icon}
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Title */}
-            <div className="relative z-10">
-              <div className="text-xs sm:text-sm lg:text-sm font-semibold text-slate-700 group-hover:text-slate-900 transition-colors duration-300 leading-tight">
-                {block.title}
+              
+              {/* Title */}
+              <div className="relative z-10">
+                <div className="text-xs sm:text-sm lg:text-sm font-semibold text-slate-700 group-hover:text-slate-900 transition-colors duration-300 leading-tight">
+                  {block.title}
+                </div>
+                <div className="text-xs text-slate-500 group-hover:text-slate-600 transition-colors duration-300 leading-tight mt-0.5 sm:mt-1">
+                  {block.subtitle}
+                </div>
               </div>
-              <div className="text-xs text-slate-500 group-hover:text-slate-600 transition-colors duration-300 leading-tight mt-0.5 sm:mt-1">
-                {block.subtitle}
-              </div>
-            </div>
-            
-            {/* Hover indicator */}
-            <div className="absolute bottom-0 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-transparent via-teal-400 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-          </button>
-        ))}
+              
+              {/* Hover indicator */}
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-transparent via-teal-400 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Botón flotante para volver al menú */}
-      {showBackToMenu && (
-        <div className="fixed bottom-4 right-4 z-50">
-          <div className="flex flex-col space-y-2">
-            {/* Botón de volver al menú */}
-            <button
-              onClick={scrollToTop}
-              className="group relative overflow-hidden rounded-full p-3 sm:p-4 bg-gradient-to-r from-teal-500 to-blue-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
-              title="Volver al menú de bloques"
-            >
-              <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
-            </button>
-            
-            {/* Indicador del bloque actual */}
-            {currentBlock && (
-              <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-2 shadow-lg border border-white/20">
-                <span className="text-xs sm:text-sm font-medium text-slate-700">
-                  {blocks.find(b => b.id === currentBlock)?.title || `Bloque ${currentBlock}`}
-                </span>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-    </div>
+      {/* Botón flotante global */}
+      <FloatingBackButton
+        currentBlock={currentBlock}
+        blockTitle={currentBlock ? blocks.find(b => b.id === currentBlock)?.title : undefined}
+        onBackToMenu={scrollToTop}
+      />
+    </>
   );
 };
 
