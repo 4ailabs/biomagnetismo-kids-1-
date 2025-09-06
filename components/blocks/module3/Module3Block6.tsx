@@ -208,7 +208,7 @@ const Module3Block6: React.FC = () => {
           {/* Vista móvil expandida para hologramas */}
           <div className="sm:hidden mt-4 space-y-4">
             {hologramasEscolares.map((holograma) => (
-              <div key={holograma.id} className="bg-white rounded-lg shadow-lg p-4 border-l-4 border-purple-500">
+              <div key={holograma.id} className="bg-white rounded-lg shadow-lg p-4">
                 <div className="flex items-center mb-2">
                   <span className="bg-indigo-100 text-indigo-600 text-xs font-medium px-2 py-1 rounded-full mr-2">{holograma.id}</span>
                   <h3 className="font-medium text-purple-700 text-sm">{holograma.holograma}</h3>

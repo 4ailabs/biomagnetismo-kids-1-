@@ -239,7 +239,7 @@ const Module3Block5: React.FC = () => {
         <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Identificación y rastreo biomagnético de constelaciones cerebrales en niños escolares
         </p>
-        <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-amber-50 rounded-lg border-l-4 border-amber-400">
+        <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-amber-50 rounded-lg">
           <p className="text-sm sm:text-base text-amber-800">
             <strong>Metodología:</strong> Test muscular para identificar sensaciones, instante del conflicto y par biomagnético correcto
           </p>
@@ -364,7 +364,7 @@ const Module3Block5: React.FC = () => {
                               <AlertTriangle className="w-4 h-4 mr-2 text-red-500" />
                               Conflicto Biológico
                             </h5>
-                            <p className="text-sm text-slate-600 bg-red-50 p-3 rounded-lg border-l-3 border-red-300">
+                            <p className="text-sm text-slate-600 bg-red-50 p-3 rounded-lg">
                               {constellation.conflict}
                             </p>
                           </div>
@@ -374,7 +374,7 @@ const Module3Block5: React.FC = () => {
                               <Activity className="w-4 h-4 mr-2 text-blue-500" />
                               Manifestación Observable
                             </h5>
-                            <p className="text-sm text-slate-600 bg-blue-50 p-3 rounded-lg border-l-3 border-blue-300">
+                            <p className="text-sm text-slate-600 bg-blue-50 p-3 rounded-lg">
                               {constellation.manifestation}
                             </p>
                           </div>
@@ -402,7 +402,7 @@ const Module3Block5: React.FC = () => {
                               <Target className="w-4 h-4 mr-2 text-purple-500" />
                               Par Biomagnético
                             </h5>
-                            <p className="text-sm font-mono text-purple-700 bg-purple-50 p-3 rounded-lg border-l-3 border-purple-300">
+                            <p className="text-sm font-mono text-purple-700 bg-purple-50 p-3 rounded-lg">
                               {constellation.biomagnetic_pair}
                             </p>
                           </div>
@@ -413,7 +413,7 @@ const Module3Block5: React.FC = () => {
                               <Search className="w-4 h-4 mr-2 text-teal-500" />
                               Protocolo de Rastreo
                             </h5>
-                            <p className="text-sm text-slate-600 bg-teal-50 p-3 rounded-lg border-l-3 border-teal-300">
+                            <p className="text-sm text-slate-600 bg-teal-50 p-3 rounded-lg">
                               {constellation.tracking_protocol}
                             </p>
                           </div>

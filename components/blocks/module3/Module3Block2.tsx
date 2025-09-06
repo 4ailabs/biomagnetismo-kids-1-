@@ -81,7 +81,7 @@ const Module3Block2: React.FC = () => {
               <div className="space-y-4 text-gray-600">
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
-                  <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                  <div className="bg-blue-50 p-4 rounded-lg">
                     <div className="space-y-3 text-sm">
                       <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
                       <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
@@ -142,7 +142,7 @@ const Module3Block2: React.FC = () => {
               <div className="space-y-4 text-gray-600">
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
-                  <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <div className="space-y-3 text-sm">
                       <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
                       <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
@@ -205,7 +205,7 @@ const Module3Block2: React.FC = () => {
               <div className="space-y-4 text-gray-600">
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
-                  <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
+                  <div className="bg-red-50 p-4 rounded-lg">
                     <div className="space-y-3 text-sm">
                       <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar las sensaciones predominantes</p>
                       <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
@@ -268,7 +268,7 @@ const Module3Block2: React.FC = () => {
               
               <div>
                 <p className="font-semibold text-gray-800 mb-2">Protocolo Universal para Cualquier Patología:</p>
-                <div className="bg-white p-4 rounded-lg border-l-4 border-yellow-500">
+                <div className="bg-white p-4 rounded-lg">
                   <ol className="text-sm leading-relaxed space-y-2">
                     <li><strong>1. Buscar la sensación o sensaciones:</strong> Test muscular para identificar la emoción predominante que sostiene la patología</li>
                     <li><strong>2. Buscar con el test el instante:</strong> Ubicar temporalmente cuándo se activó este patrón (momento específico)</li>
@@ -315,7 +315,7 @@ const Module3Block2: React.FC = () => {
               <div className="space-y-4 text-gray-600">
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
-                  <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                  <div className="bg-blue-50 p-4 rounded-lg">
                     <div className="space-y-3 text-sm">
                       <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
                       <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
@@ -375,7 +375,7 @@ const Module3Block2: React.FC = () => {
               </div>
               
               <div className="space-y-4 text-gray-600">
-                <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
+                <div className="bg-red-50 p-4 rounded-lg">
                   <p className="font-semibold text-red-800 mb-2">⚠️ IMPORTANTE:</p>
                   <p className="text-sm leading-relaxed text-red-700">
                     En crisis severas, aplicar biomagnetismo solo como apoyo complementario. 
@@ -549,7 +549,7 @@ const Module3Block2: React.FC = () => {
               <div className="space-y-4 text-gray-600">
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
-                  <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+                  <div className="bg-green-50 p-4 rounded-lg">
                     <div className="space-y-3 text-sm">
                       <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
                       <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
@@ -679,7 +679,7 @@ const Module3Block2: React.FC = () => {
                 
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
-                  <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
+                  <div className="bg-red-50 p-4 rounded-lg">
                     <div className="space-y-3 text-sm">
                       <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
                       <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
@@ -727,7 +727,7 @@ const Module3Block2: React.FC = () => {
                 
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
-                  <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                  <div className="bg-blue-50 p-4 rounded-lg">
                     <div className="space-y-3 text-sm">
                       <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
                       <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
@@ -775,7 +775,7 @@ const Module3Block2: React.FC = () => {
                 
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
-                  <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400">
+                  <div className="bg-purple-50 p-4 rounded-lg">
                     <div className="space-y-3 text-sm">
                       <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
                       <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
@@ -823,7 +823,7 @@ const Module3Block2: React.FC = () => {
                 
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
-                  <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+                  <div className="bg-green-50 p-4 rounded-lg">
                     <div className="space-y-3 text-sm">
                       <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
                       <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
