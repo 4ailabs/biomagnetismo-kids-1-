@@ -46,9 +46,25 @@ const Header: React.FC = () => {
           </div>
         )}
         
+        {/* Botón de Lista de Pares - visible en todos los módulos */}
+        {isInModule && (
+          <div className="absolute top-2 sm:top-3 lg:top-4 right-28 sm:right-32 lg:right-36 z-10">
+            <button
+              onClick={() => window.open('/resources/lista-pares-biomagneticos.html', '_blank')}
+              className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 bg-white/80 backdrop-blur-sm text-slate-600 text-xs sm:text-sm font-medium rounded-md sm:rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50"
+            >
+              <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+              </svg>
+              <span className="hidden sm:inline">Lista de Pares</span>
+              <span className="sm:hidden">Pares</span>
+            </button>
+          </div>
+        )}
+        
         {/* Botón de Diapositivas - solo visible cuando estamos en el Módulo 2 */}
         {isInModule && activeModule === 2 && (
-          <div className="absolute top-2 sm:top-3 lg:top-4 right-28 sm:right-32 lg:right-36 z-10">
+          <div className="absolute top-2 sm:top-3 lg:top-4 right-48 sm:right-52 lg:right-56 z-10">
             <Link 
               to="/presentation-modulo2"
               className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 bg-white/80 backdrop-blur-sm text-slate-600 text-xs sm:text-sm font-medium rounded-md sm:rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50"

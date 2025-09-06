@@ -1,731 +1,476 @@
-import React from 'react';
-import CourseSection from '../../CourseSection';
-import { Users, Brain, Heart, Target, ArrowRight, CheckCircle, Activity, Shield, Zap, AlertTriangle } from 'lucide-react';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { 
+  Shield, 
+  Brain, 
+  Target, 
+  Eye, 
+  Ear, 
+  Heart,
+  AlertTriangle,
+  Baby,
+  Zap,
+  Compass,
+  ChevronDown,
+  ChevronUp,
+  Search,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Activity,
+  Gauge
+} from 'lucide-react';
 
 const Module3Block5: React.FC = () => {
+  const { t } = useTranslation();
+  const [activeConstellationGroup, setActiveConstellationGroup] = useState<string | null>('tronco');
+  const [selectedConstellation, setSelectedConstellation] = useState<string | null>(null);
+
+  const constellationGroups = {
+    tronco: {
+      title: "Supervivencia Primaria",
+      subtitle: "Tronco Cerebral y Cerebelo",
+      color: "from-red-500 to-rose-600",
+      icon: <Shield className="w-5 h-5" />,
+      constellations: [
+        {
+          id: "tcr",
+          name: "TCR - Sentirse Perdido",
+          conflict: "Abandono y Desorientación",
+          manifestation: "Niño en su propio mundo, no escucha, se distrae",
+          biomagnetic_pair: "Riñón (-) → Riñón (+)",
+          extremity_pattern: "Acortamiento persistente bilateral",
+          examples: ["Abandono en guardería", "Mudanza repentina", "Nacimiento hermano", "Perderse en lugar público"],
+          tracking_protocol: "Medir extremidades en posición supina. Acortamiento bilateral indica TCR activa."
+        },
+        {
+          id: "mamarias",
+          name: "Glándulas Mamarias - El Pequeño Cuidador",
+          conflict: "Preocupación Excesiva por Otros",
+          manifestation: "Asume rol de cuidador, se preocupa por el bienestar familiar",
+          biomagnetic_pair: "Mama (-) → Mama (+)",
+          extremity_pattern: "Acortamiento derecho con simetría intermitente",
+          examples: ["Padre enfermo", "Peleas de padres", "Responsabilidad por hermano menor", "Muerte de mascota"],
+          tracking_protocol: "Rastreo con pregunta: '¿Te sientes responsable de cuidar a alguien?'"
+        },
+        {
+          id: "cerebelo",
+          name: "Cerebelo - El Muro Emocional",
+          conflict: "Protección por Aplanamiento",
+          manifestation: "Aislamiento emocional, frialdad, 'nada le importa'",
+          biomagnetic_pair: "Cerebelo (-) → Cerebelo (+)",
+          extremity_pattern: "Rigidez en medición, resistencia al movimiento",
+          examples: ["Bullying escolar", "Críticas constantes", "Ridiculización pública", "Invasión del espacio"],
+          tracking_protocol: "Observar rigidez corporal durante medición de extremidades"
+        }
+      ]
+    },
+    corteza: {
+      title: "Procesamiento Cognitivo",
+      subtitle: "Sustancia Blanca y Corteza",
+      color: "from-blue-500 to-indigo-600",
+      icon: <Brain className="w-5 h-5" />,
+      constellations: [
+        {
+          id: "blanca",
+          name: "Sustancia Blanca - No Soy Suficiente",
+          conflict: "Devaluación Intelectual",
+          manifestation: "Megalomanía compensatoria, necesita ser centro de atención",
+          biomagnetic_pair: "Frontal (-) → Timo (+)",
+          extremity_pattern: "Alternancia entre acortamiento y simetría",
+          examples: ["Comparaciones constantes", "No cumple expectativas", "Último en ser elegido", "Discapacidad o dificultad"],
+          tracking_protocol: "Preguntar: '¿Te comparas con otros niños?' antes de medir extremidades"
+        },
+        {
+          id: "sensorial",
+          name: "Corteza Sensorial - Déficit de Atención",
+          conflict: "Pérdida de Contacto",
+          manifestation: "Despiste, olvidos, distracción, posible diagnóstico TDAH",
+          biomagnetic_pair: "Temporal Izq (-) → Temporal Der (+)",
+          extremity_pattern: "Acortamiento izquierdo predominante",
+          examples: ["Divorcio de padres", "Padres ausentes", "Sobreprotección asfixiante", "Invasión del espacio"],
+          tracking_protocol: "Método específico para TDAH: medir con padres presentes vs ausentes"
+        },
+        {
+          id: "frontal",
+          name: "Lóbulo Frontal - Miedo al Futuro",
+          conflict: "Ansiedad Anticipatoria",
+          manifestation: "Ansiedad constante, preocupación excesiva, miedos irracionales",
+          biomagnetic_pair: "Frontal (-) → Occipital (+)",
+          extremity_pattern: "Acortamiento que aumenta al mencionar el futuro",
+          examples: ["Pánico ante exámenes", "Angustia por cambio colegio", "Miedo a médicos", "Temor separación padres"],
+          tracking_protocol: "Medir antes y después de mencionar eventos futuros"
+        },
+        {
+          id: "motora",
+          name: "Corteza Motora - Atrapado sin Salida",
+          conflict: "Inmovilización",
+          manifestation: "Tics nerviosos, parpadeo, movimientos repetitivos, hiperactividad motora",
+          biomagnetic_pair: "Bulbo (-) → Suprarrenal (+)",
+          extremity_pattern: "Micro-movimientos durante medición",
+          examples: ["Inmovilizado en pelea", "Obligado a comer", "Atrapado en discusión", "Encerrado accidentalmente"],
+          tracking_protocol: "Observar movimientos involuntarios durante rastreo"
+        }
+      ]
+    },
+    territorial: {
+      title: "Defensa del Territorio",
+      subtitle: "Corteza Territorial",
+      color: "from-green-500 to-emerald-600",
+      icon: <Target className="w-5 h-5" />,
+      constellations: [
+        {
+          id: "maniaco",
+          name: "Maniaco-Depresiva - El Subibaja",
+          conflict: "Conflicto de Lealtades",
+          manifestation: "Cambios humor extremos, manía-depresión, inmadurez",
+          biomagnetic_pair: "Temporal Der (-) → Temporal Der (+)",
+          extremity_pattern: "Alternancia extrema: acortamiento severo/simetría perfecta",
+          examples: ["Lealtades en divorcio", "Rey en casa/don nadie en colegio", "Peleas territoriales hermanos"],
+          tracking_protocol: "Medir en diferentes contextos emocionales"
+        },
+        {
+          id: "asma",
+          name: "Asma - Miedo en mi Territorio",
+          conflict: "Amenaza Territorial",
+          manifestation: "Crisis asmáticas, dificultad respiratoria",
+          biomagnetic_pair: "Axila (-) → Axila (+)",
+          extremity_pattern: "Acortamiento con patrón respiratorio alterado",
+          examples: ["Miedo a ladrones", "Pánico a profesor", "Amenaza por discusiones padres"],
+          tracking_protocol: "Observar patrón respiratorio durante medición"
+        },
+        {
+          id: "planeante",
+          name: "Planeante - El Niño en las Nubes",
+          conflict: "Disociación por Susto",
+          manifestation: "Ausente, desconectado, vive en fantasía",
+          biomagnetic_pair: "Bulbo (-) → Cerebelo (+)",
+          extremity_pattern: "Extremidades 'flotantes', sin tensión muscular",
+          examples: ["Susto grande", "Miedo paralizante"],
+          tracking_protocol: "Observar tono muscular durante medición"
+        },
+        {
+          id: "agresiva",
+          name: "Agresiva - Furia o Autolesión",
+          conflict: "Frustración Explosiva",
+          manifestation: "Rabietas explosivas (manía) o autolesión (depresión)",
+          biomagnetic_pair: "Mastoides Der (-) → Corazón (+)",
+          extremity_pattern: "Tensión extrema o flacidez según fase",
+          examples: ["Castigo injusto", "Destrucción de algo valioso", "Frustración no expresada"],
+          tracking_protocol: "Evaluar tensión muscular y estado emocional actual"
+        },
+        {
+          id: "marcaje",
+          name: "Marcaje Urinario - Haciendo Mío el Espacio",
+          conflict: "Invasión del Territorio",
+          manifestation: "Enuresis repetitiva y compulsiva",
+          biomagnetic_pair: "Vejiga (-) → Vejiga (+)",
+          extremity_pattern: "Acortamiento cuando se menciona su espacio",
+          examples: ["Llegada nuevo bebé", "Compañero cuarto", "Invasión espacio aula"],
+          tracking_protocol: "Preguntar sobre su espacio antes de medir"
+        }
+      ]
+    },
+    especiales: {
+      title: "Patrones Complejos",
+      subtitle: "Constelaciones Especiales",
+      color: "from-purple-500 to-violet-600",
+      icon: <Zap className="w-5 h-5" />,
+      constellations: [
+        {
+          id: "mitomana",
+          name: "Mitómana - Creador de Historias",
+          conflict: "Confusión de Identidad",
+          manifestation: "Inventa historias, exagera, miente patológicamente",
+          biomagnetic_pair: "Lengua (-) → Hioides (+)",
+          extremity_pattern: "Patrón cambiante según la historia que cuenta",
+          examples: ["Rol confuso familia reconstituida", "Miedo al castigo"],
+          tracking_protocol: "Observar congruencia durante narración"
+        },
+        {
+          id: "autista",
+          name: "Autista - Encerrado en mi Mundo",
+          conflict: "Múltiples Traumas",
+          manifestation: "Aislamiento profundo, evita contacto social",
+          biomagnetic_pair: "Múltiples pares activos simultáneamente",
+          extremity_pattern: "Rigidez extrema, resistencia al contacto",
+          examples: ["Ambiente caótico", "Combinación conflictos severos"],
+          tracking_protocol: "Rastreo muy gradual, respetando límites del niño"
+        },
+        {
+          id: "alimentaria",
+          name: "Bulímica/Anoréxica - Conflicto en el Plato",
+          conflict: "No Poder Tragar",
+          manifestation: "Rechazo comida o ciclos compulsivos",
+          biomagnetic_pair: "Estómago (-) → Duodeno (+)",
+          extremity_pattern: "Acortamiento relacionado con hora de comidas",
+          examples: ["Contrariedad familiar", "Asco hacia situación", "Conflictos identidad"],
+          tracking_protocol: "Evaluar antes/después de mencionar alimentos"
+        },
+        {
+          id: "obsesivo",
+          name: "Obsesivo-Compulsivo - Rituales de Control",
+          conflict: "Susto + Injusticia + Confusión Identidad",
+          manifestation: "Necesidad de rituales, manías, comportamientos repetitivos",
+          biomagnetic_pair: "Temporal Izq (-) → Suprarrenal (+)",
+          extremity_pattern: "Patrón muy específico y repetitivo",
+          examples: ["Evento aterrador súbito", "Injusticia + confusión"],
+          tracking_protocol: "Respetar rituales del niño durante evaluación"
+        }
+      ]
+    }
+  };
+
+  const trackingSteps = [
+    {
+      step: 1,
+      title: "Observación Inicial",
+      description: "Evaluar postura, tensión corporal y estado emocional del niño",
+      icon: <Eye className="w-4 h-4" />
+    },
+    {
+      step: 2,
+      title: "Medición de Extremidades",
+      description: "Posición supina, medir diferencia en longitud de piernas",
+      icon: <Compass className="w-4 h-4" />
+    },
+    {
+      step: 3,
+      title: "Activación Emocional",
+      description: "Mencionar conflictos específicos y observar cambios",
+      icon: <Heart className="w-4 h-4" />
+    },
+    {
+      step: 4,
+      title: "Confirmación del Patrón",
+      description: "Acortamiento = Sí, Simetría = No para cada constelación",
+      icon: <CheckCircle className="w-4 h-4" />
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
+    <div id="block-5" className="mb-8 sm:mb-12 lg:mb-16 max-w-6xl mx-auto px-2 sm:px-4">
       {/* Header */}
-      <div className="bg-gradient-to-r from-slate-100 to-gray-200 text-slate-800 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-slate-200 rounded-full">
-              <Users className="w-12 h-12 text-slate-600" />
-            </div>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            Enfoque Sistémico Escolar
-          </h1>
-          <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto">
-            Desórdenes Sistémicos y Conflictología Dental en el Contexto Educativo
+      <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+        <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full mb-3 sm:mb-4">
+          <Shield className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
+        </div>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-2 sm:mb-3">
+          Estrategias de Supervivencia
+        </h2>
+        <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          Identificación y rastreo biomagnético de constelaciones cerebrales en niños escolares
+        </p>
+        <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-amber-50 rounded-lg border-l-4 border-amber-400">
+          <p className="text-sm sm:text-base text-amber-800">
+            <strong>Metodología:</strong> Rastreo por extremidades donde <strong>acortamiento = sí</strong> y <strong>simetría = no</strong>
           </p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Introducción */}
-        <CourseSection
-          title="Introducción al Enfoque Sistémico Escolar"
-          icon={<Users className="w-8 h-8 text-slate-500" />}
-        >
-          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-lg p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              El Niño como Sistema Integrado
-            </h3>
-            <div className="space-y-4 text-gray-600 leading-relaxed">
-              <p>
-                El enfoque sistémico en el biomagnetismo escolar reconoce que el niño no es una 
-                colección de partes separadas, sino un sistema integrado donde todos los órganos, 
-                sistemas y funciones están interconectados y se influyen mutuamente.
-              </p>
-              <p>
-                <strong>Los desórdenes sistémicos</strong> no son problemas aislados, sino manifestaciones 
-                de desequilibrios que afectan múltiples sistemas simultáneamente. <strong>La conflictología 
-                dental</strong> nos revela cómo los conflictos emocionales se manifiestan físicamente 
-                en la boca y los dientes.
-              </p>
-              <p>
-                En el contexto escolar, estos desórdenes sistémicos se manifiestan como problemas 
-                de aprendizaje, comportamiento, relaciones sociales y bienestar general. Comprender 
-                esta interconexión es fundamental para desarrollar tratamientos efectivos y holísticos.
-              </p>
-            </div>
-          </div>
-        </CourseSection>
-
-        {/* Desórdenes Sistémicos */}
-        <CourseSection
-          title="Desórdenes Sistémicos en el Entorno Escolar"
-          icon={<Brain className="w-8 h-8 text-slate-500" />}
-        >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Los desórdenes sistémicos en escolares no son problemas aislados, sino manifestaciones 
-              de desequilibrios que afectan múltiples sistemas simultáneamente. Cada sistema está 
-              interconectado y influye en el funcionamiento de los demás.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {/* Sistema Nervioso */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <Brain className="w-8 h-8 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Sistema Nervioso Central</h3>
-                  <p className="text-sm text-gray-500">Desórdenes neurológicos en escolares</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">TDAH (Trastorno por Déficit de Atención):</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Temporal Izq (-) → Temporal Der (+)<br/>
-                    <strong>Microorganismo:</strong> Virus del polioma<br/>
-                    <strong>Manifestaciones escolares:</strong> Dificultad de concentración, hiperactividad, impulsividad<br/>
-                    <strong>Impacto sistémico:</strong> Afecta sistema endocrino (tiroides, suprarrenales) y digestivo
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Ansiedad Escolar:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Plexo Solar (-) → Suprarrenal (+)<br/>
-                    <strong>Microorganismo:</strong> Helicobacter pylori<br/>
-                    <strong>Manifestaciones escolares:</strong> Evitación, miedo al fracaso, síntomas físicos<br/>
-                    <strong>Impacto sistémico:</strong> Afecta sistema digestivo, inmune y cardiovascular
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Depresión Infantil:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Timo (-) → Timo (+)<br/>
-                    <strong>Microorganismo:</strong> Streptococcus pneumoniae<br/>
-                    <strong>Manifestaciones escolares:</strong> Aislamiento, bajo rendimiento, falta de motivación<br/>
-                    <strong>Impacto sistémico:</strong> Afecta sistema inmune, endocrino y digestivo
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Sistema Endocrino */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <Heart className="w-8 h-8 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Sistema Endocrino</h3>
-                  <p className="text-sm text-gray-500">Desequilibrios hormonales en escolares</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Problemas de Tiroides:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Tiroides (-) → Tiroides (+)<br/>
-                    <strong>Microorganismo:</strong> Virus de Epstein-Barr<br/>
-                    <strong>Manifestaciones escolares:</strong> Fatiga, dificultad de concentración, cambios de humor<br/>
-                    <strong>Impacto sistémico:</strong> Afecta metabolismo, crecimiento y desarrollo cognitivo
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Desequilibrios Suprarrenales:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Suprarrenal (-) → Suprarrenal (+)<br/>
-                    <strong>Microorganismo:</strong> Candida albicans<br/>
-                    <strong>Manifestaciones escolares:</strong> Estrés crónico, ansiedad, problemas de sueño<br/>
-                    <strong>Impacto sistémico:</strong> Afecta sistema nervioso, inmune y digestivo
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Problemas de Crecimiento:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Hipófisis (-) → Hipófisis (+)<br/>
-                    <strong>Microorganismo:</strong> Mycoplasma pneumoniae<br/>
-                    <strong>Manifestaciones escolares:</strong> Baja estatura, retraso en desarrollo, autoestima afectada<br/>
-                    <strong>Impacto sistémico:</strong> Afecta desarrollo óseo, muscular y cognitivo
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Sistema Inmune */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Shield className="w-8 h-8 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Sistema Inmune</h3>
-                  <p className="text-sm text-gray-500">Desequilibrios inmunológicos en escolares</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Asma Escolar:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Pulmón (-) → Suprarrenal (+)<br/>
-                    <strong>Microorganismo:</strong> Virus de la rabia (Axila - Axila)<br/>
-                    <strong>Manifestaciones escolares:</strong> Dificultad respiratoria, ausentismo, ansiedad<br/>
-                    <strong>Impacto sistémico:</strong> Afecta sistema nervioso, cardiovascular y digestivo
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Alergias Alimentarias:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Intestino (-) → Intestino (+)<br/>
-                    <strong>Microorganismo:</strong> Clostridium difficile<br/>
-                    <strong>Manifestaciones escolares:</strong> Problemas de concentración, cambios de humor, fatiga<br/>
-                    <strong>Impacto sistémico:</strong> Afecta sistema digestivo, nervioso y endocrino
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Infecciones Recurrentes:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Timo (-) → Timo (+)<br/>
-                    <strong>Microorganismo:</strong> Streptococcus pyogenes<br/>
-                    <strong>Manifestaciones escolares:</strong> Ausentismo frecuente, fatiga, bajo rendimiento<br/>
-                    <strong>Impacto sistémico:</strong> Afecta desarrollo físico, cognitivo y social
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Sistema Digestivo */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-orange-100 rounded-full mr-4">
-                  <Activity className="w-8 h-8 text-orange-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Sistema Digestivo</h3>
-                  <p className="text-sm text-gray-500">Problemas gastrointestinales en escolares</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Síndrome del Intestino Irritable:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Intestino (-) → Intestino (+)<br/>
-                    <strong>Microorganismo:</strong> Escherichia coli<br/>
-                    <strong>Manifestaciones escolares:</strong> Dolor abdominal, ansiedad, dificultad de concentración<br/>
-                    <strong>Impacto sistémico:</strong> Afecta sistema nervioso, inmune y endocrino
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Reflujo Gastroesofágico:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Estómago (-) → Estómago (+)<br/>
-                    <strong>Microorganismo:</strong> Helicobacter pylori<br/>
-                    <strong>Manifestaciones escolares:</strong> Dificultad para comer, malestar, problemas de sueño<br/>
-                    <strong>Impacto sistémico:</strong> Afecta sistema nervioso, respiratorio y cardiovascular
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Problemas de Absorción:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Par biomagnético:</strong> Páncreas (-) → Páncreas (+)<br/>
-                    <strong>Microorganismo:</strong> Candida albicans<br/>
-                    <strong>Manifestaciones escolares:</strong> Fatiga, problemas de concentración, bajo rendimiento<br/>
-                    <strong>Impacto sistémico:</strong> Afecta desarrollo físico, cognitivo y sistema inmune
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </CourseSection>
-
-        {/* Conflictología Dental */}
-        <CourseSection
-          title="Conflictología Dental en el Contexto Escolar"
-          icon={<Target className="w-8 h-8 text-slate-500" />}
-        >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              La conflictología dental nos revela cómo los conflictos emocionales se manifiestan 
-              físicamente en la boca y los dientes. En el contexto escolar, estos conflictos 
-              están directamente relacionados con las experiencias del niño en el entorno educativo.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {/* Bruxismo Escolar */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-red-100 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-red-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Bruxismo Escolar</h3>
-                  <p className="text-sm text-gray-500">"Tengo que morder/aguantar situaciones injustas"</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Par biomagnético:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Principal:</strong> Mandíbula (-) → Mandíbula (+)<br/>
-                    <strong>Complementario:</strong> Ángulo (-) → Ángulo (+)
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Microorganismos:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Neisseria gonorreae</strong> (Mandíbula - Mandíbula): Enojo respecto a la vida, fastidio, frustración<br/>
-                    <strong>Streptococcus fragilis</strong> (Ángulo - Ángulo): Ira reprimida, no poder expresar lo que se siente
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Manifestaciones escolares:</p>
-                  <p className="text-sm leading-relaxed">
-                    Rechinamiento de dientes, tensión mandibular, dolores de cabeza, desgaste dental, 
-                    especialmente durante el sueño. Relacionado con conflictos de autoridad y frustración académica.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Impacto sistémico:</p>
-                  <p className="text-sm leading-relaxed">
-                    Afecta sistema nervioso (tensión), sistema digestivo (dificultad para comer), 
-                    sistema cardiovascular (estrés) y sistema endocrino (cortisol elevado).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Problemas de Masticación */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <CheckCircle className="w-8 h-8 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Problemas de Masticación</h3>
-                  <p className="text-sm text-gray-500">"No puedo morder/defenderme de lo que me molesta"</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Par biomagnético:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Principal:</strong> Articulación TMJ (-) → Articulación TMJ (+)<br/>
-                    <strong>Complementario:</strong> Músculos masticatorios (-) → Músculos masticatorios (+)
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Microorganismos:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Staphylococcus aureus</strong> (TMJ - TMJ): Conflictos de comunicación, no poder expresarse<br/>
-                    <strong>Enterococcus faecalis</strong> (Músculos - Músculos): Debilidad, falta de fuerza para defenderse
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Manifestaciones escolares:</p>
-                  <p className="text-sm leading-relaxed">
-                    Dificultad para morder, masticar y tragar, dolor en la articulación temporomandibular, 
-                    limitación en la apertura bucal, problemas para comer en el comedor escolar.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Impacto sistémico:</p>
-                  <p className="text-sm leading-relaxed">
-                    Afecta sistema digestivo (nutrición), sistema nervioso (dolor), sistema muscular 
-                    (tensión) y sistema inmune (inflamación crónica).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Dolores Dentales */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <Heart className="w-8 h-8 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Dolores Dentales</h3>
-                  <p className="text-sm text-gray-500">"Me duele ser quien soy en este lugar"</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Par biomagnético:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Principal:</strong> Diente específico (-) → Diente específico (+)<br/>
-                    <strong>Complementario:</strong> Encía (-) → Encía (+)
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Microorganismos:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Streptococcus mutans</strong> (Diente - Diente): Conflictos de identidad, autoestima<br/>
-                    <strong>Porphyromonas gingivalis</strong> (Encía - Encía): Conflictos de aceptación social
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Manifestaciones escolares:</p>
-                  <p className="text-sm leading-relaxed">
-                    Dolor dental constante, sensibilidad, problemas de concentración, evitación de 
-                    actividades que requieren hablar o sonreír, aislamiento social.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Impacto sistémico:</p>
-                  <p className="text-sm leading-relaxed">
-                    Afecta sistema nervioso (dolor crónico), sistema inmune (inflamación), 
-                    sistema endocrino (estrés) y sistema cardiovascular (tensión).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Problemas de Alineación */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Zap className="w-8 h-8 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Problemas de Alineación</h3>
-                  <p className="text-sm text-gray-500">"No encajo en este lugar, no pertenezco aquí"</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Par biomagnético:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Principal:</strong> Maxilar (-) → Maxilar (+)<br/>
-                    <strong>Complementario:</strong> Mandíbula (-) → Mandíbula (+)
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Microorganismos:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Actinomyces israelii</strong> (Maxilar - Maxilar): Conflictos de adaptación, cambios familiares<br/>
-                    <strong>Fusobacterium nucleatum</strong> (Mandíbula - Mandíbula): Conflictos de pertenencia, identidad
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Manifestaciones escolares:</p>
-                  <p className="text-sm leading-relaxed">
-                    Maloclusión, dientes apiñados, sobremordida, problemas de pronunciación, 
-                    dificultades para comer, autoestima afectada, bullying.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Impacto sistémico:</p>
-                  <p className="text-sm leading-relaxed">
-                    Afecta sistema nervioso (estrés), sistema digestivo (masticación), 
-                    sistema respiratorio (respiración bucal) y sistema endocrino (crecimiento).
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </CourseSection>
-
-        {/* Sistema Educativo */}
-        <CourseSection
-          title="Impacto en el Sistema Educativo"
-          icon={<Users className="w-8 h-8 text-slate-500" />}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Rendimiento Académico
-              </h3>
-              <div className="space-y-3 text-gray-600">
-                <div className="flex items-start">
-                  <Users className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
-                  <p>Los desórdenes sistémicos y problemas dentales afectan directamente el rendimiento académico, causando dificultades de concentración, memoria y procesamiento de información.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Relaciones Sociales
-              </h3>
-              <div className="space-y-3 text-gray-600">
-                <div className="flex items-start">
-                  <Heart className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                  <p>Estos problemas también afectan las relaciones sociales, causando aislamiento, dificultades de comunicación y problemas de autoestima en el entorno escolar.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Comportamiento Escolar
-              </h3>
-              <div className="space-y-3 text-gray-600">
-                <div className="flex items-start">
-                  <Target className="w-5 h-5 text-purple-500 mr-3 mt-1 flex-shrink-0" />
-                  <p>Los desórdenes sistémicos pueden manifestarse como problemas de comportamiento, hiperactividad, agresividad o retraimiento en el entorno escolar.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Ausentismo Escolar
-              </h3>
-              <div className="space-y-3 text-gray-600">
-                <div className="flex items-start">
-                  <AlertTriangle className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" />
-                  <p>Los problemas de salud sistémicos y dentales pueden causar ausentismo escolar frecuente, afectando la continuidad del aprendizaje y el desarrollo académico.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </CourseSection>
-
-        {/* Protocolo Sistémico */}
-        <CourseSection
-          title="Protocolo Sistémico de Intervención"
-          icon={<Shield className="w-8 h-8 text-slate-500" />}
-        >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              El protocolo sistémico de intervención reconoce que el niño es un sistema integrado 
-              donde todos los componentes están interconectados. La intervención debe abordar 
-              múltiples sistemas simultáneamente para lograr resultados efectivos y duraderos.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {/* Evaluación Integral */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <Shield className="w-8 h-8 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Evaluación Integral</h3>
-                  <p className="text-sm text-gray-500">Análisis completo del sistema del niño</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Evaluación multisistémica:</p>
-                  <p className="text-sm leading-relaxed">
-                    Rastreo completo de todos los sistemas: nervioso, endocrino, inmune, digestivo, 
-                    cardiovascular, respiratorio, muscular y esquelético. Identificar interconexiones 
-                    y desequilibrios prioritarios.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Mapeo de conflictos:</p>
-                  <p className="text-sm leading-relaxed">
-                    Identificar conflictos biológicos específicos, microorganismos asociados, 
-                    pares biomagnéticos desequilibrados y manifestaciones en el entorno escolar.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Evaluación contextual:</p>
-                  <p className="text-sm leading-relaxed">
-                    Analizar el impacto del entorno familiar, escolar y social en el desarrollo 
-                    de los desórdenes sistémicos y su manifestación en el comportamiento.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Priorización de intervenciones:</p>
-                  <p className="text-sm leading-relaxed">
-                    Determinar qué sistemas requieren intervención inmediata y cuáles pueden 
-                    ser abordados en fases posteriores del tratamiento.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Tratamiento Multisistémico */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Tratamiento Multisistémico</h3>
-                  <p className="text-sm text-gray-500">Intervención coordinada en múltiples sistemas</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo de pares principales:</p>
-                  <p className="text-sm leading-relaxed">
-                    Trabajar primero los pares biomagnéticos más importantes: Temporal Izq (-) → Temporal Der (+), 
-                    Frontal (-) → Occipital (+), Timo (-) → Timo (+), Suprarrenal (-) → Suprarrenal (+).
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo de sistemas específicos:</p>
-                  <p className="text-sm leading-relaxed">
-                    Abordar cada sistema afectado con pares específicos: sistema nervioso, endocrino, 
-                    inmune, digestivo, cardiovascular, respiratorio, muscular y esquelético.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo de microorganismos:</p>
-                  <p className="text-sm leading-relaxed">
-                    Identificar y trabajar con virus, bacterias y parásitos específicos que están 
-                    afectando el equilibrio sistémico del niño.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Coordinación de especialistas:</p>
-                  <p className="text-sm leading-relaxed">
-                    Trabajar en coordinación con pediatras, odontólogos, psicólogos, maestros 
-                    y otros especialistas para un abordaje integral.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Apoyo Educativo */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Users className="w-8 h-8 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Apoyo Educativo</h3>
-                  <p className="text-sm text-gray-500">Estrategias educativas personalizadas</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Adaptaciones curriculares:</p>
-                  <p className="text-sm leading-relaxed">
-                    Modificar el currículo según las necesidades específicas del niño: tiempos 
-                    de descanso, actividades alternativas, métodos de evaluación adaptados.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Estrategias de enseñanza:</p>
-                  <p className="text-sm leading-relaxed">
-                    Implementar métodos de enseñanza que respeten el ritmo y estilo de aprendizaje 
-                    del niño: visual, auditivo, kinestésico, multisensorial.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Apoyo emocional:</p>
-                  <p className="text-sm leading-relaxed">
-                    Proporcionar apoyo emocional y psicológico en el entorno escolar: técnicas 
-                    de relajación, manejo del estrés, desarrollo de habilidades sociales.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Coordinación con la familia:</p>
-                  <p className="text-sm leading-relaxed">
-                    Mantener comunicación constante con la familia para coordinar estrategias 
-                    de apoyo en el hogar y en la escuela.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Enfoque Holístico */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-indigo-100 rounded-full mr-4">
-                  <Brain className="w-8 h-8 text-indigo-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Enfoque Holístico</h3>
-                  <p className="text-sm text-gray-500">Visión integral del niño como sistema</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Interconexión de sistemas:</p>
-                  <p className="text-sm leading-relaxed">
-                    Reconocer que todos los sistemas están interconectados y que un desequilibrio 
-                    en uno afecta a todos los demás. El tratamiento debe abordar estas interconexiones.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Desarrollo integral:</p>
-                  <p className="text-sm leading-relaxed">
-                    Considerar el desarrollo físico, emocional, cognitivo y social del niño como 
-                    un proceso integrado que requiere apoyo en todas las dimensiones.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Prevención y promoción:</p>
-                  <p className="text-sm leading-relaxed">
-                    No solo tratar los problemas existentes, sino prevenir futuros desequilibrios 
-                    y promover el desarrollo saludable del niño.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Empoderamiento del niño:</p>
-                  <p className="text-sm leading-relaxed">
-                    Involucrar al niño en su propio proceso de sanación, enseñándole técnicas 
-                    de autocuidado y autoconocimiento que le servirán toda la vida.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </CourseSection>
-
-        {/* Próximos Pasos */}
-        <div className="bg-gradient-to-r from-slate-100 to-gray-200 rounded-lg p-8 text-slate-800 text-center">
-          <h2 className="text-2xl font-bold mb-4">
-            ¿Listo para los Casos Clínicos?
-          </h2>
-          <p className="text-slate-700 mb-6">
-            Ahora que conoces el enfoque sistémico, es momento de revisar 
-            casos clínicos reales y protocolos de emergencia.
+      {/* Protocolo de Rastreo */}
+      <div className="mb-8 sm:mb-10 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+        <div className="bg-gradient-to-r from-slate-50 to-slate-100 p-4 sm:p-6 border-b border-slate-200">
+          <h3 className="text-lg sm:text-xl font-semibold text-slate-800 mb-2">
+            Protocolo de Rastreo para Estrategias de Supervivencia
+          </h3>
+          <p className="text-sm sm:text-base text-slate-600">
+            Método específico para identificar constelaciones cerebrales activas
           </p>
-          <div className="flex justify-center">
-            <ArrowRight className="w-6 h-6 text-slate-700 animate-pulse" />
+        </div>
+        
+        <div className="p-4 sm:p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {trackingSteps.map((step) => (
+              <div key={step.step} className="text-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-3 text-white font-bold">
+                  {step.icon}
+                </div>
+                <h4 className="font-semibold text-slate-800 mb-2 text-sm sm:text-base">
+                  {step.step}. {step.title}
+                </h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
           </div>
+        </div>
+      </div>
+
+      {/* Grupos de Constelaciones */}
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
+        {Object.entries(constellationGroups).map(([key, group]) => (
+          <button
+            key={key}
+            onClick={() => setActiveConstellationGroup(activeConstellationGroup === key ? null : key)}
+            className={`p-4 sm:p-5 rounded-xl transition-all duration-300 text-left ${
+              activeConstellationGroup === key
+                ? 'bg-white shadow-xl border-2 border-orange-200 scale-105'
+                : 'bg-white/80 hover:bg-white shadow-md border border-slate-200 hover:shadow-lg'
+            }`}
+          >
+            <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${group.color} rounded-full flex items-center justify-center mb-3 text-white`}>
+              {group.icon}
+            </div>
+            <h3 className="font-semibold text-slate-800 mb-1 text-sm sm:text-base">
+              {group.title}
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 mb-2">
+              {group.subtitle}
+            </p>
+            <div className="flex items-center text-xs text-slate-500">
+              <span>{group.constellations.length} constelaciones</span>
+              {activeConstellationGroup === key ? 
+                <ChevronUp className="w-4 h-4 ml-auto" /> : 
+                <ChevronDown className="w-4 h-4 ml-auto" />
+              }
+            </div>
+          </button>
+        ))}
+      </div>
+
+      {/* Constelaciones Detalladas */}
+      {activeConstellationGroup && (
+        <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl border border-slate-200 overflow-hidden mb-8">
+          <div className={`bg-gradient-to-r ${constellationGroups[activeConstellationGroup].color} p-4 sm:p-6 text-white`}>
+            <div className="flex items-center mb-2">
+              {constellationGroups[activeConstellationGroup].icon}
+              <h3 className="text-lg sm:text-xl font-bold ml-3">
+                {constellationGroups[activeConstellationGroup].title}
+              </h3>
+            </div>
+            <p className="text-sm sm:text-base opacity-90">
+              {constellationGroups[activeConstellationGroup].subtitle}
+            </p>
+          </div>
+          
+          <div className="p-4 sm:p-6">
+            <div className="space-y-6">
+              {constellationGroups[activeConstellationGroup].constellations.map((constellation) => (
+                <div
+                  key={constellation.id}
+                  className={`border rounded-lg overflow-hidden transition-all duration-300 ${
+                    selectedConstellation === constellation.id 
+                      ? 'border-orange-300 shadow-lg' 
+                      : 'border-slate-200 hover:border-slate-300'
+                  }`}
+                >
+                  <button
+                    onClick={() => setSelectedConstellation(selectedConstellation === constellation.id ? null : constellation.id)}
+                    className="w-full p-4 text-left hover:bg-slate-50 transition-colors duration-200"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-semibold text-slate-800 text-sm sm:text-base mb-1">
+                          {constellation.name}
+                        </h4>
+                        <p className="text-xs sm:text-sm text-slate-600">
+                          {constellation.conflict} → {constellation.manifestation}
+                        </p>
+                      </div>
+                      {selectedConstellation === constellation.id ? 
+                        <ChevronUp className="w-5 h-5 text-slate-400" /> : 
+                        <ChevronDown className="w-5 h-5 text-slate-400" />
+                      }
+                    </div>
+                  </button>
+                  
+                  {selectedConstellation === constellation.id && (
+                    <div className="border-t border-slate-200 p-4 bg-slate-50">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        {/* Información Clínica */}
+                        <div className="space-y-4">
+                          <div>
+                            <h5 className="font-medium text-slate-700 mb-2 text-sm flex items-center">
+                              <AlertTriangle className="w-4 h-4 mr-2 text-red-500" />
+                              Conflicto Biológico
+                            </h5>
+                            <p className="text-sm text-slate-600 bg-red-50 p-3 rounded-lg border-l-3 border-red-300">
+                              {constellation.conflict}
+                            </p>
+                          </div>
+                          
+                          <div>
+                            <h5 className="font-medium text-slate-700 mb-2 text-sm flex items-center">
+                              <Activity className="w-4 h-4 mr-2 text-blue-500" />
+                              Manifestación Observable
+                            </h5>
+                            <p className="text-sm text-slate-600 bg-blue-50 p-3 rounded-lg border-l-3 border-blue-300">
+                              {constellation.manifestation}
+                            </p>
+                          </div>
+                          
+                          <div>
+                            <h5 className="font-medium text-slate-700 mb-2 text-sm flex items-center">
+                              <Baby className="w-4 h-4 mr-2 text-green-500" />
+                              Ejemplos Específicos
+                            </h5>
+                            <ul className="text-sm text-slate-600 space-y-1">
+                              {constellation.examples.map((example, idx) => (
+                                <li key={idx} className="flex items-start">
+                                  <ArrowRight className="w-3 h-3 mr-2 mt-1 text-green-500 flex-shrink-0" />
+                                  {example}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                        
+                        {/* Información de Rastreo */}
+                        <div className="space-y-4">
+                          <div>
+                            <h5 className="font-medium text-slate-700 mb-2 text-sm flex items-center">
+                              <Target className="w-4 h-4 mr-2 text-purple-500" />
+                              Par Biomagnético
+                            </h5>
+                            <p className="text-sm font-mono text-purple-700 bg-purple-50 p-3 rounded-lg border-l-3 border-purple-300">
+                              {constellation.biomagnetic_pair}
+                            </p>
+                          </div>
+                          
+                          <div>
+                            <h5 className="font-medium text-slate-700 mb-2 text-sm flex items-center">
+                              <Gauge className="w-4 h-4 mr-2 text-amber-500" />
+                              Patrón en Extremidades
+                            </h5>
+                            <p className="text-sm text-slate-600 bg-amber-50 p-3 rounded-lg border-l-3 border-amber-300">
+                              {constellation.extremity_pattern}
+                            </p>
+                          </div>
+                          
+                          <div>
+                            <h5 className="font-medium text-slate-700 mb-2 text-sm flex items-center">
+                              <Search className="w-4 h-4 mr-2 text-teal-500" />
+                              Protocolo de Rastreo
+                            </h5>
+                            <p className="text-sm text-slate-600 bg-teal-50 p-3 rounded-lg border-l-3 border-teal-300">
+                              {constellation.tracking_protocol}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Notas Importantes */}
+      <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-4 sm:p-6 border border-amber-200">
+        <h3 className="font-semibold text-amber-800 mb-3 text-base sm:text-lg flex items-center">
+          <AlertTriangle className="w-5 h-5 mr-2" />
+          Consideraciones Importantes
+        </h3>
+        <div className="space-y-2 text-sm sm:text-base text-amber-700">
+          <p>• Las estrategias de supervivencia son respuestas inteligentes del organismo ante amenazas</p>
+          <p>• Cada constelación representa una adaptación neurológica específica</p>
+          <p>• El rastreo debe ser respetuoso, gradual y apropiado para la edad del niño</p>
+          <p>• La presencia de múltiples constelaciones indica situaciones más complejas</p>
+          <p>• El objetivo es liberar las estrategias una vez que ya no son necesarias</p>
         </div>
       </div>
     </div>

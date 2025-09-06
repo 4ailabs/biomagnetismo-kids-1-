@@ -1,6 +1,6 @@
 import React from 'react';
 import CourseSection from '../../CourseSection';
-import { Search, Target, ArrowRight, CheckCircle, Activity, Shield, Zap, Heart } from 'lucide-react';
+import { Heart, Activity, Brain, Target, ArrowRight, CheckCircle, Users, BookOpen } from 'lucide-react';
 
 const Module3Block3: React.FC = () => {
   return (
@@ -10,600 +10,378 @@ const Module3Block3: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-slate-200 rounded-full">
-              <Search className="w-12 h-12 text-slate-600" />
+              <Heart className="w-12 h-12 text-slate-600" />
             </div>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            Técnicas de Rastreo Integradas
+            Introducción al Rastreo Biomagnético Escolar
           </h1>
           <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto">
-            Rastreo Biomagnético, Kinesiológico y por Sensaciones en el Contexto Escolar
+            Fundamentos del Rastreo por Medición de Extremidades en Niños Escolares
           </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Introducción */}
+        {/* Objetivo del Bloque */}
+        <section className="bg-slate-100 text-slate-700 rounded-lg sm:rounded-xl lg:rounded-xl shadow-sm p-3 sm:p-4 lg:p-6 text-center border border-slate-200 mb-12">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3">Objetivo del Bloque</h2>
+          <p className="text-sm sm:text-base max-w-2xl sm:max-w-3xl mx-auto leading-relaxed">
+            Dominar los fundamentos del rastreo biomagnético por medición de extremidades aplicado a escolares, 
+            comprender la técnica del acortamiento como indicador de resonancia y desarrollar habilidades 
+            para la identificación precisa de desequilibrios energéticos en niños.
+          </p>
+        </section>
+
+        {/* Fundamentos Teóricos */}
         <CourseSection
-          title="Introducción a las Técnicas de Rastreo Integradas"
-          icon={<Search className="w-8 h-8 text-slate-500" />}
+          title="¿Qué es el Rastreo Biomagnético Escolar?"
+          icon={<BookOpen className="w-8 h-8 text-slate-500" />}
         >
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-lg p-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              El Rastreo como Herramienta de Diagnóstico Integral
+              Definición y Principios Fundamentales
             </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                El rastreo en el contexto escolar no es solo una técnica de diagnóstico, sino una herramienta 
-                de comunicación profunda con el organismo del niño. A través de diferentes modalidades de 
-                rastreo, podemos acceder a información que el niño no puede expresar verbalmente.
+                <strong>El rastreo biomagnético escolar</strong> es la técnica que utiliza la medición de la 
+                longitud de las extremidades inferiores para identificar desequilibrios energéticos específicos 
+                en niños escolares. A través del acortamiento de la extremidad derecha, podemos detectar 
+                resonancias que indican la presencia de conflictos, sensaciones y alteraciones que afectan 
+                al niño en el contexto educativo.
               </p>
               <p>
-                <strong>El rastreo biomagnético</strong> nos permite identificar desequilibrios energéticos 
-                específicos. <strong>El rastreo kinesiológico</strong> nos da acceso a información emocional 
-                y de estrés. <strong>El rastreo por sensaciones</strong> nos conecta con la sabiduría corporal 
-                del niño.
+                La técnica funciona como un <strong>sistema de detección binario</strong> donde el acortamiento 
+                de la pierna derecha = SÍ (hay resonancia) y la simetría = NO (no hay resonancia). Esto nos 
+                permite hacer preguntas específicas al organismo del niño colocando imanes en diferentes puntos 
+                y observando la respuesta de las extremidades.
               </p>
               <p>
-                La integración de estas tres técnicas crea un sistema de diagnóstico multidimensional que 
-                respeta la complejidad del ser humano en desarrollo y permite intervenciones más precisas 
-                y efectivas en el entorno educativo.
+                En el contexto escolar, el rastreo biomagnético nos permite identificar exactamente qué conflictos, 
+                sensaciones o desequilibrios energéticos están interfiriendo con el aprendizaje, la socialización 
+                o el bienestar del niño, información que está almacenada en su campo energético pero no es 
+                accesible verbalmente.
               </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-blue-100 rounded-full mr-3">
+                  <Brain className="w-6 h-6 text-blue-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800">Principios del Rastreo</h4>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• El acortamiento indica resonancia energética</li>
+                <li>• La simetría indica ausencia de resonancia</li>
+                <li>• Los niños muestran respuestas más claras</li>
+                <li>• La información es específica y precisa</li>
+                <li>• Permite detección de causas profundas</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-green-100 rounded-full mr-3">
+                  <Target className="w-6 h-6 text-green-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800">Aplicaciones Escolares</h4>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Identificar sensaciones que soportan conflictos</li>
+                <li>• Rastrear el instante temporal de origen</li>
+                <li>• Detectar microbios asociados al conflicto</li>
+                <li>• Localizar puntos de resonancia específicos</li>
+                <li>• Determinar pares biomagnéticos correctivos</li>
+              </ul>
             </div>
           </div>
         </CourseSection>
 
-        {/* Rastreo Biomagnético */}
+        {/* El Rastreo Biomagnético en Niños */}
         <CourseSection
-          title="Rastreo Biomagnético Escolar"
-          icon={<Target className="w-8 h-8 text-slate-500" />}
-        >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              El rastreo biomagnético en escolares requiere sensibilidad especial. Los niños son más 
-              sensibles a los campos magnéticos y responden más rápidamente que los adultos.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {/* Preparación del Niño */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Preparación del Niño</h3>
-                  <p className="text-sm text-gray-500">Crear un ambiente seguro y confortable</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Explicación simple:</p>
-                  <p className="text-sm leading-relaxed">
-                    "Vamos a jugar a encontrar tesoros en tu cuerpo. Los imanes nos ayudan a encontrar 
-                    lugares que necesitan un poco de ayuda para sentirse mejor."
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Posición cómoda:</p>
-                  <p className="text-sm leading-relaxed">
-                    Niño acostado boca arriba, con una almohada bajo la cabeza. Mantener el ambiente 
-                    tranquilo, sin ruidos fuertes. Permitir que el niño tenga un objeto de confianza 
-                    (peluche, manta) si lo necesita.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Tiempo de sesión:</p>
-                  <p className="text-sm leading-relaxed">
-                    Máximo 20-30 minutos para niños de 5-8 años. 30-45 minutos para niños de 9-12 años. 
-                    Observar señales de cansancio o inquietud y ajustar la duración según la respuesta del niño.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Secuencia de Rastreo Básica */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <CheckCircle className="w-8 h-8 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Secuencia de Rastreo Básica</h3>
-                  <p className="text-sm text-gray-500">Protocolo paso a paso para escolares</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-1">1. Evaluación inicial:</p>
-                  <p className="text-sm">Pulso radial, temperatura, estado general del niño</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-1">2. Rastreo de pares principales:</p>
-                  <p className="text-sm">Temporal Izq (-) → Temporal Der (+), Frontal (-) → Occipital (+)</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-1">3. Rastreo de glándulas:</p>
-                  <p className="text-sm">Timo (-) → Timo (+), Suprarrenal (-) → Suprarrenal (+)</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-1">4. Rastreo de órganos:</p>
-                  <p className="text-sm">Hígado (-) → Hígado (+), Riñón Izq (-) → Riñón Der (+)</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">5. Confirmación:</p>
-                  <p className="text-sm leading-relaxed">
-                    Verificar que los pares encontrados respondan correctamente. Si hay resonancia, 
-                    mantener los imanes en posición durante el tiempo indicado (10-15 minutos).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Puntos Específicos para Escolares */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Activity className="w-8 h-8 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Puntos Específicos para Escolares</h3>
-                  <p className="text-sm text-gray-500">Áreas prioritarias en el rastreo pediátrico</p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Sistema Nervioso Central:</p>
-                  <p className="text-sm text-gray-600 mb-2">Temporal Izq (-) → Temporal Der (+)</p>
-                  <p className="text-sm text-gray-600 mb-2">Frontal (-) → Occipital (+)</p>
-                  <p className="text-sm text-gray-600">Cerebelo (-) → Cerebelo (+)</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Sistema Endocrino:</p>
-                  <p className="text-sm text-gray-600 mb-2">Timo (-) → Timo (+)</p>
-                  <p className="text-sm text-gray-600 mb-2">Suprarrenal (-) → Suprarrenal (+)</p>
-                  <p className="text-sm text-gray-600">Tiroides (-) → Tiroides (+)</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Sistema Inmune:</p>
-                  <p className="text-sm text-gray-600 mb-2">Bazo (-) → Bazo (+)</p>
-                  <p className="text-sm text-gray-600 mb-2">Ganglios (-) → Ganglios (+)</p>
-                  <p className="text-sm text-gray-600">Médula ósea (-) → Médula ósea (+)</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Sistema Digestivo:</p>
-                  <p className="text-sm text-gray-600 mb-2">Estómago (-) → Estómago (+)</p>
-                  <p className="text-sm text-gray-600 mb-2">Intestino (-) → Intestino (+)</p>
-                  <p className="text-sm text-gray-600">Hígado (-) → Hígado (+)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </CourseSection>
-
-        {/* Rastreo Kinesiológico */}
-        <CourseSection
-          title="Rastreo Kinesiológico Aplicado"
+          title="El Rastreo Biomagnético en Niños Escolares"
           icon={<Activity className="w-8 h-8 text-slate-500" />}
         >
           <div className="mb-6">
             <p className="text-gray-600 text-lg leading-relaxed">
-              La kinesiología en escolares es especialmente efectiva porque los niños tienen respuestas 
-              musculares más claras y directas que los adultos. Su sistema nervioso responde de manera 
-              más honesta a los estímulos.
+              Los niños son especialmente receptivos al rastreo biomagnético porque su sistema energético es 
+              más puro y menos interferido que en los adultos. Sus respuestas de acortamiento son más claras, 
+              directas y precisas, facilitando la identificación de desequilibrios específicos.
             </p>
           </div>
 
           <div className="space-y-8">
-            {/* Test Muscular Básico */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-orange-100 rounded-full mr-4">
-                  <Activity className="w-8 h-8 text-orange-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Test Muscular Básico</h3>
-                  <p className="text-sm text-gray-500">Técnica fundamental para escolares</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Preparación:</p>
-                  <p className="text-sm leading-relaxed">
-                    Niño sentado cómodamente, brazo extendido horizontalmente. Explicar: "Vamos a jugar 
-                    a que tu brazo es fuerte como un superhéroe. Voy a tocar tu brazo suavemente."
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnica:</p>
-                  <p className="text-sm leading-relaxed">
-                    Presión suave y constante en el brazo extendido. Si el brazo se mantiene firme = 
-                    respuesta positiva. Si cede = respuesta negativa o estrés. Repetir 2-3 veces para confirmar.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Puntos de test:</p>
-                  <p className="text-sm leading-relaxed">
-                    Deltoides (hombro), Bíceps (brazo), Cuádriceps (muslo). Usar el músculo más fuerte 
-                    y accesible para el niño.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Test de Estrés Emocional */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-yellow-100 rounded-full mr-4">
-                  <Heart className="w-8 h-8 text-yellow-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Test de Estrés Emocional</h3>
-                  <p className="text-sm text-gray-500">Identificar conflictos emocionales específicos</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Método:</p>
-                  <p className="text-sm leading-relaxed">
-                    Con el niño en posición de test, mencionar diferentes situaciones escolares: 
-                    "¿Te sientes bien cuando estás en la escuela?", "¿Te gusta tu maestra?", 
-                    "¿Te sientes cómodo con tus compañeros?"
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Interpretación:</p>
-                  <p className="text-sm leading-relaxed">
-                    Brazo fuerte = respuesta positiva, sin estrés. Brazo débil = hay conflicto 
-                    emocional con esa situación. Observar cambios en la fuerza muscular.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Aplicación práctica:</p>
-                  <p className="text-sm leading-relaxed">
-                    Identificar qué materias, maestros o situaciones generan más estrés. Esto 
-                    ayuda a enfocar el tratamiento biomagnético en las áreas específicas de conflicto.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Test de Alimentos */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <Shield className="w-8 h-8 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Test de Alimentos</h3>
-                  <p className="text-sm text-gray-500">Identificar sensibilidades alimentarias</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Método:</p>
-                  <p className="text-sm leading-relaxed">
-                    Colocar una muestra del alimento en la boca del niño (sin tragar) o en la mano. 
-                    Realizar el test muscular. Si el brazo se debilita, hay sensibilidad a ese alimento.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Alimentos comunes a testear:</p>
-                  <p className="text-sm leading-relaxed">
-                    Lácteos, gluten, azúcar, colorantes artificiales, conservantes. Estos pueden 
-                    afectar el comportamiento y el rendimiento escolar.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Aplicación escolar:</p>
-                  <p className="text-sm leading-relaxed">
-                    Identificar si el desayuno o almuerzo escolar está afectando al niño. 
-                    Recomendar ajustes en la dieta para mejorar el comportamiento en clase.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </CourseSection>
-
-        {/* Rastreo por Sensaciones */}
-        <CourseSection
-          title="Rastreo por Sensaciones Corporales"
-          icon={<Zap className="w-8 h-8 text-slate-500" />}
-        >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Los niños son especialmente sensibles a las sensaciones corporales. Su capacidad de 
-              percepción está menos "contaminada" por patrones mentales que en los adultos, lo que 
-              los hace excelentes "detectores" de desequilibrios energéticos.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {/* Sensaciones Físicas */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-red-100 rounded-full mr-4">
-                  <Zap className="w-8 h-8 text-red-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Sensaciones Físicas</h3>
-                  <p className="text-sm text-gray-500">Identificar desequilibrios a través del cuerpo</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnica de escaneo corporal:</p>
-                  <p className="text-sm leading-relaxed">
-                    "Vamos a hacer un mapa de tu cuerpo. Cierra los ojos y dime qué sientes en cada parte. 
-                    ¿Hay algún lugar que se siente diferente, caliente, frío, tenso o raro?"
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Sensaciones a identificar:</p>
-                  <p className="text-sm leading-relaxed">
-                    Calor (inflamación), frío (debilidad), tensión (estrés), hormigueo (circulación), 
-                    pesadez (congestión), ligereza (equilibrio). Cada sensación indica un estado energético específico.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Aplicación práctica:</p>
-                  <p className="text-sm leading-relaxed">
-                    Mapear las sensaciones antes y después del tratamiento biomagnético. Los niños 
-                    pueden reportar cambios inmediatos en sus sensaciones corporales.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Sensaciones Emocionales */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-pink-100 rounded-full mr-4">
-                  <Heart className="w-8 h-8 text-pink-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Sensaciones Emocionales</h3>
-                  <p className="text-sm text-gray-500">Conectar con las emociones a través del cuerpo</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnica de mapeo emocional:</p>
-                  <p className="text-sm leading-relaxed">
-                    "¿Dónde sientes la tristeza en tu cuerpo? ¿Y la alegría? ¿Y el enojo? 
-                    ¿Hay algún lugar que se siente pesado o vacío?"
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Emociones y ubicaciones:</p>
-                  <p className="text-sm leading-relaxed">
-                    Tristeza (pecho), enojo (hígado/estómago), miedo (riñones), alegría (corazón), 
-                    ansiedad (plexo solar). Cada emoción tiene una ubicación corporal específica.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Aplicación escolar:</p>
-                  <p className="text-sm leading-relaxed">
-                    Identificar qué emociones están bloqueadas o excesivas. Esto ayuda a entender 
-                    el comportamiento del niño en el entorno escolar y enfocar el tratamiento.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Técnicas de Sensibilización */}
+            {/* Diferencias con Adultos */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Activity className="w-8 h-8 text-purple-500" />
+                  <Users className="w-8 h-8 text-purple-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">Técnicas de Sensibilización</h3>
-                  <p className="text-sm text-gray-500">Aumentar la percepción corporal del niño</p>
+                  <h3 className="text-xl font-bold text-gray-800">Diferencias Clave con el Rastreo en Adultos</h3>
+                  <p className="text-sm text-gray-500">Características específicas del rastreo biomagnético infantil</p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-3">Ventajas en Niños:</h4>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>• Acortamientos más evidentes y claros</li>
+                    <li>• Menos interferencia del sistema nervioso</li>
+                    <li>• Mayor reactividad energética</li>
+                    <li>• Respuestas más rápidas e inmediatas</li>
+                    <li>• Correcciones energéticas más efectivas</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-3">Consideraciones Especiales:</h4>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>• Necesidad de explicaciones simples</li>
+                    <li>• Sesiones más cortas</li>
+                    <li>• Ambiente lúdico y seguro</li>
+                    <li>• Presencia de padres cuando sea necesario</li>
+                    <li>• Manejo delicado y suave</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Preparación del Niño */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-6">
+                <div className="p-3 bg-orange-100 rounded-full mr-4">
+                  <Heart className="w-8 h-8 text-orange-500" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800">Preparación del Niño para el Rastreo</h3>
+                  <p className="text-sm text-gray-500">Crear el ambiente adecuado para la evaluación</p>
                 </div>
               </div>
               
               <div className="space-y-4 text-gray-600">
                 <div>
-                  <p className="font-semibold text-gray-800 mb-2">Respiración consciente:</p>
-                  <p className="text-sm leading-relaxed">
-                    "Respira profundo y siente cómo el aire entra y sale de tu cuerpo. 
-                    ¿Dónde sientes la respiración? ¿En el pecho, en el vientre, en la espalda?"
-                  </p>
+                  <p className="font-semibold text-gray-800 mb-2">Explicación adaptada por edad:</p>
+                  <div className="bg-slate-50 rounded-lg p-4 space-y-3">
+                    <p className="text-sm">
+                      <strong>5-7 años:</strong> "Vamos a revisar si tus piernas están del mismo tamaño. 
+                      Estos imanes especiales nos ayudan a ver si tu cuerpo necesita equilibrio para 
+                      sentirte mejor en la escuela."
+                    </p>
+                    <p className="text-sm">
+                      <strong>8-10 años:</strong> "Voy a medir la longitud de tus piernas mientras coloco imanes 
+                      en diferentes puntos. Si una pierna se acorta, significa que encontramos un lugar que 
+                      necesita ayuda energética."
+                    </p>
+                    <p className="text-sm">
+                      <strong>11-12 años:</strong> "Usaremos el rastreo biomagnético para identificar desequilibrios 
+                      energéticos. El acortamiento de tu pierna derecha nos indica dónde hay conflictos que 
+                      podrían estar afectando tu bienestar escolar."
+                    </p>
+                  </div>
                 </div>
                 
                 <div>
-                  <p className="font-semibold text-gray-800 mb-2">Visualización guiada:</p>
-                  <p className="text-sm leading-relaxed">
-                    "Imagina que tienes una luz dorada que recorre tu cuerpo desde la cabeza hasta los pies. 
-                    ¿Dónde se detiene la luz? ¿Dónde se siente más brillante o más tenue?"
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnica de colores:</p>
-                  <p className="text-sm leading-relaxed">
-                    "Si tu cuerpo fuera un arcoíris, ¿de qué color sería cada parte? ¿Hay algún lugar 
-                    que se siente de un color diferente o más oscuro?"
-                  </p>
+                  <p className="font-semibold text-gray-800 mb-2">Ambiente terapéutico:</p>
+                  <ul className="text-sm space-y-1">
+                    <li>• Camilla cómoda con pies fuera del borde</li>
+                    <li>• Temperatura agradable y ambiente tranquilo</li>
+                    <li>• Permitir objetos de confianza si es necesario</li>
+                    <li>• Presencia de padres si el niño lo requiere</li>
+                    <li>• Explicar cada paso del proceso</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </CourseSection>
 
-        {/* Integración de Técnicas */}
+        {/* Protocolo Técnico Básico */}
         <CourseSection
-          title="Integración de las Tres Técnicas"
-          icon={<Shield className="w-8 h-8 text-slate-500" />}
+          title="Protocolo Técnico del Rastreo"
+          icon={<Target className="w-8 h-8 text-slate-500" />}
         >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              La verdadera potencia del rastreo escolar está en la integración de las tres técnicas. 
-              Cada una aporta información única que, combinada, crea un diagnóstico multidimensional 
-              y un tratamiento más efectivo.
-            </p>
-          </div>
-
           <div className="space-y-8">
-            {/* Protocolo Integrado Completo */}
+            {/* Técnica de Medición */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <Shield className="w-8 h-8 text-blue-500" />
+                  <Activity className="w-8 h-8 text-blue-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">Protocolo Integrado Completo</h3>
-                  <p className="text-sm text-gray-500">Secuencia paso a paso para escolares</p>
+                  <h3 className="text-xl font-bold text-gray-800">Técnica de Medición de Extremidades</h3>
+                  <p className="text-sm text-gray-500">Protocolo paso a paso para todas las edades</p>
                 </div>
               </div>
               
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-1">Fase 1 - Sensaciones (5-10 min):</p>
-                  <p className="text-sm leading-relaxed">
-                    Mapeo corporal inicial. "¿Cómo se siente tu cuerpo hoy? ¿Hay algún lugar que se siente diferente?" 
-                    Registrar todas las sensaciones reportadas por el niño.
-                  </p>
+              <div className="space-y-6">
+                <div className="bg-slate-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-gray-800 mb-4">Protocolo Estándar:</h4>
+                  <ol className="list-decimal list-inside space-y-3 text-sm text-gray-600">
+                    <li><strong>Posicionamiento:</strong> Niño en decúbito supino, pies fuera de la camilla</li>
+                    <li><strong>Sujeción:</strong> Tomar ambos pies por los talones y elevarlos 30 grados</li>
+                    <li><strong>Medición inicial:</strong> Verificar simetría de extremidades como línea base</li>
+                    <li><strong>Colocación de imán:</strong> Colocar imán negativo en el punto a evaluar</li>
+                    <li><strong>Re-medición:</strong> Volver a medir las extremidades</li>
+                    <li><strong>Interpretación:</strong> Acortamiento derecho = SÍ, simetría = NO</li>
+                    <li><strong>Registro:</strong> Anotar la respuesta y continuar con siguiente punto</li>
+                  </ol>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-gray-800 mb-1">Fase 2 - Kinesiología (10-15 min):</p>
-                  <p className="text-sm leading-relaxed">
-                    Test muscular para confirmar áreas de estrés. "Vamos a probar qué tan fuerte está tu brazo 
-                    cuando piensas en diferentes cosas de la escuela." Identificar conflictos específicos.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-1">Fase 3 - Biomagnetismo (15-20 min):</p>
-                  <p className="text-sm leading-relaxed">
-                    Aplicar imanes en los pares identificados. "Vamos a poner estos imanes especiales en los 
-                    lugares que necesitan ayuda." Trabajar con los desequilibrios encontrados.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-1">Fase 4 - Verificación (5-10 min):</p>
-                  <p className="text-sm leading-relaxed">
-                    Re-testar con kinesiología y re-mapear sensaciones. "¿Cómo se siente tu cuerpo ahora? 
-                    ¿Hay algún cambio?" Confirmar mejoras y ajustar si es necesario.
-                  </p>
+                <div className="bg-amber-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-gray-800 mb-4">Consideraciones para Niños:</h4>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>• <strong>Suavidad:</strong> Manipular las extremidades con delicadeza</li>
+                    <li>• <strong>Consistencia:</strong> Mantener la misma técnica durante toda la sesión</li>
+                    <li>• <strong>Paciencia:</strong> Permitir que el niño se relaje entre mediciones</li>
+                    <li>• <strong>Comunicación:</strong> Explicar cada paso que se va realizando</li>
+                    <li>• <strong>Observación:</strong> Estar atento a signos de cansancio o molestia</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            {/* Ventajas del Enfoque Integrado */}
+            {/* Interpretación de Respuestas */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-green-100 rounded-full mr-4">
                   <CheckCircle className="w-8 h-8 text-green-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">Ventajas del Enfoque Integrado</h3>
-                  <p className="text-sm text-gray-500">Beneficios específicos para escolares</p>
+                  <h3 className="text-xl font-bold text-gray-800">Interpretación de las Respuestas</h3>
+                  <p className="text-sm text-gray-500">Cómo leer correctamente los acortamientos</p>
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <p className="font-semibold text-gray-800 mb-2">Mayor precisión diagnóstica:</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    La combinación de técnicas permite identificar desequilibrios que una sola técnica 
-                    podría pasar por alto. Los niños responden de manera más clara a la integración.
-                  </p>
+                  <h4 className="font-semibold text-gray-800 mb-4">Respuesta Positiva (SÍ):</h4>
+                  <div className="space-y-3">
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <p className="text-sm font-semibold text-green-800">Acortamiento de extremidad derecha</p>
+                      <p className="text-xs text-green-700">Indica resonancia con el punto evaluado</p>
+                    </div>
+                    <p className="text-sm text-gray-600">Significa que hay conflicto, sensación o microbio asociado con ese punto específico.</p>
+                  </div>
                 </div>
                 
                 <div>
-                  <p className="font-semibold text-gray-800 mb-2">Mejor comprensión del niño:</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    El niño participa activamente en su diagnóstico y tratamiento, desarrollando 
-                    conciencia corporal y emocional que le servirá toda la vida.
-                  </p>
+                  <h4 className="font-semibold text-gray-800 mb-4">Respuesta Negativa (NO):</h4>
+                  <div className="space-y-3">
+                    <div className="bg-red-50 rounded-lg p-4">
+                      <p className="text-sm font-semibold text-red-800">Simetría de extremidades</p>
+                      <p className="text-xs text-red-700">No hay resonancia con el punto evaluado</p>
+                    </div>
+                    <p className="text-sm text-gray-600">Significa que no hay conflicto asociado con ese punto en particular.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CourseSection>
+
+        {/* Tipos de Preguntas en Rastreo */}
+        <CourseSection
+          title="Tipos de Preguntas en Rastreo Biomagnético Escolar"
+          icon={<Brain className="w-8 h-8 text-slate-500" />}
+        >
+          <div className="space-y-8">
+            {/* Estructura de Preguntas */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-6">
+                <div className="p-3 bg-indigo-100 rounded-full mr-4">
+                  <Brain className="w-8 h-8 text-indigo-500" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800">Estructura de Preguntas para Rastreo</h3>
+                  <p className="text-sm text-gray-500">Cómo formular preguntas efectivas durante el rastreo</p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-4">Preguntas Efectivas:</h4>
+                  <div className="space-y-3">
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <p className="text-sm font-semibold text-green-800">✓ Específicas y directas</p>
+                      <p className="text-xs text-green-700">"¿Hay resonancia con abandono escolar?"</p>
+                    </div>
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <p className="text-sm font-semibold text-green-800">✓ Una variable por vez</p>
+                      <p className="text-xs text-green-700">"¿Es una bacteria grampositiva?"</p>
+                    </div>
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <p className="text-sm font-semibold text-green-800">✓ Orientadas al rastreo</p>
+                      <p className="text-xs text-green-700">"¿El conflicto se originó este año?"</p>
+                    </div>
+                  </div>
                 </div>
                 
                 <div>
-                  <p className="font-semibold text-gray-800 mb-2">Resultados más duraderos:</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    El abordaje multidimensional crea cambios más profundos y estables, 
-                    reduciendo la necesidad de tratamientos repetitivos.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Aplicación escolar específica:</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Identifica exactamente qué aspectos del entorno escolar están afectando al niño, 
-                    permitiendo intervenciones más dirigidas y efectivas.
-                  </p>
+                  <h4 className="font-semibold text-gray-800 mb-4">Preguntas a Evitar:</h4>
+                  <div className="space-y-3">
+                    <div className="bg-red-50 rounded-lg p-4">
+                      <p className="text-sm font-semibold text-red-800">✗ Ambiguas</p>
+                      <p className="text-xs text-red-700">"¿Hay algo que molesta?"</p>
+                    </div>
+                    <div className="bg-red-50 rounded-lg p-4">
+                      <p className="text-sm font-semibold text-red-800">✗ Múltiples opciones</p>
+                      <p className="text-xs text-red-700">"¿Es tristeza o enojo?"</p>
+                    </div>
+                    <div className="bg-red-50 rounded-lg p-4">
+                      <p className="text-sm font-semibold text-red-800">✗ En negativo</p>
+                      <p className="text-xs text-red-700">"¿No le gusta la escuela?"</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Consideraciones Especiales */}
+            {/* Ejemplos por Categoría */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-purple-500" />
+                <div className="p-3 bg-yellow-100 rounded-full mr-4">
+                  <Target className="w-8 h-8 text-yellow-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">Consideraciones Especiales para Escolares</h3>
-                  <p className="text-sm text-gray-500">Adaptaciones específicas por edad</p>
+                  <h3 className="text-xl font-bold text-gray-800">Ejemplos de Preguntas por Categoría</h3>
+                  <p className="text-sm text-gray-500">Plantillas de preguntas para diferentes aspectos del rastreo</p>
                 </div>
               </div>
               
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Niños de 5-7 años:</p>
-                  <p className="text-sm leading-relaxed">
-                    Sesiones más cortas (20-30 min), más juego y visualización. Usar lenguaje simple 
-                    y metáforas. Permitir movimiento y descansos frecuentes.
-                  </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-blue-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-blue-800 mb-3">Sensaciones</h4>
+                  <ul className="text-sm text-blue-700 space-y-2">
+                    <li>"¿Hay resonancia con abandono escolar?"</li>
+                    <li>"¿Marca la sensación de vulnerabilidad?"</li>
+                    <li>"¿Se acorta con frustración académica?"</li>
+                    <li>"¿Hay respuesta con devaluación?"</li>
+                  </ul>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Niños de 8-10 años:</p>
-                  <p className="text-sm leading-relaxed">
-                    Pueden manejar sesiones más largas (30-45 min), mayor participación en el diagnóstico. 
-                    Explicar más sobre lo que está pasando en su cuerpo.
-                  </p>
+                <div className="bg-green-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-green-800 mb-3">Rastreo Temporal</h4>
+                  <ul className="text-sm text-green-700 space-y-2">
+                    <li>"¿El origen fue este año escolar?"</li>
+                    <li>"¿Marca en los primeros meses?"</li>
+                    <li>"¿Hay respuesta con septiembre?"</li>
+                    <li>"¿Se acorta con la primera semana?"</li>
+                  </ul>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Niños de 11-12 años:</p>
-                  <p className="text-sm leading-relaxed">
-                    Sesiones completas (45-60 min), participación activa en el tratamiento. Pueden 
-                    entender conceptos más complejos y colaborar en su propio proceso de sanación.
-                  </p>
+                <div className="bg-purple-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-purple-800 mb-3">Microbios</h4>
+                  <ul className="text-sm text-purple-700 space-y-2">
+                    <li>"¿Marca con bacteria asociada?"</li>
+                    <li>"¿Hay respuesta con grampositiva?"</li>
+                    <li>"¿Se acorta con Estafilococo?"</li>
+                    <li>"¿Marca con virus ARN?"</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -613,11 +391,12 @@ const Module3Block3: React.FC = () => {
         {/* Próximos Pasos */}
         <div className="bg-gradient-to-r from-slate-100 to-gray-200 rounded-lg p-8 text-slate-800 text-center">
           <h2 className="text-2xl font-bold mb-4">
-            ¿Listo para la Evaluación?
+            Fundamentos del Rastreo Establecidos
           </h2>
           <p className="text-slate-700 mb-6">
-            Ahora que conoces las técnicas de rastreo, es momento de aprender 
-            sobre los métodos de evaluación y mapeo de sensaciones.
+            Ahora que comprendes los fundamentos del rastreo biomagnético escolar por medición de extremidades, 
+            es momento de aprender sobre las 18 sensaciones específicas que soportan los conflictos 
+            escolares y cómo identificarlas usando esta técnica.
           </p>
           <div className="flex justify-center">
             <ArrowRight className="w-6 h-6 text-slate-700 animate-pulse" />

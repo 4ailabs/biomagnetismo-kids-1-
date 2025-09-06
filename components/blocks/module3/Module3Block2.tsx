@@ -14,10 +14,10 @@ const Module3Block2: React.FC = () => {
             </div>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            Patologías Escolares Comunes
+            Patologías Escolares Específicas
           </h1>
           <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto">
-            TDAH, Asma, Bruxismo y Otras Condiciones que Afectan el Aprendizaje
+            TDAH, Asma, Bruxismo y Trastornos Digestivos desde la Perspectiva Biomagnética
           </p>
         </div>
       </div>
@@ -80,17 +80,43 @@ const Module3Block2: React.FC = () => {
               
               <div className="space-y-4 text-gray-600">
                 <div>
-                  <p className="font-semibold text-gray-800 mb-1">Par biomagnético:</p>
-                  <p className="text-sm">Temporal Izq (-) → Temporal Der (+)</p>
+                  <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
+                  <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                    <div className="space-y-3 text-sm">
+                      <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Desconexión, falta de contacto</li>
+                        <li>• Sobrecarga sensorial, abrumado</li>
+                        <li>• Necesidad de protección</li>
+                        <li>• "No puedo con tanto estímulo"</li>
+                      </ul>
+                      
+                      <p><strong>2. Buscar el instante:</strong> Test para ubicar la edad en la que se generó el conflicto</p>
+                      <p className="text-xs text-gray-500 ml-4">Identificar la edad específica del conflicto</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Primer día de colegio (5-6 años)</li>
+                        <li>• Cambio de maestro/aula (6-8 años)</li>
+                        <li>• Conflicto específico en clase (7-12 años)</li>
+                        <li>• Momento de sobrecarga (cualquier edad)</li>
+                      </ul>
+                      
+                      <p><strong>3. Test para el par:</strong> Seleccionar de los 50 pares del módulo</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar la lista de 50 pares optimizados para escolares</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Temporal Izq (-) → Temporal Der (+) - TDAH</li>
+                        <li>• Frontal (-) → Occipital (+) - Función ejecutiva</li>
+                        <li>• Suprarrenales (-) → Suprarrenales (+) - Regulación estrés</li>
+                      </ul>
+                      
+                      <p><strong>4. Colocar los imanes:</strong> Aplicar los imanes de los pares seleccionados</p>
+                      <p className="text-xs text-gray-500 ml-4">Tiempo: 15-20 minutos según el par específico</p>
+                    </div>
+                  </div>
                 </div>
                 
                 <div>
-                  <p className="font-semibold text-gray-800 mb-1">Microorganismo:</p>
-                  <p className="text-sm">Virus del polioma (trastornos del sueño, anorexia)</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Descripción:</p>
+                  <p className="font-semibold text-gray-800 mb-2">Interpretación Biológica:</p>
                   <p className="text-sm leading-relaxed">
                     El niño se desconecta del entorno para protegerse de la sobrecarga sensorial. 
                     Se manifiesta como dificultad para mantener la atención, "soñar despierto", 
@@ -115,17 +141,44 @@ const Module3Block2: React.FC = () => {
               
               <div className="space-y-4 text-gray-600">
                 <div>
-                  <p className="font-semibold text-gray-800 mb-1">Par biomagnético:</p>
-                  <p className="text-sm">Temporal Der (-) → Temporal Der (+)</p>
+                  <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
+                  <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
+                    <div className="space-y-3 text-sm">
+                      <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Nerviosismo, inquietud</li>
+                        <li>• Necesidad de movimiento</li>
+                        <li>• Tensión acumulada</li>
+                        <li>• "No puedo estar quieto"</li>
+                        <li>• Alerta constante</li>
+                      </ul>
+                      
+                      <p><strong>2. Buscar el instante:</strong> Test para ubicar la edad en la que se generó el conflicto</p>
+                      <p className="text-xs text-gray-500 ml-4">Identificar la edad específica del conflicto</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Entrada al sistema escolar (5-6 años)</li>
+                        <li>• Situación de restricción física (6-8 años)</li>
+                        <li>• Conflicto de autoridad (7-9 años)</li>
+                        <li>• Pérdida de libertad (6-9 años)</li>
+                      </ul>
+                      
+                      <p><strong>3. Test para el par:</strong> Seleccionar de los 50 pares del módulo</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar la lista de 50 pares optimizados para escolares</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Temporal Der (-) → Temporal Der (+) - Hiperactividad</li>
+                        <li>• Suprarrenales (-) → Suprarrenales (+) - Regulación estrés</li>
+                        <li>• Cervicales (-) → Sacro (+) - Regulación autonómica</li>
+                      </ul>
+                      
+                      <p><strong>4. Colocar los imanes:</strong> Aplicar los imanes de los pares seleccionados</p>
+                      <p className="text-xs text-gray-500 ml-4">Tiempo: 15-20 minutos según el par específico</p>
+                    </div>
+                  </div>
                 </div>
                 
                 <div>
-                  <p className="font-semibold text-gray-800 mb-1">Microorganismo:</p>
-                  <p className="text-sm">Bonilla (específico para niños hiperactivos)</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Descripción:</p>
+                  <p className="font-semibold text-gray-800 mb-2">Interpretación Biológica:</p>
                   <p className="text-sm leading-relaxed">
                     El movimiento constante es una estrategia para liberar la tensión acumulada 
                     y mantener el sistema nervioso en estado de alerta. Se manifiesta como 
@@ -151,17 +204,44 @@ const Module3Block2: React.FC = () => {
               
               <div className="space-y-4 text-gray-600">
                 <div>
-                  <p className="font-semibold text-gray-800 mb-1">Par principal:</p>
-                  <p className="text-sm">Frontal (-) → Occipital (+)</p>
+                  <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
+                  <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
+                    <div className="space-y-3 text-sm">
+                      <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar las sensaciones predominantes</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Confusión, no sé cómo reaccionar</li>
+                        <li>• Alternancia de respuestas</li>
+                        <li>• "A veces me desconecto, a veces exploto"</li>
+                        <li>• Impredecibilidad</li>
+                        <li>• Conflictos internos</li>
+                      </ul>
+                      
+                      <p><strong>2. Buscar el instante:</strong> Test para ubicar la edad en la que se generó el conflicto</p>
+                      <p className="text-xs text-gray-500 ml-4">Identificar la edad específica del conflicto</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Situación de amenaza variable (6-8 años)</li>
+                        <li>• Conflictos contradictorios (7-10 años)</li>
+                        <li>• Entorno impredecible (5-12 años)</li>
+                        <li>• Múltiples estresores (cualquier edad)</li>
+                      </ul>
+                      
+                      <p><strong>3. Test para el par:</strong> Seleccionar de los 50 pares del módulo</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar la lista de 50 pares optimizados para escolares</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Frontal (-) → Occipital (+) - Función ejecutiva</li>
+                        <li>• Temporal Izq (-) → Temporal Der (+) - TDAH</li>
+                        <li>• Temporal Der (-) → Temporal Der (+) - Hiperactividad</li>
+                      </ul>
+                      
+                      <p><strong>4. Colocar los imanes:</strong> Aplicar los imanes de los pares seleccionados</p>
+                      <p className="text-xs text-gray-500 ml-4">Tiempo: 20-25 minutos (combinación de pares)</p>
+                    </div>
+                  </div>
                 </div>
                 
                 <div>
-                  <p className="font-semibold text-gray-800 mb-1">Par complementario:</p>
-                  <p className="text-sm">Temporal Izq (-) → Temporal Der (+)</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Descripción:</p>
+                  <p className="font-semibold text-gray-800 mb-2">Interpretación Biológica:</p>
                   <p className="text-sm leading-relaxed">
                     El niño alterna entre desconectarse y hiperactivarse según perciba el nivel de amenaza 
                     del entorno. Esta combinación de respuestas permite una adaptación más flexible pero 
@@ -175,7 +255,7 @@ const Module3Block2: React.FC = () => {
 
           <div className="mt-8 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-8">
             <h3 className="text-xl font-bold text-gray-800 mb-6">
-              Protocolo de Evaluación TDAH
+              Protocolo General para Trabajar TDAH
             </h3>
             <div className="space-y-4 text-gray-600">
               <div>
@@ -187,13 +267,20 @@ const Module3Block2: React.FC = () => {
               </div>
               
               <div>
-                <p className="font-semibold text-gray-800 mb-2">Secuencia de Rastreo:</p>
-                <p className="text-sm leading-relaxed">
-                  1. Temporal Izq (-) → buscar resonancia<br/>
-                  2. Temporal Der (-) → buscar resonancia<br/>
-                  3. Frontal (-) → buscar resonancia<br/>
-                  4. Suprarrenal (-) → buscar resonancia<br/>
-                  5. Timo (-) → buscar resonancia
+                <p className="font-semibold text-gray-800 mb-2">Protocolo Universal para Cualquier Patología:</p>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-yellow-500">
+                  <ol className="text-sm leading-relaxed space-y-2">
+                    <li><strong>1. Buscar la sensación o sensaciones:</strong> Test muscular para identificar la emoción predominante que sostiene la patología</li>
+                    <li><strong>2. Buscar con el test el instante:</strong> Ubicar temporalmente cuándo se activó este patrón (momento específico)</li>
+                    <li><strong>3. Preguntar con el test cuál es el par que soporta la información de conflicto:</strong> El organismo indica qué sistema almacena esta información</li>
+                    <li><strong>4. Seleccionar con el test cuál es el par a colocar:</strong> Confirmar el par biomagnético específico que necesita ser equilibrado</li>
+                  </ol>
+                </div>
+              </div>
+              
+              <div className="bg-amber-100 p-3 rounded-lg">
+                <p className="text-sm font-medium text-amber-800">
+                  <strong>Importante:</strong> No hay pares fijos para patologías. Cada niño y cada situación requiere su propio rastreo personalizado siguiendo esta secuencia.
                 </p>
               </div>
             </div>
@@ -213,6 +300,68 @@ const Module3Block2: React.FC = () => {
           </div>
 
           <div className="space-y-8">
+            {/* Secuencia de Trabajo para Asma */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-6">
+                <div className="p-3 bg-blue-100 rounded-full mr-4">
+                  <Heart className="w-8 h-8 text-blue-500" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800">Secuencia de Trabajo para Asma Escolar</h3>
+                  <p className="text-sm text-gray-500">Protocolo de evaluación y tratamiento</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 text-gray-600">
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
+                  <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                    <div className="space-y-3 text-sm">
+                      <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Ahogo, falta de aire</li>
+                        <li>• Miedo territorial, "no puedo estar aquí"</li>
+                        <li>• Amenaza, peligro en el entorno</li>
+                        <li>• "Quiero irme a casa"</li>
+                        <li>• Enojo territorial</li>
+                      </ul>
+                      
+                      <p><strong>2. Buscar el instante:</strong> Test para ubicar la edad en la que se generó el conflicto</p>
+                      <p className="text-xs text-gray-500 ml-4">Identificar la edad específica del conflicto</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Primera crisis en el colegio (5-7 años)</li>
+                        <li>• Conflicto específico con maestro (6-10 años)</li>
+                        <li>• Situación de bullying (8-12 años)</li>
+                        <li>• Cambio de colegio/aula (cualquier edad)</li>
+                        <li>• Evento traumático en entorno escolar (cualquier edad)</li>
+                      </ul>
+                      
+                      <p><strong>3. Test para el par:</strong> Seleccionar de los 50 pares del módulo</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar la lista de 50 pares optimizados para escolares</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Axila (-) → Axila (+) - Asma territorial</li>
+                        <li>• Pulmón (-) → Suprarrenal (+) - Crisis aguda</li>
+                        <li>• Bronquio (-) → Paratiroides (+) - Mantenimiento</li>
+                      </ul>
+                      
+                      <p><strong>4. Colocar los imanes:</strong> Aplicar los imanes de los pares seleccionados</p>
+                      <p className="text-xs text-gray-500 ml-4">Tiempo: 15-20 minutos según el par específico</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Interpretación Biológica:</p>
+                  <p className="text-sm leading-relaxed">
+                    El asma escolar refleja una respuesta de amenaza territorial donde el niño percibe 
+                    el ambiente educativo como hostil. La dificultad respiratoria es una estrategia 
+                    del organismo para forzar el regreso al territorio seguro (hogar).
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Crisis Aguda */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
@@ -220,15 +369,18 @@ const Module3Block2: React.FC = () => {
                   <Heart className="w-8 h-8 text-red-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">Crisis Aguda</h3>
-                  <p className="text-sm text-gray-500">Protocolo de emergencia (Máximo 10 minutos)</p>
+                  <h3 className="text-xl font-bold text-gray-800">Manejo de Crisis Aguda</h3>
+                  <p className="text-sm text-gray-500">Solo para emergencias (Máximo 10 minutos)</p>
                 </div>
               </div>
               
               <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-1">Par inmediato:</p>
-                  <p className="text-sm">Pulmón (-) → Suprarrenal (+)</p>
+                <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
+                  <p className="font-semibold text-red-800 mb-2">⚠️ IMPORTANTE:</p>
+                  <p className="text-sm leading-relaxed text-red-700">
+                    En crisis severas, aplicar biomagnetismo solo como apoyo complementario. 
+                    Siempre tener disponible medicación de rescate y contacto médico.
+                  </p>
                 </div>
                 
                 <div>
@@ -237,11 +389,20 @@ const Module3Block2: React.FC = () => {
                 </div>
                 
                 <div>
-                  <p className="font-semibold text-gray-800 mb-2">Descripción:</p>
+                  <p className="font-semibold text-gray-800 mb-1">Técnica:</p>
+                  <p className="text-sm">Presión muy suave, más intención que fuerza</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold text-gray-800 mb-1">Respiración guiada:</p>
+                  <p className="text-sm">"Inhala por la nariz, exhala por la boca"</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Enfoque:</p>
                   <p className="text-sm leading-relaxed">
-                    Para crisis respiratorias severas que aparecen exclusivamente en contexto escolar. 
-                    El objetivo es estabilizar la respiración inmediatamente. Técnica: Presión muy suave, 
-                    más intención que fuerza. Respiración guiada: "Inhala por la nariz, exhala por la boca".
+                    El par a utilizar debe ser determinado por test muscular en el momento, 
+                    no hay par fijo para crisis asmáticas.
                   </p>
                 </div>
               </div>
@@ -373,6 +534,58 @@ const Module3Block2: React.FC = () => {
               </div>
             </div>
 
+            {/* Secuencia de Trabajo para Bruxismo */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-6">
+                <div className="p-3 bg-green-100 rounded-full mr-4">
+                  <Target className="w-8 h-8 text-green-500" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800">Secuencia de Trabajo para Bruxismo Escolar</h3>
+                  <p className="text-sm text-gray-500">Protocolo de evaluación y tratamiento</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 text-gray-600">
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
+                  <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+                    <div className="space-y-3 text-sm">
+                      <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Ira reprimida, "no puedo expresar mi enojo"</li>
+                        <li>• Frustración, "tengo que aguantar"</li>
+                        <li>• Tensión mandibular, "aprieto los dientes"</li>
+                        <li>• "No puedo decir lo que siento"</li>
+                        <li>• Enojo respecto a situaciones injustas</li>
+                      </ul>
+                      
+                      <p><strong>2. Buscar el instante:</strong> Test para ubicar la edad en la que se generó el conflicto</p>
+                      <p className="text-xs text-gray-500 ml-4">Identificar la edad específica del conflicto</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Situaciones injustas en el colegio (6-10 años)</li>
+                        <li>• Conflictos con maestros (7-12 años)</li>
+                        <li>• Bullying o acoso (8-12 años)</li>
+                        <li>• Restricciones para expresar emociones (cualquier edad)</li>
+                      </ul>
+                      
+                      <p><strong>3. Test para el par:</strong> Seleccionar de los 50 pares del módulo</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar la lista de 50 pares optimizados para escolares</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Mandíbula (-) → Mandíbula (+) - Bruxismo</li>
+                        <li>• Ángulo (-) → Ángulo (+) - Ira reprimida</li>
+                        <li>• Temporal Izq (-) → Temporal Der (+) - TDAH</li>
+                      </ul>
+                      
+                      <p><strong>4. Colocar los imanes:</strong> Aplicar los imanes de los pares seleccionados</p>
+                      <p className="text-xs text-gray-500 ml-4">Tiempo: 20 minutos (aplicación nocturna)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Protocolo Integral */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
@@ -458,10 +671,46 @@ const Module3Block2: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
                 Ansiedad Escolar
               </h3>
-              <div className="space-y-3 text-gray-600">
+              <div className="space-y-4 text-gray-600">
                 <div className="flex items-start">
                   <Heart className="w-5 h-5 text-red-500 mr-3 mt-1 flex-shrink-0" />
                   <p>Relacionada con conflictos de rendimiento y competencia, se manifiesta como preocupación excesiva, evitación escolar y síntomas físicos de ansiedad.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
+                  <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
+                    <div className="space-y-3 text-sm">
+                      <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Preocupación excesiva, "no puedo con la presión"</li>
+                        <li>• Miedo al fracaso, "tengo que ser perfecto"</li>
+                        <li>• Tensión, "no puedo relajarme"</li>
+                        <li>• "No soy lo suficientemente bueno"</li>
+                      </ul>
+                      
+                      <p><strong>2. Buscar el instante:</strong> Test para ubicar la edad en la que se generó el conflicto</p>
+                      <p className="text-xs text-gray-500 ml-4">Identificar la edad específica del conflicto</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Presión por rendimiento (7-10 años)</li>
+                        <li>• Comparaciones con otros niños (6-12 años)</li>
+                        <li>• Exámenes o evaluaciones (8-12 años)</li>
+                        <li>• Expectativas familiares (cualquier edad)</li>
+                      </ul>
+                      
+                      <p><strong>3. Test para el par:</strong> Seleccionar de los 50 pares del módulo</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar la lista de 50 pares optimizados para escolares</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Suprarrenales (-) → Suprarrenales (+) - Regulación estrés</li>
+                        <li>• Estómago (-) → Suprarrenales (+) - Gastritis/pánico</li>
+                        <li>• Plexo Solar (-) → Riñón Der (+) - Seguridad emocional</li>
+                      </ul>
+                      
+                      <p><strong>4. Colocar los imanes:</strong> Aplicar los imanes de los pares seleccionados</p>
+                      <p className="text-xs text-gray-500 ml-4">Tiempo: 15-20 minutos según el par específico</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -470,10 +719,46 @@ const Module3Block2: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
                 Depresión Infantil
               </h3>
-              <div className="space-y-3 text-gray-600">
+              <div className="space-y-4 text-gray-600">
                 <div className="flex items-start">
                   <Brain className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
                   <p>Asociada con conflictos de aceptación e identidad, se caracteriza por tristeza persistente, pérdida de interés y cambios en el comportamiento escolar.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
+                  <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                    <div className="space-y-3 text-sm">
+                      <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Tristeza profunda, "no valgo nada"</li>
+                        <li>• Desconexión, "no me importa nada"</li>
+                        <li>• Vacío, "no siento nada"</li>
+                        <li>• "No pertenezco aquí"</li>
+                      </ul>
+                      
+                      <p><strong>2. Buscar el instante:</strong> Test para ubicar la edad en la que se generó el conflicto</p>
+                      <p className="text-xs text-gray-500 ml-4">Identificar la edad específica del conflicto</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Rechazo social (8-12 años)</li>
+                        <li>• Pérdida de figura importante (cualquier edad)</li>
+                        <li>• Fracaso escolar (7-12 años)</li>
+                        <li>• Cambios familiares (cualquier edad)</li>
+                      </ul>
+                      
+                      <p><strong>3. Test para el par:</strong> Seleccionar de los 50 pares del módulo</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar la lista de 50 pares optimizados para escolares</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Timo (-) → Timo (+) - Sistema inmune emocional</li>
+                        <li>• Timo (-) → Suprarrenal (+) - Autoestima</li>
+                        <li>• Plexo Solar (-) → Riñón Der (+) - Seguridad emocional</li>
+                      </ul>
+                      
+                      <p><strong>4. Colocar los imanes:</strong> Aplicar los imanes de los pares seleccionados</p>
+                      <p className="text-xs text-gray-500 ml-4">Tiempo: 20-25 minutos (proceso más largo)</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -482,10 +767,46 @@ const Module3Block2: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
                 Trastornos del Sueño
               </h3>
-              <div className="space-y-3 text-gray-600">
+              <div className="space-y-4 text-gray-600">
                 <div className="flex items-start">
                   <Activity className="w-5 h-5 text-purple-500 mr-3 mt-1 flex-shrink-0" />
                   <p>Relacionados con conflictos de autoridad y creatividad, incluyen insomnio, pesadillas frecuentes y somnolencia diurna que afectan el rendimiento.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
+                  <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400">
+                    <div className="space-y-3 text-sm">
+                      <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• "No puedo relajarme", tensión constante</li>
+                        <li>• Miedo nocturno, "tengo pesadillas"</li>
+                        <li>• "No puedo dormir", insomnio</li>
+                        <li>• "Estoy cansado pero no puedo descansar"</li>
+                      </ul>
+                      
+                      <p><strong>2. Buscar el instante:</strong> Test para ubicar la edad en la que se generó el conflicto</p>
+                      <p className="text-xs text-gray-500 ml-4">Identificar la edad específica del conflicto</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Conflictos de autoridad (6-10 años)</li>
+                        <li>• Situaciones traumáticas (cualquier edad)</li>
+                        <li>• Cambios en rutina familiar (cualquier edad)</li>
+                        <li>• Presión escolar (7-12 años)</li>
+                      </ul>
+                      
+                      <p><strong>3. Test para el par:</strong> Seleccionar de los 50 pares del módulo</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar la lista de 50 pares optimizados para escolares</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Hipófisis (-) → Hipófisis (+) - Regulación endocrina</li>
+                        <li>• Suprarrenales (-) → Suprarrenales (+) - Regulación estrés</li>
+                        <li>• Cervicales (-) → Sacro (+) - Regulación autonómica</li>
+                      </ul>
+                      
+                      <p><strong>4. Colocar los imanes:</strong> Aplicar los imanes de los pares seleccionados</p>
+                      <p className="text-xs text-gray-500 ml-4">Tiempo: 20 minutos (aplicación nocturna)</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -494,10 +815,46 @@ const Module3Block2: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
                 Trastornos Alimentarios
               </h3>
-              <div className="space-y-3 text-gray-600">
+              <div className="space-y-4 text-gray-600">
                 <div className="flex items-start">
                   <Target className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
                   <p>Asociados con conflictos de aceptación y competencia, incluyen pérdida de apetito, cambios en los hábitos alimentarios y problemas de crecimiento.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Secuencia de Trabajo:</p>
+                  <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+                    <div className="space-y-3 text-sm">
+                      <p><strong>1. Buscar la sensación:</strong> Test muscular para identificar la sensación predominante</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar las sensaciones del módulo en el apartado de sensaciones</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• "No tengo hambre", pérdida de apetito</li>
+                        <li>• "No me gusta la comida", rechazo alimentario</li>
+                        <li>• "No soy lo suficientemente bueno", baja autoestima</li>
+                        <li>• "No pertenezco", desconexión</li>
+                      </ul>
+                      
+                      <p><strong>2. Buscar el instante:</strong> Test para ubicar la edad en la que se generó el conflicto</p>
+                      <p className="text-xs text-gray-500 ml-4">Identificar la edad específica del conflicto</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Comparaciones con otros niños (6-10 años)</li>
+                        <li>• Presión por rendimiento (7-12 años)</li>
+                        <li>• Rechazo social (8-12 años)</li>
+                        <li>• Cambios familiares (cualquier edad)</li>
+                      </ul>
+                      
+                      <p><strong>3. Test para el par:</strong> Seleccionar de los 50 pares del módulo</p>
+                      <p className="text-xs text-gray-500 ml-4">Usar la lista de 50 pares optimizados para escolares</p>
+                      <ul className="ml-4 space-y-1">
+                        <li>• Estómago (-) → Estómago (+) - Somatizaciones</li>
+                        <li>• Duodeno (-) → Duodeno (+) - Colon irritable</li>
+                        <li>• Timo (-) → Suprarrenal (+) - Autoestima</li>
+                      </ul>
+                      
+                      <p><strong>4. Colocar los imanes:</strong> Aplicar los imanes de los pares seleccionados</p>
+                      <p className="text-xs text-gray-500 ml-4">Tiempo: 15-20 minutos según el par específico</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

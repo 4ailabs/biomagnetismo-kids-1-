@@ -1,6 +1,6 @@
 import React from 'react';
 import CourseSection from '../../CourseSection';
-import { MapPin, Target, ArrowRight, CheckCircle, Activity, Shield, Zap, Heart, Brain } from 'lucide-react';
+import { Heart, Target, ArrowRight, CheckCircle, Activity, Users, Brain, BookOpen } from 'lucide-react';
 
 const Module3Block4: React.FC = () => {
   return (
@@ -10,678 +10,468 @@ const Module3Block4: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-slate-200 rounded-full">
-              <MapPin className="w-12 h-12 text-slate-600" />
+              <Heart className="w-12 h-12 text-slate-600" />
             </div>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            Evaluación y Mapeo de Sensaciones
+            Las 18 Sensaciones del Conflicto Escolar
           </h1>
           <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto">
-            Herramientas de Evaluación Integral para el Biomagnetismo Escolar
+            Identificación y Trabajo con las Sensaciones que Soportan los Conflictos Educativos
           </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Introducción */}
+        {/* Objetivo del Bloque */}
+        <section className="bg-slate-100 text-slate-700 rounded-lg sm:rounded-xl lg:rounded-xl shadow-sm p-3 sm:p-4 lg:p-6 text-center border border-slate-200 mb-12">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3">Objetivo del Bloque</h2>
+          <p className="text-sm sm:text-base max-w-2xl sm:max-w-3xl mx-auto leading-relaxed">
+            Aprender a identificar, rastrear y trabajar con las 18 sensaciones específicas que soportan los 
+            conflictos escolares más frecuentes en niños de 5-12 años usando el rastreo biomagnético 
+            por medición de extremidades.
+          </p>
+        </section>
+
+        {/* Fundamento Teórico */}
         <CourseSection
-          title="Introducción a la Evaluación Integral Escolar"
-          icon={<MapPin className="w-8 h-8 text-slate-500" />}
+          title="Fundamento Teórico de las Sensaciones"
+          icon={<BookOpen className="w-8 h-8 text-slate-500" />}
         >
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-lg p-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              La Evaluación como Herramienta de Comprensión Profunda
+              ¿Qué son las Sensaciones que Soportan Conflictos?
             </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                La evaluación en el contexto del biomagnetismo escolar no es solo un diagnóstico, 
-                sino un proceso de comprensión profunda del niño en su totalidad. Cada herramienta 
-                de evaluación nos permite acceder a diferentes capas de información sobre el estado 
-                físico, emocional, energético y cognitivo del estudiante.
+                Las <strong>sensaciones que soportan conflictos</strong> son emociones viscerales profundas 
+                que el niño experimenta en su cuerpo como respuesta a situaciones escolares desafiantes. 
+                Estas sensaciones se "anclan" energéticamente y se convierten en el sustrato emocional 
+                que mantiene activo el conflicto biológico.
               </p>
               <p>
-                <strong>El mapeo de sensaciones</strong> nos conecta con la sabiduría corporal del niño. 
-                <strong>La evaluación energética</strong> nos revela desequilibrios que no son visibles 
-                a simple vista. <strong>La observación sistemática</strong> nos muestra patrones de 
-                comportamiento que indican conflictos específicos.
+                A diferencia de las emociones superficiales que el niño puede expresar ("estoy triste", "me enojo"), 
+                estas sensaciones son más profundas y frecuentemente inconscientes. Son la <strong>verdadera causa 
+                energética</strong> de síntomas como TDAH, asma, bruxismo y otras manifestaciones escolares.
               </p>
               <p>
-                La integración de todas estas herramientas de evaluación nos permite crear un mapa 
-                completo del niño, no como un "paciente" sino como un ser único con necesidades 
-                específicas que requieren un abordaje personalizado y respetuoso.
+                El rastreo biomagnético por medición de extremidades nos permite acceder a esta información que 
+                está almacenada en el campo energético del niño pero no disponible para su mente consciente. 
+                Una vez identificada la sensación específica a través del acortamiento, podemos trabajar con ella 
+                para liberar el conflicto.
               </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-blue-100 rounded-full mr-3">
+                  <Brain className="w-6 h-6 text-blue-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800">Características de las Sensaciones</h4>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Son específicas y precisas</li>
+                <li>• Se sienten en el cuerpo, no en la mente</li>
+                <li>• Generalmente son inconscientes</li>
+                <li>• Se activan en contextos escolares específicos</li>
+                <li>• Mantienen el conflicto biológico activo</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-green-100 rounded-full mr-3">
+                  <Target className="w-6 h-6 text-green-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800">Proceso de Identificación</h4>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Rastreo biomagnético con lista específica</li>
+                <li>• Confirmación por acortamiento de extremidades</li>
+                <li>• Exploración de la dinámica de la sensación</li>
+                <li>• Correlación con síntomas físicos</li>
+                <li>• Búsqueda del instante de origen</li>
+              </ul>
             </div>
           </div>
         </CourseSection>
 
-        {/* Evaluación Inicial */}
+        {/* Lista Completa de las 18 Sensaciones */}
         <CourseSection
-          title="Evaluación Inicial del Estudiante"
-          icon={<Target className="w-8 h-8 text-slate-500" />}
+          title="Lista Completa de las 18 Sensaciones Escolares"
+          icon={<Heart className="w-8 h-8 text-slate-500" />}
         >
           <div className="mb-6">
             <p className="text-gray-600 text-lg leading-relaxed">
-              La evaluación inicial es el fundamento de todo el proceso. No se trata solo de recopilar 
-              información, sino de establecer una conexión profunda con el niño y comprender su mundo 
-              desde su perspectiva.
+              Estas son las 18 sensaciones más frecuentes que sostienen conflictos escolares. Cada una 
+              tiene características específicas y se manifiesta de maneras particulares en el contexto educativo.
             </p>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Sensaciones de Separación y Pérdida */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-red-100 rounded-full mr-3">
+                  <Heart className="w-6 h-6 text-red-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800">Separación y Pérdida</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="bg-red-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-red-800 mb-2">1. Abandono</h5>
+                  <p className="text-sm text-red-700">"Me dejaron solo en este lugar desconocido"</p>
+                </div>
+                <div className="bg-red-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-red-800 mb-2">2. Soledad</h5>
+                  <p className="text-sm text-red-700">"Estoy solo, nadie me acompaña realmente"</p>
+                </div>
+                <div className="bg-red-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-red-800 mb-2">3. Vacío</h5>
+                  <p className="text-sm text-red-700">"Hay un hueco que no se puede llenar"</p>
+                </div>
+                <div className="bg-red-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-red-800 mb-2">4. Traición</h5>
+                  <p className="text-sm text-red-700">"Alguien en quien confiaba me falló"</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Sensaciones de Ataque y Defensa */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-orange-100 rounded-full mr-3">
+                  <Activity className="w-6 h-6 text-orange-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800">Ataque y Defensa</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-orange-800 mb-2">5. Agresión</h5>
+                  <p className="text-sm text-orange-700">"Me atacan o me siento en peligro"</p>
+                </div>
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-orange-800 mb-2">6. Vulnerabilidad</h5>
+                  <p className="text-sm text-orange-700">"Estoy expuesto y pueden lastimarme"</p>
+                </div>
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-orange-800 mb-2">7. Persecución</h5>
+                  <p className="text-sm text-orange-700">"Me persiguen, me vigilan constantemente"</p>
+                </div>
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-orange-800 mb-2">8. Ira</h5>
+                  <p className="text-sm text-orange-700">"Tengo rabia acumulada que no puedo expresar"</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Sensaciones de Incapacidad */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-yellow-100 rounded-full mr-3">
+                  <Brain className="w-6 h-6 text-yellow-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800">Incapacidad</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="bg-yellow-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-yellow-800 mb-2">9. Frustración</h5>
+                  <p className="text-sm text-yellow-700">"No puedo hacer lo que quiero o necesito"</p>
+                </div>
+                <div className="bg-yellow-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-yellow-800 mb-2">10. Impotencia</h5>
+                  <p className="text-sm text-yellow-700">"No tengo poder para cambiar mi situación"</p>
+                </div>
+                <div className="bg-yellow-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-yellow-800 mb-2">11. Insatisfacción</h5>
+                  <p className="text-sm text-yellow-700">"Nada de lo que hago es suficiente"</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Sensaciones de Devaluación */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-blue-100 rounded-full mr-3">
+                  <Users className="w-6 h-6 text-blue-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800">Devaluación</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-blue-800 mb-2">12. Devaluación</h5>
+                  <p className="text-sm text-blue-700">"No valgo lo suficiente, soy inferior"</p>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-blue-800 mb-2">13. Humillación</h5>
+                  <p className="text-sm text-blue-700">"Me expusieron y me hicieron sentir mal"</p>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-blue-800 mb-2">14. Desvalorización Estética</h5>
+                  <p className="text-sm text-blue-700">"Los otros son más bonitos o mejores que yo"</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Sensaciones Existenciales */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-purple-100 rounded-full mr-3">
+                  <Target className="w-6 h-6 text-purple-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800">Existenciales</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-purple-800 mb-2">15. Hambre</h5>
+                  <p className="text-sm text-purple-700">"Tengo hambre de algo que no llega"</p>
+                </div>
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-purple-800 mb-2">16. Angustia</h5>
+                  <p className="text-sm text-purple-700">"Hay una opresión que no puedo explicar"</p>
+                </div>
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-purple-800 mb-2">17. Infelicidad</h5>
+                  <p className="text-sm text-purple-700">"La tristeza profunda que no se va"</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Sensación Extrema */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-gray-100 rounded-full mr-3">
+                  <CheckCircle className="w-6 h-6 text-gray-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800">Sensación Específica</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-gray-800 mb-2">18. Amor Difícil</h5>
+                  <p className="text-sm text-gray-700">"El amor que necesito es complicado de conseguir o mantener"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CourseSection>
+
+        {/* Protocolo de Identificación */}
+        <CourseSection
+          title="Protocolo de Identificación de Sensaciones"
+          icon={<Activity className="w-8 h-8 text-slate-500" />}
+        >
           <div className="space-y-8">
-            {/* Entrevista con Padres */}
+            {/* Paso a Paso */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <Heart className="w-8 h-8 text-blue-500" />
+                  <Target className="w-8 h-8 text-blue-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">Entrevista con Padres</h3>
-                  <p className="text-sm text-gray-500">Información fundamental del contexto familiar</p>
+                  <h3 className="text-xl font-bold text-gray-800">Protocolo Paso a Paso</h3>
+                  <p className="text-sm text-gray-500">Metodología sistemática para identificar la sensación específica</p>
                 </div>
               </div>
               
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Preguntas clave:</p>
-                  <p className="text-sm leading-relaxed">
-                    ¿Cuándo comenzaron los síntomas? ¿Coincidió con algún evento familiar o escolar? 
-                    ¿Cómo es el comportamiento del niño en casa vs. en la escuela? ¿Hay patrones 
-                    estacionales o relacionados con actividades específicas?
-                  </p>
+              <div className="space-y-6">
+                <div className="bg-slate-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-gray-800 mb-4">Secuencia de Rastreo:</h4>
+                  <ol className="list-decimal list-inside space-y-3 text-sm text-gray-600">
+                    <li><strong>Establecer contexto:</strong> "Vamos a identificar cuál es la sensación que está detrás de tu conflicto escolar usando el rastreo"</li>
+                    <li><strong>Preparar rastreo:</strong> Niño en posición, medir extremidades como línea base</li>
+                    <li><strong>Colocar imán y preguntar:</strong> Imán negativo en punto específico: "¿Hay resonancia con abandono escolar?" (observar acortamiento)</li>
+                    <li><strong>Continuar sistemáticamente:</strong> Rastrear una por una las 18 sensaciones hasta encontrar acortamiento</li>
+                    <li><strong>Confirmar hallazgo:</strong> Cuando hay acortamiento, repetir 2-3 veces para validar</li>
+                    <li><strong>Explorar dinámicas:</strong> Una vez confirmada, profundizar en manifestaciones y correlaciones</li>
+                  </ol>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Historia del desarrollo:</p>
-                  <p className="text-sm leading-relaxed">
-                    Embarazo, parto, primeros años de vida, hitos del desarrollo, enfermedades 
-                    importantes, traumas o cambios significativos en la familia.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Contexto escolar:</p>
-                  <p className="text-sm leading-relaxed">
-                    ¿Cómo ha sido la adaptación a la escuela? ¿Hay maestros o materias específicas 
-                    que generan más estrés? ¿Cómo son las relaciones con compañeros?
-                  </p>
+                <div className="bg-amber-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-gray-800 mb-4">Consideraciones Importantes:</h4>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>• <strong>Una por vez:</strong> Rastrear solo una sensación por vez, nunca combinar</li>
+                    <li>• <strong>Técnica consistente:</strong> Mantener la misma posición y presión en las mediciones</li>
+                    <li>• <strong>Contexto específico:</strong> Siempre vincular con "en la escuela" o "cuando estás estudiando"</li>
+                    <li>• <strong>Múltiples sensaciones:</strong> Un niño puede mostrar acortamiento en 2-3 sensaciones diferentes</li>
+                    <li>• <strong>Validación cruzada:</strong> Correlacionar resultados con síntomas físicos observados</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            {/* Entrevista con Maestros */}
+            {/* Sensaciones por Edad */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-green-500" />
+                  <Users className="w-8 h-8 text-green-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">Entrevista con Maestros</h3>
-                  <p className="text-sm text-gray-500">Perspectiva del entorno educativo</p>
+                  <h3 className="text-xl font-bold text-gray-800">Sensaciones Más Frecuentes por Edad</h3>
+                  <p className="text-sm text-gray-500">Patrones típicos según el desarrollo</p>
                 </div>
               </div>
               
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Comportamiento en clase:</p>
-                  <p className="text-sm leading-relaxed">
-                    ¿Cómo se comporta el niño en diferentes materias? ¿Hay patrones de comportamiento 
-                    específicos? ¿Cómo interactúa con compañeros y maestros?
-                  </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-blue-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-blue-800 mb-3">5-7 años</h4>
+                  <div className="space-y-2 text-sm text-blue-700">
+                    <p><strong>Más frecuentes:</strong></p>
+                    <ul className="space-y-1 ml-4">
+                      <li>• Abandono</li>
+                      <li>• Soledad</li>
+                      <li>• Vulnerabilidad</li>
+                      <li>• Hambre (de atención)</li>
+                    </ul>
+                    <p className="mt-3"><strong>Contexto:</strong> Adaptación inicial, separación de padres</p>
+                  </div>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Rendimiento académico:</p>
-                  <p className="text-sm leading-relaxed">
-                    ¿En qué materias tiene más dificultades? ¿Hay fluctuaciones en el rendimiento? 
-                    ¿Cómo responde a diferentes métodos de enseñanza?
-                  </p>
+                <div className="bg-green-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-green-800 mb-3">8-10 años</h4>
+                  <div className="space-y-2 text-sm text-green-700">
+                    <p><strong>Más frecuentes:</strong></p>
+                    <ul className="space-y-1 ml-4">
+                      <li>• Frustración</li>
+                      <li>• Devaluación</li>
+                      <li>• Humillación</li>
+                      <li>• Insatisfacción</li>
+                    </ul>
+                    <p className="mt-3"><strong>Contexto:</strong> Exigencias académicas, comparaciones</p>
+                  </div>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Factores desencadenantes:</p>
-                  <p className="text-sm leading-relaxed">
-                    ¿Qué situaciones o eventos parecen desencadenar comportamientos problemáticos? 
-                    ¿Hay momentos del día o actividades específicas que generan más estrés?
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Evaluación Energética Inicial */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Zap className="w-8 h-8 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Evaluación Energética Inicial</h3>
-                  <p className="text-sm text-gray-500">Rastreo básico del campo energético</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Pares principales:</p>
-                  <p className="text-sm leading-relaxed">
-                    Temporal Izq (-) → Temporal Der (+), Frontal (-) → Occipital (+), 
-                    Timo (-) → Timo (+), Suprarrenal (-) → Suprarrenal (+)
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Sistemas prioritarios:</p>
-                  <p className="text-sm leading-relaxed">
-                    Sistema nervioso central, sistema endocrino, sistema inmune, sistema digestivo. 
-                    Identificar cuáles presentan mayor desequilibrio.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Microorganismos asociados:</p>
-                  <p className="text-sm leading-relaxed">
-                    Rastrear virus, bacterias y parásitos que puedan estar afectando el equilibrio 
-                    energético del niño y su capacidad de aprendizaje.
-                  </p>
+                <div className="bg-purple-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-purple-800 mb-3">11-12 años</h4>
+                  <div className="space-y-2 text-sm text-purple-700">
+                    <p><strong>Más frecuentes:</strong></p>
+                    <ul className="space-y-1 ml-4">
+                      <li>• Traición</li>
+                      <li>• Desvalorización estética</li>
+                      <li>• Ira</li>
+                      <li>• Angustia</li>
+                    </ul>
+                    <p className="mt-3"><strong>Contexto:</strong> Cambios pre-adolescentes, relaciones sociales complejas</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </CourseSection>
 
-        {/* Mapeo de Sensaciones */}
+        {/* Exploración de Dinámicas */}
         <CourseSection
-          title="Mapeo de Sensaciones Corporales"
-          icon={<MapPin className="w-8 h-8 text-slate-500" />}
+          title="Exploración de Dinámicas de la Sensación"
+          icon={<Brain className="w-8 h-8 text-slate-500" />}
         >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              El mapeo de sensaciones es una herramienta poderosa que nos permite acceder a la 
-              sabiduría corporal del niño. Los niños son especialmente sensibles a sus sensaciones 
-              y pueden reportar cambios sutiles que los adultos no perciben.
-            </p>
-          </div>
-
           <div className="space-y-8">
-            {/* Sensaciones Físicas */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-red-100 rounded-full mr-4">
-                  <MapPin className="w-8 h-8 text-red-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Sensaciones Físicas</h3>
-                  <p className="text-sm text-gray-500">Mapeo corporal detallado</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnica de escaneo:</p>
-                  <p className="text-sm leading-relaxed">
-                    "Vamos a hacer un mapa de tu cuerpo. Cierra los ojos y dime qué sientes en cada parte. 
-                    ¿Hay algún lugar que se siente diferente, caliente, frío, tenso, pesado o ligero?"
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Sensaciones a identificar:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Calor:</strong> Inflamación, actividad excesiva<br/>
-                    <strong>Frío:</strong> Debilidad, falta de energía<br/>
-                    <strong>Tensión:</strong> Estrés, contracturas<br/>
-                    <strong>Hormigueo:</strong> Circulación, activación nerviosa<br/>
-                    <strong>Pesadez:</strong> Congestión, bloqueos<br/>
-                    <strong>Ligereza:</strong> Equilibrio, bienestar
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Documentación:</p>
-                  <p className="text-sm leading-relaxed">
-                    Registrar todas las sensaciones reportadas en un diagrama corporal. 
-                    Marcar intensidad (1-10) y características específicas de cada sensación.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Sensaciones Emocionales */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-pink-100 rounded-full mr-4">
-                  <Heart className="w-8 h-8 text-pink-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Sensaciones Emocionales</h3>
-                  <p className="text-sm text-gray-500">Mapeo emocional corporal</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnica de mapeo emocional:</p>
-                  <p className="text-sm leading-relaxed">
-                    "¿Dónde sientes la tristeza en tu cuerpo? ¿Y la alegría? ¿Y el enojo? 
-                    ¿Hay algún lugar que se siente pesado, vacío, o que duele cuando estás triste?"
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Emociones y ubicaciones:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Tristeza:</strong> Pecho, corazón<br/>
-                    <strong>Enojo:</strong> Hígado, estómago, mandíbula<br/>
-                    <strong>Miedo:</strong> Riñones, vejiga, piernas<br/>
-                    <strong>Alegría:</strong> Corazón, pecho, brazos<br/>
-                    <strong>Ansiedad:</strong> Plexo solar, estómago<br/>
-                    <strong>Frustración:</strong> Mandíbula, cuello, hombros
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Aplicación escolar:</p>
-                  <p className="text-sm leading-relaxed">
-                    Identificar qué emociones están bloqueadas o excesivas. Esto ayuda a entender 
-                    el comportamiento del niño en el entorno escolar y enfocar el tratamiento.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Sensaciones Energéticas */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Zap className="w-8 h-8 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Sensaciones Energéticas</h3>
-                  <p className="text-sm text-gray-500">Mapeo del campo energético</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnica de visualización energética:</p>
-                  <p className="text-sm leading-relaxed">
-                    "Imagina que tienes una luz dorada que recorre tu cuerpo desde la cabeza hasta los pies. 
-                    ¿Dónde se detiene la luz? ¿Dónde se siente más brillante o más tenue?"
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Sensaciones energéticas:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Flujo suave:</strong> Equilibrio energético<br/>
-                    <strong>Bloqueos:</strong> Sensación de "atasco"<br/>
-                    <strong>Vibración:</strong> Activación energética<br/>
-                    <strong>Vacío:</strong> Falta de energía<br/>
-                    <strong>Calor energético:</strong> Activación excesiva<br/>
-                    <strong>Frescor:</strong> Energía equilibrada
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Correlación con pares biomagnéticos:</p>
-                  <p className="text-sm leading-relaxed">
-                    Las sensaciones energéticas reportadas por el niño suelen correlacionar 
-                    directamente con los pares biomagnéticos desequilibrados encontrados en el rastreo.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Sensaciones Cognitivas */}
+            {/* Preguntas de Exploración */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-indigo-100 rounded-full mr-4">
                   <Brain className="w-8 h-8 text-indigo-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">Sensaciones Cognitivas</h3>
-                  <p className="text-sm text-gray-500">Mapeo de la función mental</p>
+                  <h3 className="text-xl font-bold text-gray-800">Preguntas de Exploración Profunda</h3>
+                  <p className="text-sm text-gray-500">Cómo profundizar una vez identificada la sensación</p>
                 </div>
               </div>
               
-              <div className="space-y-4 text-gray-600">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnica de mapeo cognitivo:</p>
-                  <p className="text-sm leading-relaxed">
-                    "¿Cómo se siente tu cabeza cuando piensas? ¿Hay algún lugar que se siente pesado, 
-                    confuso, o que duele cuando intentas concentrarte?"
-                  </p>
+                  <h4 className="font-semibold text-gray-800 mb-4">Manifestaciones Corporales:</h4>
+                  <div className="space-y-2 text-sm text-gray-600">
+                    <p>"¿Dónde sientes eso en tu cuerpo?"</p>
+                    <p>"¿Cómo se siente físicamente cuando tienes esa sensación?"</p>
+                    <p>"¿Qué le pasa a tu cuerpo cuando estás en la escuela?"</p>
+                    <p>"¿En qué parte te duele o se tensa?"</p>
+                  </div>
                 </div>
                 
                 <div>
-                  <p className="font-semibold text-gray-800 mb-2">Sensaciones cognitivas:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Claridad mental:</strong> Sensación de "luz" en la cabeza<br/>
-                    <strong>Confusión:</strong> Sensación de "niebla" o "nubes"<br/>
-                    <strong>Presión:</strong> Sensación de "peso" en la cabeza<br/>
-                    <strong>Hormigueo:</strong> Activación nerviosa<br/>
-                    <strong>Vacío:</strong> Falta de concentración<br/>
-                    <strong>Calor:</strong> Sobrecarga mental
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Aplicación en el aprendizaje:</p>
-                  <p className="text-sm leading-relaxed">
-                    Identificar qué sensaciones cognitivas están afectando la capacidad de aprendizaje 
-                    del niño y correlacionarlas con los desequilibrios biomagnéticos encontrados.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </CourseSection>
-
-        {/* Herramientas de Evaluación */}
-        <CourseSection
-          title="Herramientas de Evaluación Especializadas"
-          icon={<Activity className="w-8 h-8 text-slate-500" />}
-        >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Las herramientas de evaluación especializadas nos permiten obtener información 
-              objetiva y subjetiva sobre el estado del niño, complementando el rastreo biomagnético 
-              con datos cuantificables y observables.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {/* Escalas de Evaluación */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <Activity className="w-8 h-8 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Escalas de Evaluación</h3>
-                  <p className="text-sm text-gray-500">Herramientas cuantificables para escolares</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Escala de Bienestar Escolar (1-10):</p>
-                  <p className="text-sm leading-relaxed">
-                    "¿Qué tan bien te sientes en la escuela hoy?" (1 = muy mal, 10 = muy bien). 
-                    Evaluar diariamente para identificar patrones y cambios.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Escala de Energía Corporal (1-10):</p>
-                  <p className="text-sm leading-relaxed">
-                    "¿Qué tan energético te sientes hoy?" (1 = muy cansado, 10 = muy energético). 
-                    Correlacionar con los tratamientos biomagnéticos aplicados.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Escala de Concentración (1-10):</p>
-                  <p className="text-sm leading-relaxed">
-                    "¿Qué tan fácil te resulta concentrarte hoy?" (1 = muy difícil, 10 = muy fácil). 
-                    Evaluar antes y después de las sesiones de tratamiento.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Escala de Emociones (1-10):</p>
-                  <p className="text-sm leading-relaxed">
-                    Evaluar alegría, tristeza, enojo, miedo, ansiedad. "¿Qué tan alegre te sientes hoy?" 
-                    (1 = muy triste, 10 = muy alegre). Repetir para cada emoción.
-                  </p>
+                  <h4 className="font-semibold text-gray-800 mb-4">Reacciones y Patrones:</h4>
+                  <div className="space-y-2 text-sm text-gray-600">
+                    <p>"¿Qué haces cuando sientes eso?"</p>
+                    <p>"¿Cómo reacciona tu cuerpo?"</p>
+                    <p>"¿Qué pensamientos vienen cuando tienes esa sensación?"</p>
+                    <p>"¿Qué situaciones específicas la activan más?"</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Técnicas de Observación */}
+            {/* Correlación con Síntomas */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-green-500" />
+                <div className="p-3 bg-yellow-100 rounded-full mr-4">
+                  <CheckCircle className="w-8 h-8 text-yellow-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">Técnicas de Observación</h3>
-                  <p className="text-sm text-gray-500">Observación sistemática del comportamiento</p>
+                  <h3 className="text-xl font-bold text-gray-800">Correlación Sensación-Síntoma</h3>
+                  <p className="text-sm text-gray-500">Conexiones típicas entre sensaciones y manifestaciones físicas</p>
                 </div>
               </div>
               
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Observación en el aula:</p>
-                  <p className="text-sm leading-relaxed">
-                    Postura, movimientos, nivel de atención, interacciones con compañeros, 
-                    respuesta a instrucciones, participación en actividades.
-                  </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-red-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-red-800 mb-2">Abandono/Soledad</h5>
+                  <ul className="text-sm text-red-700 space-y-1">
+                    <li>• Ansiedad de separación</li>
+                    <li>• Problemas digestivos</li>
+                    <li>• Enfermedades frecuentes los lunes</li>
+                    <li>• Regresiones</li>
+                  </ul>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Observación durante el recreo:</p>
-                  <p className="text-sm leading-relaxed">
-                    Nivel de actividad, interacciones sociales, preferencias de juego, 
-                    comportamiento en grupo vs. individual, respuesta al ruido y movimiento.
-                  </p>
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-orange-800 mb-2">Frustración/Impotencia</h5>
+                  <ul className="text-sm text-orange-700 space-y-1">
+                    <li>• TDAH</li>
+                    <li>• Bruxismo</li>
+                    <li>• Comportamientos disruptivos</li>
+                    <li>• Tics nerviosos</li>
+                  </ul>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Observación durante las comidas:</p>
-                  <p className="text-sm leading-relaxed">
-                    Apetito, preferencias alimentarias, comportamiento en la mesa, 
-                    interacciones sociales durante la comida.
-                  </p>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-blue-800 mb-2">Devaluación/Humillación</h5>
+                  <ul className="text-sm text-blue-700 space-y-1">
+                    <li>• Mutismo selectivo</li>
+                    <li>• Evitación escolar</li>
+                    <li>• Problemas de autoestima</li>
+                    <li>• Aislamiento social</li>
+                  </ul>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Registro de patrones:</p>
-                  <p className="text-sm leading-relaxed">
-                    Documentar horarios de mayor/menor energía, días de la semana con más dificultades, 
-                    factores ambientales que afectan el comportamiento.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Registro de Datos */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <CheckCircle className="w-8 h-8 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Registro de Datos</h3>
-                  <p className="text-sm text-gray-500">Documentación sistemática del progreso</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Formulario de evaluación inicial:</p>
-                  <p className="text-sm leading-relaxed">
-                    Datos demográficos, historia clínica, evaluación energética inicial, 
-                    mapeo de sensaciones, escalas de evaluación, observaciones del comportamiento.
-                  </p>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-green-800 mb-2">Agresión/Vulnerabilidad</h5>
+                  <ul className="text-sm text-green-700 space-y-1">
+                    <li>• Asma escolar</li>
+                    <li>• Crisis de pánico</li>
+                    <li>• Fobias específicas</li>
+                    <li>• Somatizaciones</li>
+                  </ul>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Registro de sesiones:</p>
-                  <p className="text-sm leading-relaxed">
-                    Fecha, duración, pares biomagnéticos trabajados, sensaciones reportadas, 
-                    cambios observados, escalas de evaluación post-sesión.
-                  </p>
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-purple-800 mb-2">Angustia/Infelicidad</h5>
+                  <ul className="text-sm text-purple-700 space-y-1">
+                    <li>• Trastornos del sueño</li>
+                    <li>• Pérdida de apetito</li>
+                    <li>• Fatiga crónica</li>
+                    <li>• Dolores de cabeza</li>
+                  </ul>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Seguimiento semanal:</p>
-                  <p className="text-sm leading-relaxed">
-                    Evaluación de progreso, cambios en el comportamiento escolar, 
-                    reportes de maestros y padres, ajustes al plan de tratamiento.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Evaluación de resultados:</p>
-                  <p className="text-sm leading-relaxed">
-                    Comparación de escalas iniciales vs. finales, análisis de patrones de mejora, 
-                    identificación de factores de éxito, recomendaciones para el futuro.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </CourseSection>
-
-        {/* Interpretación de Resultados */}
-        <CourseSection
-          title="Interpretación de Resultados"
-          icon={<Shield className="w-8 h-8 text-slate-500" />}
-        >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              La interpretación de resultados es el arte de integrar toda la información recopilada 
-              para crear un plan de tratamiento personalizado y efectivo. No se trata solo de 
-              analizar datos, sino de comprender al niño como un ser único.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {/* Análisis Integral */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <Shield className="w-8 h-8 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Análisis Integral</h3>
-                  <p className="text-sm text-gray-500">Integración de toda la información recopilada</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Correlación de datos:</p>
-                  <p className="text-sm leading-relaxed">
-                    Relacionar los pares biomagnéticos desequilibrados con las sensaciones reportadas, 
-                    las escalas de evaluación y las observaciones del comportamiento. Buscar patrones 
-                    consistentes que indiquen conflictos específicos.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Identificación de prioridades:</p>
-                  <p className="text-sm leading-relaxed">
-                    Determinar qué desequilibrios están afectando más significativamente el bienestar 
-                    y rendimiento del niño. Priorizar el tratamiento de los conflictos más impactantes.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Contexto escolar específico:</p>
-                  <p className="text-sm leading-relaxed">
-                    Analizar cómo los desequilibrios encontrados se manifiestan específicamente en 
-                    el entorno escolar. Identificar factores ambientales que pueden estar exacerbando 
-                    los conflictos.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Plan de Tratamiento */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Plan de Tratamiento</h3>
-                  <p className="text-sm text-gray-500">Protocolo personalizado basado en la evaluación</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo biomagnético específico:</p>
-                  <p className="text-sm leading-relaxed">
-                    Seleccionar los pares biomagnéticos más importantes para trabajar primero. 
-                    Establecer una secuencia de tratamiento que respete la capacidad del niño 
-                    y su respuesta a las sesiones.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Frecuencia de sesiones:</p>
-                  <p className="text-sm leading-relaxed">
-                    Determinar la frecuencia óptima basada en la edad del niño, la severidad 
-                    de los desequilibrios y la respuesta inicial. Ajustar según la evolución.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Estrategias de apoyo:</p>
-                  <p className="text-sm leading-relaxed">
-                    Incluir recomendaciones para el hogar y la escuela: cambios en la dieta, 
-                    técnicas de relajación, modificaciones ambientales, estrategias de comunicación.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Objetivos específicos:</p>
-                  <p className="text-sm leading-relaxed">
-                    Establecer objetivos claros y medibles para el tratamiento. Incluir escalas 
-                    de evaluación para monitorear el progreso y ajustar el plan según sea necesario.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Consideraciones Especiales */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Brain className="w-8 h-8 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Consideraciones Especiales</h3>
-                  <p className="text-sm text-gray-500">Factores únicos de cada niño</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Edad y desarrollo:</p>
-                  <p className="text-sm leading-relaxed">
-                    Adaptar el lenguaje, las técnicas y las expectativas según la edad del niño. 
-                    Los niños más pequeños requieren más juego y visualización, mientras que los 
-                    mayores pueden participar más activamente en su tratamiento.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Contexto familiar:</p>
-                  <p className="text-sm leading-relaxed">
-                    Considerar el apoyo familiar disponible, la comprensión de los padres sobre 
-                    el biomagnetismo, y la capacidad de la familia para implementar recomendaciones.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Contexto escolar:</p>
-                  <p className="text-sm leading-relaxed">
-                    Evaluar la receptividad de la escuela a las recomendaciones, la disponibilidad 
-                    de recursos de apoyo, y la capacidad de los maestros para implementar estrategias 
-                    de ayuda.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Necesidades individuales:</p>
-                  <p className="text-sm leading-relaxed">
-                    Reconocer que cada niño es único y puede requerir adaptaciones específicas 
-                    en el tratamiento. Mantener flexibilidad y estar dispuesto a ajustar el 
-                    enfoque según la respuesta del niño.
-                  </p>
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h5 className="font-semibold text-gray-800 mb-2">Ira/Persecución</h5>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• Hiperactividad</li>
+                    <li>• Agresividad</li>
+                    <li>• Problemas de conducta</li>
+                    <li>• Desafío a la autoridad</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -691,11 +481,12 @@ const Module3Block4: React.FC = () => {
         {/* Próximos Pasos */}
         <div className="bg-gradient-to-r from-slate-100 to-gray-200 rounded-lg p-8 text-slate-800 text-center">
           <h2 className="text-2xl font-bold mb-4">
-            ¿Listo para el Enfoque Sistémico?
+            Sensaciones Identificadas
           </h2>
           <p className="text-slate-700 mb-6">
-            Ahora que conoces las herramientas de evaluación, es momento de aprender 
-            sobre el enfoque sistémico y la conflictología dental.
+            Ahora que dominas la identificación de las 18 sensaciones específicas del conflicto escolar 
+            mediante rastreo biomagnético, es momento de aprender sobre el rastreo temporal para encontrar 
+            el instante de origen y la identificación de microbios asociados usando la misma técnica de extremidades.
           </p>
           <div className="flex justify-center">
             <ArrowRight className="w-6 h-6 text-slate-700 animate-pulse" />

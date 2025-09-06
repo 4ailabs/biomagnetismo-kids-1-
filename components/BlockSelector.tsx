@@ -18,7 +18,8 @@ import {
   Microscope,
   Award,
   CheckCircle,
-  Users
+  Users,
+  Table
 } from 'lucide-react';
 
 const BlockSelector: React.FC = () => {
@@ -49,14 +50,14 @@ const BlockSelector: React.FC = () => {
       ];
     } else if (activeModule === 3) {
       return [
-        { id: 1, title: "Fundamentos", subtitle: "8 Conflictos Escolares", icon: <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-blue-400 to-indigo-500' },
-        { id: 2, title: "Patologías", subtitle: "TDAH, Asma, Bruxismo", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
-        { id: 3, title: "Rastreo", subtitle: "3 Técnicas Integradas", icon: <Search className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-green-400 to-emerald-500' },
-        { id: 4, title: "Evaluación", subtitle: "Mapeo y Sensaciones", icon: <MapPin className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-purple-400 to-indigo-500' },
-        { id: 5, title: "Sistémico", subtitle: "Desórdenes y Dental", icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-orange-400 to-amber-500' },
-        { id: 6, title: "Casos", subtitle: "Clínicos y Emergencia", icon: <UserCheck className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-cyan-500' },
-        { id: 7, title: "Microorganismos", subtitle: "Bacterias, Virus, Hongos", icon: <Microscope className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-red-400 to-pink-500' },
-        { id: 8, title: "Seguimiento", subtitle: "Ética y Recursos", icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-amber-400 to-orange-500' },
+        { id: 1, title: "Fundamentos", subtitle: "Neurobiología del Aprendizaje", icon: <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-blue-400 to-indigo-500' },
+        { id: 2, title: "8 Conflictos", subtitle: "Conflictos Biológicos Escolares", icon: <Target className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
+        { id: 3, title: "Rastreo", subtitle: "Técnicas por Extremidades", icon: <Search className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-green-400 to-emerald-500' },
+        { id: 4, title: "18 Sensaciones", subtitle: "Sensaciones que Soportan", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-purple-400 to-indigo-500' },
+        { id: 5, title: "Patologías", subtitle: "TDAH, Asma, Bruxismo", icon: <UserCheck className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-orange-400 to-amber-500' },
+        { id: 6, title: "50 Pares", subtitle: "Lista Optimizada Escolar", icon: <Table className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-indigo-400 to-purple-500' },
+        { id: 7, title: "Técnicas", subtitle: "Rastreo Integrado", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-cyan-500' },
+        { id: 8, title: "Casos", subtitle: "Clínicos y Protocolos", icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-amber-400 to-orange-500' },
       ];
     } else {
       // Módulos futuros
@@ -85,7 +86,10 @@ const BlockSelector: React.FC = () => {
     <div className="bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-2 sm:p-3 lg:p-4 border border-white/20">
       <div className="text-center mb-2 sm:mb-3 lg:mb-4">
         <h2 className="text-sm sm:text-base lg:text-lg font-semibold text-slate-700 mb-1 sm:mb-2">
-          {activeModule === 1 ? t('blockSelector.title') : t('blockSelector.module2.title')}
+          {activeModule === 1 ? t('blockSelector.title') : 
+           activeModule === 2 ? t('blockSelector.module2.title') :
+           activeModule === 3 ? 'Módulo 3 - Navega por los Bloques' :
+           t('blockSelector.title')}
         </h2>
         <div className="w-8 sm:w-10 lg:w-12 xl:w-16 h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full mx-auto"></div>
       </div>

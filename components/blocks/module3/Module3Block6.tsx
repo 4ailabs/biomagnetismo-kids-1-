@@ -1,847 +1,236 @@
 import React from 'react';
+import { Table, Search, Target, Heart, Clock, CheckCircle } from 'lucide-react';
 import CourseSection from '../../CourseSection';
-import { UserCheck, AlertTriangle, Heart, Target, ArrowRight, CheckCircle, Activity, Shield, Zap, Users } from 'lucide-react';
 
 const Module3Block6: React.FC = () => {
+  const paresPrioritarios = [
+    { id: 1, par: "Temporal Izq - Temporal Der", microorganismo: "Tifus exantemático", aplicacion: "TDAH" },
+    { id: 2, par: "Temporal Der - Temporal Der", microorganismo: "Bonilla", aplicacion: "Hiperactividad" },
+    { id: 3, par: "Frontal - Occipital", microorganismo: "-", aplicacion: "Función ejecutiva" },
+    { id: 4, par: "Suprarrenales - Suprarrenales", microorganismo: "-", aplicacion: "Regulación estrés" },
+    { id: 5, par: "Estómago - Estómago", microorganismo: "-", aplicacion: "Somatizaciones" },
+    { id: 6, par: "Estómago - Suprarrenales", microorganismo: "Sarampión", aplicacion: "Gastritis/pánico" },
+    { id: 7, par: "Axila - Axila", microorganismo: "Virus rabia", aplicacion: "Asma territorial" },
+    { id: 8, par: "Mandíbula - Mandíbula", microorganismo: "Neisseria", aplicacion: "Bruxismo" },
+    { id: 9, par: "Timo - Timo", microorganismo: "-", aplicacion: "Sistema inmune emocional" },
+    { id: 10, par: "Timo - Suprarrenal", microorganismo: "-", aplicacion: "Autoestima" },
+    { id: 11, par: "Parietal - Riñón Contralateral", microorganismo: "GOIZ", aplicacion: "Concentración" },
+    { id: 12, par: "Bulbo - Cerebelo", microorganismo: "Newcastle", aplicacion: "Coordinación" },
+    { id: 13, par: "Polo - Polo", microorganismo: "Abraham", aplicacion: "Dislexia" },
+    { id: 14, par: "Cerebelo - Cerebelo", microorganismo: "Universidad Chapingo", aplicacion: "Convulsiones" },
+    { id: 15, par: "Hipófisis - Hipófisis", microorganismo: "-", aplicacion: "Regulación endocrina" },
+    { id: 16, par: "Riñón - Riñón", microorganismo: "Clostridium tetani", aplicacion: "Depuración" },
+    { id: 17, par: "Cervicales - Sacro", microorganismo: "-", aplicacion: "Regulación autonómica" },
+    { id: 18, par: "Plexo Solar - Riñón Der", microorganismo: "-", aplicacion: "Seguridad emocional" },
+    { id: 19, par: "Duodeno - Duodeno", microorganismo: "-", aplicacion: "Colon irritable" },
+    { id: 20, par: "Interciliar - Bulbo", microorganismo: "David", aplicacion: "Enuresis" }
+  ];
+
+  const paresPsicoemocionales = [
+    { id: 21, par: "Corazón - Corazón", microorganismo: "-", aplicacion: "Negatividad/pesimismo" },
+    { id: 22, par: "Corazón - Páncreas", microorganismo: "-", aplicacion: "Envidia" },
+    { id: 23, par: "Corazón - Vejiga", microorganismo: "-", aplicacion: "Resentimiento" },
+    { id: 24, par: "Riñón Izq - Ojo Izq", microorganismo: "-", aplicacion: "Miedos comunes" },
+    { id: 25, par: "Rótula - Rótula", microorganismo: "-", aplicacion: "Miedo general" },
+    { id: 26, par: "Bulbo - Corazón", microorganismo: "-", aplicacion: "Crueldad/agresividad" },
+    { id: 27, par: "Mastoides Der - Corazón", microorganismo: "-", aplicacion: "Agresividad" },
+    { id: 28, par: "Ombligo - Testículo", microorganismo: "-", aplicacion: "Complejo Edipo" },
+    { id: 29, par: "Ombligo - Uretero", microorganismo: "-", aplicacion: "Complejo Elektra" },
+    { id: 30, par: "Suprarrenal - Hígado", microorganismo: "-", aplicacion: "Soberbia" },
+    { id: 31, par: "Timo - Hipófisis", microorganismo: "-", aplicacion: "Avaricia/acaparamiento" },
+    { id: 32, par: "Hipófisis - Tiroides", microorganismo: "-", aplicacion: "Venganza" },
+    { id: 33, par: "Sien Der - Corazón", microorganismo: "-", aplicacion: "Tristeza" },
+    { id: 34, par: "Tráquea - Corazón", microorganismo: "-", aplicacion: "Intolerancia" },
+    { id: 35, par: "Estómago - Corazón", microorganismo: "-", aplicacion: "Gula/control peso" }
+  ];
+
+  const paresComplementarios = [
+    { id: 36, par: "Bazo - Bazo", microorganismo: "Yersinia pestis", aplicacion: "Tos bronquitis" },
+    { id: 37, par: "Lengua - Lengua", microorganismo: "Sarcoptes", aplicacion: "Separación dolorosa" },
+    { id: 38, par: "Laringe - Laringe", microorganismo: "Bordetella pertussis", aplicacion: "Tos ferina" },
+    { id: 39, par: "Oído - Oído", microorganismo: "Toxoplasma", aplicacion: "Conflictos grupales" },
+    { id: 40, par: "Canto - Canto", microorganismo: "Aspergillus", aplicacion: "Glaucoma" },
+    { id: 41, par: "Nervio Vago - Riñón", microorganismo: "-", aplicacion: "Reservorio universal" },
+    { id: 42, par: "Dental - Riñón", microorganismo: "-", aplicacion: "Reservorio universal" },
+    { id: 43, par: "Quiasma - Quiasma", microorganismo: "Lucina", aplicacion: "Sistema linfático" },
+    { id: 44, par: "Parotida - Parotida", microorganismo: "Leni", aplicacion: "Regulación hormonal" },
+    { id: 45, par: "Oreja - Oreja", microorganismo: "Leni", aplicacion: "Tics nerviosos" },
+    { id: 46, par: "Muñeca - Tibia Inferior", microorganismo: "-", aplicacion: "Polarización" },
+    { id: 47, par: "Pectoral - Cuadríceps", microorganismo: "-", aplicacion: "Energético" },
+    { id: 48, par: "Aquiles - Aquiles", microorganismo: "Shigella", aplicacion: "Gastrointestinal" },
+    { id: 49, par: "Calcáneo - Calcáneo", microorganismo: "Ricketsia", aplicacion: "Debilidad muscular" },
+    { id: 50, par: "Dorsal 7 - Dorsal 7", microorganismo: "-", aplicacion: "Acidez/oxidación" }
+  ];
+
+  const hologramasEscolares = [
+    { id: 1, holograma: "Humillación Pública", evento: "Ridículo frente a compañeros/maestros", par: "Temporal Izq (-) → Suprarrenal (+)", sensacion: "Vergüenza, humillación", manifestaciones: "Mutismo, retraimiento, somatizaciones" },
+    { id: 2, holograma: "Traición del Grupo de Pares", evento: "Ruptura de confianza en amistades", par: "Corazón (-) → Timo (+)", sensacion: "Traición, abandono", manifestaciones: "Aislamiento, desconfianza, agresividad" },
+    { id: 3, holograma: "Fracaso Académico Devastador", evento: "Fallo que destruye autoestima intelectual", par: "Frontal (-) → Timo (+)", sensacion: "\"He fallado\", devaluación", manifestaciones: "Autosabotaje, perfeccionismo, miedo al fracaso" },
+    { id: 4, holograma: "Injusticia de Autoridad", evento: "Abuso de poder por figura de autoridad", par: "Suprarrenal (-) → Hígado (+)", sensacion: "Ira, impotencia", manifestaciones: "Rebeldía, desafío, conductas oposicionistas" },
+    { id: 5, holograma: "Pérdida de Identidad Grupal", evento: "Perder lugar o identidad en el grupo", par: "Pericardio (-) → Plexo Solar (+)", sensacion: "Vacío, no pertenencia", manifestaciones: "Dificultades sociales, cambios de personalidad" },
+    { id: 6, holograma: "Sobrecarga Sistémica Súbita", evento: "Demandas que superan capacidad", par: "Temporal Izq (-) → Temporal Der (+)", sensacion: "Agotamiento, \"ya no puedo más\"", manifestaciones: "Fatiga, dificultades concentración, somatizaciones" },
+    { id: 7, holograma: "Amenaza de Expulsión/Separación", evento: "Riesgo de perder lugar en sistema escolar", par: "Bulbo Raquídeo (-) → Corazón (+)", sensacion: "Pánico, miedo extremo", manifestaciones: "Ansiedad severa, conductas de supervivencia" }
+  ];
+
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-slate-100 to-gray-200 text-slate-800 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-slate-200 rounded-full">
-              <UserCheck className="w-12 h-12 text-slate-600" />
+    <div id="block-6" className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-6 sm:py-12 px-2 sm:px-4 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="flex justify-center mb-4 sm:mb-6">
+            <div className="p-3 sm:p-4 bg-indigo-200 rounded-full">
+              <Table className="w-8 h-8 sm:w-12 sm:h-12 text-indigo-600" />
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            Casos Clínicos y Protocolos de Emergencia
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 px-2">
+            Lista de 50 Pares Optimizados
           </h1>
-          <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto">
-            Aplicación Práctica del Biomagnetismo Escolar en Situaciones Reales
+          <p className="text-base sm:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto px-2">
+            Pares Biomagnéticos Específicos para el Contexto Escolar
           </p>
         </div>
-      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Introducción */}
         <CourseSection
-          title="Introducción a los Casos Clínicos y Protocolos de Emergencia"
-          icon={<UserCheck className="w-8 h-8 text-slate-500" />}
+          title="Puntos Prioritarios Escolares (1-20)"
+          icon={<Target className="w-6 h-6 sm:w-8 sm:h-8 text-pink-500" />}
         >
-          <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-lg p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              Aplicación Práctica del Biomagnetismo Escolar
-            </h3>
-            <div className="space-y-4 text-gray-600 leading-relaxed">
-              <p>
-                Los casos clínicos reales nos permiten entender cómo aplicar el biomagnetismo 
-                en situaciones concretas del entorno escolar. Cada caso presenta desafíos únicos 
-                que requieren un abordaje personalizado y protocolos específicos.
-              </p>
-              <p>
-                <strong>Los protocolos de emergencia</strong> son fundamentales para manejar 
-                situaciones críticas que pueden surgir en el entorno escolar, donde la 
-                intervención inmediata puede marcar la diferencia en el bienestar del estudiante.
-              </p>
-              <p>
-                <strong>La coordinación con el equipo educativo</strong> es esencial para 
-                asegurar un seguimiento integral y la implementación de estrategias de apoyo 
-                que complementen el tratamiento biomagnético.
-              </p>
+          <div className="overflow-x-auto -mx-2 sm:mx-0">
+            <div className="min-w-full px-2 sm:px-0">
+              <table className="w-full border-collapse bg-white rounded-lg shadow-lg overflow-hidden">
+                <thead className="bg-gradient-to-r from-pink-500 to-rose-500 text-white">
+                  <tr>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">#</th>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Par Biomagnético</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {paresPrioritarios.map((par) => (
+                    <tr key={par.id} className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="px-2 sm:px-4 py-2 sm:py-3 font-medium text-indigo-600 text-xs sm:text-sm">{par.id}</td>
+                      <td className="px-2 sm:px-4 py-2 sm:py-3 font-medium text-xs sm:text-sm break-words">{par.par}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </CourseSection>
 
-        {/* Casos Clínicos Comunes */}
         <CourseSection
-          title="Casos Clínicos Comunes en el Entorno Escolar"
-          icon={<UserCheck className="w-8 h-8 text-slate-500" />}
+          title="Puntos Psicoemocionales (21-35)"
+          icon={<Heart className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500" />}
         >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Los casos clínicos reales nos permiten entender cómo aplicar el biomagnetismo 
-              en situaciones concretas del entorno escolar. Cada caso presenta desafíos únicos 
-              que requieren un abordaje personalizado y protocolos específicos.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {/* Caso 1: TDAH con Ansiedad */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <UserCheck className="w-8 h-8 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Caso 1: TDAH con Ansiedad</h3>
-                  <p className="text-sm text-gray-500">Estudiante de 8 años - Dificultades de concentración y ansiedad</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Presentación del caso:</p>
-                  <p className="text-sm leading-relaxed">
-                    Estudiante de 8 años con dificultades de concentración, hiperactividad, impulsividad 
-                    y ansiedad por el rendimiento académico. Presentaba problemas de comportamiento 
-                    en el aula, dificultades para seguir instrucciones y episodios de ansiedad durante 
-                    exámenes y presentaciones.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Evaluación biomagnética:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Pares desequilibrados:</strong> Temporal Izq (-) → Temporal Der (+), Plexo Solar (-) → Suprarrenal (+)<br/>
-                    <strong>Microorganismos:</strong> Virus del polioma, Helicobacter pylori<br/>
-                    <strong>Sistemas afectados:</strong> Nervioso, endocrino, digestivo
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo de tratamiento:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Fase 1:</strong> Trabajo en pares principales (Temporal, Plexo Solar, Suprarrenal)<br/>
-                    <strong>Fase 2:</strong> Protocolo específico para TDAH (Frontal, Occipital, Timo)<br/>
-                    <strong>Fase 3:</strong> Protocolo de ansiedad (Corazón, Pulmón, Riñón)<br/>
-                    <strong>Fase 4:</strong> Protocolo de microorganismos (Virus del polioma, H. pylori)
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Resultados obtenidos:</p>
-                  <p className="text-sm leading-relaxed">
-                    Mejora significativa en la concentración, reducción de la hiperactividad, 
-                    disminución de la ansiedad, mejor rendimiento académico y mejora en las 
-                    relaciones sociales. El estudiante pudo seguir las clases sin interrupciones 
-                    y participar activamente en las actividades escolares.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Caso 2: Asma Inducida por Estrés */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <Heart className="w-8 h-8 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Caso 2: Asma Inducida por Estrés</h3>
-                  <p className="text-sm text-gray-500">Niña de 10 años - Episodios de asma durante exámenes</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Presentación del caso:</p>
-                  <p className="text-sm leading-relaxed">
-                    Niña de 10 años con episodios de asma que se desencadenaban durante exámenes, 
-                    presentaciones orales y situaciones de estrés académico. Presentaba dificultad 
-                    respiratoria, sibilancias, tos seca y ansiedad durante los episodios.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Evaluación biomagnética:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Pares desequilibrados:</strong> Pulmón (-) → Suprarrenal (+), Corazón (-) → Corazón (+)<br/>
-                    <strong>Microorganismos:</strong> Virus de la rabia (Axila - Axila), Pseudomonas aeruginosa<br/>
-                    <strong>Sistemas afectados:</strong> Respiratorio, cardiovascular, nervioso
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo de tratamiento:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Fase 1:</strong> Protocolo de crisis asmática (Pulmón, Suprarrenal, Corazón)<br/>
-                    <strong>Fase 2:</strong> Protocolo de prevención (Axila, Timo, Plexo Solar)<br/>
-                    <strong>Fase 3:</strong> Protocolo de mantenimiento (Sistema inmune, endocrino)<br/>
-                    <strong>Fase 4:</strong> Técnicas de relajación y respiración
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Resultados obtenidos:</p>
-                  <p className="text-sm leading-relaxed">
-                    Reducción significativa de episodios de asma, mejor control del estrés, 
-                    disminución de la ansiedad durante exámenes, mejora en la capacidad 
-                    respiratoria y mayor confianza en situaciones académicas estresantes.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Caso 3: Bruxismo Nocturno */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Caso 3: Bruxismo Nocturno</h3>
-                  <p className="text-sm text-gray-500">Estudiante de 9 años - Bruxismo severo relacionado con estrés</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Presentación del caso:</p>
-                  <p className="text-sm leading-relaxed">
-                    Estudiante de 9 años con bruxismo severo durante el sueño, relacionado con 
-                    estrés escolar y conflictos familiares. Presentaba desgaste dental, dolor 
-                    mandibular, dolores de cabeza y problemas de sueño.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Evaluación biomagnética:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Pares desequilibrados:</strong> Mandíbula (-) → Mandíbula (+), Ángulo (-) → Ángulo (+)<br/>
-                    <strong>Microorganismos:</strong> Neisseria gonorreae, Streptococcus fragilis<br/>
-                    <strong>Sistemas afectados:</strong> Muscular, nervioso, digestivo
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo de tratamiento:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Fase 1:</strong> Protocolo de bruxismo (Mandíbula, Ángulo, TMJ)<br/>
-                    <strong>Fase 2:</strong> Protocolo de estrés (Suprarrenal, Plexo Solar, Timo)<br/>
-                    <strong>Fase 3:</strong> Protocolo de microorganismos (Neisseria, Streptococcus)<br/>
-                    <strong>Fase 4:</strong> Técnicas de relajación y manejo del estrés
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Resultados obtenidos:</p>
-                  <p className="text-sm leading-relaxed">
-                    Reducción significativa del bruxismo, disminución del dolor mandibular, 
-                    mejora en la calidad del sueño, reducción del estrés y mejor rendimiento 
-                    académico. El estudiante pudo dormir mejor y concentrarse más en clase.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Caso 4: Depresión Infantil */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-orange-100 rounded-full mr-4">
-                  <AlertTriangle className="w-8 h-8 text-orange-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Caso 4: Depresión Infantil</h3>
-                  <p className="text-sm text-gray-500">Niño de 11 años - Depresión, aislamiento y bajo rendimiento</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Presentación del caso:</p>
-                  <p className="text-sm leading-relaxed">
-                    Niño de 11 años con síntomas de depresión, aislamiento social, bajo rendimiento 
-                    académico, falta de motivación y episodios de tristeza. Presentaba problemas 
-                    de autoestima y dificultades para relacionarse con otros niños.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Evaluación biomagnética:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Pares desequilibrados:</strong> Timo (-) → Timo (+), Corazón (-) → Corazón (+)<br/>
-                    <strong>Microorganismos:</strong> Streptococcus pneumoniae, Candida albicans<br/>
-                    <strong>Sistemas afectados:</strong> Inmune, endocrino, nervioso
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo de tratamiento:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Fase 1:</strong> Protocolo de depresión (Timo, Corazón, Plexo Solar)<br/>
-                    <strong>Fase 2:</strong> Protocolo de autoestima (Suprarrenal, Tiroides, Hipófisis)<br/>
-                    <strong>Fase 3:</strong> Protocolo de microorganismos (Streptococcus, Candida)<br/>
-                    <strong>Fase 4:</strong> Técnicas de apoyo emocional y social
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Resultados obtenidos:</p>
-                  <p className="text-sm leading-relaxed">
-                    Mejora significativa en el estado de ánimo, aumento de la autoestima, 
-                    mejor rendimiento académico, mejora en las relaciones sociales y mayor 
-                    participación en actividades escolares. El niño recuperó su motivación 
-                    y entusiasmo por aprender.
-                  </p>
-                </div>
-              </div>
+          <div className="overflow-x-auto -mx-2 sm:mx-0">
+            <div className="min-w-full px-2 sm:px-0">
+              <table className="w-full border-collapse bg-white rounded-lg shadow-lg overflow-hidden">
+                <thead className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
+                  <tr>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">#</th>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Par Biomagnético</th>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Microorganismo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {paresPsicoemocionales.map((par) => (
+                    <tr key={par.id} className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="px-2 sm:px-4 py-2 sm:py-3 font-medium text-indigo-600 text-xs sm:text-sm">{par.id}</td>
+                      <td className="px-2 sm:px-4 py-2 sm:py-3 font-medium text-xs sm:text-sm break-words">{par.par}</td>
+                      <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-slate-600 italic break-words">{par.microorganismo}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </CourseSection>
 
-        {/* Protocolos de Emergencia */}
         <CourseSection
-          title="Protocolos de Emergencia Biomagnética"
-          icon={<AlertTriangle className="w-8 h-8 text-slate-500" />}
+          title="Puntos Complementarios (36-50)"
+          icon={<CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />}
         >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Los protocolos de emergencia son fundamentales para manejar situaciones críticas 
-              que pueden surgir en el entorno escolar. La intervención inmediata puede marcar 
-              la diferencia en el bienestar del estudiante y prevenir complicaciones mayores.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {/* Crisis de Ansiedad */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-red-100 rounded-full mr-4">
-                  <AlertTriangle className="w-8 h-8 text-red-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Crisis de Ansiedad</h3>
-                  <p className="text-sm text-gray-500">Protocolo inmediato para crisis de ansiedad</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Síntomas de crisis:</p>
-                  <p className="text-sm leading-relaxed">
-                    Taquicardia, sudoración, temblores, dificultad para respirar, sensación de 
-                    ahogo, náuseas, mareos, miedo intenso, sensación de pérdida de control.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo inmediato:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Paso 1:</strong> Aplicar imanes en Plexo Solar (-) → Suprarrenal (+)<br/>
-                    <strong>Paso 2:</strong> Trabajar Corazón (-) → Corazón (+) para estabilizar<br/>
-                    <strong>Paso 3:</strong> Aplicar Pulmón (-) → Pulmón (+) para respiración<br/>
-                    <strong>Paso 4:</strong> Técnicas de respiración 4-7-8
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnicas de apoyo:</p>
-                  <p className="text-sm leading-relaxed">
-                    Respiración diafragmática, técnicas de grounding (5-4-3-2-1), 
-                    relajación muscular progresiva, visualización de lugar seguro.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Seguimiento:</p>
-                  <p className="text-sm leading-relaxed">
-                    Evaluar respuesta en 5-10 minutos, documentar duración y intensidad, 
-                    planificar seguimiento con protocolo preventivo.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Crisis Asmática */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <Heart className="w-8 h-8 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Crisis Asmática</h3>
-                  <p className="text-sm text-gray-500">Protocolo para crisis respiratoria</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Síntomas de crisis:</p>
-                  <p className="text-sm leading-relaxed">
-                    Dificultad respiratoria, sibilancias, tos seca, opresión en el pecho, 
-                    ansiedad, sudoración, uso de músculos accesorios para respirar.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo inmediato:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Paso 1:</strong> Aplicar Pulmón (-) → Suprarrenal (+) para broncodilatación<br/>
-                    <strong>Paso 2:</strong> Trabajar Corazón (-) → Corazón (+) para estabilizar<br/>
-                    <strong>Paso 3:</strong> Aplicar Axila (-) → Axila (+) para virus de la rabia<br/>
-                    <strong>Paso 4:</strong> Técnicas de respiración controlada
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnicas de apoyo:</p>
-                  <p className="text-sm leading-relaxed">
-                    Respiración de labios fruncidos, posición de recuperación, 
-                    técnicas de relajación, masaje en puntos de acupresión.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Seguimiento:</p>
-                  <p className="text-sm leading-relaxed">
-                    Monitorear función respiratoria, evaluar respuesta al tratamiento, 
-                    coordinar con servicios médicos si es necesario.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Crisis Emocional */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <Shield className="w-8 h-8 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Crisis Emocional</h3>
-                  <p className="text-sm text-gray-500">Protocolo para crisis emocional severa</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Síntomas de crisis:</p>
-                  <p className="text-sm leading-relaxed">
-                    Llanto incontrolable, agresividad, retraimiento extremo, autolesiones, 
-                    pensamientos suicidas, desregulación emocional severa.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo inmediato:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Paso 1:</strong> Aplicar Timo (-) → Timo (+) para estabilizar emociones<br/>
-                    <strong>Paso 2:</strong> Trabajar Corazón (-) → Corazón (+) para calma<br/>
-                    <strong>Paso 3:</strong> Aplicar Plexo Solar (-) → Plexo Solar (+) para centro<br/>
-                    <strong>Paso 4:</strong> Técnicas de grounding y contención
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnicas de apoyo:</p>
-                  <p className="text-sm leading-relaxed">
-                    Técnicas de grounding (5-4-3-2-1), respiración consciente, 
-                    técnicas de contención emocional, apoyo psicológico inmediato.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Seguimiento:</p>
-                  <p className="text-sm leading-relaxed">
-                    Evaluar estabilidad emocional, coordinar con psicólogo escolar, 
-                    implementar protocolo de seguimiento emocional.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Crisis de Hiperactividad */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Activity className="w-8 h-8 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Crisis de Hiperactividad</h3>
-                  <p className="text-sm text-gray-500">Protocolo para crisis de hiperactividad severa</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Síntomas de crisis:</p>
-                  <p className="text-sm leading-relaxed">
-                    Hiperactividad extrema, impulsividad severa, agresividad, 
-                    incapacidad para mantenerse quieto, comportamiento disruptivo.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Protocolo inmediato:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Paso 1:</strong> Aplicar Temporal Izq (-) → Temporal Der (+) para concentración<br/>
-                    <strong>Paso 2:</strong> Trabajar Frontal (-) → Occipital (+) para calma<br/>
-                    <strong>Paso 3:</strong> Aplicar Suprarrenal (-) → Suprarrenal (+) para regulación<br/>
-                    <strong>Paso 4:</strong> Técnicas de calma y relajación
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnicas de apoyo:</p>
-                  <p className="text-sm leading-relaxed">
-                    Técnicas de respiración profunda, relajación muscular progresiva, 
-                    actividades de descarga física controlada, técnicas de mindfulness.
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Seguimiento:</p>
-                  <p className="text-sm leading-relaxed">
-                    Evaluar nivel de actividad, implementar estrategias de regulación, 
-                    coordinar con equipo educativo para adaptaciones.
-                  </p>
-                </div>
-              </div>
+          <div className="overflow-x-auto -mx-2 sm:mx-0">
+            <div className="min-w-full px-2 sm:px-0">
+              <table className="w-full border-collapse bg-white rounded-lg shadow-lg overflow-hidden">
+                <thead className="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+                  <tr>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">#</th>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Par Biomagnético</th>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Microorganismo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {paresComplementarios.map((par) => (
+                    <tr key={par.id} className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="px-2 sm:px-4 py-2 sm:py-3 font-medium text-indigo-600 text-xs sm:text-sm">{par.id}</td>
+                      <td className="px-2 sm:px-4 py-2 sm:py-3 font-medium text-xs sm:text-sm break-words">{par.par}</td>
+                      <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-slate-600 italic break-words">{par.microorganismo}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </CourseSection>
 
-        {/* Técnicas de Intervención */}
         <CourseSection
-          title="Técnicas de Intervención Inmediata"
-          icon={<Zap className="w-8 h-8 text-slate-500" />}
+          title="Los 7 Hologramas Escolares"
+          icon={<Search className="w-6 h-6 sm:w-8 sm:h-8 text-purple-500" />}
         >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Las técnicas de intervención inmediata son herramientas esenciales para estabilizar 
-              al estudiante durante crisis y situaciones de emergencia. Estas técnicas complementan 
-              el trabajo biomagnético y pueden aplicarse de forma independiente cuando sea necesario.
-            </p>
+          <div className="overflow-x-auto -mx-2 sm:mx-0">
+            <div className="min-w-full px-2 sm:px-0">
+              <table className="w-full border-collapse bg-white rounded-lg shadow-lg overflow-hidden">
+                <thead className="bg-gradient-to-r from-purple-500 to-violet-500 text-white">
+                  <tr>
+                    <th className="px-1 sm:px-2 py-2 sm:py-3 text-left font-semibold text-xs">#</th>
+                    <th className="px-1 sm:px-2 py-2 sm:py-3 text-left font-semibold text-xs">Holograma</th>
+                    <th className="px-1 sm:px-2 py-2 sm:py-3 text-left font-semibold text-xs hidden sm:table-cell">Evento</th>
+                    <th className="px-1 sm:px-2 py-2 sm:py-3 text-left font-semibold text-xs hidden lg:table-cell">Par Biomagnético</th>
+                    <th className="px-1 sm:px-2 py-2 sm:py-3 text-left font-semibold text-xs hidden lg:table-cell">Sensación</th>
+                    <th className="px-1 sm:px-2 py-2 sm:py-3 text-left font-semibold text-xs hidden xl:table-cell">Manifestaciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {hologramasEscolares.map((holograma) => (
+                    <tr key={holograma.id} className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="px-1 sm:px-2 py-2 sm:py-3 font-medium text-indigo-600 text-xs">{holograma.id}</td>
+                      <td className="px-1 sm:px-2 py-2 sm:py-3 font-medium text-purple-700 text-xs sm:text-sm break-words">{holograma.holograma}</td>
+                      <td className="px-1 sm:px-2 py-2 sm:py-3 text-xs text-slate-600 hidden sm:table-cell break-words">{holograma.evento}</td>
+                      <td className="px-1 sm:px-2 py-2 sm:py-3 text-xs text-slate-700 font-mono hidden lg:table-cell break-words">{holograma.par}</td>
+                      <td className="px-1 sm:px-2 py-2 sm:py-3 text-xs text-slate-600 italic hidden lg:table-cell break-words">{holograma.sensacion}</td>
+                      <td className="px-1 sm:px-2 py-2 sm:py-3 text-xs text-slate-600 hidden xl:table-cell break-words">{holograma.manifestaciones}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-
-          <div className="space-y-8">
-            {/* Técnicas de Respiración */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <Zap className="w-8 h-8 text-blue-500" />
+          
+          {/* Vista móvil expandida para hologramas */}
+          <div className="sm:hidden mt-4 space-y-4">
+            {hologramasEscolares.map((holograma) => (
+              <div key={holograma.id} className="bg-white rounded-lg shadow-lg p-4 border-l-4 border-purple-500">
+                <div className="flex items-center mb-2">
+                  <span className="bg-indigo-100 text-indigo-600 text-xs font-medium px-2 py-1 rounded-full mr-2">{holograma.id}</span>
+                  <h3 className="font-medium text-purple-700 text-sm">{holograma.holograma}</h3>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Técnicas de Respiración</h3>
-                  <p className="text-sm text-gray-500">Herramientas para calmar el sistema nervioso</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Respiración 4-7-8:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Inhalar por 4 segundos, mantener por 7 segundos, exhalar por 8 segundos<br/>
-                    <strong>Indicación:</strong> Crisis de ansiedad, hiperactividad, estrés agudo<br/>
-                    <strong>Beneficio:</strong> Activa el sistema nervioso parasimpático, reduce cortisol
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Respiración diafragmática:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Respiración profunda usando el diafragma, manos en el abdomen<br/>
-                    <strong>Indicación:</strong> Crisis asmática, ansiedad, problemas respiratorios<br/>
-                    <strong>Beneficio:</strong> Mejora oxigenación, reduce tensión muscular
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Respiración de labios fruncidos:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Inhalar por la nariz, exhalar por la boca con labios fruncidos<br/>
-                    <strong>Indicación:</strong> Crisis asmática, dificultad respiratoria<br/>
-                    <strong>Beneficio:</strong> Mejora intercambio gaseoso, reduce sibilancias
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Respiración consciente:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Atención plena en la respiración, contar inhalaciones y exhalaciones<br/>
-                    <strong>Indicación:</strong> Crisis emocional, hiperactividad, problemas de concentración<br/>
-                    <strong>Beneficio:</strong> Mejora concentración, reduce estrés, aumenta autocontrol
-                  </p>
+                <div className="space-y-2 text-xs text-slate-600">
+                  <div>
+                    <span className="font-medium">Evento:</span> {holograma.evento}
+                  </div>
+                  <div>
+                    <span className="font-medium">Par:</span> <span className="font-mono">{holograma.par}</span>
+                  </div>
+                  <div>
+                    <span className="font-medium">Sensación:</span> <span className="italic">{holograma.sensacion}</span>
+                  </div>
+                  <div>
+                    <span className="font-medium">Manifestaciones:</span> {holograma.manifestaciones}
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Técnicas de Relajación */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <Heart className="w-8 h-8 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Técnicas de Relajación</h3>
-                  <p className="text-sm text-gray-500">Métodos para reducir tensión y estrés</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Relajación muscular progresiva:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Tensar y relajar grupos musculares de forma secuencial<br/>
-                    <strong>Indicación:</strong> Bruxismo, tensión muscular, ansiedad, estrés<br/>
-                    <strong>Beneficio:</strong> Reduce tensión física, mejora conciencia corporal
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Visualización guiada:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Imaginar un lugar seguro y tranquilo con todos los sentidos<br/>
-                    <strong>Indicación:</strong> Crisis emocional, ansiedad, depresión, trauma<br/>
-                    <strong>Beneficio:</strong> Reduce estrés, mejora estado de ánimo, aumenta sensación de seguridad
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Mindfulness adaptado:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Atención plena en el presente, observación sin juicio<br/>
-                    <strong>Indicación:</strong> TDAH, problemas de concentración, impulsividad<br/>
-                    <strong>Beneficio:</strong> Mejora atención, reduce impulsividad, aumenta autocontrol
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnica de la mariposa:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Cruzar brazos sobre el pecho y alternar golpes suaves<br/>
-                    <strong>Indicación:</strong> Trauma, crisis emocional, ansiedad severa<br/>
-                    <strong>Beneficio:</strong> Regula sistema nervioso, reduce activación emocional
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Técnicas de Grounding */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Técnicas de Grounding</h3>
-                  <p className="text-sm text-gray-500">Métodos para estabilizar y conectar con el presente</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnica 5-4-3-2-1:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Identificar 5 cosas que ves, 4 que tocas, 3 que escuchas, 2 que hueles, 1 que saboreas<br/>
-                    <strong>Indicación:</strong> Crisis de ansiedad, disociación, trauma<br/>
-                    <strong>Beneficio:</strong> Conecta con el presente, reduce disociación, mejora estabilidad
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Grounding físico:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Sentir los pies en el suelo, peso del cuerpo, contacto con superficies<br/>
-                    <strong>Indicación:</strong> Crisis emocional, hiperactividad, ansiedad<br/>
-                    <strong>Beneficio:</strong> Aumenta sensación de estabilidad, reduce flotación
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Actividades sensoriales:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Usar objetos con diferentes texturas, temperaturas, sonidos<br/>
-                    <strong>Indicación:</strong> TDAH, problemas de concentración, crisis sensorial<br/>
-                    <strong>Beneficio:</strong> Regula sistema nervioso, mejora concentración, reduce sobrecarga
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnica del anclaje:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Técnica:</strong> Identificar un objeto o lugar que represente seguridad y estabilidad<br/>
-                    <strong>Indicación:</strong> Crisis emocional, trauma, ansiedad severa<br/>
-                    <strong>Beneficio:</strong> Proporciona sensación de seguridad, reduce ansiedad
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </CourseSection>
-
-        {/* Seguimiento Post-Intervención */}
-        <CourseSection
-          title="Seguimiento Post-Intervención"
-          icon={<CheckCircle className="w-8 h-8 text-slate-500" />}
-        >
-          <div className="mb-6">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              El seguimiento post-intervención es fundamental para asegurar la estabilidad del estudiante 
-              y prevenir futuras crisis. Un seguimiento adecuado incluye evaluación inmediata, planificación 
-              a largo plazo y coordinación con el equipo educativo.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {/* Evaluación Inmediata */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <CheckCircle className="w-8 h-8 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Evaluación Inmediata</h3>
-                  <p className="text-sm text-gray-500">Evaluación de la respuesta a la intervención</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Evaluación de síntomas:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Física:</strong> Respiración, frecuencia cardíaca, tensión muscular, dolor<br/>
-                    <strong>Emocional:</strong> Estado de ánimo, nivel de ansiedad, estabilidad emocional<br/>
-                    <strong>Conductual:</strong> Nivel de actividad, capacidad de concentración, interacción social
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Documentación:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Registro de crisis:</strong> Duración, intensidad, síntomas presentes, respuesta al tratamiento<br/>
-                    <strong>Cambios observados:</strong> Mejoras, empeoramientos, nuevos síntomas<br/>
-                    <strong>Tiempo de respuesta:</strong> Cuánto tardó en responder a la intervención
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Planificación inmediata:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Necesidades inmediatas:</strong> Continuar tratamiento, derivar a especialista, hospitalización<br/>
-                    <strong>Apoyo requerido:</strong> Técnicas de autocuidado, medicación, terapia psicológica<br/>
-                    <strong>Coordinación:</strong> Contactar familia, equipo educativo, servicios médicos
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Indicadores de éxito:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Estabilización:</strong> Reducción de síntomas, mejora en función respiratoria, calma emocional<br/>
-                    <strong>Funcionamiento:</strong> Capacidad de comunicarse, seguir instrucciones, participar en actividades<br/>
-                    <strong>Seguridad:</strong> Ausencia de riesgo de autolesión, estabilidad emocional
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Plan de Seguimiento */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-green-100 rounded-full mr-4">
-                  <Target className="w-8 h-8 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Plan de Seguimiento</h3>
-                  <p className="text-sm text-gray-500">Planificación a largo plazo para el estudiante</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Sesiones regulares de biomagnetismo:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Frecuencia:</strong> Sesiones semanales durante el primer mes, luego cada 15 días<br/>
-                    <strong>Duración:</strong> 60-90 minutos por sesión, adaptado a la edad del niño<br/>
-                    <strong>Objetivos:</strong> Mantener equilibrio sistémico, prevenir recaídas, fortalecer sistemas
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Técnicas de autocuidado:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Respiración:</strong> Enseñar técnicas de respiración para uso independiente<br/>
-                    <strong>Relajación:</strong> Práctica de técnicas de relajación y mindfulness<br/>
-                    <strong>Grounding:</strong> Técnicas de estabilización para crisis futuras
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Coordinación con equipo educativo:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Maestros:</strong> Estrategias de apoyo en el aula, adaptaciones curriculares<br/>
-                    <strong>Psicólogos:</strong> Apoyo emocional, terapia individual o grupal<br/>
-                    <strong>Familia:</strong> Educación sobre el trastorno, técnicas de apoyo en casa
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Monitoreo continuo:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Evaluación semanal:</strong> Progreso, nuevos síntomas, efectividad del tratamiento<br/>
-                    <strong>Registro de crisis:</strong> Frecuencia, intensidad, desencadenantes<br/>
-                    <strong>Ajustes del plan:</strong> Modificaciones según la respuesta del estudiante
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Coordinación con el Equipo Educativo */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-indigo-100 rounded-full mr-4">
-                  <Users className="w-8 h-8 text-indigo-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Coordinación con el Equipo Educativo</h3>
-                  <p className="text-sm text-gray-500">Trabajo colaborativo para el bienestar del estudiante</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-600">
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Comunicación con maestros:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Información sobre el trastorno:</strong> Síntomas, desencadenantes, estrategias de apoyo<br/>
-                    <strong>Adaptaciones en el aula:</strong> Tiempos de descanso, actividades alternativas, métodos de evaluación<br/>
-                    <strong>Señales de alerta:</strong> Cómo identificar crisis inminentes, cuándo contactar especialistas
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Apoyo psicológico:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Psicólogo escolar:</strong> Evaluación psicológica, terapia individual, apoyo emocional<br/>
-                    <strong>Terapia familiar:</strong> Apoyo a la familia, técnicas de manejo en casa<br/>
-                    <strong>Grupos de apoyo:</strong> Conectarse con otros estudiantes con problemas similares
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Coordinación médica:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Pediatra:</strong> Evaluación médica, medicación si es necesaria, seguimiento de salud<br/>
-                    <strong>Especialistas:</strong> Neurólogo, psiquiatra, otros especialistas según necesidades<br/>
-                    <strong>Servicios de emergencia:</strong> Protocolos para crisis severas, contactos de emergencia
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-gray-800 mb-2">Plan de crisis:</p>
-                  <p className="text-sm leading-relaxed">
-                    <strong>Protocolo de emergencia:</strong> Pasos a seguir en caso de crisis, contactos de emergencia<br/>
-                    <strong>Estrategias de prevención:</strong> Identificar desencadenantes, implementar medidas preventivas<br/>
-                    <strong>Apoyo continuo:</strong> Disponibilidad de especialistas, seguimiento regular
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </CourseSection>
-
-        {/* Próximos Pasos */}
-        <div className="bg-gradient-to-r from-slate-100 to-gray-200 rounded-lg p-8 text-slate-800 text-center">
-          <h2 className="text-2xl font-bold mb-4">
-            ¿Listo para los Microorganismos?
-          </h2>
-          <p className="text-slate-700 mb-6">
-            Ahora que conoces los casos clínicos y protocolos de emergencia, es momento de aprender 
-            sobre los microorganismos que afectan el entorno escolar.
-          </p>
-          <div className="flex justify-center">
-            <ArrowRight className="w-6 h-6 text-slate-700 animate-pulse" />
-          </div>
-        </div>
       </div>
     </div>
   );
