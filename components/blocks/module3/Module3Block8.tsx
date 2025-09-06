@@ -841,17 +841,453 @@ const Module3Block8: React.FC = () => {
           </div>
         </CourseSection>
 
+        {/* Casos Clínicos Detallados */}
+        <CourseSection
+          title="Casos Clínicos Detallados"
+          icon={<BookOpen className="w-6 h-6 sm:w-8 sm:h-8 text-slate-500" />}
+        >
+          <div className="space-y-6 sm:space-y-8">
+            <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-lg p-4 sm:p-6 lg:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
+                Casos Reales de Biomagnetismo Escolar
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                Los siguientes casos ilustran la aplicación práctica de la metodología biomagnética 
+                en el contexto escolar, mostrando el protocolo completo desde la identificación de 
+                sensaciones hasta la aplicación de pares específicos.
+              </p>
+            </div>
+
+            {/* Caso 1: TDAH Inatento */}
+            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-center mb-4 sm:mb-6">
+                <div className="p-2 sm:p-3 bg-yellow-100 rounded-full mr-3 sm:mr-4 mb-3 sm:mb-0 self-start">
+                  <Activity className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-500" />
+                </div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800">Caso 1: Ana, 8 años - TDAH Inatento</h3>
+                  <p className="text-xs sm:text-sm text-gray-500">"Me desconecto para protegerme"</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="bg-blue-50 rounded-lg p-4 sm:p-6">
+                    <h4 className="font-semibold text-blue-800 mb-3 text-sm sm:text-base">Presentación Clínica</h4>
+                    <ul className="space-y-2 text-xs sm:text-sm text-blue-700">
+                      <li>• Dificultad extrema para concentrarse en clase</li>
+                      <li>• "Se va" mentalmente durante explicaciones</li>
+                      <li>• Ansiedad matutina antes de ir al colegio</li>
+                      <li>• Dolores de cabeza frecuentes</li>
+                      <li>• Bajo rendimiento académico</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-green-50 rounded-lg p-4 sm:p-6">
+                    <h4 className="font-semibold text-green-800 mb-3 text-sm sm:text-base">Protocolo de Rastreo</h4>
+                    <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-green-700">
+                      <div>
+                        <strong>1. Sensación identificada:</strong> Desconexión, falta de contacto
+                      </div>
+                      <div>
+                        <strong>2. Edad del conflicto:</strong> 6 años (primer día de colegio)
+                      </div>
+                      <div>
+                        <strong>3. Par seleccionado:</strong> Temporal Izq (-) → Temporal Der (+)
+                      </div>
+                      <div>
+                        <strong>4. Microorganismo:</strong> Tifus exantemático
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-amber-50 rounded-lg p-4 sm:p-6">
+                  <h4 className="font-semibold text-amber-800 mb-3 text-sm sm:text-base">Secuencia de Trabajo Aplicada</h4>
+                  <ol className="space-y-2 text-xs sm:text-sm text-amber-700">
+                    <li><strong>Test muscular:</strong> Identificó sensación de "desconexión" al nombrar "falta de contacto"</li>
+                    <li><strong>Regresión de edad:</strong> Confirmó conflicto a los 6 años, primer día de colegio</li>
+                    <li><strong>Selección de par:</strong> Test muscular confirmó Temporal Izq (-) → Temporal Der (+)</li>
+                    <li><strong>Aplicación:</strong> Imanes colocados 20 minutos, 3 sesiones semanales</li>
+                  </ol>
+                </div>
+                
+                <div className="bg-emerald-50 rounded-lg p-4 sm:p-6">
+                  <h4 className="font-semibold text-emerald-800 mb-3 text-sm sm:text-base">Resultados</h4>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs sm:text-sm text-emerald-700">
+                    <div>
+                      <strong>Inmediatos (1-2 semanas):</strong>
+                      <ul className="mt-1 space-y-1">
+                        <li>• Reducción ansiedad matutina</li>
+                        <li>• Menos dolores de cabeza</li>
+                        <li>• Mayor presencia en clase</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong>A largo plazo (1-2 meses):</strong>
+                      <ul className="mt-1 space-y-1">
+                        <li>• Mejora concentración sostenida</li>
+                        <li>• Incremento rendimiento académico</li>
+                        <li>• Mayor confianza en sí misma</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Caso 2: Asma Escolar */}
+            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-center mb-4 sm:mb-6">
+                <div className="p-2 sm:p-3 bg-red-100 rounded-full mr-3 sm:mr-4 mb-3 sm:mb-0 self-start">
+                  <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-red-500" />
+                </div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800">Caso 2: Roberto, 10 años - Asma Escolar</h3>
+                  <p className="text-xs sm:text-sm text-gray-500">"Necesito regresar a casa"</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="bg-red-50 rounded-lg p-4 sm:p-6">
+                    <h4 className="font-semibold text-red-800 mb-3 text-sm sm:text-base">Presentación Clínica</h4>
+                    <ul className="space-y-2 text-xs sm:text-sm text-red-700">
+                      <li>• Crisis asmáticas principalmente en horario escolar</li>
+                      <li>• Silbidos al respirar durante clases</li>
+                      <li>• Necesidad de salir del aula frecuentemente</li>
+                      <li>• Bajo rendimiento por ausencias</li>
+                      <li>• Ansiedad relacionada con el colegio</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-green-50 rounded-lg p-4 sm:p-6">
+                    <h4 className="font-semibold text-green-800 mb-3 text-sm sm:text-base">Protocolo de Rastreo</h4>
+                    <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-green-700">
+                      <div>
+                        <strong>1. Sensación identificada:</strong> Amenaza territorial
+                      </div>
+                      <div>
+                        <strong>2. Edad del conflicto:</strong> 8 años (cambio de maestro)
+                      </div>
+                      <div>
+                        <strong>3. Par seleccionado:</strong> Axila (-) → Axila (+)
+                      </div>
+                      <div>
+                        <strong>4. Microorganismo:</strong> Virus rabia
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-amber-50 rounded-lg p-4 sm:p-6">
+                  <h4 className="font-semibold text-amber-800 mb-3 text-sm sm:text-base">Secuencia de Trabajo Aplicada</h4>
+                  <ol className="space-y-2 text-xs sm:text-sm text-amber-700">
+                    <li><strong>Test muscular:</strong> Identificó sensación de "amenaza territorial" al nombrar "invasión de espacio"</li>
+                    <li><strong>Regresión de edad:</strong> Confirmó conflicto a los 8 años, cambio de maestro estricto</li>
+                    <li><strong>Selección de par:</strong> Test muscular confirmó Axila (-) → Axila (+)</li>
+                    <li><strong>Aplicación:</strong> Imanes colocados 25 minutos, 2 sesiones semanales</li>
+                  </ol>
+                </div>
+                
+                <div className="bg-emerald-50 rounded-lg p-4 sm:p-6">
+                  <h4 className="font-semibold text-emerald-800 mb-3 text-sm sm:text-base">Resultados</h4>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs sm:text-sm text-emerald-700">
+                    <div>
+                      <strong>Inmediatos (1-2 semanas):</strong>
+                      <ul className="mt-1 space-y-1">
+                        <li>• Reducción crisis asmáticas</li>
+                        <li>• Menos ansiedad en el colegio</li>
+                        <li>• Mayor permanencia en aula</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong>A largo plazo (1-2 meses):</strong>
+                      <ul className="mt-1 space-y-1">
+                        <li>• Prácticamente eliminadas las crisis</li>
+                        <li>• Mejora rendimiento académico</li>
+                        <li>• Mayor confianza en el entorno escolar</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Caso 3: Bruxismo Escolar */}
+            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-center mb-4 sm:mb-6">
+                <div className="p-2 sm:p-3 bg-purple-100 rounded-full mr-3 sm:mr-4 mb-3 sm:mb-0 self-start">
+                  <Target className="w-6 h-6 sm:w-8 sm:h-8 text-purple-500" />
+                </div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800">Caso 3: Carmen, 11 años - Bruxismo Escolar</h3>
+                  <p className="text-xs sm:text-sm text-gray-500">"Debo aguantar sin poder expresar"</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="bg-purple-50 rounded-lg p-4 sm:p-6">
+                    <h4 className="font-semibold text-purple-800 mb-3 text-sm sm:text-base">Presentación Clínica</h4>
+                    <ul className="space-y-2 text-xs sm:text-sm text-purple-700">
+                      <li>• Rechinar de dientes principalmente nocturno</li>
+                      <li>• Dolor mandibular al despertar</li>
+                      <li>• Tensión en cuello y hombros</li>
+                      <li>• Dificultad para dormir</li>
+                      <li>• Irritabilidad durante el día</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-green-50 rounded-lg p-4 sm:p-6">
+                    <h4 className="font-semibold text-green-800 mb-3 text-sm sm:text-base">Protocolo de Rastreo</h4>
+                    <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-green-700">
+                      <div>
+                        <strong>1. Sensación identificada:</strong> Ira reprimida
+                      </div>
+                      <div>
+                        <strong>2. Edad del conflicto:</strong> 9 años (conflicto con compañeros)
+                      </div>
+                      <div>
+                        <strong>3. Par seleccionado:</strong> Mandíbula (-) → Mandíbula (+)
+                      </div>
+                      <div>
+                        <strong>4. Microorganismo:</strong> Neisseria gonorreae
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-amber-50 rounded-lg p-4 sm:p-6">
+                  <h4 className="font-semibold text-amber-800 mb-3 text-sm sm:text-base">Secuencia de Trabajo Aplicada</h4>
+                  <ol className="space-y-2 text-xs sm:text-sm text-amber-700">
+                    <li><strong>Test muscular:</strong> Identificó sensación de "ira reprimida" al nombrar "no puedo expresar mi enojo"</li>
+                    <li><strong>Regresión de edad:</strong> Confirmó conflicto a los 9 años, bullying por parte de compañeros</li>
+                    <li><strong>Selección de par:</strong> Test muscular confirmó Mandíbula (-) → Mandíbula (+)</li>
+                    <li><strong>Aplicación:</strong> Imanes colocados 20 minutos, 3 sesiones semanales</li>
+                  </ol>
+                </div>
+                
+                <div className="bg-emerald-50 rounded-lg p-4 sm:p-6">
+                  <h4 className="font-semibold text-emerald-800 mb-3 text-sm sm:text-base">Resultados</h4>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs sm:text-sm text-emerald-700">
+                    <div>
+                      <strong>Inmediatos (1-2 semanas):</strong>
+                      <ul className="mt-1 space-y-1">
+                        <li>• Reducción bruxismo nocturno</li>
+                        <li>• Menos dolor mandibular</li>
+                        <li>• Mejor calidad de sueño</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong>A largo plazo (1-2 meses):</strong>
+                      <ul className="mt-1 space-y-1">
+                        <li>• Eliminación del bruxismo</li>
+                        <li>• Mayor capacidad de expresión</li>
+                        <li>• Mejora en relaciones sociales</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Caso 4: Ansiedad Escolar */}
+            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-center mb-4 sm:mb-6">
+                <div className="p-2 sm:p-3 bg-orange-100 rounded-full mr-3 sm:mr-4 mb-3 sm:mb-0 self-start">
+                  <Users className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500" />
+                </div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800">Caso 4: Diego, 7 años - Ansiedad Escolar</h3>
+                  <p className="text-xs sm:text-sm text-gray-500">"Puedo ser rechazado públicamente"</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="bg-orange-50 rounded-lg p-4 sm:p-6">
+                    <h4 className="font-semibold text-orange-800 mb-3 text-sm sm:text-base">Presentación Clínica</h4>
+                    <ul className="space-y-2 text-xs sm:text-sm text-orange-700">
+                      <li>• Ansiedad extrema antes de ir al colegio</li>
+                      <li>• Náuseas y vómitos matutinos</li>
+                      <li>• Dificultad para separarse de los padres</li>
+                      <li>• Evita participar en clase</li>
+                      <li>• Aislamiento social</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-green-50 rounded-lg p-4 sm:p-6">
+                    <h4 className="font-semibold text-green-800 mb-3 text-sm sm:text-base">Protocolo de Rastreo</h4>
+                    <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-green-700">
+                      <div>
+                        <strong>1. Sensación identificada:</strong> Miedo profundo
+                      </div>
+                      <div>
+                        <strong>2. Edad del conflicto:</strong> 6 años (humillación pública)
+                      </div>
+                      <div>
+                        <strong>3. Par seleccionado:</strong> Temporal Izq (-) → Suprarrenal (+)
+                      </div>
+                      <div>
+                        <strong>4. Holograma:</strong> Humillación Pública
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-amber-50 rounded-lg p-4 sm:p-6">
+                  <h4 className="font-semibold text-amber-800 mb-3 text-sm sm:text-base">Secuencia de Trabajo Aplicada</h4>
+                  <ol className="space-y-2 text-xs sm:text-sm text-amber-700">
+                    <li><strong>Test muscular:</strong> Identificó sensación de "miedo profundo" al nombrar "vulnerabilidad"</li>
+                    <li><strong>Regresión de edad:</strong> Confirmó conflicto a los 6 años, ridiculizado por compañeros</li>
+                    <li><strong>Selección de par:</strong> Test muscular confirmó Temporal Izq (-) → Suprarrenal (+)</li>
+                    <li><strong>Aplicación:</strong> Imanes colocados 25 minutos, 3 sesiones semanales</li>
+                  </ol>
+                </div>
+                
+                <div className="bg-emerald-50 rounded-lg p-4 sm:p-6">
+                  <h4 className="font-semibold text-emerald-800 mb-3 text-sm sm:text-base">Resultados</h4>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs sm:text-sm text-emerald-700">
+                    <div>
+                      <strong>Inmediatos (1-2 semanas):</strong>
+                      <ul className="mt-1 space-y-1">
+                        <li>• Reducción ansiedad matutina</li>
+                        <li>• Menos náuseas</li>
+                        <li>• Mayor facilidad para separarse</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong>A largo plazo (1-2 meses):</strong>
+                      <ul className="mt-1 space-y-1">
+                        <li>• Participación activa en clase</li>
+                        <li>• Mejora en relaciones sociales</li>
+                        <li>• Mayor confianza en sí mismo</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Caso 5: Depresión Infantil */}
+            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-center mb-4 sm:mb-6">
+                <div className="p-2 sm:p-3 bg-gray-100 rounded-full mr-3 sm:mr-4 mb-3 sm:mb-0 self-start">
+                  <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-gray-500" />
+                </div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800">Caso 5: Sofía, 12 años - Depresión Infantil</h3>
+                  <p className="text-xs sm:text-sm text-gray-500">"He fallado, no valgo lo suficiente"</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="bg-gray-50 rounded-lg p-4 sm:p-6">
+                    <h4 className="font-semibold text-gray-800 mb-3 text-sm sm:text-base">Presentación Clínica</h4>
+                    <ul className="space-y-2 text-xs sm:text-sm text-gray-700">
+                      <li>• Tristeza persistente y apatía</li>
+                      <li>• Aislamiento social</li>
+                      <li>• Bajo rendimiento académico</li>
+                      <li>• Pérdida de interés en actividades</li>
+                      <li>• Ideas de autosabotaje</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-green-50 rounded-lg p-4 sm:p-6">
+                    <h4 className="font-semibold text-green-800 mb-3 text-sm sm:text-base">Protocolo de Rastreo</h4>
+                    <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-green-700">
+                      <div>
+                        <strong>1. Sensación identificada:</strong> Devaluación
+                      </div>
+                      <div>
+                        <strong>2. Edad del conflicto:</strong> 11 años (fracaso académico)
+                      </div>
+                      <div>
+                        <strong>3. Par seleccionado:</strong> Frontal (-) → Timo (+)
+                      </div>
+                      <div>
+                        <strong>4. Holograma:</strong> Fracaso Académico Devastador
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-amber-50 rounded-lg p-4 sm:p-6">
+                  <h4 className="font-semibold text-amber-800 mb-3 text-sm sm:text-base">Secuencia de Trabajo Aplicada</h4>
+                  <ol className="space-y-2 text-xs sm:text-sm text-amber-700">
+                    <li><strong>Test muscular:</strong> Identificó sensación de "devaluación" al nombrar "no valgo lo suficiente"</li>
+                    <li><strong>Regresión de edad:</strong> Confirmó conflicto a los 11 años, examen reprobado públicamente</li>
+                    <li><strong>Selección de par:</strong> Test muscular confirmó Frontal (-) → Timo (+)</li>
+                    <li><strong>Aplicación:</strong> Imanes colocados 30 minutos, 2 sesiones semanales</li>
+                  </ol>
+                </div>
+                
+                <div className="bg-emerald-50 rounded-lg p-4 sm:p-6">
+                  <h4 className="font-semibold text-emerald-800 mb-3 text-sm sm:text-base">Resultados</h4>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs sm:text-sm text-emerald-700">
+                    <div>
+                      <strong>Inmediatos (1-2 semanas):</strong>
+                      <ul className="mt-1 space-y-1">
+                        <li>• Mejora en estado de ánimo</li>
+                        <li>• Mayor motivación</li>
+                        <li>• Inicio de reintegración social</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong>A largo plazo (1-2 meses):</strong>
+                      <ul className="mt-1 space-y-1">
+                        <li>• Recuperación completa del ánimo</li>
+                        <li>• Mejora significativa en rendimiento</li>
+                        <li>• Reconstrucción de autoestima</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Consideraciones Finales */}
+            <div className="bg-gradient-to-r from-slate-100 to-gray-200 rounded-lg p-4 sm:p-6 lg:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
+                Consideraciones Importantes en Casos Clínicos
+              </h3>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 text-gray-600">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-3 text-sm sm:text-base">Factores de Éxito</h4>
+                  <ul className="space-y-2 text-xs sm:text-sm">
+                    <li>• <strong>Consistencia:</strong> Aplicación regular de protocolos</li>
+                    <li>• <strong>Contexto familiar:</strong> Involucramiento de padres</li>
+                    <li>• <strong>Paciencia:</strong> Respeto por los tiempos del niño</li>
+                    <li>• <strong>Observación:</strong> Seguimiento detallado de cambios</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-3 text-sm sm:text-base">Limitaciones</h4>
+                  <ul className="space-y-2 text-xs sm:text-sm">
+                    <li>• <strong>No sustituye:</strong> Tratamiento médico convencional</li>
+                    <li>• <strong>Individualidad:</strong> Cada caso es único</li>
+                    <li>• <strong>Tiempo:</strong> Procesos requieren paciencia</li>
+                    <li>• <strong>Colaboración:</strong> Necesita trabajo en equipo</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CourseSection>
+
         {/* Próximos Pasos */}
-        <div className="bg-gradient-to-r from-slate-100 to-gray-200 rounded-lg p-8 text-slate-800 text-center">
-          <h2 className="text-2xl font-bold mb-4">
+        <div className="bg-gradient-to-r from-slate-100 to-gray-200 rounded-lg p-4 sm:p-6 lg:p-8 text-slate-800 text-center">
+          <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
             ¡Módulo 3 Completado!
           </h2>
-          <p className="text-slate-700 mb-6">
+          <p className="text-sm sm:text-base text-slate-700 mb-4 sm:mb-6">
             Has completado exitosamente el módulo de Biomagnetismo Escolar. 
             Ahora tienes las herramientas necesarias para aplicar esta técnica de manera ética y profesional en el entorno educativo.
           </p>
           <div className="flex justify-center">
-            <Award className="w-6 h-6 text-slate-700 animate-pulse" />
+            <Award className="w-5 h-5 sm:w-6 sm:h-6 text-slate-700 animate-pulse" />
           </div>
         </div>
       </div>
