@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSection from '../../CourseSection';
 import BlockHeader from '../../BlockHeader';
+import { textUtils } from '../../../src/styles/typography';
 import { BookOpen, Heart, Brain, Users, Target, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 
 const Module3Block1: React.FC = () => {
@@ -24,10 +25,10 @@ const Module3Block1: React.FC = () => {
           icon={<BookOpen className="w-8 h-8 text-slate-500" />}
         >
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-lg p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+            <h3 className={`${textUtils.title.subsection} mb-6`}>
               ¿Qué son los Conflictos Biológicos Escolares?
             </h3>
-            <div className="space-y-4 text-gray-600 leading-relaxed">
+            <div className={`space-y-4 ${textUtils.body.medium}`}>
               <p>
                 Los conflictos biológicos escolares son respuestas adaptativas del organismo infantil ante 
                 situaciones específicas del entorno educativo que generan estrés o amenaza percibida. 

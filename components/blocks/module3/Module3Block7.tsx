@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSection from '../../CourseSection';
 import { Target, ArrowRight, CheckCircle, Activity, Shield, Zap } from 'lucide-react';
+import { textUtils } from '../../../src/styles/typography';
 
 const Module3Block7: React.FC = () => {
   return (
@@ -29,7 +30,7 @@ const Module3Block7: React.FC = () => {
           icon={<Target className="w-6 h-6 sm:w-8 sm:h-8 text-slate-500" />}
         >
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-lg p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8">
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
+            <h3 className="${textUtils.title.subsection} text-gray-800 mb-4 sm:mb-6">
               Rastreo Biomagnético en el Contexto Escolar
             </h3>
             <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed text-sm sm:text-base">
@@ -54,7 +55,7 @@ const Module3Block7: React.FC = () => {
 
         {/* Próximos Pasos */}
         <div className="bg-gradient-to-r from-slate-100 to-gray-200 rounded-lg p-4 sm:p-6 lg:p-8 text-slate-800 text-center">
-          <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">
+          <h2 className="${textUtils.title.subsection} mb-3 sm:mb-4">
             ¿Listo para el Seguimiento?
           </h2>
           <p className="text-slate-700 mb-4 sm:mb-6 text-sm sm:text-base">

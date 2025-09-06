@@ -4,6 +4,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { Magnet, Menu, X, Home, List, Presentation } from 'lucide-react';
 import { useModule } from '../src/contexts/ModuleContext';
 import { useDocumentTitle } from '../src/hooks/useDocumentTitle';
+import { textUtils } from '../src/styles/typography';
 import LanguageSelector from './LanguageSelector';
 import ModuleSelector from './ModuleSelector';
 
@@ -40,22 +41,22 @@ const Header: React.FC = () => {
             <>
               <Link 
                 to="/"
-                className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-slate-500 to-slate-600 text-white text-sm font-medium rounded-lg hover:from-slate-600 hover:to-slate-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+                className={`inline-flex items-center px-3 py-2 bg-gradient-to-r from-slate-500 to-slate-600 text-white rounded-lg hover:from-slate-600 hover:to-slate-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg ${textUtils.button.primary}`}
               >
                 <Home className="w-4 h-4 mr-2" />
                 Volver al Inicio
               </Link>
               <button
                 onClick={() => window.open('/resources/lista-pares-biomagneticos.html', '_blank')}
-                className="inline-flex items-center px-3 py-2 bg-white/80 backdrop-blur-sm text-slate-600 text-sm font-medium rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50"
+                className={`inline-flex items-center px-3 py-2 bg-white/80 backdrop-blur-sm text-slate-600 rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50 ${textUtils.button.secondary}`}
               >
                 <List className="w-4 h-4 mr-2" />
                 Lista de Pares
               </button>
               {activeModule === 2 && (
-                <Link 
+                <Link
                   to="/presentation-modulo2"
-                  className="inline-flex items-center px-3 py-2 bg-white/80 backdrop-blur-sm text-slate-600 text-sm font-medium rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50"
+                  className={`inline-flex items-center px-3 py-2 bg-white/80 backdrop-blur-sm text-slate-600 rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50 ${textUtils.button.secondary}`}
                 >
                   <Presentation className="w-4 h-4 mr-2" />
                   Diapositivas
@@ -130,13 +131,13 @@ const Header: React.FC = () => {
           <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 bg-gradient-to-br from-teal-400 to-blue-500 rounded-full shadow-lg mb-3 sm:mb-4 lg:mb-6">
             <Magnet className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xl:w-10 xl:h-10 text-white" />
           </div>
-          <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold tracking-tight bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 bg-clip-text text-transparent sm:animate-pulse leading-tight pb-2">
+          <h1 className={`${textUtils.title.main} tracking-tight bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 bg-clip-text text-transparent sm:animate-pulse pb-2`}>
             Biomagnetismo Kids
           </h1>
-          <p className="mt-2 sm:mt-3 lg:mt-4 text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-slate-700 max-w-3xl sm:max-w-4xl mx-auto font-medium px-2 sm:px-4 leading-relaxed">
+          <p className={`mt-2 sm:mt-3 lg:mt-4 ${textUtils.subtitle.main} max-w-3xl sm:max-w-4xl mx-auto font-medium px-2 sm:px-4`}>
             {isInModule ? `${currentModule?.title} – ${currentModule?.subtitle}` : 'Formación Especializada en Biomagnetismo Infantil'}
           </p>
-          <div className="mt-3 sm:mt-4 lg:mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm text-slate-500">
+          <div className={`mt-3 sm:mt-4 lg:mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 ${textUtils.body.small} text-slate-500`}>
             <span className="flex items-center">
               <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 lg:w-2 lg:h-2 bg-green-400 rounded-full mr-1 sm:mr-1.5 lg:mr-2 animate-pulse"></span>
               {t('header.course')}

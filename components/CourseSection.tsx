@@ -1,4 +1,5 @@
 import React from 'react';
+import { textUtils } from '../src/styles/typography';
 
 interface CourseSectionProps {
   title: string;
@@ -14,9 +15,9 @@ const CourseSection: React.FC<CourseSectionProps> = ({ title, icon, children }) 
           <div className="flex-shrink-0 bg-teal-500 text-white rounded-lg p-2 sm:p-3 shadow-md">
             {icon}
           </div>
-          <h2 className="ml-3 sm:ml-4 text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 break-words">{title}</h2>
+          <h2 className={`ml-3 sm:ml-4 ${textUtils.title.section} break-words`}>{title}</h2>
         </div>
-        <div className="space-y-3 sm:space-y-4 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <div className={`space-y-3 sm:space-y-4 ${textUtils.body.medium}`}>
           {children}
         </div>
       </div>

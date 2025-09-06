@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useModule } from '../src/contexts/ModuleContext';
+import { textUtils } from '../src/styles/typography';
 import FloatingBackButton from './FloatingBackButton';
 import {
   BookOpen,
@@ -112,12 +113,12 @@ const BlockSelector: React.FC = () => {
     <>
       <div className="bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-2 sm:p-3 lg:p-4 border border-white/20">
         <div className="text-center mb-2 sm:mb-3 lg:mb-4">
-          <h2 className="text-sm sm:text-base lg:text-lg font-semibold text-slate-700 mb-1 sm:mb-2">
-            {activeModule === 1 ? t('blockSelector.title') : 
-             activeModule === 2 ? t('blockSelector.module2.title') :
-             activeModule === 3 ? 'Módulo 3 - Navega por los Bloques' :
-             t('blockSelector.title')}
-          </h2>
+        <h2 className={`${textUtils.title.card} mb-1 sm:mb-2`}>
+          {activeModule === 1 ? t('blockSelector.title') : 
+           activeModule === 2 ? t('blockSelector.module2.title') :
+           activeModule === 3 ? 'Módulo 3 - Navega por los Bloques' :
+           t('blockSelector.title')}
+        </h2>
           <div className="w-8 sm:w-10 lg:w-12 xl:w-16 h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full mx-auto"></div>
         </div>
         <div className={`grid gap-1.5 sm:gap-2 lg:gap-3 ${
@@ -148,15 +149,15 @@ const BlockSelector: React.FC = () => {
                 </div>
               </div>
               
-              {/* Title */}
-              <div className="relative z-10">
-                <div className="text-xs sm:text-sm lg:text-sm font-semibold text-slate-700 group-hover:text-slate-900 transition-colors duration-300 leading-tight">
-                  {block.title}
-                </div>
-                <div className="text-xs text-slate-500 group-hover:text-slate-600 transition-colors duration-300 leading-tight mt-0.5 sm:mt-1">
-                  {block.subtitle}
-                </div>
+            {/* Title */}
+            <div className="relative z-10">
+              <div className={`${textUtils.title.card} group-hover:text-slate-900 transition-colors duration-300`}>
+                {block.title}
               </div>
+              <div className={`${textUtils.subtitle.card} group-hover:text-slate-600 transition-colors duration-300 mt-0.5 sm:mt-1`}>
+                {block.subtitle}
+              </div>
+            </div>
               
               {/* Hover indicator */}
               <div className="absolute bottom-0 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-transparent via-teal-400 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, ArrowUp } from 'lucide-react';
+import { textUtils } from '../src/styles/typography';
 
 interface FloatingBackButtonProps {
   currentBlock?: number | null;
@@ -42,7 +43,7 @@ const FloatingBackButton: React.FC<FloatingBackButtonProps> = ({
         {/* Indicador del bloque actual */}
         {currentBlock && blockTitle && (
           <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-2 shadow-lg border border-white/20">
-            <span className="text-xs sm:text-sm font-medium text-slate-700">
+            <span className={`${textUtils.title.card}`}>
               {blockTitle}
             </span>
           </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import CourseSection from '../../CourseSection';
 import BlockHeader from '../../BlockHeader';
 import { Heart, Activity, Brain, Target, ArrowRight, CheckCircle, Users, Zap } from 'lucide-react';
+import { textUtils } from '../../../src/styles/typography';
 
 const Module3Block2: React.FC = () => {
   return (

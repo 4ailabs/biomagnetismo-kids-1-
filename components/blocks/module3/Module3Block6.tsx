@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table, Search, Target, Heart, Clock, CheckCircle } from 'lucide-react';
 import CourseSection from '../../CourseSection';
+import { textUtils } from '../../../src/styles/typography';
 
 const Module3Block6: React.FC = () => {
   const paresPrioritarios = [
@@ -135,7 +136,7 @@ const Module3Block6: React.FC = () => {
                     <tr key={par.id} className="border-b border-gray-200 hover:bg-gray-50">
                       <td className="px-2 sm:px-4 py-2 sm:py-3 font-medium text-indigo-600 text-xs sm:text-sm">{par.id}</td>
                       <td className="px-2 sm:px-4 py-2 sm:py-3 font-medium text-xs sm:text-sm break-words">{par.par}</td>
-                      <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-slate-600 italic break-words">{par.microorganismo}</td>
+                      <td className="px-2 sm:px-4 py-2 sm:py-3 ${textUtils.cards.content} italic break-words">{par.microorganismo}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -163,7 +164,7 @@ const Module3Block6: React.FC = () => {
                     <tr key={par.id} className="border-b border-gray-200 hover:bg-gray-50">
                       <td className="px-2 sm:px-4 py-2 sm:py-3 font-medium text-indigo-600 text-xs sm:text-sm">{par.id}</td>
                       <td className="px-2 sm:px-4 py-2 sm:py-3 font-medium text-xs sm:text-sm break-words">{par.par}</td>
-                      <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-slate-600 italic break-words">{par.microorganismo}</td>
+                      <td className="px-2 sm:px-4 py-2 sm:py-3 ${textUtils.cards.content} italic break-words">{par.microorganismo}</td>
                     </tr>
                   ))}
                 </tbody>

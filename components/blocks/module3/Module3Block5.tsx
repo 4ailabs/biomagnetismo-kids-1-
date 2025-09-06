@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { textUtils } from '../../../src/styles/typography';
 import { 
   Shield, 
   Brain, 
@@ -236,7 +237,7 @@ const Module3Block5: React.FC = () => {
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-2 sm:mb-3">
           Estrategias de Supervivencia
         </h2>
-        <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+        <p className="${textUtils.subtitle.section} max-w-3xl mx-auto leading-relaxed">
           Identificación y rastreo biomagnético de constelaciones cerebrales en niños escolares
         </p>
         <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-amber-50 rounded-lg">
@@ -267,7 +268,7 @@ const Module3Block5: React.FC = () => {
                 <h4 className="font-semibold text-slate-800 mb-2 text-sm sm:text-base">
                   {step.step}. {step.title}
                 </h4>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="${textUtils.cards.content} leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -294,7 +295,7 @@ const Module3Block5: React.FC = () => {
             <h3 className="font-semibold text-slate-800 mb-1 text-sm sm:text-base">
               {group.title}
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 mb-2">
+            <p className="${textUtils.cards.content} mb-2">
               {group.subtitle}
             </p>
             <div className="flex items-center text-xs text-slate-500">
@@ -343,7 +344,7 @@ const Module3Block5: React.FC = () => {
                         <h4 className="font-semibold text-slate-800 text-sm sm:text-base mb-1">
                           {constellation.name}
                         </h4>
-                        <p className="text-xs sm:text-sm text-slate-600">
+                        <p className="${textUtils.cards.content}">
                           {constellation.conflict} → {constellation.manifestation}
                         </p>
                       </div>

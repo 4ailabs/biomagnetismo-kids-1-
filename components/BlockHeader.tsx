@@ -1,5 +1,6 @@
 import React from 'react';
 import { LucideIcon } from 'lucide-react';
+import { textUtils } from '../src/styles/typography';
 
 interface BlockHeaderProps {
   icon: LucideIcon;
@@ -28,10 +29,10 @@ const BlockHeader: React.FC<BlockHeaderProps> = ({
             <Icon className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 text-slate-700" />
           </div>
         </div>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight">
+        <h1 className={`${textUtils.title.main} mb-3 sm:mb-4 md:mb-6`}>
           {title}
         </h1>
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed xl:leading-relaxed">
+        <p className={`${textUtils.subtitle.main} max-w-4xl mx-auto`}>
           {subtitle}
         </p>
       </div>

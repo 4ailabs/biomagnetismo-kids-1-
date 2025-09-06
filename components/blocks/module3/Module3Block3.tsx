@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSection from '../../CourseSection';
 import { Heart, Activity, Brain, Target, ArrowRight, CheckCircle, Users, BookOpen } from 'lucide-react';
+import { textUtils } from '../../../src/styles/typography';
 
 const Module3Block3: React.FC = () => {
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSection from '../../CourseSection';
 import { Award, Heart, Target, ArrowRight, CheckCircle, Activity, Shield, Users, BookOpen } from 'lucide-react';
+import { textUtils } from '../../../src/styles/typography';
 
 const Module3Block8: React.FC = () => {
   return (
@@ -1282,7 +1283,7 @@ const Module3Block8: React.FC = () => {
           <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
             ¡Módulo 3 Completado!
           </h2>
-          <p className="text-sm sm:text-base text-slate-700 mb-4 sm:mb-6">
+          <p className="${textUtils.body.medium} mb-4 sm:mb-6">
             Has completado exitosamente el módulo de Biomagnetismo Escolar. 
             Ahora tienes las herramientas necesarias para aplicar esta técnica de manera ética y profesional en el entorno educativo.
           </p>
