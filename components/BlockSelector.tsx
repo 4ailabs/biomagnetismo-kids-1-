@@ -74,12 +74,25 @@ const BlockSelector: React.FC = () => {
   const blocks = getModuleBlocks();
 
   const handleScroll = (blockId: number) => {
-    const element = document.getElementById(`block-${blockId}`);
-    if (element) {
-      const yOffset = -120; // Offset to account for the sticky header
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
+    // Pequeño delay para asegurar que el DOM esté listo
+    setTimeout(() => {
+      const element = document.getElementById(`block-${blockId}`);
+      if (element) {
+        // Calcular offset dinámico basado en el tamaño de pantalla
+        const isMobile = window.innerWidth < 768;
+        const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+        
+        let yOffset = -120; // Desktop default
+        if (isMobile) {
+          yOffset = -60; // Móvil - header más pequeño y menos padding
+        } else if (isTablet) {
+          yOffset = -90; // Tablet - tamaño intermedio
+        }
+        
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
