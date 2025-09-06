@@ -39,9 +39,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Abandono y Desorientación",
           manifestation: "Niño en su propio mundo, no escucha, se distrae",
           biomagnetic_pair: "Riñón (-) → Riñón (+)",
-          extremity_pattern: "Acortamiento persistente bilateral",
           examples: ["Abandono en guardería", "Mudanza repentina", "Nacimiento hermano", "Perderse en lugar público"],
-          tracking_protocol: "Medir extremidades en posición supina. Acortamiento bilateral indica TCR activa."
+          tracking_protocol: "Test muscular para identificar sensación de abandono y edad del conflicto"
         },
         {
           id: "mamarias",
@@ -49,9 +48,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Preocupación Excesiva por Otros",
           manifestation: "Asume rol de cuidador, se preocupa por el bienestar familiar",
           biomagnetic_pair: "Mama (-) → Mama (+)",
-          extremity_pattern: "Acortamiento derecho con simetría intermitente",
           examples: ["Padre enfermo", "Peleas de padres", "Responsabilidad por hermano menor", "Muerte de mascota"],
-          tracking_protocol: "Rastreo con pregunta: '¿Te sientes responsable de cuidar a alguien?'"
+          tracking_protocol: "Test muscular para identificar sensación de responsabilidad y edad del conflicto"
         },
         {
           id: "cerebelo",
@@ -59,9 +57,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Protección por Aplanamiento",
           manifestation: "Aislamiento emocional, frialdad, 'nada le importa'",
           biomagnetic_pair: "Cerebelo (-) → Cerebelo (+)",
-          extremity_pattern: "Rigidez en medición, resistencia al movimiento",
           examples: ["Bullying escolar", "Críticas constantes", "Ridiculización pública", "Invasión del espacio"],
-          tracking_protocol: "Observar rigidez corporal durante medición de extremidades"
+          tracking_protocol: "Test muscular para identificar sensación de protección y edad del conflicto"
         }
       ]
     },
@@ -77,9 +74,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Devaluación Intelectual",
           manifestation: "Megalomanía compensatoria, necesita ser centro de atención",
           biomagnetic_pair: "Frontal (-) → Timo (+)",
-          extremity_pattern: "Alternancia entre acortamiento y simetría",
           examples: ["Comparaciones constantes", "No cumple expectativas", "Último en ser elegido", "Discapacidad o dificultad"],
-          tracking_protocol: "Preguntar: '¿Te comparas con otros niños?' antes de medir extremidades"
+          tracking_protocol: "Test muscular para identificar sensación de devaluación y edad del conflicto"
         },
         {
           id: "sensorial",
@@ -87,9 +83,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Pérdida de Contacto",
           manifestation: "Despiste, olvidos, distracción, posible diagnóstico TDAH",
           biomagnetic_pair: "Temporal Izq (-) → Temporal Der (+)",
-          extremity_pattern: "Acortamiento izquierdo predominante",
           examples: ["Divorcio de padres", "Padres ausentes", "Sobreprotección asfixiante", "Invasión del espacio"],
-          tracking_protocol: "Método específico para TDAH: medir con padres presentes vs ausentes"
+          tracking_protocol: "Test muscular para identificar sensación de pérdida de contacto y edad del conflicto"
         },
         {
           id: "frontal",
@@ -97,9 +92,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Ansiedad Anticipatoria",
           manifestation: "Ansiedad constante, preocupación excesiva, miedos irracionales",
           biomagnetic_pair: "Frontal (-) → Occipital (+)",
-          extremity_pattern: "Acortamiento que aumenta al mencionar el futuro",
           examples: ["Pánico ante exámenes", "Angustia por cambio colegio", "Miedo a médicos", "Temor separación padres"],
-          tracking_protocol: "Medir antes y después de mencionar eventos futuros"
+          tracking_protocol: "Test muscular para identificar sensación de ansiedad y edad del conflicto"
         },
         {
           id: "motora",
@@ -107,9 +101,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Inmovilización",
           manifestation: "Tics nerviosos, parpadeo, movimientos repetitivos, hiperactividad motora",
           biomagnetic_pair: "Bulbo (-) → Suprarrenal (+)",
-          extremity_pattern: "Micro-movimientos durante medición",
           examples: ["Inmovilizado en pelea", "Obligado a comer", "Atrapado en discusión", "Encerrado accidentalmente"],
-          tracking_protocol: "Observar movimientos involuntarios durante rastreo"
+          tracking_protocol: "Test muscular para identificar sensación de inmovilización y edad del conflicto"
         }
       ]
     },
@@ -125,9 +118,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Conflicto de Lealtades",
           manifestation: "Cambios humor extremos, manía-depresión, inmadurez",
           biomagnetic_pair: "Temporal Der (-) → Temporal Der (+)",
-          extremity_pattern: "Alternancia extrema: acortamiento severo/simetría perfecta",
           examples: ["Lealtades en divorcio", "Rey en casa/don nadie en colegio", "Peleas territoriales hermanos"],
-          tracking_protocol: "Medir en diferentes contextos emocionales"
+          tracking_protocol: "Test muscular para identificar sensación de conflicto de lealtades y edad del conflicto"
         },
         {
           id: "asma",
@@ -135,9 +127,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Amenaza Territorial",
           manifestation: "Crisis asmáticas, dificultad respiratoria",
           biomagnetic_pair: "Axila (-) → Axila (+)",
-          extremity_pattern: "Acortamiento con patrón respiratorio alterado",
           examples: ["Miedo a ladrones", "Pánico a profesor", "Amenaza por discusiones padres"],
-          tracking_protocol: "Observar patrón respiratorio durante medición"
+          tracking_protocol: "Test muscular para identificar sensación de amenaza territorial y edad del conflicto"
         },
         {
           id: "planeante",
@@ -145,9 +136,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Disociación por Susto",
           manifestation: "Ausente, desconectado, vive en fantasía",
           biomagnetic_pair: "Bulbo (-) → Cerebelo (+)",
-          extremity_pattern: "Extremidades 'flotantes', sin tensión muscular",
           examples: ["Susto grande", "Miedo paralizante"],
-          tracking_protocol: "Observar tono muscular durante medición"
+          tracking_protocol: "Test muscular para identificar sensación de disociación y edad del conflicto"
         },
         {
           id: "agresiva",
@@ -155,9 +145,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Frustración Explosiva",
           manifestation: "Rabietas explosivas (manía) o autolesión (depresión)",
           biomagnetic_pair: "Mastoides Der (-) → Corazón (+)",
-          extremity_pattern: "Tensión extrema o flacidez según fase",
           examples: ["Castigo injusto", "Destrucción de algo valioso", "Frustración no expresada"],
-          tracking_protocol: "Evaluar tensión muscular y estado emocional actual"
+          tracking_protocol: "Test muscular para identificar sensación de frustración y edad del conflicto"
         },
         {
           id: "marcaje",
@@ -165,9 +154,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Invasión del Territorio",
           manifestation: "Enuresis repetitiva y compulsiva",
           biomagnetic_pair: "Vejiga (-) → Vejiga (+)",
-          extremity_pattern: "Acortamiento cuando se menciona su espacio",
           examples: ["Llegada nuevo bebé", "Compañero cuarto", "Invasión espacio aula"],
-          tracking_protocol: "Preguntar sobre su espacio antes de medir"
+          tracking_protocol: "Test muscular para identificar sensación de invasión territorial y edad del conflicto"
         }
       ]
     },
@@ -183,9 +171,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Confusión de Identidad",
           manifestation: "Inventa historias, exagera, miente patológicamente",
           biomagnetic_pair: "Lengua (-) → Hioides (+)",
-          extremity_pattern: "Patrón cambiante según la historia que cuenta",
           examples: ["Rol confuso familia reconstituida", "Miedo al castigo"],
-          tracking_protocol: "Observar congruencia durante narración"
+          tracking_protocol: "Test muscular para identificar sensación de confusión de identidad y edad del conflicto"
         },
         {
           id: "autista",
@@ -193,9 +180,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Múltiples Traumas",
           manifestation: "Aislamiento profundo, evita contacto social",
           biomagnetic_pair: "Múltiples pares activos simultáneamente",
-          extremity_pattern: "Rigidez extrema, resistencia al contacto",
           examples: ["Ambiente caótico", "Combinación conflictos severos"],
-          tracking_protocol: "Rastreo muy gradual, respetando límites del niño"
+          tracking_protocol: "Test muscular para identificar sensación de aislamiento y edad del conflicto"
         },
         {
           id: "alimentaria",
@@ -203,9 +189,8 @@ const Module3Block5: React.FC = () => {
           conflict: "No Poder Tragar",
           manifestation: "Rechazo comida o ciclos compulsivos",
           biomagnetic_pair: "Estómago (-) → Duodeno (+)",
-          extremity_pattern: "Acortamiento relacionado con hora de comidas",
           examples: ["Contrariedad familiar", "Asco hacia situación", "Conflictos identidad"],
-          tracking_protocol: "Evaluar antes/después de mencionar alimentos"
+          tracking_protocol: "Test muscular para identificar sensación de no poder tragar y edad del conflicto"
         },
         {
           id: "obsesivo",
@@ -213,9 +198,8 @@ const Module3Block5: React.FC = () => {
           conflict: "Susto + Injusticia + Confusión Identidad",
           manifestation: "Necesidad de rituales, manías, comportamientos repetitivos",
           biomagnetic_pair: "Temporal Izq (-) → Suprarrenal (+)",
-          extremity_pattern: "Patrón muy específico y repetitivo",
           examples: ["Evento aterrador súbito", "Injusticia + confusión"],
-          tracking_protocol: "Respetar rituales del niño durante evaluación"
+          tracking_protocol: "Test muscular para identificar sensación de obsesión y edad del conflicto"
         }
       ]
     }
@@ -224,27 +208,21 @@ const Module3Block5: React.FC = () => {
   const trackingSteps = [
     {
       step: 1,
-      title: "Observación Inicial",
-      description: "Evaluar postura, tensión corporal y estado emocional del niño",
-      icon: <Eye className="w-4 h-4" />
-    },
-    {
-      step: 2,
-      title: "Medición de Extremidades",
-      description: "Posición supina, medir diferencia en longitud de piernas",
-      icon: <Compass className="w-4 h-4" />
-    },
-    {
-      step: 3,
-      title: "Activación Emocional",
-      description: "Mencionar conflictos específicos y observar cambios",
+      title: "Buscar la Sensación",
+      description: "Test muscular para identificar la sensación predominante de las 18 disponibles",
       icon: <Heart className="w-4 h-4" />
     },
     {
-      step: 4,
-      title: "Confirmación del Patrón",
-      description: "Acortamiento = Sí, Simetría = No para cada constelación",
-      icon: <CheckCircle className="w-4 h-4" />
+      step: 2,
+      title: "Buscar el Instante",
+      description: "Regresión de edad preguntando en qué momento ocurrió el conflicto",
+      icon: <Clock className="w-4 h-4" />
+    },
+    {
+      step: 3,
+      title: "Buscar el Par",
+      description: "Test muscular para encontrar el par que corrige el desequilibrio",
+      icon: <Target className="w-4 h-4" />
     }
   ];
 
@@ -263,7 +241,7 @@ const Module3Block5: React.FC = () => {
         </p>
         <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-amber-50 rounded-lg border-l-4 border-amber-400">
           <p className="text-sm sm:text-base text-amber-800">
-            <strong>Metodología:</strong> Rastreo por extremidades donde <strong>acortamiento = sí</strong> y <strong>simetría = no</strong>
+            <strong>Metodología:</strong> Test muscular para identificar sensaciones, instante del conflicto y par biomagnético correcto
           </p>
         </div>
       </div>
@@ -275,12 +253,12 @@ const Module3Block5: React.FC = () => {
             Protocolo de Rastreo para Estrategias de Supervivencia
           </h3>
           <p className="text-sm sm:text-base text-slate-600">
-            Método específico para identificar constelaciones cerebrales activas
+            Método consistente con los demás protocolos de la aplicación
           </p>
         </div>
         
         <div className="p-4 sm:p-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {trackingSteps.map((step) => (
               <div key={step.step} className="text-center">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-3 text-white font-bold">
@@ -429,15 +407,6 @@ const Module3Block5: React.FC = () => {
                             </p>
                           </div>
                           
-                          <div>
-                            <h5 className="font-medium text-slate-700 mb-2 text-sm flex items-center">
-                              <Gauge className="w-4 h-4 mr-2 text-amber-500" />
-                              Patrón en Extremidades
-                            </h5>
-                            <p className="text-sm text-slate-600 bg-amber-50 p-3 rounded-lg border-l-3 border-amber-300">
-                              {constellation.extremity_pattern}
-                            </p>
-                          </div>
                           
                           <div>
                             <h5 className="font-medium text-slate-700 mb-2 text-sm flex items-center">
