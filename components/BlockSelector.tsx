@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useModule } from '../src/contexts/ModuleContext';
 import {
@@ -20,12 +20,16 @@ import {
   CheckCircle,
   Users,
   Table,
-  Brain
+  Brain,
+  ArrowUp,
+  Menu
 } from 'lucide-react';
 
 const BlockSelector: React.FC = () => {
   const { t } = useTranslation();
   const { activeModule } = useModule();
+  const [showBackToMenu, setShowBackToMenu] = useState(false);
+  const [currentBlock, setCurrentBlock] = useState<number | null>(null);
 
   // Configuración dinámica según el módulo activo
   const getModuleBlocks = () => {
@@ -74,7 +78,22 @@ const BlockSelector: React.FC = () => {
 
   const blocks = getModuleBlocks();
 
+  // Detectar scroll para mostrar botón de volver al menú
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      // Mostrar botón después de 200px de scroll
+      setShowBackToMenu(scrollY > 200);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleScroll = (blockId: number) => {
+    // Guardar el bloque actual
+    setCurrentBlock(blockId);
+    
     // Pequeño delay para asegurar que el DOM esté listo
     setTimeout(() => {
       const element = document.getElementById(`block-${blockId}`);
@@ -94,6 +113,11 @@ const BlockSelector: React.FC = () => {
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
     }, 100);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setCurrentBlock(null);
   };
 
   return (
@@ -150,6 +174,31 @@ const BlockSelector: React.FC = () => {
           </button>
         ))}
       </div>
+
+      {/* Botón flotante para volver al menú */}
+      {showBackToMenu && (
+        <div className="fixed bottom-4 right-4 z-50">
+          <div className="flex flex-col space-y-2">
+            {/* Botón de volver al menú */}
+            <button
+              onClick={scrollToTop}
+              className="group relative overflow-hidden rounded-full p-3 sm:p-4 bg-gradient-to-r from-teal-500 to-blue-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
+              title="Volver al menú de bloques"
+            >
+              <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
+            </button>
+            
+            {/* Indicador del bloque actual */}
+            {currentBlock && (
+              <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-2 shadow-lg border border-white/20">
+                <span className="text-xs sm:text-sm font-medium text-slate-700">
+                  {blocks.find(b => b.id === currentBlock)?.title || `Bloque ${currentBlock}`}
+                </span>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
