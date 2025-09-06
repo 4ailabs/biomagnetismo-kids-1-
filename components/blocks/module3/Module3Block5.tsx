@@ -245,6 +245,34 @@ const Module3Block5: React.FC = () => {
             <strong>Metodología:</strong> Test muscular para identificar sensaciones, instante del conflicto y par biomagnético correcto
           </p>
         </div>
+        
+        {/* Enlace a App de Consejos de IA */}
+        <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+          <div className="flex items-center justify-center mb-4">
+            <div className="p-3 bg-blue-500 rounded-full mr-4">
+              <Brain className="w-6 h-6 text-white" />
+            </div>
+            <h3 className={`${textUtils.title.subsection} text-blue-800`}>
+              Consejos de IA para Estrategias de Supervivencia
+            </h3>
+          </div>
+          <p className={`${textUtils.body.medium} text-blue-700 text-center mb-4`}>
+            Accede a una aplicación especializada con consejos de inteligencia artificial 
+            para profundizar en las estrategias de supervivencia y su aplicación práctica.
+          </p>
+          <div className="text-center">
+            <a
+              href="https://estrategias-de-supervivencia.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <Brain className="w-5 h-5 mr-2" />
+              Abrir App de Consejos IA
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Protocolo de Rastreo */}
