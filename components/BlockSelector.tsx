@@ -51,13 +51,13 @@ const BlockSelector: React.FC = () => {
     } else if (activeModule === 3) {
       return [
         { id: 1, title: "Fundamentos", subtitle: "Neurobiología del Aprendizaje", icon: <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-blue-400 to-indigo-500' },
-        { id: 2, title: "8 Conflictos", subtitle: "Conflictos Biológicos Escolares", icon: <Target className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
-        { id: 3, title: "Rastreo", subtitle: "Técnicas por Extremidades", icon: <Search className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-green-400 to-emerald-500' },
-        { id: 4, title: "18 Sensaciones", subtitle: "Sensaciones que Soportan", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-purple-400 to-indigo-500' },
+        { id: 2, title: "8 Conflictos", subtitle: "Biológicos Escolares", icon: <Target className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
+        { id: 3, title: "Evaluación", subtitle: "Biomagnética y Detección", icon: <Search className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-green-400 to-emerald-500' },
+        { id: 4, title: "50 Pares", subtitle: "Lista Optimizada Escolar", icon: <Table className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-indigo-400 to-purple-500' },
         { id: 5, title: "Patologías", subtitle: "TDAH, Asma, Bruxismo", icon: <UserCheck className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-orange-400 to-amber-500' },
-        { id: 6, title: "50 Pares", subtitle: "Lista Optimizada Escolar", icon: <Table className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-indigo-400 to-purple-500' },
-        { id: 7, title: "Técnicas", subtitle: "Rastreo Integrado", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-cyan-500' },
-        { id: 8, title: "Casos", subtitle: "Clínicos y Protocolos", icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-amber-400 to-orange-500' },
+        { id: 6, title: "Técnicas", subtitle: "Rastreo Integrado", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-cyan-500' },
+        { id: 7, title: "Emergencias", subtitle: "Protocolos Escolares", icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-red-400 to-rose-500' },
+        { id: 8, title: "Casos", subtitle: "Clínicos y Práctica", icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-amber-400 to-orange-500' },
       ];
     } else {
       // Módulos futuros
