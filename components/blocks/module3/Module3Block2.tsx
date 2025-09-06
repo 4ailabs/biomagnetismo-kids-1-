@@ -1,26 +1,21 @@
 import React from 'react';
 import CourseSection from '../../CourseSection';
+import BlockHeader from '../../BlockHeader';
 import { Heart, Activity, Brain, Target, ArrowRight, CheckCircle, Users, Zap } from 'lucide-react';
 
 const Module3Block2: React.FC = () => {
   return (
     <div id="block-2" className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-slate-100 to-gray-200 text-slate-800 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-slate-200 rounded-full">
-              <Heart className="w-12 h-12 text-slate-600" />
-            </div>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            Patologías Escolares Específicas
-          </h1>
-          <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto">
-            TDAH, Asma, Bruxismo y Trastornos Digestivos desde la Perspectiva Biomagnética
-          </p>
-        </div>
-      </div>
+      <BlockHeader
+        icon={Heart}
+        title="Patologías Escolares Específicas"
+        subtitle="TDAH, Asma, Bruxismo y Trastornos Digestivos desde la Perspectiva Biomagnética"
+        gradientFrom="from-slate-100"
+        gradientTo="to-gray-200"
+        iconBgColor="bg-slate-200"
+        iconTextColor="text-slate-600"
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Introducción */}

@@ -1,26 +1,21 @@
 import React from 'react';
 import CourseSection from '../../CourseSection';
+import BlockHeader from '../../BlockHeader';
 import { BookOpen, Heart, Brain, Users, Target, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 
 const Module3Block1: React.FC = () => {
   return (
     <div id="block-1" className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-slate-100 to-gray-200 text-slate-800 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-slate-200 rounded-full">
-              <BookOpen className="w-12 h-12 text-slate-700" />
-            </div>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            Fundamentos del Biomagnetismo Escolar
-          </h1>
-          <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto">
-            Los 8 Conflictos Biológicos que Afectan el Aprendizaje en Niños de 5-12 Años
-          </p>
-        </div>
-      </div>
+      <BlockHeader
+        icon={BookOpen}
+        title="Fundamentos del Biomagnetismo Escolar"
+        subtitle="Los 8 Conflictos Biológicos que Afectan el Aprendizaje en Niños de 5-12 Años"
+        gradientFrom="from-slate-100"
+        gradientTo="to-gray-200"
+        iconBgColor="bg-slate-200"
+        iconTextColor="text-slate-700"
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Introducción */}

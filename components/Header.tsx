@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, Link } from 'react-router-dom';
-import { Magnet } from 'lucide-react';
+import { Magnet, Menu, X, Home, List, Presentation } from 'lucide-react';
 import { useModule } from '../src/contexts/ModuleContext';
 import { useDocumentTitle } from '../src/hooks/useDocumentTitle';
 import LanguageSelector from './LanguageSelector';
@@ -13,6 +13,7 @@ const Header: React.FC = () => {
   const location = useLocation();
   const currentModule = modules.find(m => m.id === activeModule);
   const isInModule = location.pathname.startsWith('/modulo/');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   // Actualizar el título de la página dinámicamente
   useDocumentTitle(currentModule?.title || 'Módulo 1');
@@ -20,63 +21,110 @@ const Header: React.FC = () => {
   return (
     <header className="relative bg-white/80 backdrop-blur-md shadow-xl border-b border-white/20">
       <div className="max-w-7xl mx-auto py-3 sm:py-4 lg:py-6 xl:py-8 px-3 sm:px-4 lg:px-6 xl:px-8">
-        {/* Language Selector */}
-        <div className="absolute top-2 sm:top-3 lg:top-4 right-2 sm:right-3 lg:right-4 z-10">
-          <LanguageSelector />
-        </div>
-        
-        {/* Module Selector */}
-        <div className="absolute top-2 sm:top-3 lg:top-4 left-2 sm:left-3 lg:left-4 z-10">
-          <ModuleSelector />
-        </div>
-
-        {/* Botón Volver al Inicio - solo visible cuando estamos en un módulo */}
+        {/* Mobile Menu Button */}
         {isInModule && (
-          <div className="absolute top-2 sm:top-3 lg:top-4 left-2 sm:left-3 lg:left-4 z-10">
-            <Link 
-              to="/"
-              className="inline-flex items-center px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-slate-500 to-slate-600 text-white text-xs sm:text-sm font-medium rounded-md sm:rounded-lg hover:from-slate-600 hover:to-slate-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-            >
-              <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              <span className="hidden sm:inline">Volver al Inicio</span>
-              <span className="sm:hidden">Inicio</span>
-            </Link>
-          </div>
-        )}
-        
-        {/* Botón de Lista de Pares - visible en todos los módulos */}
-        {isInModule && (
-          <div className="absolute top-2 sm:top-3 lg:top-4 right-28 sm:right-32 lg:right-36 z-10">
+          <div className="lg:hidden absolute top-2 right-2 z-20">
             <button
-              onClick={() => window.open('/resources/lista-pares-biomagneticos.html', '_blank')}
-              className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 bg-white/80 backdrop-blur-sm text-slate-600 text-xs sm:text-sm font-medium rounded-md sm:rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 bg-white/80 backdrop-blur-sm text-slate-600 rounded-lg shadow-sm hover:bg-white hover:text-slate-800 transition-all duration-300"
             >
-              <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-              </svg>
-              <span className="hidden sm:inline">Lista de Pares</span>
-              <span className="sm:hidden">Pares</span>
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         )}
-        
-        {/* Botón de Diapositivas - solo visible cuando estamos en el Módulo 2 */}
-        {isInModule && activeModule === 2 && (
-          <div className="absolute top-2 sm:top-3 lg:top-4 right-48 sm:right-52 lg:right-56 z-10">
-            <Link 
-              to="/presentation-modulo2"
-              className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 bg-white/80 backdrop-blur-sm text-slate-600 text-xs sm:text-sm font-medium rounded-md sm:rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50"
-            >
-              <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-              <span className="hidden sm:inline">Diapositivas</span>
-              <span className="sm:hidden">Slides</span>
-            </Link>
+
+        {/* Desktop Navigation - Solo visible en pantallas grandes */}
+        <div className="hidden lg:flex absolute top-2 right-2 z-10 space-x-2">
+          <LanguageSelector />
+          {isInModule && (
+            <>
+              <Link 
+                to="/"
+                className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-slate-500 to-slate-600 text-white text-sm font-medium rounded-lg hover:from-slate-600 hover:to-slate-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Volver al Inicio
+              </Link>
+              <button
+                onClick={() => window.open('/resources/lista-pares-biomagneticos.html', '_blank')}
+                className="inline-flex items-center px-3 py-2 bg-white/80 backdrop-blur-sm text-slate-600 text-sm font-medium rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50"
+              >
+                <List className="w-4 h-4 mr-2" />
+                Lista de Pares
+              </button>
+              {activeModule === 2 && (
+                <Link 
+                  to="/presentation-modulo2"
+                  className="inline-flex items-center px-3 py-2 bg-white/80 backdrop-blur-sm text-slate-600 text-sm font-medium rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md border border-slate-200/50"
+                >
+                  <Presentation className="w-4 h-4 mr-2" />
+                  Diapositivas
+                </Link>
+              )}
+            </>
+          )}
+        </div>
+
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden fixed inset-0 z-30 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)}>
+            <div className="absolute top-0 right-0 w-80 h-full bg-white shadow-xl transform transition-transform duration-300">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-lg font-semibold text-slate-800">Menú de Navegación</h3>
+                  <button
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="p-2 text-slate-400 hover:text-slate-600"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="pb-4 border-b border-slate-200">
+                    <LanguageSelector />
+                  </div>
+                  
+                  <Link 
+                    to="/"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center w-full px-4 py-3 bg-gradient-to-r from-slate-500 to-slate-600 text-white rounded-lg hover:from-slate-600 hover:to-slate-700 transition-all duration-300"
+                  >
+                    <Home className="w-5 h-5 mr-3" />
+                    <span>Volver al Inicio</span>
+                  </Link>
+                  
+                  <button
+                    onClick={() => {
+                      window.open('/resources/lista-pares-biomagneticos.html', '_blank');
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="flex items-center w-full px-4 py-3 bg-slate-50 text-slate-700 rounded-lg hover:bg-slate-100 transition-all duration-300"
+                  >
+                    <List className="w-5 h-5 mr-3" />
+                    <span>Lista de Pares</span>
+                  </button>
+                  
+                  {activeModule === 2 && (
+                    <Link 
+                      to="/presentation-modulo2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center w-full px-4 py-3 bg-slate-50 text-slate-700 rounded-lg hover:bg-slate-100 transition-all duration-300"
+                    >
+                      <Presentation className="w-5 h-5 mr-3" />
+                      <span>Diapositivas</span>
+                    </Link>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         )}
+
+        {/* Module Selector - Solo visible en pantallas grandes */}
+        <div className="hidden lg:block absolute top-2 left-2 z-10">
+          <ModuleSelector />
+        </div>
         
         <div className="text-center">
           <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 bg-gradient-to-br from-teal-400 to-blue-500 rounded-full shadow-lg mb-3 sm:mb-4 lg:mb-6">
@@ -103,13 +151,30 @@ const Header: React.FC = () => {
             </span>
           </div>
           
+          {/* Breadcrumb Navigation - solo visible cuando estamos en un módulo */}
+          {isInModule && (
+            <div className="mt-3 sm:mt-4 lg:mt-5 xl:mt-6">
+              <nav className="flex items-center justify-center space-x-2 text-xs sm:text-sm text-slate-500">
+                <Link to="/" className="hover:text-slate-700 transition-colors">
+                  Inicio
+                </Link>
+                <span className="text-slate-300">/</span>
+                <span className="text-slate-700 font-medium">
+                  {currentModule?.title}
+                </span>
+              </nav>
+            </div>
+          )}
+
           {/* Información contextual del módulo - solo visible cuando estamos en un módulo */}
           {isInModule && (
             <div className="mt-4 sm:mt-5 lg:mt-6 xl:mt-8 p-3 sm:p-4 lg:p-6 bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg sm:rounded-xl border border-teal-100 max-w-lg sm:max-w-xl lg:max-w-2xl mx-auto">
               <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed">
                 {activeModule === 1 
                   ? "Este módulo te guiará desde la concepción hasta los primeros meses de vida, explorando cómo las experiencias gestacionales y perinatales influyen en el campo energético del bebé."
-                  : "Descubre cómo el desarrollo infantil entre los 3 meses y 5 años crea patrones energéticos que influyen en la salud y comportamiento del niño."
+                  : activeModule === 2
+                  ? "Descubre cómo el desarrollo infantil entre los 3 meses y 5 años crea patrones energéticos que influyen en la salud y comportamiento del niño."
+                  : "Aprende a aplicar el biomagnetismo en el contexto escolar, identificando y trabajando con los conflictos biológicos que afectan el aprendizaje de niños de 5-12 años."
                 }
               </p>
             </div>
