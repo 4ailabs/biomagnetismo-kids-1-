@@ -65,14 +65,14 @@ const Module3Block4: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-blue-100 rounded-full mr-3">
                   <Brain className="w-6 h-6 text-blue-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Características de las Sensaciones</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Características de las Sensaciones</h4>
               </div>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className={`space-y-2 ${textUtils.body.small}`}>
                 <li>• Son específicas y precisas</li>
                 <li>• Se sienten en el cuerpo, no en la mente</li>
                 <li>• Generalmente son inconscientes</li>
@@ -81,14 +81,14 @@ const Module3Block4: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-green-100 rounded-full mr-3">
                   <Target className="w-6 h-6 text-green-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Proceso de Identificación</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Proceso de Identificación</h4>
               </div>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className={`space-y-2 ${textUtils.body.small}`}>
                 <li>• Rastreo biomagnético con lista específica</li>
                 <li>• Confirmación por acortamiento de extremidades</li>
                 <li>• Exploración de la dinámica de la sensación</li>
@@ -113,12 +113,12 @@ const Module3Block4: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Sensaciones de Separación y Pérdida */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-red-100 rounded-full mr-3">
                   <Heart className="w-6 h-6 text-red-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Separación y Pérdida</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Separación y Pérdida</h4>
               </div>
               <div className="space-y-3">
                 <div className="bg-red-50 rounded-lg p-4">
@@ -141,12 +141,12 @@ const Module3Block4: React.FC = () => {
             </div>
 
             {/* Sensaciones de Ataque y Defensa */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-orange-100 rounded-full mr-3">
                   <Activity className="w-6 h-6 text-orange-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Ataque y Defensa</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Ataque y Defensa</h4>
               </div>
               <div className="space-y-3">
                 <div className="bg-orange-50 rounded-lg p-4">
@@ -169,12 +169,12 @@ const Module3Block4: React.FC = () => {
             </div>
 
             {/* Sensaciones de Incapacidad */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-yellow-100 rounded-full mr-3">
                   <Brain className="w-6 h-6 text-yellow-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Incapacidad</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Incapacidad</h4>
               </div>
               <div className="space-y-3">
                 <div className="bg-yellow-50 rounded-lg p-4">
@@ -193,12 +193,12 @@ const Module3Block4: React.FC = () => {
             </div>
 
             {/* Sensaciones de Devaluación */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-blue-100 rounded-full mr-3">
                   <Users className="w-6 h-6 text-blue-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Devaluación</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Devaluación</h4>
               </div>
               <div className="space-y-3">
                 <div className="bg-blue-50 rounded-lg p-4">
@@ -217,12 +217,12 @@ const Module3Block4: React.FC = () => {
             </div>
 
             {/* Sensaciones Existenciales */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-purple-100 rounded-full mr-3">
                   <Target className="w-6 h-6 text-purple-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Existenciales</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Existenciales</h4>
               </div>
               <div className="space-y-3">
                 <div className="bg-purple-50 rounded-lg p-4">
@@ -241,12 +241,12 @@ const Module3Block4: React.FC = () => {
             </div>
 
             {/* Sensación Extrema */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-gray-100 rounded-full mr-3">
                   <CheckCircle className="w-6 h-6 text-gray-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Sensación Específica</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Sensación Específica</h4>
               </div>
               <div className="space-y-3">
                 <div className="bg-gray-50 rounded-lg p-4">
@@ -291,7 +291,7 @@ const Module3Block4: React.FC = () => {
                 
                 <div className="bg-amber-50 rounded-lg p-6">
                   <h4 className="font-semibold text-gray-800 mb-4">Consideraciones Importantes:</h4>
-                  <ul className="space-y-2 text-sm text-gray-600">
+                  <ul className={`space-y-2 ${textUtils.body.small}`}>
                     <li>• <strong>Una por vez:</strong> Rastrear solo una sensación por vez, nunca combinar</li>
                     <li>• <strong>Técnica consistente:</strong> Mantener la misma posición y presión en las mediciones</li>
                     <li>• <strong>Contexto específico:</strong> Siempre vincular con "en la escuela" o "cuando estás estudiando"</li>
@@ -382,7 +382,7 @@ const Module3Block4: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-4">Manifestaciones Corporales:</h4>
-                  <div className="space-y-2 text-sm text-gray-600">
+                  <div className={`space-y-2 ${textUtils.body.small}`}>
                     <p>"¿Dónde sientes eso en tu cuerpo?"</p>
                     <p>"¿Cómo se siente físicamente cuando tienes esa sensación?"</p>
                     <p>"¿Qué le pasa a tu cuerpo cuando estás en la escuela?"</p>
@@ -392,7 +392,7 @@ const Module3Block4: React.FC = () => {
                 
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-4">Reacciones y Patrones:</h4>
-                  <div className="space-y-2 text-sm text-gray-600">
+                  <div className={`space-y-2 ${textUtils.body.small}`}>
                     <p>"¿Qué haces cuando sientes eso?"</p>
                     <p>"¿Cómo reacciona tu cuerpo?"</p>
                     <p>"¿Qué pensamientos vienen cuando tienes esa sensación?"</p>

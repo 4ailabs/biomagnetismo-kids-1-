@@ -663,7 +663,7 @@ const Module3Block2: React.FC = () => {
           icon={<Users className="w-8 h-8 text-slate-500" />}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 leading-tight">
                 Ansiedad Escolar
               </h3>
@@ -711,7 +711,7 @@ const Module3Block2: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 leading-tight">
                 Depresión Infantil
               </h3>
@@ -759,7 +759,7 @@ const Module3Block2: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 leading-tight">
                 Trastornos del Sueño
               </h3>
@@ -807,7 +807,7 @@ const Module3Block2: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 leading-tight">
                 Trastornos Alimentarios
               </h3>

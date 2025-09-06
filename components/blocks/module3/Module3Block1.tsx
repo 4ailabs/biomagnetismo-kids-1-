@@ -49,14 +49,14 @@ const Module3Block1: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-blue-100 rounded-full mr-3">
                   <Brain className="w-6 h-6 text-blue-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Características de los Conflictos</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Características de los Conflictos</h4>
               </div>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className={`space-y-2 ${textUtils.body.small}`}>
                 <li>• Son respuestas adaptativas inteligentes</li>
                 <li>• Se activan ante amenaza percibida</li>
                 <li>• Tienen manifestaciones físicas específicas</li>
@@ -65,14 +65,14 @@ const Module3Block1: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-green-100 rounded-full mr-3">
                   <Target className="w-6 h-6 text-green-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Beneficios del Biomagnetismo</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Beneficios del Biomagnetismo</h4>
               </div>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className={`space-y-2 ${textUtils.body.small}`}>
                 <li>• Identificación precisa de conflictos</li>
                 <li>• Restauración del equilibrio energético</li>
                 <li>• Liberación de bloqueos de aprendizaje</li>

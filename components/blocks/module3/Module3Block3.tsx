@@ -67,14 +67,14 @@ const Module3Block3: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-blue-100 rounded-full mr-3">
                   <Brain className="w-6 h-6 text-blue-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Principios del Rastreo</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Principios del Rastreo</h4>
               </div>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className={`space-y-2 ${textUtils.body.small}`}>
                 <li>• El acortamiento indica resonancia energética</li>
                 <li>• La simetría indica ausencia de resonancia</li>
                 <li>• Los niños muestran respuestas más claras</li>
@@ -83,14 +83,14 @@ const Module3Block3: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-green-100 rounded-full mr-3">
                   <Target className="w-6 h-6 text-green-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Aplicaciones Escolares</h4>
+                <h4 className={`${textUtils.title.subsection} text-gray-800`}>Aplicaciones Escolares</h4>
               </div>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className={`space-y-2 ${textUtils.body.small}`}>
                 <li>• Identificar sensaciones que soportan conflictos</li>
                 <li>• Rastrear el instante temporal de origen</li>
                 <li>• Detectar microbios asociados al conflicto</li>
@@ -130,7 +130,7 @@ const Module3Block3: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-3">Ventajas en Niños:</h4>
-                  <ul className="space-y-2 text-sm text-gray-600">
+                  <ul className={`space-y-2 ${textUtils.body.small}`}>
                     <li>• Acortamientos más evidentes y claros</li>
                     <li>• Menos interferencia del sistema nervioso</li>
                     <li>• Mayor reactividad energética</li>
@@ -141,7 +141,7 @@ const Module3Block3: React.FC = () => {
                 
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-3">Consideraciones Especiales:</h4>
-                  <ul className="space-y-2 text-sm text-gray-600">
+                  <ul className={`space-y-2 ${textUtils.body.small}`}>
                     <li>• Necesidad de explicaciones simples</li>
                     <li>• Sesiones más cortas</li>
                     <li>• Ambiente lúdico y seguro</li>
@@ -235,7 +235,7 @@ const Module3Block3: React.FC = () => {
                 
                 <div className="bg-amber-50 rounded-lg p-6">
                   <h4 className="font-semibold text-gray-800 mb-4">Consideraciones para Niños:</h4>
-                  <ul className="space-y-2 text-sm text-gray-600">
+                  <ul className={`space-y-2 ${textUtils.body.small}`}>
                     <li>• <strong>Suavidad:</strong> Manipular las extremidades con delicadeza</li>
                     <li>• <strong>Consistencia:</strong> Mantener la misma técnica durante toda la sesión</li>
                     <li>• <strong>Paciencia:</strong> Permitir que el niño se relaje entre mediciones</li>
