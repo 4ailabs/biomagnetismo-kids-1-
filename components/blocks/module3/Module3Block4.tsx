@@ -281,10 +281,10 @@ const Module3Block4: React.FC = () => {
                   <ol className="list-decimal list-inside space-y-3 text-sm text-gray-600">
                     <li><strong>Establecer contexto:</strong> "Vamos a identificar cuál es la sensación que está detrás de tu conflicto escolar usando el rastreo"</li>
                     <li><strong>Preparar rastreo:</strong> Niño en posición, medir extremidades como línea base</li>
-                    <li><strong>Colocar imán y preguntar:</strong> Imán negativo en punto específico: "¿Hay resonancia con abandono escolar?" (observar acortamiento)</li>
+                    <li><strong>Preguntar con test muscular:</strong> "¿Cuál es la sensación presente?" Ir nombrando y haciendo el test hasta identificar la sensación</li>
                     <li><strong>Continuar sistemáticamente:</strong> Rastrear una por una las 18 sensaciones hasta encontrar acortamiento</li>
                     <li><strong>Confirmar hallazgo:</strong> Cuando hay acortamiento, repetir 2-3 veces para validar</li>
-                    <li><strong>Explorar dinámicas:</strong> Una vez confirmada, profundizar en manifestaciones y correlaciones</li>
+                    <li><strong>Explorar contexto con padres:</strong> Explorar con la ayuda de los padres el contexto de las sensaciones en su ambiente, en casa, en la escuela, y colocar los imanes de acuerdo a lo que marque el test, de los 50 pares que están mencionados en el manual</li>
                   </ol>
                 </div>
                 
