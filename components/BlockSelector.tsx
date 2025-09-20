@@ -24,7 +24,8 @@ import {
   Table,
   Brain,
   ArrowUp,
-  Menu
+  Menu,
+  AlertTriangle
 } from 'lucide-react';
 
 const BlockSelector: React.FC = () => {
@@ -64,6 +65,15 @@ const BlockSelector: React.FC = () => {
         { id: 6, title: "50 Pares", subtitle: "Lista + Hologramas", icon: <Table className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-indigo-400 to-purple-500' },
         { id: 7, title: "Técnicas", subtitle: "Rastreo Integrado", icon: <Compass className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-cyan-500' },
         { id: 8, title: "Casos", subtitle: "Clínicos Detallados", icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-amber-400 to-orange-500' },
+      ];
+    } else if (activeModule === 4) {
+      return [
+        { id: 1, title: "Fundamentos", subtitle: "Conflictos Adolescentes", icon: <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-purple-400 to-pink-500' },
+        { id: 2, title: "Sensaciones", subtitle: "20 Sensaciones Viscerales", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-pink-400 to-rose-500' },
+        { id: 3, title: "Patologías", subtitle: "Acné, Gastritis, Ansiedad", icon: <Target className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-blue-400 to-indigo-500' },
+        { id: 4, title: "Crisis", subtitle: "Protocolos de Emergencia", icon: <AlertTriangle className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-orange-400 to-red-500' },
+        { id: 5, title: "Técnicas", subtitle: "Rastreo Especializado", icon: <Search className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-green-400 to-emerald-500' },
+        { id: 6, title: "Herramientas", subtitle: "Lista de 40 Pares", icon: <Table className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, color: 'from-teal-400 to-cyan-500' },
       ];
     } else {
       // Módulos futuros
@@ -117,6 +127,7 @@ const BlockSelector: React.FC = () => {
           {activeModule === 1 ? t('blockSelector.title') : 
            activeModule === 2 ? t('blockSelector.module2.title') :
            activeModule === 3 ? 'Módulo 3 - Navega por los Bloques' :
+           activeModule === 4 ? 'Módulo 4 - Navega por los Bloques' :
            t('blockSelector.title')}
         </h2>
           <div className="w-8 sm:w-10 lg:w-12 xl:w-16 h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full mx-auto"></div>

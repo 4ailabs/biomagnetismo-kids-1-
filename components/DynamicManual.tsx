@@ -24,6 +24,14 @@ const Module3Block6 = lazy(() => import('./blocks/module3/Module3Block6'));
 const Module3Block7 = lazy(() => import('./blocks/module3/Module3Block7'));
 const Module3Block8 = lazy(() => import('./blocks/module3/Module3Block8'));
 
+// Lazy loading para Módulo 4
+const Module4Block1 = lazy(() => import('./blocks/module4/Module4Block1'));
+const Module4Block2 = lazy(() => import('./blocks/module4/Module4Block2'));
+const Module4Block3 = lazy(() => import('./blocks/module4/Module4Block3'));
+const Module4Block4 = lazy(() => import('./blocks/module4/Module4Block4'));
+const Module4Block5 = lazy(() => import('./blocks/module4/Module4Block5'));
+const Module4Block6 = lazy(() => import('./blocks/module4/Module4Block6'));
+
 // Loading component
 const BlockLoader: React.FC = () => (
   <div className="flex items-center justify-center py-16">
@@ -79,20 +87,19 @@ const DynamicManual: React.FC = () => {
     );
   }
 
-  // Módulos futuros (4)
+  // Renderizar módulo 4
   if (activeModule === 4) {
     return (
-      <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-12 text-center">
-        <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-400 to-violet-500 rounded-full shadow-lg mb-6">
-          <span className="text-3xl">🚧</span>
+      <Suspense fallback={<BlockLoader />}>
+        <div className="space-y-12">
+          <Module4Block1 />
+          <Module4Block2 />
+          <Module4Block3 />
+          <Module4Block4 />
+          <Module4Block5 />
+          <Module4Block6 />
         </div>
-        <h2 className="text-2xl font-bold text-slate-700 mb-4">
-          Módulo {activeModule} en Desarrollo
-        </h2>
-        <p className="text-lg text-slate-600 max-w-md mx-auto">
-          Este módulo estará disponible próximamente. Estamos trabajando para traerte contenido de la más alta calidad.
-        </p>
-      </div>
+      </Suspense>
     );
   }
 

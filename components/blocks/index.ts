@@ -10,3 +10,6 @@ export * from './module2';
 
 // Módulo 3
 export * from './module3';
+
+// Módulo 4
+export * from './module4';

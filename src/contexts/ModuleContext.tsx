@@ -57,8 +57,8 @@ export const ModuleProvider: React.FC<ModuleProviderProps> = ({ children }) => {
     {
       id: 4,
       title: "MÓDULO 4",
-      subtitle: "Por definir",
-      color: "from-orange-400 to-amber-500",
+      subtitle: "El Cuerpo Que Cambia, la Identidad Que Despierta: Patrones Energéticos de 12-18 Años",
+      color: "from-purple-400 to-pink-500",
       isActive: false
     }
   ];

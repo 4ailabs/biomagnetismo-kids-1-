@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import { Magnet, Baby, ArrowRight, BookOpen } from 'lucide-react';
+import { Magnet, Baby, ArrowRight, BookOpen, Heart } from 'lucide-react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import BlockSelector from './components/BlockSelector';
@@ -8,6 +8,7 @@ import DynamicManual from './components/DynamicManual';
 import Presentation from './pages/Presentation';
 import Module2Presentation from './pages/Module2Presentation';
 import Module3Presentation from './pages/Module3Presentation';
+import Module4Presentation from './pages/Module4Presentation';
 import ModuleSelector from './components/ModuleSelector';
 import { ModuleProvider, useModuleFromRoute } from './src/contexts/ModuleContext';
 
@@ -55,6 +56,21 @@ const modulesData = [
       dot1: 'bg-emerald-400',
       dot2: 'bg-teal-400',
       dot3: 'bg-cyan-400',
+    },
+  },
+  {
+    id: 4,
+    title: 'Módulo 4: Biomagnetismo Adolescente',
+    subtitle: 'El Cuerpo Que Cambia, la Identidad Que Despierta: Patrones Energéticos de 12-18 Años',
+    Icon: Heart,
+    features: ['Adolescencia (12-18a)', '6 bloques especializados', 'Protocolos de Crisis'],
+    colors: {
+      bg: 'from-purple-400 to-pink-500',
+      button: 'from-purple-500 to-pink-600',
+      hover: 'hover:from-purple-600 hover:to-pink-700',
+      dot1: 'bg-purple-400',
+      dot2: 'bg-pink-400',
+      dot3: 'bg-rose-400',
     },
   },
 ];
@@ -171,6 +187,7 @@ const App: React.FC = () => {
         <Route path="/presentation" element={<Presentation />} />
         <Route path="/presentation-modulo2" element={<Module2Presentation />} />
         <Route path="/presentation-modulo3" element={<Module3Presentation />} />
+        <Route path="/presentation-modulo4" element={<Module4Presentation />} />
       </Routes>
     </ModuleProvider>
   );
